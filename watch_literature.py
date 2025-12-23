@@ -51,6 +51,23 @@ MAX_RETRIES = 3
 RETRY_DELAY = 2  # seconds
 ARXIV_POLITENESS_DELAY = 3  # seconds between arXiv API calls
 
+# Education term definitions for filtering and scoring
+# NO bare "learning" - only education-specific contexts
+EDU_STRONG_TERMS = [
+    "education", "higher education", "teaching", "tutoring", "tutor",
+    "pedagogy", "pedagogical", "classroom", "course", "curriculum",
+    "assessment", "feedback", "student", "teacher", "instructor",
+    "instruction", "instructional", "learner", "edtech", "mooc",
+    "educational"
+]
+
+# Education-specific "learning" phrases (contextual, not bare "learning")
+EDU_LEARNING_PHRASES = [
+    "learning outcomes", "learning analytics", "learning experience",
+    "learning environment", "learning platform", "e-learning",
+    "learning management system", "learning design"
+]
+
 
 # ==================== Data Models ====================
 
@@ -159,28 +176,8 @@ def check_hard_education_intent(paper: Paper, config: Dict) -> bool:
     This prevents generic ML papers from slipping through.
     NO bare "learning" - only education-specific contexts.
     """
-    default_rules = config.get("default_rules", {})
-    
-    # Define strong education terms (no bare "learning")
-    # These terms clearly indicate educational context, not just ML "learning"
-    edu_strong_terms = [
-        "education", "higher education", "teaching", "tutoring", "tutor",
-        "pedagogy", "pedagogical", "classroom", "course", "curriculum",
-        "assessment", "feedback", "student", "teacher", "instructor",
-        "instruction", "instructional", "learner", "edtech", "mooc",
-        "educational"
-    ]
-    
-    # Education-specific "learning" phrases (contextual, not bare "learning")
-    # These are acceptable because they indicate education-specific contexts
-    edu_learning_phrases = [
-        "learning outcomes", "learning analytics", "learning experience",
-        "learning environment", "learning platform", "e-learning",
-        "learning management system", "learning design"
-    ]
-    
-    # Combine for gate check
-    all_edu_terms = edu_strong_terms + edu_learning_phrases
+    # Combine strong terms and education-specific learning phrases
+    all_edu_terms = EDU_STRONG_TERMS + EDU_LEARNING_PHRASES
     edu_terms_norm = [normalize_text(t) for t in all_edu_terms]
     
     title_norm = normalize_text(paper.title)
@@ -227,15 +224,8 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             score += weights.get("llm_term_in_abstract", 3)
             break
     
-    # Strong education terms (NO bare "learning" - only education-specific contexts)
-    edu_strong_terms = [
-        "education", "higher education", "teaching", "tutoring", "tutor",
-        "pedagogy", "pedagogical", "classroom", "course", "curriculum",
-        "assessment", "feedback", "student", "teacher", "instructor",
-        "instruction", "instructional", "learner", "edtech", "mooc",
-        "educational"
-    ]
-    edu_strong_norm = [normalize_text(t) for t in edu_strong_terms]
+    # Strong education terms (from module-level constants)
+    edu_strong_norm = [normalize_text(t) for t in EDU_STRONG_TERMS]
     
     for term in edu_strong_norm:
         if term in title_norm:
@@ -247,13 +237,8 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             break
     
     # Weak education phrases (only as bonus if strong terms already present)
-    # These contain "learning" in education-specific contexts
-    edu_weak_phrases = [
-        "learning outcomes", "learning analytics", "learning experience",
-        "learning environment", "learning platform", "e-learning",
-        "learning management system", "learning design"
-    ]
-    edu_weak_norm = [normalize_text(p) for p in edu_weak_phrases]
+    # Uses education-specific "learning" phrases from module constants
+    edu_weak_norm = [normalize_text(p) for p in EDU_LEARNING_PHRASES]
     
     for phrase in edu_weak_norm:
         if phrase in title_norm or phrase in abstract_norm:
@@ -329,13 +314,8 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
     
-    # Education-intent terms for query (strong terms only, NO bare "learning")
-    # These clearly indicate educational context, not generic ML
-    edu_strong_terms = [
-        "education", "higher education", "teaching", "tutoring",
-        "pedagogy", "classroom", "course", "curriculum",
-        "assessment", "student", "teacher", "instruction", "instructor"
-    ]
+    # Use module-level education term constants
+    edu_strong_terms = EDU_STRONG_TERMS
     
     # Build search query: (LLM terms) AND (education terms)
     # This ensures papers must match BOTH categories
@@ -538,12 +518,8 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
     
-    # Use strong education terms (NO bare "learning")
-    edu_strong_terms = [
-        "education", "higher education", "teaching", "tutoring",
-        "pedagogy", "classroom", "course", "curriculum",
-        "assessment", "student", "teacher", "instruction", "instructor"
-    ]
+    # Use module-level education term constants
+    edu_strong_terms = EDU_STRONG_TERMS
     
     # Combine terms for search
     search_terms = llm_terms[:4] + edu_strong_terms[:6]
