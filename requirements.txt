@@ -9,6 +9,3 @@ pyzotero>=1.5.18
 
 # HTTP requests for OpenAlex API
 requests>=2.31.0
-
-# Date/time handling (for Python 3.11+ compatibility)
-python-dateutil>=2.8.2
