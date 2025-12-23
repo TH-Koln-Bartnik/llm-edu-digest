@@ -1,0 +1,11 @@
+# Core dependencies for LLM Education Literature Watcher
+# Python 3.11+ required
+
+# arXiv API client
+arxiv>=2.1.0
+
+# Zotero API client
+pyzotero>=1.5.18
+
+# HTTP requests for OpenAlex API
+requests>=2.31.0
