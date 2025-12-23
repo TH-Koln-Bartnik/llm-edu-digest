@@ -24,7 +24,6 @@
       "education",
       "higher education",
       "teaching",
-      "learning",
       "tutoring",
       "pedagogy",
       "classroom",
@@ -33,7 +32,7 @@
       "assessment",
       "feedback",
       "student",
-      "training",
+      "instructor",
       "instruction"
     ],
     "relevance_scoring": {
@@ -317,16 +316,17 @@
         "education_intent_terms": [
           "education",
           "teaching",
-          "learning",
           "course",
           "curriculum",
           "classroom",
           "student",
-          "training",
+          "instructor",
           "instruction",
           "pedagogy",
           "assessment",
-          "feedback"
+          "feedback",
+          "learning outcomes",
+          "educational"
         ],
         "relevance_scoring": {
           "min_score": 10
