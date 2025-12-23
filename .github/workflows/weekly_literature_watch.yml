@@ -46,17 +46,19 @@ jobs:
           path: |
             digest.md
             state.json
+            literature.db
+            references.json
           retention-days: 90
       
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add digest.md state.json
+          git add digest.md state.json literature.db references.json
           # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update literature digest and state [automated]"
+            git commit -m "Update literature digest, database and references [automated]"
             git push
           fi

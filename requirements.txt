@@ -9,3 +9,9 @@ pyzotero>=1.5.18
 
 # HTTP requests for OpenAlex API
 requests>=2.31.0
+
+# SQLite database utilities for Datasette
+sqlite-utils>=3.35
+
+# Text normalization for citekey generation
+unidecode>=1.3.7

@@ -14,10 +14,13 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Optional, Set
 import re
+import sqlite3
 
 import arxiv
 import requests
 from pyzotero import zotero
+from sqlite_utils import Database
+from unidecode import unidecode
 
 
 # ==================== Configuration ====================
@@ -27,18 +30,20 @@ ZOTERO_LIBRARY_ID = os.environ.get("ZOTERO_LIBRARY_ID", "")
 ZOTERO_API_KEY = os.environ.get("ZOTERO_API_KEY", "")
 OPEN_ALEX_API_KEY = os.environ.get("OPEN_ALEX_API_KEY", "")
 
-# Contact email for OpenAlex API (polite pool)
-CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "github-bot@users.noreply.github.com")
+# Contact email for OpenAlex API (polite pool) - optional, non-secret
+OPENALEX_MAILTO = os.environ.get("OPENALEX_MAILTO", "github-bot@users.noreply.github.com")
 
 # File paths
 JOURNALS_CONFIG_PATH = Path(__file__).parent / "journals.json"
 STATE_PATH = Path(__file__).parent / "state.json"
 DIGEST_PATH = Path(__file__).parent / "digest.md"
+DB_PATH = Path(__file__).parent / "literature.db"
+REFERENCES_PATH = Path(__file__).parent / "references.json"
 
 # API defaults
 ARXIV_MAX_RESULTS = 100
-OPENALEX_LOOKBACK_DAYS = 10
-OPENALEX_MAX_RESULTS_PER_JOURNAL = 100
+OPENALEX_LOOKBACK_DAYS = 90  # Increased from 10 to 90 for better coverage
+OPENALEX_MAX_RESULTS_PER_JOURNAL = 200  # Increased for pagination
 MAX_NEW_ITEMS_TOTAL = 50
 
 # Retry configuration
@@ -64,9 +69,17 @@ class Paper:
     source_type: str = "unknown"  # arxiv, openalex
     source_metadata: Dict = field(default_factory=dict)
     relevance_score: float = 0.0
+    education_intent_pass: bool = False
     pdf_downloaded: bool = False
     pdf_path: Optional[Path] = None
     attachment_missing: bool = False
+    citekey: Optional[str] = None
+    zotero_item_key: Optional[str] = None
+    zotero_attachment_key: Optional[str] = None
+    zotero_collection_key: Optional[str] = None
+    zotero_collection_name: Optional[str] = None
+    import_status: Optional[str] = None
+    last_error: Optional[str] = None
 
 
 @dataclass
@@ -140,10 +153,39 @@ def normalize_text(text: str) -> str:
     return re.sub(r'\s+', ' ', text.lower()).strip()
 
 
+def check_hard_education_intent(paper: Paper, config: Dict) -> bool:
+    """
+    Hard education-intent gate: paper must contain at least one EDU_STRONG term.
+    This prevents generic ML papers from slipping through.
+    """
+    default_rules = config.get("default_rules", {})
+    
+    # Define strong education terms (no bare "learning")
+    edu_strong_terms = [
+        "education", "higher education", "teaching", "tutoring", "tutor",
+        "pedagogy", "pedagogical", "classroom", "course", "curriculum",
+        "assessment", "feedback", "student", "teacher", "instruction",
+        "instructional", "training", "edtech", "mooc"
+    ]
+    
+    edu_strong_norm = [normalize_text(t) for t in edu_strong_terms]
+    
+    title_norm = normalize_text(paper.title)
+    abstract_norm = normalize_text(paper.abstract)
+    
+    # Check if at least one strong education term is present
+    for term in edu_strong_norm:
+        if term in title_norm or term in abstract_norm:
+            return True
+    
+    return False
+
+
 def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Optional[Dict] = None) -> float:
     """
     Calculate relevance score based on keyword matches in title and abstract.
     Returns a deterministic, explainable score.
+    Updated to enforce education-intent gating.
     """
     default_rules = config.get("default_rules", {})
     scoring = default_rules.get("relevance_scoring", {})
@@ -172,15 +214,34 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             score += weights.get("llm_term_in_abstract", 3)
             break
     
-    # Education terms
-    edu_terms = [normalize_text(t) for t in default_rules.get("education_terms", [])]
-    for term in edu_terms:
+    # Strong education terms (no bare "learning")
+    edu_strong_terms = [
+        "education", "higher education", "teaching", "tutoring", "tutor",
+        "pedagogy", "pedagogical", "classroom", "course", "curriculum",
+        "assessment", "feedback", "student", "teacher", "instruction",
+        "instructional", "training", "edtech", "mooc"
+    ]
+    edu_strong_norm = [normalize_text(t) for t in edu_strong_terms]
+    
+    for term in edu_strong_norm:
         if term in title_norm:
             score += weights.get("education_term_in_title", 4)
             break
-    for term in edu_terms:
+    for term in edu_strong_norm:
         if term in abstract_norm:
             score += weights.get("education_term_in_abstract", 2)
+            break
+    
+    # Weak education phrases (only as bonus if strong terms already present)
+    edu_weak_phrases = [
+        "learning outcomes", "learning analytics", "learning experience",
+        "learning environment", "learning platform"
+    ]
+    edu_weak_norm = [normalize_text(p) for p in edu_weak_phrases]
+    
+    for phrase in edu_weak_norm:
+        if phrase in title_norm or phrase in abstract_norm:
+            score += 1  # Small bonus
             break
     
     # Bonus phrases in title
@@ -190,8 +251,12 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             score += weights.get("bonus_phrase_in_title", 2)
             break
     
-    # Penalty phrases
+    # Penalty phrases (optimization/systems papers)
     penalty_phrases = [normalize_text(p) for p in scoring.get("penalty_phrases_anywhere", [])]
+    penalty_phrases.extend([
+        "quantization", "throughput optimization", "cuda kernel",
+        "inference speedup", "gpu optimization", "memory bandwidth"
+    ])
     for phrase in penalty_phrases:
         if phrase in title_norm or phrase in abstract_norm:
             score += weights.get("penalty_obvious_non_education", -6)
@@ -239,17 +304,23 @@ def check_education_intent_terms(paper: Paper, journal_config: Dict) -> bool:
 def search_arxiv(config: Dict, state: State) -> List[Paper]:
     """
     Search arXiv for papers on LLMs in education.
-    Returns list of Paper objects.
+    Returns list of Paper objects with hard education-intent gating.
     """
     print("\n=== Searching arXiv ===")
     
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
-    edu_terms = default_rules.get("education_terms", [])
+    
+    # Education-intent terms for query (strong terms only, no bare "learning")
+    edu_strong_terms = [
+        "education", "higher education", "teaching", "tutoring",
+        "pedagogy", "classroom", "course", "curriculum",
+        "assessment", "feedback", "student", "teacher", "instruction"
+    ]
     
     # Build search query: (LLM terms) AND (education terms)
-    llm_query = " OR ".join([f'all:"{term}"' for term in llm_terms[:3]])  # Limit query complexity
-    edu_query = " OR ".join([f'all:"{term}"' for term in edu_terms[:5]])
+    llm_query = " OR ".join([f'all:"{term}"' for term in llm_terms[:5]])
+    edu_query = " OR ".join([f'all:"{term}"' for term in edu_strong_terms[:8]])
     query = f"({llm_query}) AND ({edu_query})"
     
     print(f"arXiv query: {query}")
@@ -263,16 +334,22 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     )
     
     papers = []
+    fetched_count = 0
+    gated_out_count = 0
+    
     try:
         results = list(search.results())
-        print(f"Retrieved {len(results)} results from arXiv")
+        fetched_count = len(results)
+        print(f"Retrieved {fetched_count} results from arXiv")
         
         for result in results:
-            arxiv_id = result.entry_id.split("/")[-1]  # Extract ID from URL
-            identifier = f"arxiv:{arxiv_id}"
+            arxiv_id = result.entry_id.split("/")[-1].replace("v", "v")  # Keep version
+            # Strip version for dedup check
+            arxiv_id_no_version = re.sub(r'v\d+$', '', arxiv_id)
+            identifier = f"arxiv:{arxiv_id_no_version}"
             
             # Skip if already seen
-            if arxiv_id in state.seen_arxiv_ids:
+            if arxiv_id in state.seen_arxiv_ids or arxiv_id_no_version in state.seen_arxiv_ids:
                 continue
             
             # Extract authors
@@ -289,9 +366,15 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
                 doi=result.doi,
                 publication_date=result.published.isoformat() if result.published else None,
                 source_type="arxiv",
-                source_metadata={"arxiv_id": arxiv_id},
+                source_metadata={"arxiv_id": arxiv_id_no_version},
             )
             
+            # Apply hard education-intent gate
+            if not check_hard_education_intent(paper, config):
+                gated_out_count += 1
+                continue
+            
+            paper.education_intent_pass = True
             papers.append(paper)
             
         time.sleep(ARXIV_POLITENESS_DELAY)  # Politeness delay
@@ -299,22 +382,28 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     except Exception as e:
         print(f"Error searching arXiv: {e}")
     
-    print(f"Found {len(papers)} new arXiv papers (after deduplication)")
+    print(f"Fetched: {fetched_count}, Gated out (no EDU_STRONG term): {gated_out_count}, Passed: {len(papers)}")
+    if papers:
+        print(f"Top 5 titles with education intent:")
+        for i, paper in enumerate(papers[:5], 1):
+            print(f"  {i}. {paper.title[:80]}...")
+    
     return papers
 
 
 # ==================== OpenAlex Pipeline ====================
 
-def resolve_openalex_source_id(journal_name: str, issn: List[str], state: State) -> Optional[str]:
+def resolve_openalex_source_id(journal_name: str, issn: List[str], state: State) -> Optional[Dict]:
     """
-    Resolve journal name/ISSN to OpenAlex source ID.
+    Resolve journal name/ISSN to OpenAlex source ID and verify it's a journal.
     Uses cached values from state if available.
+    Returns dict with source_id and source_type, or None if resolution fails.
     """
     # Check cache first
     if journal_name in state.resolved_source_ids:
         cached_id = state.resolved_source_ids[journal_name]
         print(f"  Using cached source ID for '{journal_name}': {cached_id}")
-        return cached_id
+        return {"source_id": cached_id, "source_type": "journal"}  # Assume cached ones are verified
     
     print(f"  Resolving OpenAlex source ID for: {journal_name}")
     
@@ -323,7 +412,7 @@ def resolve_openalex_source_id(journal_name: str, issn: List[str], state: State)
         for issn_value in issn:
             try:
                 url = f"https://api.openalex.org/sources?filter=issn:{issn_value}"
-                headers = {"User-Agent": f"mailto:{CONTACT_EMAIL}"}
+                headers = {"User-Agent": f"mailto:{OPENALEX_MAILTO}"}
                 if OPEN_ALEX_API_KEY:
                     url += f"&api_key={OPEN_ALEX_API_KEY}"
                 
@@ -332,17 +421,25 @@ def resolve_openalex_source_id(journal_name: str, issn: List[str], state: State)
                 data = response.json()
                 
                 if data.get("results") and len(data["results"]) > 0:
-                    source_id = data["results"][0]["id"].split("/")[-1]
-                    print(f"  Resolved via ISSN {issn_value}: {source_id}")
+                    result = data["results"][0]
+                    source_id = result["id"].split("/")[-1]
+                    source_type = result.get("type", "unknown")
+                    
+                    # Verify it's a journal
+                    if source_type != "journal":
+                        print(f"  Warning: Resolved source via ISSN {issn_value} is type '{source_type}', not 'journal'. Skipping.")
+                        continue
+                    
+                    print(f"  Resolved via ISSN {issn_value}: {source_id} (type: {source_type})")
                     state.resolved_source_ids[journal_name] = source_id
-                    return source_id
+                    return {"source_id": source_id, "source_type": source_type}
             except Exception as e:
                 print(f"  Error resolving via ISSN {issn_value}: {e}")
     
     # Try by name
     try:
         url = f"https://api.openalex.org/sources?search={requests.utils.quote(journal_name)}"
-        headers = {"User-Agent": f"mailto:{CONTACT_EMAIL}"}
+        headers = {"User-Agent": f"mailto:{OPENALEX_MAILTO}"}
         if OPEN_ALEX_API_KEY:
             url += f"&api_key={OPEN_ALEX_API_KEY}"
         
@@ -354,17 +451,26 @@ def resolve_openalex_source_id(journal_name: str, issn: List[str], state: State)
             # Try to match by name similarity
             for result in data["results"]:
                 result_name = result.get("display_name", "")
+                source_type = result.get("type", "unknown")
+                
+                # Only consider journal-type sources
+                if source_type != "journal":
+                    continue
+                
                 if normalize_text(result_name) == normalize_text(journal_name):
                     source_id = result["id"].split("/")[-1]
-                    print(f"  Resolved via name: {source_id}")
+                    print(f"  Resolved via name: {source_id} (type: {source_type})")
                     state.resolved_source_ids[journal_name] = source_id
-                    return source_id
+                    return {"source_id": source_id, "source_type": source_type}
             
-            # Use first result as fallback
-            source_id = data["results"][0]["id"].split("/")[-1]
-            print(f"  Resolved via name (best match): {source_id}")
-            state.resolved_source_ids[journal_name] = source_id
-            return source_id
+            # Use first journal result as fallback
+            for result in data["results"]:
+                source_type = result.get("type", "unknown")
+                if source_type == "journal":
+                    source_id = result["id"].split("/")[-1]
+                    print(f"  Resolved via name (best journal match): {source_id} (type: {source_type})")
+                    state.resolved_source_ids[journal_name] = source_id
+                    return {"source_id": source_id, "source_type": source_type}
     except Exception as e:
         print(f"  Error resolving via name: {e}")
     
@@ -376,48 +482,81 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     """
     Search OpenAlex for papers in a specific journal.
     Returns list of Paper objects.
+    Fixed to use journal:<SOURCE_ID> filter instead of primary_location.source.id.
     """
     journal_name = journal["name"]
     print(f"\n  Searching: {journal_name}")
     
-    # Resolve source ID
+    # Resolve source ID with type verification
     issn_list = journal.get("identifiers", {}).get("issn", [])
-    source_id = resolve_openalex_source_id(journal_name, issn_list, state)
+    source_info = resolve_openalex_source_id(journal_name, issn_list, state)
     
-    if not source_id:
+    if not source_info or not source_info.get("source_id"):
         print(f"  Skipping {journal_name}: could not resolve source ID")
         return []
     
-    # Build search query
+    source_id = source_info["source_id"]
+    source_type = source_info.get("source_type", "unknown")
+    print(f"  Source ID: {source_id}, Type: {source_type}")
+    
+    # Build search query with LLM and education terms
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
-    edu_terms = default_rules.get("education_terms", [])
+    
+    # Use strong education terms
+    edu_strong_terms = [
+        "education", "higher education", "teaching", "tutoring",
+        "pedagogy", "classroom", "course", "curriculum",
+        "assessment", "student", "teacher", "instruction"
+    ]
     
     # Combine terms for search
-    search_terms = llm_terms[:3] + edu_terms[:3]  # Limit for API
+    search_terms = llm_terms[:3] + edu_strong_terms[:5]
     search_query = " OR ".join(search_terms)
     
     # Date filter
     from_date = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
+    print(f"  Publication date threshold: >{from_date}")
     
-    # Build filter
-    filters = f"primary_location.source.id:{source_id},from_publication_date:{from_date}"
+    # Build filter - CRITICAL FIX: use journal:<SOURCE_ID> instead of primary_location.source.id
+    filters = f"journal:{source_id},publication_date:>{from_date}"
+    print(f"  Filter: {filters}")
     
-    url = f"https://api.openalex.org/works?filter={filters}&search={requests.utils.quote(search_query)}&per_page={OPENALEX_MAX_RESULTS_PER_JOURNAL}"
+    # Build URL
+    base_url = "https://api.openalex.org/works"
+    params = {
+        "filter": filters,
+        "search": search_query,
+        "sort": "publication_date:desc",
+        "per-page": min(OPENALEX_MAX_RESULTS_PER_JOURNAL, 200),
+    }
     
-    headers = {"User-Agent": f"mailto:{CONTACT_EMAIL}"}
+    url = f"{base_url}?filter={filters}&search={requests.utils.quote(search_query)}&sort=publication_date:desc&per-page={params['per-page']}"
+    
+    headers = {"User-Agent": f"mailto:{OPENALEX_MAILTO}"}
     if OPEN_ALEX_API_KEY:
         url += f"&api_key={OPEN_ALEX_API_KEY}"
     
+    # Log request URL (without API key for security)
+    url_no_key = url.replace(f"&api_key={OPEN_ALEX_API_KEY}", "&api_key=***") if OPEN_ALEX_API_KEY else url
+    print(f"  Request URL: {url_no_key}")
+    
+    papers = []
     try:
         response = retry_with_backoff(requests.get, url, headers=headers, timeout=30)
         response.raise_for_status()
         data = response.json()
         
+        meta = data.get("meta", {})
+        total_count = meta.get("count", 0)
         results = data.get("results", [])
-        print(f"  Retrieved {len(results)} results")
         
-        papers = []
+        print(f"  Total matching works: {total_count}, Retrieved: {len(results)}")
+        
+        if total_count == 0:
+            print(f"  WARNING: 0 results for {journal_name}. Check filter and search terms.")
+            print(f"  Meta: {meta}")
+        
         for work in results:
             openalex_id = work["id"].split("/")[-1]
             identifier = f"openalex:{openalex_id}"
@@ -478,7 +617,13 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
                 },
             )
             
+            # Apply education-intent check
+            paper.education_intent_pass = check_hard_education_intent(paper, config)
+            
             papers.append(paper)
+        
+        # TODO: Implement pagination if needed (using cursor)
+        # For now, we rely on per-page=200 to get enough results
         
         return papers
         
@@ -551,9 +696,19 @@ def curate_papers(papers: List[Paper], config: Dict) -> List[Paper]:
         
         paper.relevance_score = calculate_relevance_score(paper, config, journal_config)
     
-    # Filter by minimum score and education intent
-    curated = []
+    # Filter by education intent pass (hard gate for arXiv)
+    edu_intent_filtered = []
     for paper in papers:
+        if paper.source_type == "arxiv" and not paper.education_intent_pass:
+            print(f"  Filtered (education intent): {paper.title[:60]}...")
+            continue
+        edu_intent_filtered.append(paper)
+    
+    print(f"After education intent filtering: {len(edu_intent_filtered)}")
+    
+    # Filter by minimum score and education intent for OpenAlex
+    curated = []
+    for paper in edu_intent_filtered:
         journal_config = None
         if paper.journal_name and paper.journal_name in journals_by_name:
             journal_config = journals_by_name[paper.journal_name]
@@ -564,7 +719,7 @@ def curate_papers(papers: List[Paper], config: Dict) -> List[Paper]:
         
         # Check education intent for Tier B practice journals
         if journal_config and not check_education_intent_terms(paper, journal_config):
-            print(f"  Filtered (education intent): {paper.title[:60]}...")
+            print(f"  Filtered (Tier B education intent): {paper.title[:60]}...")
             continue
         
         curated.append(paper)
@@ -577,10 +732,161 @@ def curate_papers(papers: List[Paper], config: Dict) -> List[Paper]:
     curated = curated[:max_items]
     
     print(f"Papers after curation: {len(curated)}")
+    print(f"Top curated papers:")
     for i, paper in enumerate(curated[:5]):
-        print(f"  {i+1}. [{paper.relevance_score:.1f}] {paper.title[:60]}...")
+        print(f"  {i+1}. [{paper.relevance_score:.1f}] [{paper.source_type}] {paper.title[:60]}...")
     
     return curated
+
+
+# ==================== Citekey Generation ====================
+
+def normalize_for_citekey(text: str) -> str:
+    """Normalize text for citekey: lowercase, ASCII, strip punctuation."""
+    # Convert to ASCII
+    text = unidecode(text)
+    # Lowercase
+    text = text.lower()
+    # Remove punctuation and special characters, keep alphanumeric and spaces
+    text = re.sub(r'[^a-z0-9\s]', '', text)
+    # Collapse whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
+def extract_first_author_family(authors: List[str]) -> str:
+    """Extract family name from first author."""
+    if not authors:
+        return "unknown"
+    
+    first_author = authors[0]
+    # Try to extract family name (assume last word is family name)
+    parts = first_author.strip().split()
+    if parts:
+        family = parts[-1]
+        return normalize_for_citekey(family)
+    return "unknown"
+
+
+def extract_short_title_token(title: str) -> str:
+    """Extract a short meaningful token from title."""
+    # Normalize
+    title_norm = normalize_for_citekey(title)
+    # Split into words
+    words = title_norm.split()
+    # Filter out common words
+    stop_words = {"the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "of", "with", "by", "from", "as", "is", "was", "are", "were", "be", "been", "being"}
+    meaningful_words = [w for w in words if w not in stop_words and len(w) > 2]
+    
+    # Take first meaningful word or fallback to first word
+    if meaningful_words:
+        return meaningful_words[0][:10]  # Limit length
+    elif words:
+        return words[0][:10]
+    return "paper"
+
+
+def generate_base_citekey(paper: Paper) -> str:
+    """Generate base citekey: {firstAuthorFamily}{year}{shortTitleToken}"""
+    # Extract components
+    family = extract_first_author_family(paper.authors)
+    
+    # Extract year from publication date
+    year = "0000"
+    if paper.publication_date:
+        match = re.search(r'(\d{4})', paper.publication_date)
+        if match:
+            year = match.group(1)
+    
+    title_token = extract_short_title_token(paper.title)
+    
+    # Combine
+    base_key = f"{family}{year}{title_token}"
+    return base_key
+
+
+def resolve_citekey_collision(base_key: str, db: Database) -> str:
+    """Resolve citekey collision by appending a, b, c, etc."""
+    # Check if base key is available
+    existing = list(db["works"].rows_where("citekey = ?", [base_key]))
+    if not existing:
+        return base_key
+    
+    # Try suffixes
+    for suffix in "abcdefghijklmnopqrstuvwxyz":
+        candidate = f"{base_key}{suffix}"
+        existing = list(db["works"].rows_where("citekey = ?", [candidate]))
+        if not existing:
+            return candidate
+    
+    # Fallback: append timestamp
+    import random
+    return f"{base_key}{random.randint(0, 99)}"
+
+
+def assign_citekey(paper: Paper, db: Database):
+    """Assign a unique citekey to the paper."""
+    if paper.citekey:
+        return  # Already has one
+    
+    base_key = generate_base_citekey(paper)
+    unique_key = resolve_citekey_collision(base_key, db)
+    paper.citekey = unique_key
+
+
+# ==================== Zotero Collections ====================
+
+def get_or_create_zotero_collection(zot: zotero.Zotero, collection_name: str) -> Optional[str]:
+    """
+    Get or create a Zotero collection by name.
+    Returns collection key or None on error.
+    """
+    try:
+        # Get all collections
+        collections = zot.collections()
+        
+        # Search for collection by name
+        for coll in collections:
+            if coll.get("data", {}).get("name") == collection_name:
+                return coll["key"]
+        
+        # Collection not found, create it
+        print(f"  Creating Zotero collection: {collection_name}")
+        template = zot.collection_template()
+        template["name"] = collection_name
+        created = zot.create_collections([template])
+        
+        if created.get("success"):
+            coll_key = created["success"]["0"]
+            print(f"  Created collection: {coll_key}")
+            return coll_key
+        else:
+            print(f"  Failed to create collection: {created}")
+            return None
+            
+    except Exception as e:
+        print(f"  Error getting/creating collection '{collection_name}': {e}")
+        return None
+
+
+def resolve_zotero_collections(zot: zotero.Zotero) -> Dict[str, str]:
+    """
+    Resolve Zotero collection keys for arXiv and peer-reviewed collections.
+    Returns dict with collection_name -> collection_key.
+    """
+    collections = {}
+    
+    # Resolve arXiv collection
+    arxiv_key = get_or_create_zotero_collection(zot, "AI-arxiv-pubs")
+    if arxiv_key:
+        collections["AI-arxiv-pubs"] = arxiv_key
+    
+    # Resolve peer-reviewed collection
+    peer_reviewed_key = get_or_create_zotero_collection(zot, "AI-peer-reviewed-pubs")
+    if peer_reviewed_key:
+        collections["AI-peer-reviewed-pubs"] = peer_reviewed_key
+    
+    return collections
 
 
 # ==================== PDF Download ====================
@@ -624,9 +930,9 @@ def download_pdf(paper: Paper) -> bool:
 
 # ==================== Zotero Import ====================
 
-def import_to_zotero(paper: Paper) -> bool:
+def import_to_zotero(paper: Paper, zot: zotero.Zotero, collection_keys: Dict[str, str]) -> bool:
     """
-    Import paper to Zotero with PDF attachment if available.
+    Import paper to Zotero with PDF attachment, citekey, and collection routing.
     Returns True if successful (item created and recorded as seen).
     """
     if not ZOTERO_LIBRARY_ID or not ZOTERO_API_KEY:
@@ -634,11 +940,19 @@ def import_to_zotero(paper: Paper) -> bool:
         return False
     
     try:
-        # Initialize Zotero client
-        zot = zotero.Zotero(ZOTERO_LIBRARY_ID, "user", ZOTERO_API_KEY)
+        # Determine item type and collection
+        if paper.source_type == "arxiv":
+            item_type = "report"
+            collection_name = "AI-arxiv-pubs"
+        else:
+            item_type = "journalArticle"
+            collection_name = "AI-peer-reviewed-pubs"
         
-        # Determine item type
-        item_type = "journalArticle" if paper.journal_name else "document"
+        # Get collection key
+        collection_key = collection_keys.get(collection_name)
+        if collection_key:
+            paper.zotero_collection_key = collection_key
+            paper.zotero_collection_name = collection_name
         
         # Create item template
         template = zot.item_template(item_type)
@@ -655,20 +969,47 @@ def import_to_zotero(paper: Paper) -> bool:
         if paper.journal_name:
             template["publicationTitle"] = paper.journal_name
         
+        # For arXiv, set publisher
+        if paper.source_type == "arxiv":
+            template["institution"] = "arXiv"
+        
         # Add creators (authors)
         template["creators"] = []
         for author in paper.authors[:50]:  # Limit number of authors
-            template["creators"].append({
-                "creatorType": "author",
-                "name": author,
-            })
+            # Try to parse into family/given
+            parts = author.strip().split()
+            if len(parts) >= 2:
+                template["creators"].append({
+                    "creatorType": "author",
+                    "firstName": " ".join(parts[:-1]),
+                    "lastName": parts[-1],
+                })
+            else:
+                template["creators"].append({
+                    "creatorType": "author",
+                    "name": author,
+                })
         
-        # Add traceability in extra field
-        extra_lines = [f"Source: {paper.identifier}"]
+        # Add collection
+        if collection_key:
+            template["collections"] = [collection_key]
+        
+        # Add traceability and citekey in extra field
+        extra_lines = []
+        
+        # Add citekey using Better BibTeX convention
+        if paper.citekey:
+            extra_lines.append(f"Citation Key: {paper.citekey}")
+        
+        # Add source tracking
+        extra_lines.append(f"Source: {paper.identifier}")
+        
         if paper.relevance_score:
             extra_lines.append(f"Relevance Score: {paper.relevance_score:.1f}")
+        
         if paper.attachment_missing:
             extra_lines.append("Note: PDF attachment not available")
+        
         template["extra"] = "\n".join(extra_lines)
         
         # Create item in Zotero
@@ -676,25 +1017,217 @@ def import_to_zotero(paper: Paper) -> bool:
         
         if not created.get("success"):
             print(f"  Failed to create Zotero item for {paper.identifier}")
+            paper.import_status = "failed"
+            paper.last_error = "Failed to create item"
             return False
         
         item_key = created["success"]["0"]
+        paper.zotero_item_key = item_key
         print(f"  Created Zotero item: {item_key}")
         
         # Upload PDF attachment if available
         if paper.pdf_downloaded and paper.pdf_path and paper.pdf_path.exists():
             try:
-                zot.attachment_simple([str(paper.pdf_path)], item_key)
+                result = zot.attachment_simple([str(paper.pdf_path)], item_key)
+                if result:
+                    paper.zotero_attachment_key = str(result)
                 print(f"  Uploaded PDF attachment for {item_key}")
+                paper.import_status = "imported_with_pdf"
             except Exception as e:
                 print(f"  Error uploading PDF attachment: {e}")
-                # Don't fail the import if PDF upload fails
+                paper.import_status = "imported_no_pdf"
+                paper.last_error = f"PDF upload failed: {e}"
+        else:
+            paper.import_status = "imported_no_pdf"
         
         return True
         
     except Exception as e:
         print(f"  Error importing to Zotero: {e}")
+        paper.import_status = "failed"
+        paper.last_error = str(e)
         return False
+
+
+# ==================== SQLite Storage ====================
+
+def init_database(db_path: Path) -> Database:
+    """Initialize SQLite database with proper schema."""
+    db = Database(db_path)
+    
+    # Create runs table
+    db["runs"].create({
+        "run_id": str,
+        "start_time": str,
+        "end_time": str,
+        "arxiv_fetched": int,
+        "arxiv_gated": int,
+        "arxiv_curated": int,
+        "openalex_fetched": int,
+        "openalex_curated": int,
+        "total_imported": int,
+        "errors": str,
+    }, pk="run_id", if_not_exists=True)
+    
+    # Create works table
+    db["works"].create({
+        "work_id": str,
+        "citekey": str,
+        "source": str,
+        "doi": str,
+        "title": str,
+        "abstract": str,
+        "authors_json": str,
+        "published_date": str,
+        "journal": str,
+        "venue_id": str,
+        "url": str,
+        "pdf_url": str,
+        "is_open_access": int,
+        "relevance_score": float,
+        "education_intent_pass": int,
+        "first_seen_utc": str,
+        "last_seen_utc": str,
+        "last_run_id": str,
+        "zotero_item_key": str,
+        "zotero_attachment_key": str,
+        "zotero_collection_key": str,
+        "zotero_collection_name": str,
+        "import_status": str,
+        "last_error": str,
+    }, pk="work_id", if_not_exists=True)
+    
+    # Create unique index on citekey
+    try:
+        db.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_citekey ON works(citekey)")
+    except:
+        pass  # Index may already exist
+    
+    return db
+
+
+def store_paper_in_db(paper: Paper, db: Database, run_id: str):
+    """Store or update paper in database."""
+    now_utc = datetime.utcnow().isoformat()
+    
+    # Check if work already exists
+    existing = list(db["works"].rows_where("work_id = ?", [paper.identifier]))
+    
+    record = {
+        "work_id": paper.identifier,
+        "citekey": paper.citekey,
+        "source": paper.source_type,
+        "doi": paper.doi or "",
+        "title": paper.title,
+        "abstract": paper.abstract,
+        "authors_json": json.dumps(paper.authors),
+        "published_date": paper.publication_date or "",
+        "journal": paper.journal_name or "",
+        "venue_id": "",
+        "url": paper.url,
+        "pdf_url": paper.pdf_url or "",
+        "is_open_access": 1 if paper.pdf_url else 0,
+        "relevance_score": paper.relevance_score,
+        "education_intent_pass": 1 if paper.education_intent_pass else 0,
+        "first_seen_utc": existing[0]["first_seen_utc"] if existing else now_utc,
+        "last_seen_utc": now_utc,
+        "last_run_id": run_id,
+        "zotero_item_key": paper.zotero_item_key or "",
+        "zotero_attachment_key": paper.zotero_attachment_key or "",
+        "zotero_collection_key": paper.zotero_collection_key or "",
+        "zotero_collection_name": paper.zotero_collection_name or "",
+        "import_status": paper.import_status or "",
+        "last_error": paper.last_error or "",
+    }
+    
+    # Upsert
+    db["works"].upsert(record, pk="work_id")
+
+
+def generate_references_json(db: Database, output_path: Path):
+    """Generate CSL-JSON references from database."""
+    print("\n=== Generating references.json ===")
+    
+    references = []
+    
+    # Get all works with citekeys
+    for row in db["works"].rows_where("citekey IS NOT NULL AND citekey != ''", order_by="citekey"):
+        # Parse authors
+        try:
+            authors_list = json.loads(row["authors_json"]) if row["authors_json"] else []
+        except:
+            authors_list = []
+        
+        # Convert to CSL author format
+        csl_authors = []
+        for author in authors_list:
+            parts = author.strip().split()
+            if len(parts) >= 2:
+                csl_authors.append({
+                    "family": parts[-1],
+                    "given": " ".join(parts[:-1])
+                })
+            else:
+                csl_authors.append({"literal": author})
+        
+        # Determine type
+        if row["source"] == "arxiv":
+            csl_type = "report"
+        elif row["journal"]:
+            csl_type = "article-journal"
+        else:
+            csl_type = "document"
+        
+        # Extract year from date
+        issued_parts = None
+        if row["published_date"]:
+            match = re.search(r'(\d{4})-?(\d{2})?-?(\d{2})?', row["published_date"])
+            if match:
+                parts = [int(match.group(1))]
+                if match.group(2):
+                    parts.append(int(match.group(2)))
+                if match.group(3):
+                    parts.append(int(match.group(3)))
+                issued_parts = [parts]
+        
+        # Build CSL-JSON item
+        csl_item = {
+            "id": row["citekey"],
+            "type": csl_type,
+            "title": row["title"],
+        }
+        
+        if csl_authors:
+            csl_item["author"] = csl_authors
+        
+        if issued_parts:
+            csl_item["issued"] = {"date-parts": issued_parts}
+        
+        if row["abstract"]:
+            csl_item["abstract"] = row["abstract"]
+        
+        if row["doi"]:
+            csl_item["DOI"] = row["doi"]
+            csl_item["URL"] = f"https://doi.org/{row['doi']}"
+        elif row["url"]:
+            csl_item["URL"] = row["url"]
+        
+        if row["journal"]:
+            csl_item["container-title"] = row["journal"]
+        
+        if row["source"] == "arxiv":
+            csl_item["publisher"] = "arXiv"
+        
+        references.append(csl_item)
+    
+    # Sort by citekey for deterministic output
+    references.sort(key=lambda x: x["id"])
+    
+    # Write to file
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(references, f, indent=2, ensure_ascii=False)
+    
+    print(f"Wrote {len(references)} references to {output_path}")
 
 
 # ==================== Digest Generation ====================
@@ -780,8 +1313,12 @@ def main():
     print("=" * 60)
     print("Weekly Literature Watcher: LLMs in University Didactics")
     print("=" * 60)
-    print(f"Start time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    start_time = datetime.now()
+    print(f"Start time: {start_time.strftime('%Y-%m-%d %H:%M:%S UTC')}")
     print()
+    
+    # Generate run ID
+    run_id = start_time.strftime("%Y%m%d_%H%M%S")
     
     # Validate secrets
     if not ZOTERO_LIBRARY_ID or not ZOTERO_API_KEY:
@@ -791,15 +1328,37 @@ def main():
     if not OPEN_ALEX_API_KEY:
         print("WARNING: OpenAlex API key not configured. Requests may be rate-limited.")
     
+    # Initialize database
+    print("\n=== Initializing Database ===")
+    db = init_database(DB_PATH)
+    print(f"Database initialized: {DB_PATH}")
+    
     # Load configuration and state
     print("\n=== Loading Configuration ===")
     config = load_config()
     print(f"Loaded configuration from {JOURNALS_CONFIG_PATH}")
     print(f"Journals configured: {len(config.get('journals', []))}")
     
+    # Update lookback days in config
+    if "default_rules" not in config:
+        config["default_rules"] = {}
+    config["default_rules"]["lookback_days"] = OPENALEX_LOOKBACK_DAYS
+    
     state = load_state()
     print(f"Loaded state from {STATE_PATH if STATE_PATH.exists() else 'new state'}")
     print(f"Previously seen: {len(state.seen_arxiv_ids)} arXiv, {len(state.seen_openalex_ids)} OpenAlex, {len(state.seen_dois)} DOIs")
+    
+    # Resolve Zotero collections
+    zot = None
+    collection_keys = {}
+    if ZOTERO_LIBRARY_ID and ZOTERO_API_KEY:
+        print("\n=== Resolving Zotero Collections ===")
+        try:
+            zot = zotero.Zotero(ZOTERO_LIBRARY_ID, "user", ZOTERO_API_KEY)
+            collection_keys = resolve_zotero_collections(zot)
+            print(f"Resolved collections: {collection_keys}")
+        except Exception as e:
+            print(f"Error resolving Zotero collections: {e}")
     
     # Search pipelines
     arxiv_papers = search_arxiv(config, state)
@@ -811,9 +1370,16 @@ def main():
     # Curate papers
     curated_papers = curate_papers(all_papers, config)
     
+    # Assign citekeys
+    print("\n=== Assigning Citekeys ===")
+    for paper in curated_papers:
+        assign_citekey(paper, db)
+        print(f"  {paper.citekey}: {paper.title[:60]}...")
+    
     # Download PDFs and import to Zotero
     print("\n=== Processing Papers ===")
     successfully_imported = []
+    arxiv_gated = len([p for p in arxiv_papers if not p.education_intent_pass])
     
     for i, paper in enumerate(curated_papers, 1):
         print(f"\n[{i}/{len(curated_papers)}] Processing: {paper.title[:60]}...")
@@ -827,9 +1393,9 @@ def main():
             paper.attachment_missing = True
         
         # Import to Zotero
-        if ZOTERO_LIBRARY_ID and ZOTERO_API_KEY:
+        if zot:
             print(f"  Importing to Zotero...")
-            success = import_to_zotero(paper)
+            success = import_to_zotero(paper, zot, collection_keys)
             
             if success:
                 successfully_imported.append(paper)
@@ -850,9 +1416,33 @@ def main():
         else:
             # If no Zotero credentials, just add to digest
             successfully_imported.append(paper)
+        
+        # Store in database
+        store_paper_in_db(paper, db, run_id)
     
     # Generate digest (only successfully imported items)
     generate_digest(successfully_imported, DIGEST_PATH)
+    
+    # Generate references.json
+    generate_references_json(db, REFERENCES_PATH)
+    
+    # Record run in database
+    end_time = datetime.now()
+    arxiv_curated = len([p for p in curated_papers if p.source_type == "arxiv"])
+    openalex_curated = len([p for p in curated_papers if p.source_type == "openalex"])
+    
+    db["runs"].insert({
+        "run_id": run_id,
+        "start_time": start_time.isoformat(),
+        "end_time": end_time.isoformat(),
+        "arxiv_fetched": len(arxiv_papers) + arxiv_gated,
+        "arxiv_gated": arxiv_gated,
+        "arxiv_curated": arxiv_curated,
+        "openalex_fetched": len(openalex_papers),
+        "openalex_curated": openalex_curated,
+        "total_imported": len(successfully_imported),
+        "errors": "",
+    })
     
     # Update state
     state.last_run = datetime.now().isoformat()
@@ -862,13 +1452,20 @@ def main():
     print("\n" + "=" * 60)
     print("SUMMARY")
     print("=" * 60)
-    print(f"Papers collected: {len(all_papers)}")
-    print(f"Papers curated: {len(curated_papers)}")
-    print(f"Papers successfully processed: {len(successfully_imported)}")
+    print(f"arXiv: Fetched {len(arxiv_papers) + arxiv_gated}, Gated {arxiv_gated}, Curated {arxiv_curated}")
+    print(f"OpenAlex: Fetched {len(openalex_papers)}, Curated {openalex_curated}")
+    print(f"Total collected: {len(all_papers)}")
+    print(f"Total curated: {len(curated_papers)}")
+    print(f"Successfully processed: {len(successfully_imported)}")
     print(f"Digest written to: {DIGEST_PATH}")
+    print(f"Database written to: {DB_PATH}")
+    print(f"References written to: {REFERENCES_PATH}")
     print(f"State saved to: {STATE_PATH}")
-    print(f"End time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    print(f"End time: {end_time.strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    print(f"Duration: {(end_time - start_time).total_seconds():.1f} seconds")
     print("=" * 60)
+
+
 
 
 if __name__ == "__main__":
