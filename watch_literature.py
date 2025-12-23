@@ -91,25 +91,26 @@ NEGATIVE_STRONG_TERMS = [
 ]
 
 # Disambiguation patterns - exclude these unless EDU_SETTING present
+# These are ML/AI techniques that use education-sounding terminology
 DISAMBIGUATION_PATTERNS = [
     # Curriculum learning (ML technique, not education)
-    {"terms": ["curriculum learning"], "context_required": True},
-    {"terms": ["curriculum", "augmentation"], "context_required": True},
-    {"terms": ["curriculum", "dataset"], "context_required": True},
-    {"terms": ["curriculum", "training"], "context_required": True},
+    ["curriculum learning"],
+    ["curriculum", "augmentation"],
+    ["curriculum", "dataset"],
+    ["curriculum", "training"],
     
     # Feedback in RL/systems (not educational feedback)
-    {"terms": ["feedback loop"], "context_required": True},
-    {"terms": ["perceptual feedback"], "context_required": True},
-    {"terms": ["execution feedback"], "context_required": True},
-    {"terms": ["reward", "feedback"], "context_required": True},
-    {"terms": ["reinforcement learning", "feedback"], "context_required": True},
+    ["feedback loop"],
+    ["perceptual feedback"],
+    ["execution feedback"],
+    ["reward", "feedback"],
+    ["reinforcement learning", "feedback"],
     
     # Distillation / teacher-student in ML (not education)
-    {"terms": ["distillation"], "context_required": True},
-    {"terms": ["teacher-student"], "context_required": True},
-    {"terms": ["teacher network"], "context_required": True},
-    {"terms": ["student network"], "context_required": True},
+    ["distillation"],
+    ["teacher-student"],
+    ["teacher network"],
+    ["student network"],
 ]
 
 
@@ -254,13 +255,8 @@ def check_hard_education_intent(paper: Paper, config: Dict) -> bool:
         return False
     
     # Step 3: Check disambiguation patterns
-    for pattern in DISAMBIGUATION_PATTERNS:
-        pattern_terms = pattern["terms"]
-        requires_context = pattern.get("context_required", True)
-        
-        if not requires_context:
-            continue
-        
+    # All patterns require EDU_SETTING context to pass
+    for pattern_terms in DISAMBIGUATION_PATTERNS:
         # Check if all terms in pattern are present
         all_terms_present = True
         for term in pattern_terms:
@@ -269,7 +265,7 @@ def check_hard_education_intent(paper: Paper, config: Dict) -> bool:
                 all_terms_present = False
                 break
         
-        # If pattern matched and requires context but no EDU_SETTING, exclude
+        # If pattern matched but no EDU_SETTING, exclude
         if all_terms_present and not edu_setting_found:
             return False
     
@@ -491,10 +487,10 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
             # Check for negative terms
             has_negative = any(normalize_text(t) in combined_text for t in NEGATIVE_STRONG_TERMS)
             
-            # Check disambiguation patterns
+            # Check disambiguation patterns (simplified - list of term lists)
             matches_disambiguation = False
-            for pattern in DISAMBIGUATION_PATTERNS:
-                if all(normalize_text(t) in combined_text for t in pattern["terms"]):
+            for pattern_terms in DISAMBIGUATION_PATTERNS:
+                if all(normalize_text(t) in combined_text for t in pattern_terms):
                     matches_disambiguation = True
                     break
             
@@ -1431,7 +1427,7 @@ def generate_references_json(db: Database, output_path: Path):
             # First run: create temporary references.json using work_id as ID
             print("⚠️  First run with pending citekeys: creating temporary references.json with work_id as fallback")
             temp_references = []
-            for row in db["works"].rows_where("1=1", order_by="work_id"):
+            for row in db["works"].rows:
                 csl_item = _build_csl_item(row, use_citekey_as_id=False)
                 if csl_item:
                     temp_references.append(csl_item)
