@@ -52,20 +52,60 @@ RETRY_DELAY = 2  # seconds
 ARXIV_POLITENESS_DELAY = 3  # seconds between arXiv API calls
 
 # Education term definitions for filtering and scoring
-# NO bare "learning" - only education-specific contexts
-EDU_STRONG_TERMS = [
-    "education", "higher education", "teaching", "tutoring", "tutor",
-    "pedagogy", "pedagogical", "classroom", "course", "curriculum",
-    "assessment", "feedback", "student", "teacher", "instructor",
-    "instruction", "instructional", "learner", "edtech", "mooc",
-    "educational"
-]
+# Split into unambiguous setting terms and ambiguous terms that need context
 
-# Education-specific "learning" phrases (contextual, not bare "learning")
-EDU_LEARNING_PHRASES = [
+# Unambiguous education setting terms - clearly indicate educational context
+EDU_SETTING_TERMS = [
+    "university", "higher education", "course", "classroom", 
+    "assignment", "grading", "rubric", "lecture", "seminar",
+    "pedagogy", "pedagogical", "tutoring", "tutor",
+    "edtech", "mooc", "educational technology",
     "learning outcomes", "learning analytics", "learning experience",
     "learning environment", "learning platform", "e-learning",
     "learning management system", "learning design"
+]
+
+# Ambiguous terms that can appear in non-education contexts
+# These alone are NOT sufficient to pass the education gate
+EDU_AMBIGUOUS_TERMS = [
+    "student", "teacher", "curriculum", "assessment", 
+    "feedback", "training", "education", "teaching",
+    "instruction", "instructional", "learner"
+]
+
+# Strong negative terms that indicate non-education ML/systems papers
+# When these appear WITHOUT EDU_SETTING_TERMS, exclude the paper
+NEGATIVE_STRONG_TERMS = [
+    "kv cache", "key-value cache", "quantization", "model quantization",
+    "optimizer", "adam optimizer", "sgd optimizer",
+    "gpu scheduling", "cuda kernel", "gpu optimization",
+    "inference optimization", "inference speedup", "throughput optimization",
+    "benchmark suite", "benchmarking", "mlperf",
+    "embodied", "embodied agent", "robot", "robotics",
+    "memory bandwidth", "hardware acceleration", "sparse attention",
+    "model compression", "knowledge distillation"
+]
+
+# Disambiguation patterns - exclude these unless EDU_SETTING present
+DISAMBIGUATION_PATTERNS = [
+    # Curriculum learning (ML technique, not education)
+    {"terms": ["curriculum learning"], "context_required": True},
+    {"terms": ["curriculum", "augmentation"], "context_required": True},
+    {"terms": ["curriculum", "dataset"], "context_required": True},
+    {"terms": ["curriculum", "training"], "context_required": True},
+    
+    # Feedback in RL/systems (not educational feedback)
+    {"terms": ["feedback loop"], "context_required": True},
+    {"terms": ["perceptual feedback"], "context_required": True},
+    {"terms": ["execution feedback"], "context_required": True},
+    {"terms": ["reward", "feedback"], "context_required": True},
+    {"terms": ["reinforcement learning", "feedback"], "context_required": True},
+    
+    # Distillation / teacher-student in ML (not education)
+    {"terms": ["distillation"], "context_required": True},
+    {"terms": ["teacher-student"], "context_required": True},
+    {"terms": ["teacher network"], "context_required": True},
+    {"terms": ["student network"], "context_required": True},
 ]
 
 
@@ -175,23 +215,74 @@ def normalize_text(text: str) -> str:
 
 def check_hard_education_intent(paper: Paper, config: Dict) -> bool:
     """
-    Hard education-intent gate: paper must contain at least one EDU_STRONG term.
-    This prevents generic ML papers from slipping through.
-    NO bare "learning" - only education-specific contexts.
-    """
-    # Combine strong terms and education-specific learning phrases
-    all_edu_terms = EDU_STRONG_TERMS + EDU_LEARNING_PHRASES
-    edu_terms_norm = [normalize_text(t) for t in all_edu_terms]
+    Hard education-intent gate with enhanced precision.
     
+    Requirements:
+    1. Must have at least one LLM term (checked by caller/query)
+    2. Must have at least one EDU_SETTING term (unambiguous education context)
+    3. Must NOT match disambiguation exclusion patterns without EDU_SETTING
+    4. Must NOT have NEGATIVE_STRONG_TERMS without EDU_SETTING
+    
+    Returns True if paper passes all gates, False otherwise.
+    """
     title_norm = normalize_text(paper.title)
     abstract_norm = normalize_text(paper.abstract)
+    combined_text = f"{title_norm} {abstract_norm}"
     
-    # Check if at least one education term is present
-    for term in edu_terms_norm:
-        if term in title_norm or term in abstract_norm:
-            return True
+    # Step 1: Check for unambiguous EDU_SETTING terms
+    edu_setting_found = False
+    for term in EDU_SETTING_TERMS:
+        term_norm = normalize_text(term)
+        if term_norm in title_norm or term_norm in abstract_norm:
+            edu_setting_found = True
+            break
     
-    return False
+    # Step 2: Check for negative strong terms (systems/optimization papers)
+    has_negative_terms = False
+    for term in NEGATIVE_STRONG_TERMS:
+        term_norm = normalize_text(term)
+        if term_norm in combined_text:
+            has_negative_terms = True
+            break
+    
+    # If negative terms present WITHOUT education setting, exclude
+    if has_negative_terms and not edu_setting_found:
+        return False
+    
+    # Step 3: Check disambiguation patterns
+    for pattern in DISAMBIGUATION_PATTERNS:
+        pattern_terms = pattern["terms"]
+        requires_context = pattern.get("context_required", True)
+        
+        if not requires_context:
+            continue
+        
+        # Check if all terms in pattern are present
+        all_terms_present = True
+        for term in pattern_terms:
+            term_norm = normalize_text(term)
+            if term_norm not in combined_text:
+                all_terms_present = False
+                break
+        
+        # If pattern matched and requires context but no EDU_SETTING, exclude
+        if all_terms_present and not edu_setting_found:
+            return False
+    
+    # Step 4: Final gate - must have EDU_SETTING term
+    if not edu_setting_found:
+        # Check if any ambiguous terms are present (for logging)
+        has_ambiguous = False
+        for term in EDU_AMBIGUOUS_TERMS:
+            term_norm = normalize_text(term)
+            if term_norm in combined_text:
+                has_ambiguous = True
+                break
+        
+        # Ambiguous terms alone are not sufficient
+        return False
+    
+    return True
 
 
 def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Optional[Dict] = None) -> float:
@@ -227,24 +318,23 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             score += weights.get("llm_term_in_abstract", 3)
             break
     
-    # Strong education terms (from module-level constants)
-    edu_strong_norm = [normalize_text(t) for t in EDU_STRONG_TERMS]
+    # Education setting terms (unambiguous education context)
+    edu_setting_norm = [normalize_text(t) for t in EDU_SETTING_TERMS]
     
-    for term in edu_strong_norm:
+    for term in edu_setting_norm:
         if term in title_norm:
             score += weights.get("education_term_in_title", 4)
             break
-    for term in edu_strong_norm:
+    for term in edu_setting_norm:
         if term in abstract_norm:
             score += weights.get("education_term_in_abstract", 2)
             break
     
-    # Weak education phrases (only as bonus if strong terms already present)
-    # Uses education-specific "learning" phrases from module constants
-    edu_weak_norm = [normalize_text(p) for p in EDU_LEARNING_PHRASES]
+    # Ambiguous education terms (smaller bonus, needs context)
+    edu_ambiguous_norm = [normalize_text(t) for t in EDU_AMBIGUOUS_TERMS]
     
-    for phrase in edu_weak_norm:
-        if phrase in title_norm or phrase in abstract_norm:
+    for term in edu_ambiguous_norm:
+        if term in title_norm or term in abstract_norm:
             score += 1  # Small bonus
             break
     
@@ -310,30 +400,31 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     """
     Search arXiv for papers on LLMs in education.
     Returns list of Paper objects with hard education-intent gating.
-    Query enforces BOTH LLM terms AND education terms (no bare "learning").
+    Query enforces BOTH LLM terms AND education terms.
+    Enhanced filtering with disambiguation and explainability.
     """
     print("\n=== Searching arXiv ===")
     
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
     
-    # Use module-level education term constants
-    edu_strong_terms = EDU_STRONG_TERMS
+    # Use module-level education term constants (both setting and ambiguous for query)
+    edu_query_terms = EDU_SETTING_TERMS[:10]  # Use top unambiguous terms for query
     
     # Build search query: (LLM terms) AND (education terms)
     # This ensures papers must match BOTH categories
     llm_query_parts = [f'"{term}"' for term in llm_terms[:6]]  # Use top LLM terms
     llm_query = " OR ".join(llm_query_parts)
     
-    edu_query_parts = [f'"{term}"' for term in edu_strong_terms[:10]]  # Use top edu terms
+    edu_query_parts = [f'"{term}"' for term in edu_query_terms]
     edu_query = " OR ".join(edu_query_parts)
     
     # Combined query with AND operator
     query = f"({llm_query}) AND ({edu_query})"
     
-    print(f"arXiv query structure: (LLM terms) AND (EDU terms)")
+    print(f"arXiv query structure: (LLM terms) AND (EDU_SETTING terms)")
     print(f"LLM terms: {', '.join(llm_terms[:6])}")
-    print(f"EDU terms: {', '.join(edu_strong_terms[:10])}")
+    print(f"EDU_SETTING terms: {', '.join(edu_query_terms)}")
     print(f"Max results: {ARXIV_MAX_RESULTS}")
     
     search = arxiv.Search(
@@ -346,6 +437,11 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     papers = []
     fetched_count = 0
     gated_out_count = 0
+    exclude_reasons = {
+        "no_edu_setting": 0,
+        "negative_terms": 0,
+        "disambiguation": 0,
+    }
     
     try:
         results = list(search.results())
@@ -379,10 +475,37 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
                 source_metadata={"arxiv_id": arxiv_id_no_version},
             )
             
-            # Apply hard education-intent gate
-            # This double-checks that education terms are really present
-            if not check_hard_education_intent(paper, config):
+            # Apply hard education-intent gate with explainability
+            # Check components for detailed logging
+            title_norm = normalize_text(paper.title)
+            abstract_norm = normalize_text(paper.abstract)
+            combined_text = f"{title_norm} {abstract_norm}"
+            
+            # Check for EDU_SETTING terms
+            has_edu_setting = any(normalize_text(t) in combined_text for t in EDU_SETTING_TERMS)
+            
+            # Check for negative terms
+            has_negative = any(normalize_text(t) in combined_text for t in NEGATIVE_STRONG_TERMS)
+            
+            # Check disambiguation patterns
+            matches_disambiguation = False
+            for pattern in DISAMBIGUATION_PATTERNS:
+                if all(normalize_text(t) in combined_text for t in pattern["terms"]):
+                    matches_disambiguation = True
+                    break
+            
+            # Apply gate
+            gate_pass = check_hard_education_intent(paper, config)
+            
+            if not gate_pass:
                 gated_out_count += 1
+                # Track exclusion reason
+                if not has_edu_setting:
+                    exclude_reasons["no_edu_setting"] += 1
+                elif has_negative:
+                    exclude_reasons["negative_terms"] += 1
+                elif matches_disambiguation:
+                    exclude_reasons["disambiguation"] += 1
                 continue
             
             paper.education_intent_pass = True
@@ -400,9 +523,16 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     # Sort by score for better logging
     papers.sort(key=lambda p: p.relevance_score, reverse=True)
     
-    print(f"Fetched: {fetched_count}, Gated out (no EDU_STRONG term): {gated_out_count}, Passed: {len(papers)}")
+    print(f"\narXiv Results:")
+    print(f"  Fetched: {fetched_count}")
+    print(f"  Gated out: {gated_out_count}")
+    print(f"    - Missing EDU_SETTING terms: {exclude_reasons['no_edu_setting']}")
+    print(f"    - Has NEGATIVE_STRONG terms: {exclude_reasons['negative_terms']}")
+    print(f"    - Disambiguation exclusion: {exclude_reasons['disambiguation']}")
+    print(f"  Passed gate: {len(papers)}")
+    
     if papers:
-        print(f"Top 5 titles with education intent and scores:")
+        print(f"\nTop 5 papers that passed education-intent gate:")
         for i, paper in enumerate(papers[:5], 1):
             print(f"  {i}. [{paper.relevance_score:.1f}] {paper.title[:70]}...")
     
@@ -521,11 +651,11 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
     
-    # Use module-level education term constants
-    edu_strong_terms = EDU_STRONG_TERMS
+    # Use module-level education term constants (setting terms for query)
+    edu_query_terms = EDU_SETTING_TERMS[:6]  # Use top unambiguous terms
     
     # Combine terms for search
-    search_terms = llm_terms[:4] + edu_strong_terms[:6]
+    search_terms = llm_terms[:4] + edu_query_terms
     search_query = " OR ".join(search_terms)
     
     # Date filter
@@ -558,6 +688,7 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     papers = []
     try:
         response = retry_with_backoff(requests.get, url, headers=headers, timeout=30)
+        print(f"  📡 HTTP Status: {response.status_code}")
         response.raise_for_status()
         data = response.json()
         
@@ -676,22 +807,47 @@ def search_openalex(config: Dict, state: State) -> List[Paper]:
     """
     Search OpenAlex for papers in whitelisted journals.
     Returns list of Paper objects.
+    Enhanced with fail-loud diagnostics for transparency.
     """
     print("\n=== Searching OpenAlex ===")
     
-    journals = config.get("journals", [])
-    lookback_days = config.get("default_rules", {}).get("lookback_days", OPENALEX_LOOKBACK_DAYS)
+    # Fail-loud diagnostics at start
+    api_key_present = bool(OPEN_ALEX_API_KEY)
+    print(f"OpenAlex API Key present: {'YES' if api_key_present else 'NO (rate-limited)'}")
     
-    print(f"Searching {len(journals)} journals")
-    print(f"Lookback window: {lookback_days} days")
+    journals = config.get("journals", [])
+    print(f"Loaded {len(journals)} journals from journals.json")
+    
+    if len(journals) == 0:
+        print("⚠️  WARNING: No journals configured. OpenAlex search skipped.")
+        return []
+    
+    lookback_days = config.get("default_rules", {}).get("lookback_days", OPENALEX_LOOKBACK_DAYS)
+    from_date = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
+    print(f"Lookback window: {lookback_days} days (from {from_date})")
+    print()
     
     all_papers = []
+    journals_queried = 0
+    journals_skipped = 0
+    
     for journal in journals:
-        papers = search_openalex_journal(journal, config, state, lookback_days)
-        all_papers.extend(papers)
+        try:
+            papers = search_openalex_journal(journal, config, state, lookback_days)
+            all_papers.extend(papers)
+            journals_queried += 1
+        except Exception as e:
+            print(f"  ❌ ERROR querying {journal.get('name', 'unknown')}: {e}")
+            journals_skipped += 1
+        
         time.sleep(1)  # Politeness delay between journal queries
     
-    print(f"\nFound {len(all_papers)} new papers from OpenAlex (after deduplication)")
+    print(f"\n=== OpenAlex Summary ===")
+    print(f"Journals queried: {journals_queried}/{len(journals)}")
+    if journals_skipped > 0:
+        print(f"⚠️  Journals skipped due to errors: {journals_skipped}")
+    print(f"Total papers found: {len(all_papers)} (after deduplication)")
+    
     return all_papers
 
 
@@ -1228,6 +1384,9 @@ def generate_references_json(db: Database, output_path: Path):
     Generate CSL-JSON references from database.
     Only includes items with citekey_status='synced' for stable citations.
     Creates an additional references_pending.json for transparency.
+    
+    IMPORTANT: Does NOT overwrite references.json when Synced=0 and Pending>0
+    to preserve stability during citekey sync process.
     """
     print("\n=== Generating references.json ===")
     
@@ -1251,18 +1410,50 @@ def generate_references_json(db: Database, output_path: Path):
     # Sort references by citekey for deterministic output
     references.sort(key=lambda x: x["id"])
     
-    # Write main references.json (only synced items)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(references, f, indent=2, ensure_ascii=False)
+    synced_count = len(references)
+    pending_count = len(pending_references)
     
-    print(f"Wrote {len(references)} synced references to {output_path}")
+    print(f"Synced citekeys: {synced_count}")
+    print(f"Pending citekeys: {pending_count}")
     
-    # Write references_pending.json for transparency
+    # Check if this is first-ever run (no existing references.json)
+    is_first_run = not output_path.exists()
+    
+    # Stability logic: Do NOT overwrite references.json with empty file when Synced=0 and Pending>0
+    if synced_count == 0 and pending_count > 0:
+        if is_first_run:
+            # First run: create temporary references.json using work_id as ID
+            print("⚠️  First run with pending citekeys: creating temporary references.json with work_id as fallback")
+            temp_references = []
+            for row in db["works"].rows_where("1=1", order_by="work_id"):
+                csl_item = _build_csl_item(row, use_citekey_as_id=False)
+                if csl_item:
+                    temp_references.append(csl_item)
+            
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(temp_references, f, indent=2, ensure_ascii=False)
+            print(f"Wrote {len(temp_references)} temporary references (using work_id) to {output_path}")
+            print("⚠️  Note: These are temporary IDs. Citekeys will replace them after Zotero+BetterBibTeX sync.")
+        else:
+            # Keep existing references.json unchanged
+            print("⚠️  Synced=0 and Pending>0: Keeping existing references.json unchanged for stability")
+            print("     Open Zotero Desktop with BetterBibTeX to sync citekeys.")
+    else:
+        # Normal case: write synced references
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(references, f, indent=2, ensure_ascii=False)
+        
+        if synced_count > 0:
+            print(f"Wrote {synced_count} synced references to {output_path}")
+        else:
+            print(f"Wrote empty references.json (no synced citekeys yet)")
+    
+    # Always write references_pending.json for transparency
     pending_path = output_path.parent / "references_pending.json"
     with open(pending_path, "w", encoding="utf-8") as f:
         json.dump(pending_references, f, indent=2, ensure_ascii=False)
     
-    print(f"Wrote {len(pending_references)} pending references to {pending_path}")
+    print(f"Wrote {pending_count} pending references to {pending_path}")
 
 
 def _build_csl_item(row: Dict, use_citekey_as_id: bool = True) -> Optional[Dict]:
@@ -1347,14 +1538,22 @@ def _build_csl_item(row: Dict, use_citekey_as_id: bool = True) -> Optional[Dict]
 
 # ==================== Digest Generation ====================
 
-def generate_digest(papers: List[Paper], output_path: Path):
-    """Generate Markdown digest of curated papers."""
+def generate_digest(papers: List[Paper], output_path: Path, sync_stats: Dict[str, int] = None):
+    """
+    Generate Markdown digest of curated papers.
+    Includes citekey sync status warning when Synced=0.
+    """
     print("\n=== Generating Digest ===")
+    
+    # Check if we need to add a citekey warning
+    citekey_warning = ""
+    if sync_stats and sync_stats.get("synced", 0) == 0 and sync_stats.get("pending", 0) > 0:
+        citekey_warning = f"\n\n> **⚠️ Citekeys Pending**: {sync_stats['pending']} items are waiting for citation keys. Open Zotero Desktop with BetterBibTeX enabled and sync to generate stable citation keys.\n"
     
     if not papers:
         digest_content = f"""# LLM Education Literature Digest
 
-*Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")}*
+*Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")}*{citekey_warning}
 
 No new items found in this run.
 """
@@ -1363,10 +1562,17 @@ No new items found in this run.
             "# LLM Education Literature Digest",
             "",
             f"*Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        ]
+        
+        # Add citekey warning if needed
+        if citekey_warning:
+            lines.append(citekey_warning)
+        
+        lines.extend([
             "",
             f"**{len(papers)} new items**",
             "",
-        ]
+        ])
         
         for i, paper in enumerate(papers, 1):
             lines.append(f"## {i}. {paper.title}")
@@ -1533,7 +1739,7 @@ def main():
     sync_stats = sync_citekeys_from_zotero(db, zot)
     
     # Generate digest (only successfully imported items)
-    generate_digest(successfully_imported, DIGEST_PATH)
+    generate_digest(successfully_imported, DIGEST_PATH, sync_stats)
     
     # Generate references.json
     generate_references_json(db, REFERENCES_PATH)
