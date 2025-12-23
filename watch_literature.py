@@ -157,15 +157,19 @@ def check_hard_education_intent(paper: Paper, config: Dict) -> bool:
     """
     Hard education-intent gate: paper must contain at least one EDU_STRONG term.
     This prevents generic ML papers from slipping through.
+    NO bare "learning" - only education-specific contexts.
     """
     default_rules = config.get("default_rules", {})
     
     # Define strong education terms (no bare "learning")
+    # These terms clearly indicate educational context, not just ML "learning"
     edu_strong_terms = [
         "education", "higher education", "teaching", "tutoring", "tutor",
         "pedagogy", "pedagogical", "classroom", "course", "curriculum",
-        "assessment", "feedback", "student", "teacher", "instruction",
-        "instructional", "training", "edtech", "mooc"
+        "assessment", "feedback", "student", "teacher", "instructor",
+        "instruction", "instructional", "learner", "edtech", "mooc",
+        "educational", "learning outcomes", "learning analytics",
+        "learning environment", "learning platform", "e-learning"
     ]
     
     edu_strong_norm = [normalize_text(t) for t in edu_strong_terms]
@@ -185,7 +189,7 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
     """
     Calculate relevance score based on keyword matches in title and abstract.
     Returns a deterministic, explainable score.
-    Updated to enforce education-intent gating.
+    Updated to enforce education-intent gating with no bare "learning".
     """
     default_rules = config.get("default_rules", {})
     scoring = default_rules.get("relevance_scoring", {})
@@ -214,12 +218,13 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             score += weights.get("llm_term_in_abstract", 3)
             break
     
-    # Strong education terms (no bare "learning")
+    # Strong education terms (NO bare "learning" - only education-specific contexts)
     edu_strong_terms = [
         "education", "higher education", "teaching", "tutoring", "tutor",
         "pedagogy", "pedagogical", "classroom", "course", "curriculum",
-        "assessment", "feedback", "student", "teacher", "instruction",
-        "instructional", "training", "edtech", "mooc"
+        "assessment", "feedback", "student", "teacher", "instructor",
+        "instruction", "instructional", "learner", "edtech", "mooc",
+        "educational"
     ]
     edu_strong_norm = [normalize_text(t) for t in edu_strong_terms]
     
@@ -233,9 +238,11 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             break
     
     # Weak education phrases (only as bonus if strong terms already present)
+    # These contain "learning" in education-specific contexts
     edu_weak_phrases = [
         "learning outcomes", "learning analytics", "learning experience",
-        "learning environment", "learning platform"
+        "learning environment", "learning platform", "e-learning",
+        "learning management system", "learning design"
     ]
     edu_weak_norm = [normalize_text(p) for p in edu_weak_phrases]
     
@@ -251,11 +258,12 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             score += weights.get("bonus_phrase_in_title", 2)
             break
     
-    # Penalty phrases (optimization/systems papers)
+    # Penalty phrases (optimization/systems papers that are clearly not education)
     penalty_phrases = [normalize_text(p) for p in scoring.get("penalty_phrases_anywhere", [])]
     penalty_phrases.extend([
         "quantization", "throughput optimization", "cuda kernel",
-        "inference speedup", "gpu optimization", "memory bandwidth"
+        "inference speedup", "gpu optimization", "memory bandwidth",
+        "model compression", "hardware acceleration", "sparse attention"
     ])
     for phrase in penalty_phrases:
         if phrase in title_norm or phrase in abstract_norm:
@@ -305,25 +313,35 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     """
     Search arXiv for papers on LLMs in education.
     Returns list of Paper objects with hard education-intent gating.
+    Query enforces BOTH LLM terms AND education terms (no bare "learning").
     """
     print("\n=== Searching arXiv ===")
     
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
     
-    # Education-intent terms for query (strong terms only, no bare "learning")
+    # Education-intent terms for query (strong terms only, NO bare "learning")
+    # These clearly indicate educational context, not generic ML
     edu_strong_terms = [
         "education", "higher education", "teaching", "tutoring",
         "pedagogy", "classroom", "course", "curriculum",
-        "assessment", "feedback", "student", "teacher", "instruction"
+        "assessment", "student", "teacher", "instruction", "instructor"
     ]
     
     # Build search query: (LLM terms) AND (education terms)
-    llm_query = " OR ".join([f'all:"{term}"' for term in llm_terms[:5]])
-    edu_query = " OR ".join([f'all:"{term}"' for term in edu_strong_terms[:8]])
+    # This ensures papers must match BOTH categories
+    llm_query_parts = [f'"{term}"' for term in llm_terms[:6]]  # Use top LLM terms
+    llm_query = " OR ".join(llm_query_parts)
+    
+    edu_query_parts = [f'"{term}"' for term in edu_strong_terms[:10]]  # Use top edu terms
+    edu_query = " OR ".join(edu_query_parts)
+    
+    # Combined query with AND operator
     query = f"({llm_query}) AND ({edu_query})"
     
-    print(f"arXiv query: {query}")
+    print(f"arXiv query structure: (LLM terms) AND (EDU terms)")
+    print(f"LLM terms: {', '.join(llm_terms[:6])}")
+    print(f"EDU terms: {', '.join(edu_strong_terms[:10])}")
     print(f"Max results: {ARXIV_MAX_RESULTS}")
     
     search = arxiv.Search(
@@ -370,11 +388,16 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
             )
             
             # Apply hard education-intent gate
+            # This double-checks that education terms are really present
             if not check_hard_education_intent(paper, config):
                 gated_out_count += 1
                 continue
             
             paper.education_intent_pass = True
+            
+            # Calculate preliminary score for logging
+            paper.relevance_score = calculate_relevance_score(paper, config)
+            
             papers.append(paper)
             
         time.sleep(ARXIV_POLITENESS_DELAY)  # Politeness delay
@@ -382,11 +405,14 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     except Exception as e:
         print(f"Error searching arXiv: {e}")
     
+    # Sort by score for better logging
+    papers.sort(key=lambda p: p.relevance_score, reverse=True)
+    
     print(f"Fetched: {fetched_count}, Gated out (no EDU_STRONG term): {gated_out_count}, Passed: {len(papers)}")
     if papers:
-        print(f"Top 5 titles with education intent:")
+        print(f"Top 5 titles with education intent and scores:")
         for i, paper in enumerate(papers[:5], 1):
-            print(f"  {i}. {paper.title[:80]}...")
+            print(f"  {i}. [{paper.relevance_score:.1f}] {paper.title[:70]}...")
     
     return papers
 
@@ -482,7 +508,7 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     """
     Search OpenAlex for papers in a specific journal.
     Returns list of Paper objects.
-    Fixed to use journal:<SOURCE_ID> filter instead of primary_location.source.id.
+    Uses journal:<SOURCE_ID> filter (NOT primary_location.source.id) for correct results.
     """
     journal_name = journal["name"]
     print(f"\n  Searching: {journal_name}")
@@ -492,35 +518,35 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     source_info = resolve_openalex_source_id(journal_name, issn_list, state)
     
     if not source_info or not source_info.get("source_id"):
-        print(f"  Skipping {journal_name}: could not resolve source ID")
+        print(f"  ❌ Skipping {journal_name}: could not resolve source ID")
         return []
     
     source_id = source_info["source_id"]
     source_type = source_info.get("source_type", "unknown")
-    print(f"  Source ID: {source_id}, Type: {source_type}")
+    print(f"  ✓ Source ID: {source_id}, Type: {source_type}")
     
-    # Build search query with LLM and education terms
+    # Build search query with LLM and education terms (matching arXiv logic)
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
     
-    # Use strong education terms
+    # Use strong education terms (NO bare "learning")
     edu_strong_terms = [
         "education", "higher education", "teaching", "tutoring",
         "pedagogy", "classroom", "course", "curriculum",
-        "assessment", "student", "teacher", "instruction"
+        "assessment", "student", "teacher", "instruction", "instructor"
     ]
     
     # Combine terms for search
-    search_terms = llm_terms[:3] + edu_strong_terms[:5]
+    search_terms = llm_terms[:4] + edu_strong_terms[:6]
     search_query = " OR ".join(search_terms)
     
     # Date filter
     from_date = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
-    print(f"  Publication date threshold: >{from_date}")
+    print(f"  📅 Publication date threshold: >{from_date} ({lookback_days} days lookback)")
     
-    # Build filter - CRITICAL FIX: use journal:<SOURCE_ID> instead of primary_location.source.id
+    # Build filter - CRITICAL: use journal:<SOURCE_ID> (NOT primary_location.source.id)
     filters = f"journal:{source_id},publication_date:>{from_date}"
-    print(f"  Filter: {filters}")
+    print(f"  🔍 Filter: {filters}")
     
     # Build URL
     base_url = "https://api.openalex.org/works"
@@ -539,7 +565,7 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     
     # Log request URL (without API key for security)
     url_no_key = url.replace(f"&api_key={OPEN_ALEX_API_KEY}", "&api_key=***") if OPEN_ALEX_API_KEY else url
-    print(f"  Request URL: {url_no_key}")
+    print(f"  🌐 Request URL: {url_no_key}")
     
     papers = []
     try:
@@ -551,11 +577,15 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
         total_count = meta.get("count", 0)
         results = data.get("results", [])
         
-        print(f"  Total matching works: {total_count}, Retrieved: {len(results)}")
+        print(f"  📊 Total matching works: {total_count}, Retrieved in this page: {len(results)}")
         
         if total_count == 0:
-            print(f"  WARNING: 0 results for {journal_name}. Check filter and search terms.")
-            print(f"  Meta: {meta}")
+            print(f"  ⚠️  WARNING: 0 results for {journal_name}")
+            print(f"  📋 Response meta: {meta}")
+            print(f"  💡 Troubleshooting:")
+            print(f"     - Verify filter uses 'journal:{source_id}' (NOT 'primary_location.source.id')")
+            print(f"     - Check publication_date range ({lookback_days} days may not have new papers)")
+            print(f"     - Verify search terms match paper topics in this journal")
         
         for work in results:
             openalex_id = work["id"].split("/")[-1]
@@ -625,10 +655,11 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
         # TODO: Implement pagination if needed (using cursor)
         # For now, we rely on per-page=200 to get enough results
         
+        print(f"  ✓ Collected {len(papers)} new papers from {journal_name}")
         return papers
         
     except Exception as e:
-        print(f"  Error searching OpenAlex for {journal_name}: {e}")
+        print(f"  ❌ Error searching OpenAlex for {journal_name}: {e}")
         return []
 
 
