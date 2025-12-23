@@ -81,10 +81,21 @@ def upload_to_zotero(zot, paper, pdf_path):
         template['publicationTitle'] = 'arXiv'
         
         # Add authors
-        template['creators'] = [
-            {'creatorType': 'author', 'firstName': author.name.split()[-1], 'lastName': ' '.join(author.name.split()[:-1]) if len(author.name.split()) > 1 else ''}
-            for author in paper.authors
-        ]
+        template['creators'] = []
+        for author in paper.authors:
+            name_parts = author.name.split()
+            if len(name_parts) == 1:
+                template['creators'].append({
+                    'creatorType': 'author',
+                    'lastName': name_parts[0],
+                    'firstName': ''
+                })
+            else:
+                template['creators'].append({
+                    'creatorType': 'author',
+                    'firstName': ' '.join(name_parts[:-1]),
+                    'lastName': name_parts[-1]
+                })
         
         # Add tags for categories
         template['tags'] = [{'tag': cat} for cat in paper.categories]
