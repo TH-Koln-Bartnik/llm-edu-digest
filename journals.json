@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.1",
+  "selection_method": "Whitelist journals using SCImago SJR 2024 quartiles as a quality proxy; use tiered topical gating for discipline/practice venues.",
+  "notes": [
+    "Tier A journals are core higher-education didactics / SoTL / assessment / online learning venues.",
+    "Tier B includes discipline-anchored education journals (management education; OR/analytics education) and one practice-oriented analytics journal that requires stricter education-intent gating to avoid irrelevant results.",
+    "OpenAlex source_id fields may be left null; the script should resolve them at runtime via OpenAlex source search and then cache resolved IDs in state.json to speed up later runs."
+  ],
+  "default_rules": {
+    "run_frequency": "weekly",
+    "lookback_days": 10,
+    "max_results_per_source_per_run": 100,
+    "max_new_items_total_per_run": 50,
+    "must_include_all_concepts": ["llm", "education"],
+    "llm_terms": [
+      "large language model",
+      "llm",
+      "chatgpt",
+      "gpt",
+      "generative ai",
+      "genai"
+    ],
+    "education_terms": [
+      "education",
+      "higher education",
+      "teaching",
+      "learning",
+      "tutoring",
+      "pedagogy",
+      "classroom",
+      "course",
+      "curriculum",
+      "assessment",
+      "feedback",
+      "student",
+      "training",
+      "instruction"
+    ],
+    "relevance_scoring": {
+      "min_score_default": 8,
+      "weights": {
+        "llm_term_in_title": 6,
+        "llm_term_in_abstract": 3,
+        "education_term_in_title": 4,
+        "education_term_in_abstract": 2,
+        "bonus_phrase_in_title": 2,
+        "penalty_obvious_non_education": -6
+      },
+      "bonus_phrases_title": [
+        "tutor",
+        "tutoring",
+        "teaching",
+        "assessment",
+        "feedback",
+        "course",
+        "curriculum",
+        "classroom",
+        "learning outcomes",
+        "higher education"
+      ],
+      "penalty_phrases_anywhere": [
+        "compiler",
+        "cuda",
+        "kernel",
+        "benchmark suite",
+        "throughput optimization"
+      ]
+    }
+  },
+  "tiers": {
+    "A_core_university_didactics": {
+      "description": "Direct higher-education didactics / SoTL / assessment / online learning venues.",
+      "rules_override": {}
+    },
+    "B_discipline_anchored_or_practice": {
+      "description": "Discipline-anchored education journals plus selected practice venues with strict education-intent gating.",
+      "rules_override": {}
+    }
+  },
+  "journals": [
+    {
+      "name": "Computers & Education",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": ["03601315"],
+        "issn_l": "03601315",
+        "scimago_sid": "17645"
+      },
+      "scimago": {
+        "sjr_2024": 3.343,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Educational Technology"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "issn_or_name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "The Internet and Higher Education",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": ["10967516"],
+        "issn_l": "10967516",
+        "scimago_sid": "16965"
+      },
+      "scimago": {
+        "sjr_2024": 2.221,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Educational Technology", "Higher Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "issn_or_name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "Assessment & Evaluation in Higher Education",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": [],
+        "issn_l": null,
+        "scimago_sid": "5700152760"
+      },
+      "scimago": {
+        "sjr_2024": 2.422,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Higher Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "Active Learning in Higher Education",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": ["14697874"],
+        "issn_l": "14697874",
+        "scimago_sid": "5700168406"
+      },
+      "scimago": {
+        "sjr_2024": 2.221,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Higher Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "issn_or_name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "Higher Education",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": [],
+        "issn_l": null,
+        "scimago_sid": "18787"
+      },
+      "scimago": {
+        "sjr_2024": 2.15,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Higher Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "Studies in Higher Education",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": ["03075079", "1470174X"],
+        "issn_l": "03075079",
+        "scimago_sid": "20853"
+      },
+      "scimago": {
+        "sjr_2024": 1.651,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Higher Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "issn_or_name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "Teaching in Higher Education",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": [],
+        "issn_l": null,
+        "scimago_sid": "200147112"
+      },
+      "scimago": {
+        "sjr_2024": 1.327,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Higher Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "Higher Education Research & Development",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": [],
+        "issn_l": null,
+        "scimago_sid": "18300156704"
+      },
+      "scimago": {
+        "sjr_2024": 1.304,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Higher Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "International Journal for Academic Development",
+      "tier": "A_core_university_didactics",
+      "identifiers": {
+        "issn": ["1360144X", "14701324"],
+        "issn_l": "1360144X",
+        "scimago_sid": "19700188332"
+      },
+      "scimago": {
+        "sjr_2024": 0.736,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Education", "Higher Education", "Academic Development"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "issn_or_name"
+      },
+      "rules_override": {}
+    },
+    {
+      "name": "Academy of Management Learning & Education",
+      "tier": "B_discipline_anchored_or_practice",
+      "identifiers": {
+        "issn": ["1537260X"],
+        "issn_l": "1537260X",
+        "scimago_sid": "5200152701"
+      },
+      "scimago": {
+        "sjr_2024": 1.848,
+        "quartile_2024": "Q1",
+        "subject_hint": ["Business", "Management Education", "Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "issn_or_name"
+      },
+      "rules_override": {
+        "relevance_scoring": {
+          "min_score": 8
+        }
+      }
+    },
+    {
+      "name": "INFORMS Transactions on Education",
+      "tier": "B_discipline_anchored_or_practice",
+      "identifiers": {
+        "issn": ["15320545"],
+        "issn_l": "15320545",
+        "scimago_sid": "21100894767"
+      },
+      "scimago": {
+        "sjr_2024": 0.345,
+        "quartile_2024": "Q2",
+        "subject_hint": ["Operations Research", "Analytics Education", "Management Science Education"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "issn_or_name"
+      },
+      "rules_override": {
+        "relevance_scoring": {
+          "min_score": 7
+        }
+      }
+    },
+    {
+      "name": "INFORMS Journal on Applied Analytics",
+      "tier": "B_discipline_anchored_or_practice",
+      "identifiers": {
+        "issn": ["26440865", "26440873"],
+        "issn_l": "26440865",
+        "scimago_sid": "21101234810"
+      },
+      "scimago": {
+        "sjr_2024": 0.498,
+        "quartile_2024": "Q2",
+        "subject_hint": ["Applied Analytics", "Operations Research", "Decision Sciences"]
+      },
+      "openalex": {
+        "source_id": null,
+        "resolve_by": "issn_or_name"
+      },
+      "rules_override": {
+        "require_education_intent_terms": true,
+        "education_intent_terms": [
+          "education",
+          "teaching",
+          "learning",
+          "course",
+          "curriculum",
+          "classroom",
+          "student",
+          "training",
+          "instruction",
+          "pedagogy",
+          "assessment",
+          "feedback"
+        ],
+        "relevance_scoring": {
+          "min_score": 10
+        }
+      },
+      "notes": "Not a didactics-first journal; stricter education-intent gating + higher min_score to avoid irrelevant applied analytics papers."
+    }
+  ]
+}
