@@ -74,7 +74,10 @@ class Paper:
     pdf_path: Optional[Path] = None
     attachment_missing: bool = False
     citekey: Optional[str] = None
+    citekey_status: str = "pending"  # "pending"|"synced"|"missing"
+    citekey_synced_utc: Optional[str] = None
     zotero_item_key: Optional[str] = None
+    zotero_item_version: Optional[int] = None
     zotero_attachment_key: Optional[str] = None
     zotero_collection_key: Optional[str] = None
     zotero_collection_name: Optional[str] = None
@@ -739,101 +742,6 @@ def curate_papers(papers: List[Paper], config: Dict) -> List[Paper]:
     return curated
 
 
-# ==================== Citekey Generation ====================
-
-def normalize_for_citekey(text: str) -> str:
-    """Normalize text for citekey: lowercase, ASCII, strip punctuation."""
-    # Convert to ASCII
-    text = unidecode(text)
-    # Lowercase
-    text = text.lower()
-    # Remove punctuation and special characters, keep alphanumeric and spaces
-    text = re.sub(r'[^a-z0-9\s]', '', text)
-    # Collapse whitespace
-    text = re.sub(r'\s+', ' ', text).strip()
-    return text
-
-
-def extract_first_author_family(authors: List[str]) -> str:
-    """Extract family name from first author."""
-    if not authors:
-        return "unknown"
-    
-    first_author = authors[0]
-    # Try to extract family name (assume last word is family name)
-    parts = first_author.strip().split()
-    if parts:
-        family = parts[-1]
-        return normalize_for_citekey(family)
-    return "unknown"
-
-
-def extract_short_title_token(title: str) -> str:
-    """Extract a short meaningful token from title."""
-    # Normalize
-    title_norm = normalize_for_citekey(title)
-    # Split into words
-    words = title_norm.split()
-    # Filter out common words
-    stop_words = {"the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "of", "with", "by", "from", "as", "is", "was", "are", "were", "be", "been", "being"}
-    meaningful_words = [w for w in words if w not in stop_words and len(w) > 2]
-    
-    # Take first meaningful word or fallback to first word
-    if meaningful_words:
-        return meaningful_words[0][:10]  # Limit length
-    elif words:
-        return words[0][:10]
-    return "paper"
-
-
-def generate_base_citekey(paper: Paper) -> str:
-    """Generate base citekey: {firstAuthorFamily}{year}{shortTitleToken}"""
-    # Extract components
-    family = extract_first_author_family(paper.authors)
-    
-    # Extract year from publication date
-    year = "0000"
-    if paper.publication_date:
-        match = re.search(r'(\d{4})', paper.publication_date)
-        if match:
-            year = match.group(1)
-    
-    title_token = extract_short_title_token(paper.title)
-    
-    # Combine
-    base_key = f"{family}{year}{title_token}"
-    return base_key
-
-
-def resolve_citekey_collision(base_key: str, db: Database) -> str:
-    """Resolve citekey collision by appending a, b, c, etc."""
-    # Check if base key is available
-    existing = list(db["works"].rows_where("citekey = ?", [base_key]))
-    if not existing:
-        return base_key
-    
-    # Try suffixes
-    for suffix in "abcdefghijklmnopqrstuvwxyz":
-        candidate = f"{base_key}{suffix}"
-        existing = list(db["works"].rows_where("citekey = ?", [candidate]))
-        if not existing:
-            return candidate
-    
-    # Fallback: append timestamp
-    import random
-    return f"{base_key}{random.randint(0, 99)}"
-
-
-def assign_citekey(paper: Paper, db: Database):
-    """Assign a unique citekey to the paper."""
-    if paper.citekey:
-        return  # Already has one
-    
-    base_key = generate_base_citekey(paper)
-    unique_key = resolve_citekey_collision(base_key, db)
-    paper.citekey = unique_key
-
-
 # ==================== Zotero Collections ====================
 
 def get_or_create_zotero_collection(zot: zotero.Zotero, collection_name: str) -> Optional[str]:
@@ -994,12 +902,11 @@ def import_to_zotero(paper: Paper, zot: zotero.Zotero, collection_keys: Dict[str
         if collection_key:
             template["collections"] = [collection_key]
         
-        # Add traceability and citekey in extra field
+        # Add traceability in extra field (NO citekey - will be synced from Zotero later)
         extra_lines = []
         
-        # Add citekey using Better BibTeX convention
-        if paper.citekey:
-            extra_lines.append(f"Citation Key: {paper.citekey}")
+        # Add Work-ID for traceability
+        extra_lines.append(f"Work-ID: {paper.identifier}")
         
         # Add source tracking
         extra_lines.append(f"Source: {paper.identifier}")
@@ -1023,6 +930,16 @@ def import_to_zotero(paper: Paper, zot: zotero.Zotero, collection_keys: Dict[str
         
         item_key = created["success"]["0"]
         paper.zotero_item_key = item_key
+        
+        # Try to get the item version
+        try:
+            item_data = zot.item(item_key)
+            if item_data and "version" in item_data:
+                paper.zotero_item_version = item_data["version"]
+        except Exception as e:
+            print(f"  Warning: Could not fetch item version: {e}")
+            pass  # Version is optional
+        
         print(f"  Created Zotero item: {item_key}")
         
         # Upload PDF attachment if available
@@ -1049,6 +966,129 @@ def import_to_zotero(paper: Paper, zot: zotero.Zotero, collection_keys: Dict[str
         return False
 
 
+# ==================== Citekey Sync from Zotero ====================
+
+def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dict[str, int]:
+    """
+    Sync citekeys from Zotero to SQLite for items with pending citekeys.
+    Returns dict with statistics: {"candidates": N, "synced": N, "pending": N, "missing": N}
+    """
+    print("\n=== Syncing Citekeys from Zotero ===")
+    
+    if not zot:
+        print("Skipping citekey sync: Zotero client not configured")
+        return {"candidates": 0, "synced": 0, "pending": 0, "missing": 0}
+    
+    stats = {"candidates": 0, "synced": 0, "pending": 0, "missing": 0}
+    now_utc = datetime.utcnow()
+    
+    # Query items that need citekeys
+    query = "citekey_status = 'pending' AND zotero_item_key IS NOT NULL AND zotero_item_key != ''"
+    candidates = list(db["works"].rows_where(query))
+    stats["candidates"] = len(candidates)
+    
+    print(f"Citekey sync candidates: {stats['candidates']}")
+    
+    if not candidates:
+        print("No items pending citekey sync")
+        return stats
+    
+    for row in candidates:
+        work_id = row["work_id"]
+        item_key = row["zotero_item_key"]
+        first_seen = row.get("first_seen_utc", "")
+        
+        print(f"  Checking work_id={work_id}, zotero_item_key={item_key}")
+        
+        try:
+            # Fetch item from Zotero
+            item = zot.item(item_key)
+            
+            if not item or "data" not in item:
+                print(f"    Warning: Could not fetch item {item_key}")
+                continue
+            
+            # Parse Extra field for Citation Key
+            extra = item["data"].get("extra", "")
+            citekey = None
+            
+            for line in extra.split("\n"):
+                line = line.strip()
+                if line.startswith("Citation Key:"):
+                    citekey = line.replace("Citation Key:", "").strip()
+                    break
+            
+            if citekey:
+                # Citekey found - sync it
+                print(f"    Found citekey: {citekey}")
+                
+                # Optional: Verify citekey pattern (author+year+optional suffix)
+                # Pattern: starts with letters, contains 4-digit year, optional alphanumeric suffix
+                if not re.match(r'^[a-zA-Z]+\d{4}[a-zA-Z0-9]*$', citekey):
+                    print(f"    Warning: Citekey '{citekey}' does not match expected pattern (author+year+suffix)")
+                
+                # Update database
+                update_data = {
+                    "work_id": work_id,
+                    "citekey": citekey,
+                    "citekey_status": "synced",
+                    "citekey_synced_utc": now_utc.isoformat(),
+                }
+                
+                # Store item version if available
+                if "version" in item:
+                    update_data["zotero_item_version"] = item["version"]
+                
+                db["works"].update(work_id, update_data)
+                stats["synced"] += 1
+                
+            else:
+                # Citekey not found - check if item is old enough to mark as missing
+                if first_seen:
+                    try:
+                        # Handle ISO 8601 format with or without timezone
+                        first_seen_clean = first_seen.replace("Z", "")
+                        if "+" in first_seen_clean:
+                            # Already has timezone info, remove it
+                            first_seen_clean = first_seen_clean.split("+")[0]
+                        first_seen_dt = datetime.fromisoformat(first_seen_clean)
+                        age_days = (now_utc - first_seen_dt).days
+                        
+                        if age_days > 30:
+                            # Item is old, mark as missing
+                            print(f"    No citekey found, item age: {age_days} days > 30, marking as 'missing'")
+                            db["works"].update(work_id, {
+                                "citekey_status": "missing",
+                                "last_error": f"No Citation Key after {age_days} days. Open Zotero Desktop to trigger BBT."
+                            })
+                            stats["missing"] += 1
+                        else:
+                            print(f"    No citekey found, item age: {age_days} days, keeping as 'pending'")
+                            stats["pending"] += 1
+                    except (ValueError, TypeError) as e:
+                        # Could not parse date, keep as pending
+                        print(f"    No citekey found, could not parse date ({e}), keeping as 'pending'")
+                        stats["pending"] += 1
+                else:
+                    print(f"    No citekey found, keeping as 'pending'")
+                    stats["pending"] += 1
+        
+        except Exception as e:
+            print(f"    Error fetching item {item_key}: {e}")
+            # Differentiate between network/API errors and other errors
+            if "404" in str(e) or "not found" in str(e).lower():
+                print(f"    Item not found in Zotero, may have been deleted")
+            elif "401" in str(e) or "403" in str(e):
+                print(f"    Authentication error, check API credentials")
+            else:
+                print(f"    Temporary error, will retry on next run")
+            stats["pending"] += 1
+            continue
+    
+    print(f"Citekey sync complete: Synced={stats['synced']}, Still pending={stats['pending']}, Missing={stats['missing']}")
+    return stats
+
+
 # ==================== SQLite Storage ====================
 
 def init_database(db_path: Path) -> Database:
@@ -1073,6 +1113,8 @@ def init_database(db_path: Path) -> Database:
     db["works"].create({
         "work_id": str,
         "citekey": str,
+        "citekey_status": str,
+        "citekey_synced_utc": str,
         "source": str,
         "doi": str,
         "title": str,
@@ -1090,6 +1132,7 @@ def init_database(db_path: Path) -> Database:
         "last_seen_utc": str,
         "last_run_id": str,
         "zotero_item_key": str,
+        "zotero_item_version": int,
         "zotero_attachment_key": str,
         "zotero_collection_key": str,
         "zotero_collection_name": str,
@@ -1097,11 +1140,28 @@ def init_database(db_path: Path) -> Database:
         "last_error": str,
     }, pk="work_id", if_not_exists=True)
     
-    # Create unique index on citekey
+    # Add columns to existing database if they don't exist
     try:
-        db.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_citekey ON works(citekey)")
-    except:
-        pass  # Index may already exist
+        db.execute("ALTER TABLE works ADD COLUMN citekey_status TEXT DEFAULT 'pending'")
+    except sqlite3.OperationalError:
+        pass  # Column already exists
+    
+    try:
+        db.execute("ALTER TABLE works ADD COLUMN citekey_synced_utc TEXT")
+    except sqlite3.OperationalError:
+        pass  # Column already exists
+    
+    try:
+        db.execute("ALTER TABLE works ADD COLUMN zotero_item_version INTEGER")
+    except sqlite3.OperationalError:
+        pass  # Column already exists
+    
+    # Create unique index on citekey where not null
+    try:
+        db.execute("DROP INDEX IF EXISTS idx_citekey")
+        db.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_citekey ON works(citekey) WHERE citekey IS NOT NULL AND citekey != ''")
+    except sqlite3.OperationalError as e:
+        print(f"Warning: Could not create unique index on citekey: {e}")
     
     return db
 
@@ -1116,6 +1176,8 @@ def store_paper_in_db(paper: Paper, db: Database, run_id: str):
     record = {
         "work_id": paper.identifier,
         "citekey": paper.citekey,
+        "citekey_status": paper.citekey_status or "pending",
+        "citekey_synced_utc": paper.citekey_synced_utc or "",
         "source": paper.source_type,
         "doi": paper.doi or "",
         "title": paper.title,
@@ -1133,6 +1195,7 @@ def store_paper_in_db(paper: Paper, db: Database, run_id: str):
         "last_seen_utc": now_utc,
         "last_run_id": run_id,
         "zotero_item_key": paper.zotero_item_key or "",
+        "zotero_item_version": paper.zotero_item_version or 0,
         "zotero_attachment_key": paper.zotero_attachment_key or "",
         "zotero_collection_key": paper.zotero_collection_key or "",
         "zotero_collection_name": paper.zotero_collection_name or "",
@@ -1145,89 +1208,125 @@ def store_paper_in_db(paper: Paper, db: Database, run_id: str):
 
 
 def generate_references_json(db: Database, output_path: Path):
-    """Generate CSL-JSON references from database."""
+    """
+    Generate CSL-JSON references from database.
+    Only includes items with citekey_status='synced' for stable citations.
+    Creates an additional references_pending.json for transparency.
+    """
     print("\n=== Generating references.json ===")
     
     references = []
+    pending_references = []
     
-    # Get all works with citekeys
-    for row in db["works"].rows_where("citekey IS NOT NULL AND citekey != ''", order_by="citekey"):
-        # Parse authors
-        try:
-            authors_list = json.loads(row["authors_json"]) if row["authors_json"] else []
-        except:
-            authors_list = []
-        
-        # Convert to CSL author format
-        csl_authors = []
-        for author in authors_list:
-            parts = author.strip().split()
-            if len(parts) >= 2:
-                csl_authors.append({
-                    "family": parts[-1],
-                    "given": " ".join(parts[:-1])
-                })
-            else:
-                csl_authors.append({"literal": author})
-        
-        # Determine type
-        if row["source"] == "arxiv":
-            csl_type = "report"
-        elif row["journal"]:
-            csl_type = "article-journal"
-        else:
-            csl_type = "document"
-        
-        # Extract year from date
-        issued_parts = None
-        if row["published_date"]:
-            match = re.search(r'(\d{4})-?(\d{2})?-?(\d{2})?', row["published_date"])
-            if match:
-                parts = [int(match.group(1))]
-                if match.group(2):
-                    parts.append(int(match.group(2)))
-                if match.group(3):
-                    parts.append(int(match.group(3)))
-                issued_parts = [parts]
-        
-        # Build CSL-JSON item
-        csl_item = {
-            "id": row["citekey"],
-            "type": csl_type,
-            "title": row["title"],
-        }
-        
-        if csl_authors:
-            csl_item["author"] = csl_authors
-        
-        if issued_parts:
-            csl_item["issued"] = {"date-parts": issued_parts}
-        
-        if row["abstract"]:
-            csl_item["abstract"] = row["abstract"]
-        
-        if row["doi"]:
-            csl_item["DOI"] = row["doi"]
-            csl_item["URL"] = f"https://doi.org/{row['doi']}"
-        elif row["url"]:
-            csl_item["URL"] = row["url"]
-        
-        if row["journal"]:
-            csl_item["container-title"] = row["journal"]
-        
-        if row["source"] == "arxiv":
-            csl_item["publisher"] = "arXiv"
-        
-        references.append(csl_item)
+    # Get all works with synced citekeys (for main references.json)
+    synced_query = "citekey_status = 'synced' AND citekey IS NOT NULL AND citekey != ''"
+    for row in db["works"].rows_where(synced_query, order_by="citekey"):
+        csl_item = _build_csl_item(row, use_citekey_as_id=True)
+        if csl_item:
+            references.append(csl_item)
     
-    # Sort by citekey for deterministic output
+    # Get all works without synced citekeys (for references_pending.json)
+    pending_query = "citekey_status != 'synced' OR citekey IS NULL OR citekey = ''"
+    for row in db["works"].rows_where(pending_query, order_by="work_id"):
+        csl_item = _build_csl_item(row, use_citekey_as_id=False)
+        if csl_item:
+            pending_references.append(csl_item)
+    
+    # Sort references by citekey for deterministic output
     references.sort(key=lambda x: x["id"])
     
-    # Write to file
+    # Write main references.json (only synced items)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(references, f, indent=2, ensure_ascii=False)
     
-    print(f"Wrote {len(references)} references to {output_path}")
+    print(f"Wrote {len(references)} synced references to {output_path}")
+    
+    # Write references_pending.json for transparency
+    pending_path = output_path.parent / "references_pending.json"
+    with open(pending_path, "w", encoding="utf-8") as f:
+        json.dump(pending_references, f, indent=2, ensure_ascii=False)
+    
+    print(f"Wrote {len(pending_references)} pending references to {pending_path}")
+
+
+def _build_csl_item(row: Dict, use_citekey_as_id: bool = True) -> Optional[Dict]:
+    """
+    Build a CSL-JSON item from a database row.
+    If use_citekey_as_id is True, use citekey as id; otherwise use work_id.
+    """
+    # Parse authors
+    try:
+        authors_list = json.loads(row["authors_json"]) if row["authors_json"] else []
+    except:
+        authors_list = []
+    
+    # Convert to CSL author format
+    csl_authors = []
+    for author in authors_list:
+        parts = author.strip().split()
+        if len(parts) >= 2:
+            csl_authors.append({
+                "family": parts[-1],
+                "given": " ".join(parts[:-1])
+            })
+        else:
+            csl_authors.append({"literal": author})
+    
+    # Determine type
+    if row["source"] == "arxiv":
+        csl_type = "report"
+    elif row["journal"]:
+        csl_type = "article-journal"
+    else:
+        csl_type = "document"
+    
+    # Extract year from date
+    issued_parts = None
+    if row["published_date"]:
+        match = re.search(r'(\d{4})-?(\d{2})?-?(\d{2})?', row["published_date"])
+        if match:
+            parts = [int(match.group(1))]
+            if match.group(2):
+                parts.append(int(match.group(2)))
+            if match.group(3):
+                parts.append(int(match.group(3)))
+            issued_parts = [parts]
+    
+    # Determine ID
+    if use_citekey_as_id and row.get("citekey"):
+        item_id = row["citekey"]
+    else:
+        item_id = row["work_id"]
+    
+    # Build CSL-JSON item
+    csl_item = {
+        "id": item_id,
+        "type": csl_type,
+        "title": row["title"],
+    }
+    
+    if csl_authors:
+        csl_item["author"] = csl_authors
+    
+    if issued_parts:
+        csl_item["issued"] = {"date-parts": issued_parts}
+    
+    if row["abstract"]:
+        csl_item["abstract"] = row["abstract"]
+    
+    if row["doi"]:
+        csl_item["DOI"] = row["doi"]
+        csl_item["URL"] = f"https://doi.org/{row['doi']}"
+    elif row["url"]:
+        csl_item["URL"] = row["url"]
+    
+    if row["journal"]:
+        csl_item["container-title"] = row["journal"]
+    
+    if row["source"] == "arxiv":
+        csl_item["publisher"] = "arXiv"
+    
+    return csl_item
 
 
 # ==================== Digest Generation ====================
@@ -1370,12 +1469,6 @@ def main():
     # Curate papers
     curated_papers = curate_papers(all_papers, config)
     
-    # Assign citekeys
-    print("\n=== Assigning Citekeys ===")
-    for paper in curated_papers:
-        assign_citekey(paper, db)
-        print(f"  {paper.citekey}: {paper.title[:60]}...")
-    
     # Download PDFs and import to Zotero
     print("\n=== Processing Papers ===")
     successfully_imported = []
@@ -1420,6 +1513,9 @@ def main():
         # Store in database
         store_paper_in_db(paper, db, run_id)
     
+    # Sync citekeys from Zotero for all pending items
+    sync_stats = sync_citekeys_from_zotero(db, zot)
+    
     # Generate digest (only successfully imported items)
     generate_digest(successfully_imported, DIGEST_PATH)
     
@@ -1457,6 +1553,7 @@ def main():
     print(f"Total collected: {len(all_papers)}")
     print(f"Total curated: {len(curated_papers)}")
     print(f"Successfully processed: {len(successfully_imported)}")
+    print(f"Citekey sync: Synced={sync_stats['synced']}, Pending={sync_stats['pending']}, Missing={sync_stats['missing']}")
     print(f"Digest written to: {DIGEST_PATH}")
     print(f"Database written to: {DB_PATH}")
     print(f"References written to: {REFERENCES_PATH}")

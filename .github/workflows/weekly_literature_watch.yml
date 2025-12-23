@@ -48,13 +48,14 @@ jobs:
             state.json
             literature.db
             references.json
+            references_pending.json
           retention-days: 90
       
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add digest.md state.json literature.db references.json
+          git add digest.md state.json literature.db references.json references_pending.json
           # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit"

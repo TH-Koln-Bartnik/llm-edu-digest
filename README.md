@@ -17,9 +17,11 @@ Every week (or on-demand), this workflow:
    - Operations research / analytics education
 3. **Scores and filters** results using relevance scoring (LLM + education keywords)
 4. **Downloads PDFs** when available from open access sources
-5. **Imports to Zotero** with full metadata and PDF attachments
-6. **Generates a digest** (`digest.md`) with summaries and links
-7. **Prevents duplicates** via persistent state tracking
+5. **Imports to Zotero** with full metadata and PDF attachments (without citation keys initially)
+6. **Syncs citation keys** from Zotero/Better BibTeX back to the database
+7. **Generates a digest** (`digest.md`) with summaries and links
+8. **Exports references** (`references.json`) for papers with synced citation keys
+9. **Prevents duplicates** via persistent state tracking
 
 ---
 
@@ -91,7 +93,25 @@ Common log sections:
 3. Look for newly imported items with:
    - Full metadata (title, authors, abstract, DOI, journal)
    - PDF attachments (when available)
-   - Source tracking in the "Extra" field (e.g., "Source: arxiv:2401.12345")
+   - Source tracking in the "Extra" field (e.g., "Work-ID: arxiv:2401.12345")
+
+### Understanding Citation Keys
+
+**This workflow uses Zotero + Better BibTeX as the source of truth for citation keys:**
+
+1. **On Import**: Papers are imported to Zotero **without** citation keys initially
+2. **Better BibTeX Generates Keys**: Open Zotero Desktop (with Better BibTeX plugin installed) to auto-generate citation keys in the format `{author}{year}{a/b/c...}`
+3. **Sync Back**: On the next workflow run, citation keys are synced from Zotero back to the SQLite database
+4. **References Export**: Only papers with synced citation keys appear in `references.json` (for stable Quarto/Pandoc citations)
+
+**To enable citation keys:**
+- Install [Better BibTeX for Zotero](https://retorque.re/zotero-better-bibtex/)
+- Configure citation key format: `[auth][year]` (author + year, with auto-disambiguation)
+- Open Zotero Desktop periodically to sync and generate keys
+
+**Files generated:**
+- `references.json` - Only items with synced citation keys (ready for citations)
+- `references_pending.json` - Items still waiting for citation keys (for transparency)
 
 ### Download Artifacts
 
@@ -269,6 +289,9 @@ python watch_literature.py
 | `journals.json` | Curated whitelist of journals to search |
 | `state.json` | Persistent state for deduplication (auto-updated) |
 | `digest.md` | Generated digest of new papers (auto-updated) |
+| `literature.db` | SQLite database storing all papers and citation key status (auto-updated) |
+| `references.json` | CSL-JSON export of papers with synced citation keys (auto-updated) |
+| `references_pending.json` | Papers waiting for citation keys from Zotero (auto-updated) |
 | `.github/workflows/weekly_literature_watch.yml` | GitHub Actions workflow definition |
 | `.gitignore` | Files to exclude from git (temp files, caches) |
 
