@@ -1,773 +1,757 @@
 # LLM Education Literature Digest
 
-*Generated: 2025-12-23 06:56:16 UTC*
+*Generated: 2025-12-23 08:52:54 UTC*
 
-**48 new items**
+**47 new items**
 
-## 1. Anatomy-R1: Enhancing Anatomy Reasoning in Multimodal Large Language Models via Anatomical Similarity Curriculum and Group Diversity Augmentation
+## 1. Topic Discovery and Classification for Responsible Generative AI Adaptation in Higher Education
 
-**Authors:** Ziyang Song, Zelin Zang, Zuyao Chen, Xusheng Liang, Dong Yi et al. (8 authors)
+**Authors:** Diane Myung-kyung Woodbridge, Allyson Seba, Freddie Seba, Aydin Schwartz
 
-**Source:** arxiv • 2025-12-22
+**Source:** arxiv • 2025-12-17
 
-**Summary:** Multimodal Large Language Models (MLLMs) have achieved impressive progress in natural image reasoning, yet their potential in medical imaging remains underexplored, especially in clinical anatomical surgical images. Anatomy understanding tasks demand precise understanding and clinically coherent ans...
+**Summary:** As generative artificial intelligence (GenAI) becomes increasingly capable of delivering personalized learning experiences and real-time feedback, a growing number of students are incorporating these tools into their academic workflows. They use GenAI to clarify concepts, solve complex problems, and...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.19512v1
-- PDF: https://arxiv.org/pdf/2512.19512v1
+- Landing page: http://arxiv.org/abs/2512.16036v1
+- PDF: https://arxiv.org/pdf/2512.16036v1
 
-*Relevance score: 17.0*
+*Relevance score: 18.0*
 
 ---
 
-## 2. VIGOR+: Iterative Confounder Generation and Validation via LLM-CEVAE Feedback Loop
+## 2. Bridging Traditional Machine Learning and Large Language Models: A Two-Part Course Design for Modern AI Education
 
-**Authors:** JiaWei Zhu, ZiHeng Liu
+**Authors:** Fang Li
 
-**Source:** arxiv • 2025-12-22
+**Source:** arxiv • 2025-12-04
 
-**Summary:** Hidden confounding remains a fundamental challenge in causal inference from observational data. Recent advances leverage Large Language Models (LLMs) to generate plausible hidden confounders based on domain knowledge, yet a critical gap exists: LLM-generated confounders often exhibit semantic plausi...
+**Summary:** This paper presents an innovative pedagogical approach for teaching artificial intelligence and data science that systematically bridges traditional machine learning techniques with modern Large Language Models (LLMs). We describe a course structured in two sequential and complementary parts: founda...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.19349v1
-- PDF: https://arxiv.org/pdf/2512.19349v1
+- Landing page: http://arxiv.org/abs/2512.05167v1
+- PDF: https://arxiv.org/pdf/2512.05167v1
 
-*Relevance score: 17.0*
+*Relevance score: 18.0*
 
 ---
 
-## 3. Stop saying LLM: Large Discourse Models (LDM) and Artificial Discursive Agent (ADA)?
+## 3. Leveraging Peer, Self, and Teacher Assessments for Generative AI-Enhanced Feedback
 
-**Authors:** Amar Lakel
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** This paper proposes an epistemological shift in the analysis of large generative models, replacing the category ''Large Language Models'' (LLM) with that of ''Large Discourse Models'' (LDM), and then with that of Artificial Discursive Agent (ADA). The theoretical framework is based on an ontological...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19117v1
-- PDF: https://arxiv.org/pdf/2512.19117v1
-
-*Relevance score: 17.0*
-
----
-
-## 4. IntelliCode: A Multi-Agent LLM Tutoring System with Centralized Learner Modeling
-
-**Authors:** Jones David, Shreya Ghosh
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** LLM-based tutors are typically single-turn assistants that lack persistent representations of learner knowledge, making it difficult to provide principled, transparent, and long-term pedagogical support. We introduce IntelliCode, a multi-agent LLM tutoring system built around a centralized, versione...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18669v1
-- PDF: https://arxiv.org/pdf/2512.18669v1
-
-*Relevance score: 17.0*
-
----
-
-## 5. SimpleCall: A Lightweight Image Restoration Agent in Label-Free Environments with MLLM Perceptual Feedback
-
-**Authors:** Jianglin Lu, Yuanwei Wu, Ziyi Zhao, Hongcheng Wang, Felix Jimenez et al. (7 authors)
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Complex image restoration aims to recover high-quality images from inputs affected by multiple degradations such as blur, noise, rain, and compression artifacts. Recent restoration agents, powered by vision-language models and large language models, offer promising restoration capabilities but suffe...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18599v1
-- PDF: https://arxiv.org/pdf/2512.18599v1
-
-*Relevance score: 17.0*
-
----
-
-## 6. Learning Hierarchical Procedural Memory for LLM Agents through Bayesian Selection and Contrastive Refinement
-
-**Authors:** Saman Forouzandeh, Wei Peng, Parham Moradi, Xinghuo Yu, Mahdi Jalili
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** We present MACLA, a framework that decouples reasoning from learning by maintaining a frozen large language model while performing all adaptation in an external hierarchical procedural memory. MACLA extracts reusable procedures from trajectories, tracks reliability via Bayesian posteriors, selects a...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18950v1
-- PDF: https://arxiv.org/pdf/2512.18950v1
-
-*Relevance score: 15.0*
-
----
-
-## 7. When Less is More: 8-bit Quantization Improves Continual Learning in Large Language Models
-
-**Authors:** Michael S. Zhang, Rishi A. Ruia, Arnav Kewalram, Saathvik Dharmapuram, Utkarsh Sharma et al. (6 authors)
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** Catastrophic forgetting poses a fundamental challenge in continual learning, particularly when models are quantized for deployment efficiency. We systematically investigate the interplay between quantization precision (FP16, INT8, INT4) and replay buffer strategies in large language models, revealin...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18934v1
-- PDF: https://arxiv.org/pdf/2512.18934v1
-
-*Relevance score: 15.0*
-
----
-
-## 8. Can LLMs Estimate Student Struggles? Human-AI Difficulty Alignment with Proficiency Simulation for Item Difficulty Prediction
-
-**Authors:** Ming Li, Han Chen, Yunze Xiao, Jian Chen, Hong Jiao et al. (6 authors)
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Accurate estimation of item (question or task) difficulty is critical for educational assessment but suffers from the cold start problem. While Large Language Models demonstrate superhuman problem-solving capabilities, it remains an open question whether they can perceive the cognitive struggles of ...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18880v1
-- PDF: https://arxiv.org/pdf/2512.18880v1
-
-*Relevance score: 15.0*
-
----
-
-## 9. ESearch-R1: Learning Cost-Aware MLLM Agents for Interactive Embodied Search via Reinforcement Learning
-
-**Authors:** Weijie Zhou, Xuangtang Xiong, Ye Tian, Lijun Yue, Xinyu Wu et al. (11 authors)
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Multimodal Large Language Models (MLLMs) have empowered embodied agents with remarkable capabilities in planning and reasoning. However, when facing ambiguous natural language instructions (e.g., "fetch the tool" in a cluttered room), current agents often fail to balance the high cost of physical ex...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18571v1
-- PDF: https://arxiv.org/pdf/2512.18571v1
-
-*Relevance score: 15.0*
-
----
-
-## 10. GreedySnake: Accelerating SSD-Offloaded LLM Training with Efficient Scheduling and Optimizer Step Overlapping
-
-**Authors:** Yikang Yue, Yishu Yin, Xuehai Qian
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** SSD-offloaded training offers a practical and promising approach to making LLM training cost-effective. Building on gradient accumulation with micro-batches, this paper introduces GreedySnake, a new SSD-offloaded training system that employs vertical scheduling, which executes all microbatches of a ...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17570v1
-- PDF: https://arxiv.org/pdf/2512.17570v1
-
-*Relevance score: 15.0*
-
----
-
-## 11. Exploring the features used for summary evaluation by Human and GPT
-
-**Authors:** Zahra Sadeghi, Evangelos Milios, Frank Rudzicz
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** Summary assessment involves evaluating how well a generated summary reflects the key ideas and meaning of the source text, requiring a deep understanding of the content. Large Language Models (LLMs) have been used to automate this process, acting as judges to evaluate summaries with respect to the o...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19620v1
-- PDF: https://arxiv.org/pdf/2512.19620v1
-
-*Relevance score: 11.0*
-
----
-
-## 12. Towards Closed-Loop Embodied Empathy Evolution: Probing LLM-Centric Lifelong Empathic Motion Generation in Unseen Scenarios
-
-**Authors:** Jiawen Wang, Jingjing Wang Tianyang Chen, Min Zhang, Guodong Zhou
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** In the literature, existing human-centric emotional motion generation methods primarily focus on boosting performance within a single scale-fixed dataset, largely neglecting the flexible and scale-increasing motion scenarios (e.g., sports, dance), whereas effectively learning these newly emerging sc...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19551v1
-- PDF: https://arxiv.org/pdf/2512.19551v1
-
-*Relevance score: 11.0*
-
----
-
-## 13. CodeSimpleQA: Scaling Factuality in Code Large Language Models
-
-**Authors:** Jian Yang, Wei Zhang, Yizhi Li, Shawn Guo, Haowen Wang et al. (11 authors)
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** Large language models (LLMs) have made significant strides in code generation, achieving impressive capabilities in synthesizing code snippets from natural language instructions. However, a critical challenge remains in ensuring LLMs generate factually accurate responses about programming concepts, ...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19424v1
-- PDF: https://arxiv.org/pdf/2512.19424v1
-
-*Relevance score: 11.0*
-
----
-
-## 14. Brain-Grounded Axes for Reading and Steering LLM States
-
-**Authors:** Sandro Andric
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** Interpretability methods for large language models (LLMs) typically derive directions from textual supervision, which can lack external grounding. We propose using human brain activity not as a training signal but as a coordinate system for reading and steering LLM states. Using the SMN4Lang MEG dat...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19399v1
-- PDF: https://arxiv.org/pdf/2512.19399v1
-
-*Relevance score: 11.0*
-
----
-
-## 15. AWPO: Enhancing Tool-Use of Large Language Models through Explicit Integration of Reasoning Rewards
-
-**Authors:** Zihan Lin, Xiaohan Wang, Hexiong Yang, Jiajun Chai, Jie Cao et al. (8 authors)
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** While reinforcement learning (RL) shows promise in training tool-use large language models (LLMs) using verifiable outcome rewards, existing methods largely overlook the potential of explicit reasoning rewards to bolster reasoning and tool utilization. Furthermore, natively combining reasoning and o...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19126v1
-- PDF: https://arxiv.org/pdf/2512.19126v1
-
-*Relevance score: 11.0*
-
----
-
-## 16. BanglaForge: LLM Collaboration with Self-Refinement for Bangla Code Generation
-
-**Authors:** Mahir Labib Dihan, Sadif Ahmed, Md Nafiu Rahman
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** Bangla is a low-resource language for code generation, lacking large-scale annotated datasets and tools to transform natural language specifications into executable programs. This makes Bangla-to-code generation a challenging task requiring innovative solutions. To address this, we introduce BanglaF...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19122v1
-- PDF: https://arxiv.org/pdf/2512.19122v1
-
-*Relevance score: 11.0*
-
----
-
-## 17. The Erasure Illusion: Stress-Testing the Generalization of LLM Forgetting Evaluation
-
-**Authors:** Hengrui Jia, Taoran Li, Jonas Guan, Varun Chandrasekaran
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** Machine unlearning aims to remove specific data influences from trained models, a capability essential for adhering to copyright laws and ensuring AI safety. Current unlearning metrics typically measure success by monitoring the model's performance degradation on the specific unlearning dataset ($D_...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19025v1
-- PDF: https://arxiv.org/pdf/2512.19025v1
-
-*Relevance score: 11.0*
-
----
-
-## 18. CrashChat: A Multimodal Large Language Model for Multitask Traffic Crash Video Analysis
-
-**Authors:** Kaidi Liang, Ke Li, Xianbiao Hu, Ruwen Qin
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Automating crash video analysis is essential to leverage the growing availability of driving video data for traffic safety research and accountability attribution in autonomous driving. Crash video analysis is a challenging multitask problem due to the complex spatiotemporal dynamics of crash events...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18878v1
-- PDF: https://arxiv.org/pdf/2512.18878v1
-
-*Relevance score: 11.0*
-
----
-
-## 19. From Word to World: Can Large Language Models be Implicit Text-based World Models?
-
-**Authors:** Yixia Li, Hongru Wang, Jiahao Qiu, Zhenfei Yin, Dongdong Zhang et al. (11 authors)
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Agentic reinforcement learning increasingly relies on experience-driven scaling, yet real-world environments remain non-adaptive, limited in coverage, and difficult to scale. World models offer a potential way to improve learning efficiency through simulated experience, but it remains unclear whethe...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18832v1
-- PDF: https://arxiv.org/pdf/2512.18832v1
-
-*Relevance score: 11.0*
-
----
-
-## 20. HARBOR: Holistic Adaptive Risk assessment model for BehaviORal healthcare
-
-**Authors:** Aditya Siddhant
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Behavioral healthcare risk assessment remains a challenging problem due to the highly multimodal nature of patient data and the temporal dynamics of mood and affective disorders. While large language models (LLMs) have demonstrated strong reasoning capabilities, their effectiveness in structured cli...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18829v1
-- PDF: https://arxiv.org/pdf/2512.18829v1
-
-*Relevance score: 11.0*
-
----
-
-## 21. LLM-CAS: Dynamic Neuron Perturbation for Real-Time Hallucination Correction
-
-**Authors:** Jensen Zhang, Ningyuan Liu, Yijia Fan, Zihao Huang, Qinglin Zeng et al. (8 authors)
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Large language models (LLMs) often generate hallucinated content that lacks factual or contextual grounding, limiting their reliability in critical applications. Existing approaches such as supervised fine-tuning and reinforcement learning from human feedback are data intensive and computationally e...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18623v1
-- PDF: https://arxiv.org/pdf/2512.18623v1
-
-*Relevance score: 11.0*
-
----
-
-## 22. A Multi-agent Text2SQL Framework using Small Language Models and Execution Feedback
-
-**Authors:** Thanh Dat Hoang, Thanh Trung Huynh, Matthias Weidlich, Thanh Tam Nguyen, Tong Chen et al. (7 authors)
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Text2SQL, the task of generating SQL queries from natural language text, is a critical challenge in data engineering. Recently, Large Language Models (LLMs) have demonstrated superior performance for this task due to their advanced comprehension and generation capabilities. However, privacy and cost...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18622v1
-- PDF: https://arxiv.org/pdf/2512.18622v1
-
-*Relevance score: 11.0*
-
----
-
-## 23. Vox Deorum: A Hybrid LLM Architecture for 4X / Grand Strategy Game AI -- Lessons from Civilization V
-
-**Authors:** John Chen, Sihan Cheng, Can Gurkan, Ryan Lay, Moez Salahuddin
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** Large Language Models' capacity to reason in natural language makes them uniquely promising for 4X and grand strategy games, enabling more natural human-AI gameplay interactions such as collaboration and negotiation. However, these games present unique challenges due to their complexity and long-hor...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18564v1
-- PDF: https://arxiv.org/pdf/2512.18564v1
-
-*Relevance score: 11.0*
-
----
-
-## 24. Large Language Models as Discounted Bayesian Filters
-
-**Authors:** Jensen Zhang, Jing Yang, Keze Wang
+**Authors:** Alvaro Becerra, Ruth Cobos
 
 **Source:** arxiv • 2025-12-20
 
-**Summary:** Large Language Models (LLMs) demonstrate strong few-shot generalization through in-context learning, yet their reasoning in dynamic and stochastic environments remains opaque. Prior studies mainly focus on static tasks and overlook the online adaptation required when beliefs must be continuously upd...
+**Summary:** Providing timely and meaningful feedback remains a persistent challenge in higher education, especially in large courses where teachers must balance formative depth with scalability. Recent advances in Generative Artificial Intelligence (GenAI) offer new opportunities to support feedback processes w...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.18489v1
-- PDF: https://arxiv.org/pdf/2512.18489v1
+- Landing page: http://arxiv.org/abs/2512.18306v1
+- PDF: https://arxiv.org/pdf/2512.18306v1
 
-*Relevance score: 11.0*
+*Relevance score: 17.0*
 
 ---
 
-## 25. Mitigating Spurious Correlations in NLI via LLM-Synthesized Counterfactuals and Dynamic Balanced Sampling
+## 4. From NLG Evaluation to Modern Student Assessment in the Era of ChatGPT: The Great Misalignment Problem and Pedagogical Multi-Factor Assessment (P-MFA)
 
-**Authors:** Christopher Román Jaimes
+**Authors:** Mika Hämäläinen, Kimmo Leiviskä
 
-**Source:** arxiv • 2025-12-20
+**Source:** arxiv • 2025-12-17
 
-**Summary:** Natural Language Inference (NLI) models frequently rely on spurious correlations rather than semantic reasoning. Existing mitigation strategies often incur high annotation costs or trigger catastrophic forgetting during fine-tuning. We propose an automated, scalable pipeline to address these limitat...
+**Summary:** This paper explores the growing epistemic parallel between NLG evaluation and grading of students in a Finnish University. We argue that both domains are experiencing a Great Misalignment Problem. As students increasingly use tools like ChatGPT to produce sophisticated outputs, traditional assessmen...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.18462v1
-- PDF: https://arxiv.org/pdf/2512.18462v1
+- Landing page: http://arxiv.org/abs/2512.15183v1
+- PDF: https://arxiv.org/pdf/2512.15183v1
 
-*Relevance score: 11.0*
+*Relevance score: 17.0*
 
 ---
 
-## 26. Phoneme-based speech recognition driven by large language models and sampling marginalization
+## 5. Unveiling User Perceptions in the Generative AI Era: A Sentiment-Driven Evaluation of AI Educational Apps' Role in Digital Transformation of e-Teaching
 
-**Authors:** Te Ma, Nanjie Li, Hao Huang, Zhijian Ou
+**Authors:** Adeleh Mazaherian, Erfan Nourbakhsh
 
-**Source:** arxiv • 2025-12-20
+**Source:** arxiv • 2025-12-12
 
-**Summary:** Recently, the Large Language Model-based Phoneme-to-Grapheme (LLM-P2G) method has shown excellent performance in speech recognition tasks and has become a feasible direction to replace the traditional WFST decoding method. This framework takes into account both recognition accuracy and system scalab...
+**Summary:** The rapid integration of generative artificial intelligence into education has driven digital transformation in e-teaching, yet user perceptions of AI educational apps remain underexplored. This study performs a sentiment-driven evaluation of user reviews from top AI ed-apps on the Google Play Store...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.18371v1
-- PDF: https://arxiv.org/pdf/2512.18371v1
+- Landing page: http://arxiv.org/abs/2512.11934v1
+- PDF: https://arxiv.org/pdf/2512.11934v1
 
-*Relevance score: 11.0*
+*Relevance score: 17.0*
 
 ---
 
-## 27. Linear Personality Probing and Steering in LLMs: A Big Five Study
+## 6. Developing and Evaluating a Large Language Model-Based Automated Feedback System Grounded in Evidence-Centered Design for Supporting Physics Problem Solving
 
-**Authors:** Michel Frising, Daniel Balcells
+**Authors:** Holger Maus, Paul Tschisgale, Fabian Kieser, Stefan Petersen, Peter Wulff
 
-**Source:** arxiv • 2025-12-19
+**Source:** arxiv • 2025-12-11
 
-**Summary:** Large language models (LLMs) exhibit distinct and consistent personalities that greatly impact trust and engagement. While this means that personality frameworks would be highly valuable tools to characterize and control LLMs' behavior, current approaches remain either costly (post-training) or brit...
+**Summary:** Generative AI offers new opportunities for individualized and adaptive learning, particularly through large language model (LLM)-based feedback systems. While LLMs can produce effective feedback for relatively straightforward conceptual tasks, delivering high-quality feedback for tasks that require ...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.17639v1
-- PDF: https://arxiv.org/pdf/2512.17639v1
+- Landing page: http://arxiv.org/abs/2512.10785v1
+- PDF: https://arxiv.org/pdf/2512.10785v1
 
-*Relevance score: 11.0*
+*Relevance score: 17.0*
 
 ---
 
-## 28. Enabling Disaggregated Multi-Stage MLLM Inference via GPU-Internal Scheduling and Resource Sharing
+## 7. Persian-Phi: Efficient Cross-Lingual Adaptation of Compact LLMs via Curriculum Learning
 
-**Authors:** Lingxiao Zhao, Haoran Zhou, Yuezhi Che, Dazhao Cheng
+**Authors:** Amir Mohammad Akhlaghi, Amirhossein Shabani, Mostafa Abdolmaleki, Saeed Reza Kheradpisheh
 
-**Source:** arxiv • 2025-12-19
+**Source:** arxiv • 2025-12-08
 
-**Summary:** Multimodal large language models (MLLMs) extend LLMs with visual understanding through a three-stage pipeline: multimodal preprocessing, vision encoding, and LLM inference. While these stages enhance capability, they introduce significant system bottlenecks. First, multimodal preprocessing-especiall...
+**Summary:** The democratization of AI is currently hindered by the immense computational costs required to train Large Language Models (LLMs) for low-resource languages. This paper presents Persian-Phi, a 3.8B parameter model that challenges the assumption that robust multilingual capabilities require massive m...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.17574v1
-- PDF: https://arxiv.org/pdf/2512.17574v1
+- Landing page: http://arxiv.org/abs/2512.07454v1
+- PDF: https://arxiv.org/pdf/2512.07454v1
 
-*Relevance score: 11.0*
+*Relevance score: 17.0*
 
 ---
 
-## 29. Towards Explainable Conversational AI for Early Diagnosis with Large Language Models
+## 8. When Scaffolding Breaks: Investigating Student Interaction with LLM-Based Writing Support in Real-Time K-12 EFL Classrooms
 
-**Authors:** Maliha Tabassum, M Shamim Kaiser
+**Authors:** Junho Myung, Hyunseung Lim, Hana Oh, Hyoungwook Jin, Nayeon Kang et al. (9 authors)
 
-**Source:** arxiv • 2025-12-19
+**Source:** arxiv • 2025-12-05
 
-**Summary:** Healthcare systems around the world are grappling with issues like inefficient diagnostics, rising costs, and limited access to specialists. These problems often lead to delays in treatment and poor health outcomes. Most current AI and deep learning diagnostic systems are not very interactive or tra...
+**Summary:** Large language models (LLMs) are promising tools for scaffolding students' English writing skills, but their effectiveness in real-time K-12 classrooms remains underexplored. Addressing this gap, our study examines the benefits and limitations of using LLMs as real-time learning support, considering...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.17559v1
-- PDF: https://arxiv.org/pdf/2512.17559v1
+- Landing page: http://arxiv.org/abs/2512.05506v1
+- PDF: https://arxiv.org/pdf/2512.05506v1
 
-*Relevance score: 11.0*
+*Relevance score: 17.0*
 
 ---
 
-## 30. GroundingME: Exposing the Visual Grounding Gap in MLLMs through Multi-Dimensional Evaluation
+## 9. SocraticAI: Transforming LLMs into Guided CS Tutors Through Scaffolded Interaction
 
-**Authors:** Rang Li, Lei Li, Shuhuai Ren, Hao Tian, Shuhao Gu et al. (13 authors)
+**Authors:** Karthik Sunil, Aalok Thakkar
 
-**Source:** arxiv • 2025-12-19
+**Source:** arxiv • 2025-12-03
 
-**Summary:** Visual grounding, localizing objects from natural language descriptions, represents a critical bridge between language and vision understanding. While multimodal large language models (MLLMs) achieve impressive scores on existing benchmarks, a fundamental question remains: can MLLMs truly ground lan...
+**Summary:** We present SocraticAI, a scaffolded AI tutoring system that integrates large language models (LLMs) into undergraduate Computer Science education through structured constraints rather than prohibition. The system enforces well-formulated questions, reflective engagement, and daily usage limits while...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.17495v1
-- PDF: https://arxiv.org/pdf/2512.17495v1
+- Landing page: http://arxiv.org/abs/2512.03501v1
+- PDF: https://arxiv.org/pdf/2512.03501v1
 
-*Relevance score: 11.0*
+*Relevance score: 17.0*
 
 ---
 
-## 31. UCoder: Unsupervised Code Generation by Internal Probing of Large Language Models
+## 10. Uncovering Students' Inquiry Patterns in GenAI-Supported Clinical Practice: An Integration of Epistemic Network Analysis and Sequential Pattern Mining
 
-**Authors:** Jiajun Wu, Jian Yang, Wei Zhang, Lin Jing, Yuqing Ma et al. (9 authors)
+**Authors:** Jiameng Wei, Dinh Dang, Kaixun Yang, Emily Stokes, Amna Mazeh et al. (12 authors)
 
-**Source:** arxiv • 2025-12-19
+**Source:** arxiv • 2025-12-04
 
-**Summary:** Large language models (LLMs) have demonstrated remarkable capabilities in code generation tasks. However, their effectiveness heavily relies on supervised training with extensive labeled (e.g., question-answering pairs) or unlabeled datasets (e.g., code snippets), which are often expensive and diffi...
+**Summary:** Assessment of medication history-taking has traditionally relied on human observation, limiting scalability and detailed performance data. While Generative AI (GenAI) platforms enable extensive data collection and learning analytics provide powerful methods for analyzing educational traces, these ap...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.17385v1
-- PDF: https://arxiv.org/pdf/2512.17385v1
+- Landing page: http://arxiv.org/abs/2512.06018v1
+- PDF: https://arxiv.org/pdf/2512.06018v1
 
-*Relevance score: 11.0*
+*Relevance score: 16.0*
 
 ---
 
-## 32. AdvJudge-Zero: Binary Decision Flips in LLM-as-a-Judge via Adversarial Control Tokens
+## 11. Preparing Future-Ready Learners: K12 Skills Shift and GenAI EdTech Innovation Direction
 
-**Authors:** Tung-Ling Li, Yuhao Wu, Hongliang Liu
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** Reward models and LLM-as-a-Judge systems are central to modern post-training pipelines such as RLHF, DPO, and RLAIF, where they provide scalar feedback and binary decisions that guide model selection and RL-based fine-tuning. We show that these judge systems exhibit a recurring vulnerability: short ...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17375v1
-- PDF: https://arxiv.org/pdf/2512.17375v1
-
-*Relevance score: 11.0*
-
----
-
-## 33. Bridging Natural Language and Formal Specification--Automated Translation of Software Requirements to LTL via Hierarchical Semantics Decomposition Using LLMs
-
-**Authors:** Zhi Ma, Cheng Wen, Zhexin Su, Xiao Liang, Cong Tian et al. (7 authors)
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** Automating the translation of natural language (NL) software requirements into formal specifications remains a critical challenge in scaling formal verification practices to industrial settings, particularly in safety-critical domains. Existing approaches, both rule-based and learning-based, face si...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17334v1
-- PDF: https://arxiv.org/pdf/2512.17334v1
-
-*Relevance score: 11.0*
-
----
-
-## 34. Neuro-Symbolic Control with Large Language Models for Language-Guided Spatial Tasks
-
-**Authors:** Momina Liaqat Ali, Muhammad Abid
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** Although large language models (LLMs) have recently become effective tools for language-conditioned control in embodied systems, instability, slow convergence, and hallucinated actions continue to limit their direct application to continuous control. A modular neuro-symbolic control framework that c...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17321v1
-- PDF: https://arxiv.org/pdf/2512.17321v1
-
-*Relevance score: 11.0*
-
----
-
-## 35. Large Language Models as Pokémon Battle Agents: Strategic Play and Content Generation
-
-**Authors:** Daksh Jain, Aarya Jain, Ashutosh Desai, Avyakt Verma, Ishan Bhanuka et al. (7 authors)
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** Strategic decision-making in Pokémon battles presents a unique testbed for evaluating large language models. Pokémon battles demand reasoning about type matchups, statistical trade-offs, and risk assessment, skills that mirror human strategic thinking. This work examines whether Large Language Model...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17308v1
-- PDF: https://arxiv.org/pdf/2512.17308v1
-
-*Relevance score: 11.0*
-
----
-
-## 36. Learning When to Look: A Disentangled Curriculum for Strategic Perception in Multimodal Reasoning
-
-**Authors:** Siqi Yang, Zilve Gao, Haibo Qiu, Fanfan Liu, Peng Shi et al. (8 authors)
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** Multimodal Large Language Models (MLLMs) demonstrate significant potential but remain brittle in complex, long-chain visual reasoning tasks. A critical failure mode is "visual forgetting", where models progressively lose visual grounding as reasoning extends, a phenomenon aptly described as "think l...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17227v1
-- PDF: https://arxiv.org/pdf/2512.17227v1
-
-*Relevance score: 11.0*
-
----
-
-## 37. TCDE: Topic-Centric Dual Expansion of Queries and Documents with Large Language Models for Information Retrieval
-
-**Authors:** Yu Yang, Feng Tian, Ping Chen
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** Query Expansion (QE) enriches queries and Document Expansion (DE) enriches documents, and these two techniques are often applied separately. However, such separate application may lead to semantic misalignment between the expanded queries (or documents) and their relevant documents (or queries). To ...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17164v1
-- PDF: https://arxiv.org/pdf/2512.17164v1
-
-*Relevance score: 11.0*
-
----
-
-## 38. Smoothing DiLoCo with Primal Averaging for Faster Training of LLMs
-
-**Authors:** Aaron Defazio, Konstantin Mishchenko, Parameswaran Raman, Hao-Jun Michael Shi, Lin Xiao
+**Authors:** Xin Miao, Pawan Kumar Mishra
 
 **Source:** arxiv • 2025-12-18
 
-**Summary:** We propose Generalized Primal Averaging (GPA), an extension of Nesterov's method in its primal averaging formulation that addresses key limitations of recent averaging-based optimizers such as single-worker DiLoCo and Schedule-Free (SF) in the non-distributed setting. These two recent algorithmic ap...
+**Summary:** Since Generative AI came out it has quickly embedded itself in our social fabric, triggering lots of discussions, predictions, and efforts from research, industry, government and capital market to experiment and embrace the technology. The question for the global K12 education is, what and how shoul...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.17131v1
-- PDF: https://arxiv.org/pdf/2512.17131v1
+- Landing page: http://arxiv.org/abs/2512.16428v1
+- PDF: https://arxiv.org/pdf/2512.16428v1
+
+*Relevance score: 15.0*
+
+---
+
+## 12. From Co-Design to Metacognitive Laziness: Evaluating Generative AI in Vocational Education
+
+**Authors:** Amir Yunus, Peng Rend Gay, Oon Teng Lee
+
+**Source:** arxiv • 2025-12-13
+
+**Summary:** This study examines the development and deployment of a Generative AI proof-of-concept (POC) designed to support lecturers in a vocational education setting in Singapore. Employing a user-centred, mixed-methods design process, we co-developed an AI chatbot with lecturers to address recurring instruc...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.12306v1
+- PDF: https://arxiv.org/pdf/2512.12306v1
+
+*Relevance score: 15.0*
+
+---
+
+## 13. Large Language Models for Education and Research: An Empirical and User Survey-based Analysis
+
+**Authors:** Md Mostafizer Rahman, Ariful Islam Shiplu, Md Faizul Ibne Amin, Yutaka Watanobe, Lu Peng
+
+**Source:** arxiv • 2025-12-08
+
+**Summary:** Pretrained Large Language Models (LLMs) have achieved remarkable success across diverse domains, with education and research emerging as particularly impactful areas. Among current state-of-the-art LLMs, ChatGPT and DeepSeek exhibit strong capabilities in mathematics, science, medicine, literature, ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.08057v1
+- PDF: https://arxiv.org/pdf/2512.08057v1
+
+*Relevance score: 15.0*
+
+---
+
+## 14. Teaching large language models to see in radar: aspect-distributed prototypes for few-shot HRRP ATR
+
+**Authors:** De Bi, Chengbai Xu, Lingfeng Chen, Panhe Hu
+
+**Source:** arxiv • 2025-12-07
+
+**Summary:** High-resolution range profiles (HRRPs) play a critical role in automatic target recognition (ATR) due to their richinformationregarding target scattering centers (SCs), which encapsulate the geometric and electromagnetic characteristics of thetarget.Under few-shot circumstances, traditional learning...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.06617v1
+- PDF: https://arxiv.org/pdf/2512.06617v1
+
+*Relevance score: 15.0*
+
+---
+
+## 15. On the Role and Impact of GenAI Tools in Software Engineering Education
+
+**Authors:** Qiaolin Qin, Ronnie de Souza Santos, Rodrigo Spinola
+
+**Source:** arxiv • 2025-12-03
+
+**Summary:** Context. The rise of generative AI (GenAI) tools like ChatGPT and GitHub Copilot has transformed how software is learned and written. In software engineering (SE) education, these tools offer new opportunities for support, but also raise concerns about over-reliance, ethical use, and impacts on lear...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.04256v1
+- PDF: https://arxiv.org/pdf/2512.04256v1
+
+*Relevance score: 15.0*
+
+---
+
+## 16. Designing AI-Resilient Assessments Using Interconnected Problems: A Theoretically Grounded and Empirically Validated Framework
+
+**Authors:** Kaihua Ding
+
+**Source:** arxiv • 2025-12-11
+
+**Summary:** The rapid adoption of generative AI has undermined traditional modular assessments in computing education, creating a disconnect between academic evaluation and industry practice. This paper presents a theoretically grounded framework for designing AI-resilient assessments, supported by formal analy...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.10758v1
+- PDF: https://arxiv.org/pdf/2512.10758v1
+
+*Relevance score: 12.0*
+
+---
+
+## 17. Model-Free Assessment of Simulator Fidelity via Quantile Curves
+
+**Authors:** Garud Iyengar, Yu-Shiou Willy Lin, Kaizheng Wang
+
+**Source:** arxiv • 2025-12-04
+
+**Summary:** Simulation of complex systems originated in manufacturing and queuing applications. It is now widely used for large-scale, ML-based systems in research, education, and consumer surveys. However, characterizing the discrepancy between simulators and ground truth remains challenging for increasingly c...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.05024v1
+- PDF: https://arxiv.org/pdf/2512.05024v1
+
+*Relevance score: 12.0*
+
+---
+
+## 18. Are LLMs Truly Multilingual? Exploring Zero-Shot Multilingual Capability of LLMs for Information Retrieval: An Italian Healthcare Use Case
+
+**Authors:** Vignesh Kumar Kembu, Pierandrea Morandini, Marta Bianca Maria Ranzini, Antonino Nocera
+
+**Source:** arxiv • 2025-12-04
+
+**Summary:** Large Language Models (LLMs) have become a key topic in AI and NLP, transforming sectors like healthcare, finance, education, and marketing by improving customer service, automating tasks, providing insights, improving diagnostics, and personalizing learning experiences. Information extraction from ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.04834v1
+- PDF: https://arxiv.org/pdf/2512.04834v1
+
+*Relevance score: 12.0*
+
+---
+
+## 19. GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators
+
+**Authors:** Jiacheng Guo, Ling Yang, Peter Chen, Qixin Xiao, Yinjie Wang et al. (9 authors)
+
+**Source:** arxiv • 2025-12-22
+
+**Summary:** Training capable Large Language Model (LLM) agents is critically bottlenecked by the high cost and static nature of real-world interaction data. We address this by introducing GenEnv, a framework that establishes a difficulty-aligned co-evolutionary game between an agent and a scalable, generative e...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.19682v1
+- PDF: https://arxiv.org/pdf/2512.19682v1
+
+*Relevance score: 11.0*
+
+---
+
+## 20. On the Role of Contextual Information and Ego States in LLM Agent Behavior for Transactional Analysis Dialogues
+
+**Authors:** Monika Zamojska, Jarosław A. Chudziak
+
+**Source:** arxiv • 2025-12-18
+
+**Summary:** LLM-powered agents are now used in many areas, from customer support to education, and there is increasing interest in their ability to act more like humans. This includes fields such as social, political, and psychological research, where the goal is to model group dynamics and social behavior. How...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.17060v1
+- PDF: https://arxiv.org/pdf/2512.17060v1
+
+*Relevance score: 11.0*
+
+---
+
+## 21. JustRL: Scaling a 1.5B LLM with a Simple RL Recipe
+
+**Authors:** Bingxiang He, Zekai Qu, Zeyuan Liu, Yinghao Chen, Yuxin Zuo et al. (12 authors)
+
+**Source:** arxiv • 2025-12-18
+
+**Summary:** Recent advances in reinforcement learning for large language models have converged on increasing complexity: multi-stage training pipelines, dynamic hyperparameter schedules, and curriculum learning strategies. This raises a fundamental question: \textbf{Is this complexity necessary?} We present \te...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.16649v1
+- PDF: https://arxiv.org/pdf/2512.16649v1
+
+*Relevance score: 11.0*
+
+---
+
+## 22. ORACLE: Time-Dependent Recursive Summary Graphs for Foresight on News Data Using LLMs
+
+**Authors:** Lev Kharlashkin, Eiaki Morooka, Yehor Tereshchenko, Mika Hämäläinen
+
+**Source:** arxiv • 2025-12-17
+
+**Summary:** ORACLE turns daily news into week-over-week, decision-ready insights for one of the Finnish University of Applied Sciences. The platform crawls and versions news, applies University-specific relevance filtering, embeds content, classifies items into PESTEL dimensions and builds a concise Time-Depend...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.15397v1
+- PDF: https://arxiv.org/pdf/2512.15397v1
+
+*Relevance score: 11.0*
+
+---
+
+## 23. ChatGPT and Gemini participated in the Korean College Scholastic Ability Test -- Earth Science I
+
+**Authors:** Seok-Hyun Ga, Chun-Yen Chang
+
+**Source:** arxiv • 2025-12-17
+
+**Summary:** The rapid development of Generative AI is bringing innovative changes to education and assessment. As the prevalence of students utilizing AI for assignments increases, concerns regarding academic integrity and the validity of assessments are growing. This study utilizes the Earth Science I section ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.15298v1
+- PDF: https://arxiv.org/pdf/2512.15298v1
+
+*Relevance score: 11.0*
+
+---
+
+## 24. Puzzle Curriculum GRPO for Vision-Centric Reasoning
+
+**Authors:** Ahmadreza Jeddi, Hakki Can Karaimer, Hue Nguyen, Zhongling Wang, Ke Zhao et al. (10 authors)
+
+**Source:** arxiv • 2025-12-16
+
+**Summary:** Recent reinforcement learning (RL) approaches like outcome-supervised GRPO have advanced chain-of-thought reasoning in Vision Language Models (VLMs), yet key issues linger: (i) reliance on costly and noisy hand-curated annotations or external verifiers; (ii) flat and sparse reward schemes in GRPO; a...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.14944v1
+- PDF: https://arxiv.org/pdf/2512.14944v1
+
+*Relevance score: 11.0*
+
+---
+
+## 25. Reconsidering Conversational Norms in LLM Chatbots for Sustainable AI
+
+**Authors:** Ronnie de Souza Santos, Cleyton Magalhães, Italo Santos
+
+**Source:** arxiv • 2025-12-16
+
+**Summary:** LLM based chatbots have become central interfaces in technical, educational, and analytical domains, supporting tasks such as code reasoning, problem solving, and information exploration. As these systems scale, sustainability concerns have intensified, with most assessments focusing on model archit...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.14673v1
+- PDF: https://arxiv.org/pdf/2512.14673v1
+
+*Relevance score: 11.0*
+
+---
+
+## 26. Estimating problem difficulty without ground truth using Large Language Model comparisons
+
+**Authors:** Marthe Ballon, Andres Algaba, Brecht Verbeken, Vincent Ginis
+
+**Source:** arxiv • 2025-12-16
+
+**Summary:** Recent advances in the finetuning of large language models (LLMs) have significantly improved their performance on established benchmarks, emphasizing the need for increasingly difficult, synthetic data. A key step in this data generation pipeline is a method for estimating problem difficulty. Curre...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.14220v1
+- PDF: https://arxiv.org/pdf/2512.14220v1
+
+*Relevance score: 11.0*
+
+---
+
+## 27. Evaluating Frontier LLMs on PhD-Level Mathematical Reasoning: A Benchmark on a Textbook in Theoretical Computer Science about Randomized Algorithms
+
+**Authors:** Yang Cao, Yubin Chen, Xuyang Guo, Zhao Song, Song Yue et al. (7 authors)
+
+**Source:** arxiv • 2025-12-16
+
+**Summary:** The rapid advancement of large language models (LLMs) has led to significant breakthroughs in automated mathematical reasoning and scientific discovery. Georgiev, G${ó}$mez-Serrano, Tao, and Wagner [GGSTW+25] demonstrate that AI systems can explore new constructions and improve existing bounds, illu...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.13978v1
+- PDF: https://arxiv.org/pdf/2512.13978v1
+
+*Relevance score: 11.0*
+
+---
+
+## 28. Context Branching for LLM Conversations: A Version Control Approach to Exploratory Programming
+
+**Authors:** Bhargav Chickmagalur Nanjundappa, Spandan Maaheshwari
+
+**Source:** arxiv • 2025-12-15
+
+**Summary:** Large Language Models (LLMs) have become integral to software engineering workflows, yet their effectiveness degrades significantly in multi-turn conversations. Recent studies demonstrate an average 39% performance drop when instructions are delivered across multiple turns, with models making premat...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.13914v1
+- PDF: https://arxiv.org/pdf/2512.13914v1
+
+*Relevance score: 11.0*
+
+---
+
+## 29. Async Control: Stress-testing Asynchronous Control Measures for LLM Agents
+
+**Authors:** Asa Cooper Stickland, Jan Michelfeit, Arathi Mani, Charlie Griffin, Ollie Matthews et al. (9 authors)
+
+**Source:** arxiv • 2025-12-15
+
+**Summary:** LLM-based software engineering agents are increasingly used in real-world development tasks, often with access to sensitive data or security-critical codebases. Such agents could intentionally sabotage these codebases if they were misaligned. We investigate asynchronous monitoring, in which a monito...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.13526v1
+- PDF: https://arxiv.org/pdf/2512.13526v1
+
+*Relevance score: 11.0*
+
+---
+
+## 30. Socratic Students: Teaching Language Models to Learn by Asking Questions
+
+**Authors:** Rajeev Bhatt Ambati, Tianyi Niu, Aashu Singh, Shlok Mishra, Shashank Srivastava et al. (6 authors)
+
+**Source:** arxiv • 2025-12-15
+
+**Summary:** Large Language Models (LLMs) excel at static interactions, where they answer user queries by retrieving knowledge encoded in their parameters. However, in many real-world settings, such as educational tutoring or medical assistance, relevant information is not directly available and must be actively...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.13102v2
+- PDF: https://arxiv.org/pdf/2512.13102v2
+
+*Relevance score: 11.0*
+
+---
+
+## 31. DiG: Differential Grounding for Enhancing Fine-Grained Perception in Multimodal Large Language Model
+
+**Authors:** Zhou Tao, Shida Wang, Yongxiang Hua, Haoyu Cao, Linli Xu
+
+**Source:** arxiv • 2025-12-14
+
+**Summary:** Multimodal Large Language Models have achieved impressive performance on a variety of vision-language tasks, yet their fine-grained visual perception and precise spatial reasoning remain limited. In this work, we introduce DiG (Differential Grounding), a novel proxy task framework where MLLMs learn ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.12633v1
+- PDF: https://arxiv.org/pdf/2512.12633v1
+
+*Relevance score: 11.0*
+
+---
+
+## 32. Exploring the Modular Integration of "AI + Architecture" Pedagogy in Undergraduate Design Education: A Case Study of Architectural Design III/IV Courses at Zhejiang University
+
+**Authors:** Wang Jiaqi, Lan Yi, Chen Xiang
+
+**Source:** arxiv • 2025-12-14
+
+**Summary:** This study investigates AI integration in architectural education through a teaching experiment in Zhejiang University's 2024-25 grade three undergraduate design studio. Adopting a dual-module framework (20-hour AI training + embedded ethics discussions), the course introduced deep learning models, ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.13730v1
+- PDF: https://arxiv.org/pdf/2512.13730v1
+
+*Relevance score: 11.0*
+
+---
+
+## 33. KidsArtBench: Multi-Dimensional Children's Art Evaluation with Attribute-Aware MLLMs
+
+**Authors:** Mingrui Ye, Chanjin Zheng, Zengyi Yu, Chenyu Xiang, Zhixue Zhao et al. (7 authors)
+
+**Source:** arxiv • 2025-12-14
+
+**Summary:** Multimodal Large Language Models (MLLMs) show remarkable progress across many visual-language tasks; however, their capacity to evaluate artistic expression remains limited. Aesthetic concepts are inherently abstract and open-ended, and multimodal artwork annotations are scarce. We introduce KidsArt...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.12503v1
+- PDF: https://arxiv.org/pdf/2512.12503v1
+
+*Relevance score: 11.0*
+
+---
+
+## 34. AI as a Teaching Partner: Early Lessons from Classroom Codesign with Secondary Teachers
+
+**Authors:** Alex Liu, Lief Esbenshade, Shawon Sarkar, Zewei Tian, Min Sun et al. (9 authors)
+
+**Source:** arxiv • 2025-12-12
+
+**Summary:** This report presents a comprehensive account of the Colleague AI Classroom pilot, a collaborative design (co-design) study that brought generative AI technology directly into real classrooms. In this study, AI functioned as a third agent, an active participant that mediated feedback, supported inqui...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.12045v1
+- PDF: https://arxiv.org/pdf/2512.12045v1
+
+*Relevance score: 11.0*
+
+---
+
+## 35. Evolutionary Reinforcement Learning based AI tutor for Socratic Interdisciplinary Instruction
+
+**Authors:** Mei Jiang, Haihai Shen, Zhuo Luo, Bingdong Li, Wenjing Hong et al. (7 authors)
+
+**Source:** arxiv • 2025-12-12
+
+**Summary:** Cultivating higher-order cognitive abilities -- such as knowledge integration, critical thinking, and creativity -- in modern STEM education necessitates a pedagogical shift from passive knowledge transmission to active Socratic construction. Although Large Language Models (LLMs) hold promise for ST...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.11930v1
+- PDF: https://arxiv.org/pdf/2512.11930v1
+
+*Relevance score: 11.0*
+
+---
+
+## 36. LLM-Assisted AHP for Explainable Cyber Range Evaluation
+
+**Authors:** Vyron Kampourakis, Georgios Kavallieratos, Georgios Spathoulas, Vasileios Gkioulos, Sokratis Katsikas
+
+**Source:** arxiv • 2025-12-11
+
+**Summary:** Cyber Ranges (CRs) have emerged as prominent platforms for cybersecurity training and education, especially for Critical Infrastructure (CI) sectors that face rising cyber threats. One way to address these threats is through hands-on exercises that bridge IT and OT domains to improve defensive readi...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.10487v1
+- PDF: https://arxiv.org/pdf/2512.10487v1
+
+*Relevance score: 11.0*
+
+---
+
+## 37. Enhancing Large Language Models for End-to-End Circuit Analysis Problem Solving
+
+**Authors:** Liangliang Chen, Weiyu Sun, Ying Zhang
+
+**Source:** arxiv • 2025-12-10
+
+**Summary:** Large language models (LLMs) have shown strong performance in data-rich domains such as programming, but their reliability in engineering tasks remains limited. Circuit analysis -- requiring multimodal understanding and precise mathematical reasoning -- highlights these challenges. Although Gemini 2...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.10159v1
+- PDF: https://arxiv.org/pdf/2512.10159v1
+
+*Relevance score: 11.0*
+
+---
+
+## 38. Automatic Essay Scoring and Feedback Generation in Basque Language Learning
+
+**Authors:** Ekhi Azurmendi, Xabier Arregi, Oier Lopez de Lacalle
+
+**Source:** arxiv • 2025-12-09
+
+**Summary:** This paper introduces the first publicly available dataset for Automatic Essay Scoring (AES) and feedback generation in Basque, targeting the CEFR C1 proficiency level. The dataset comprises 3,200 essays from HABE, each annotated by expert evaluators with criterion specific scores covering correctne...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.08713v1
+- PDF: https://arxiv.org/pdf/2512.08713v1
+
+*Relevance score: 11.0*
+
+---
+
+## 39. Curriculum Guided Massive Multi Agent System Solving For Robust Long Horizon Tasks
+
+**Authors:** Indrajit Kar, Kalathur Chenchu Kishore Kumar
+
+**Source:** arxiv • 2025-12-09
+
+**Summary:** Large Language Models and multi-agent systems have shown promise in decomposing complex tasks, yet they struggle with long-horizon reasoning tasks and escalating computation cost. This work introduces a hierarchical multi-agent architecture that distributes reasoning across a 64*64 grid of lightweig...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.08545v1
+- PDF: https://arxiv.org/pdf/2512.08545v1
+
+*Relevance score: 11.0*
+
+---
+
+## 40. DermETAS-SNA LLM: A Dermatology Focused Evolutionary Transformer Architecture Search with StackNet Augmented LLM Assistant
+
+**Authors:** Nitya Phani Santosh Oruganty, Keerthi Vemula Murali, Chun-Kit Ngan, Paulo Bandeira Pinho
+
+**Source:** arxiv • 2025-12-09
+
+**Summary:** Our work introduces the DermETAS-SNA LLM Assistant that integrates Dermatology-focused Evolutionary Transformer Architecture Search with StackNet Augmented LLM. The assistant dynamically learns skin-disease classifiers and provides medically informed descriptions to facilitate clinician-patient inte...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.08998v1
+- PDF: https://arxiv.org/pdf/2512.08998v1
+
+*Relevance score: 11.0*
+
+---
+
+## 41. An Experience Report on a Pedagogically Controlled, Curriculum-Constrained AI Tutor for SE Education
+
+**Authors:** Lucia Happe, Dominik Fuchß, Luca Hüttner, Kai Marquardt, Anne Koziolek
+
+**Source:** arxiv • 2025-12-08
+
+**Summary:** The integration of artificial intelligence (AI) into education continues to evoke both promise and skepticism. While past waves of technological optimism often fell short, recent advances in large language models (LLMs) have revived the vision of scalable, individualized tutoring. This paper present...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.11882v1
+- PDF: https://arxiv.org/pdf/2512.11882v1
+
+*Relevance score: 11.0*
+
+---
+
+## 42. Classifying German Language Proficiency Levels Using Large Language Models
+
+**Authors:** Elias-Leander Ahlers, Witold Brunsmann, Malte Schilling
+
+**Source:** arxiv • 2025-12-06
+
+**Summary:** Assessing language proficiency is essential for education, as it enables instruction tailored to learners needs. This paper investigates the use of Large Language Models (LLMs) for automatically classifying German texts according to the Common European Framework of Reference for Languages (CEFR) int...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.06483v1
+- PDF: https://arxiv.org/pdf/2512.06483v1
+
+*Relevance score: 11.0*
+
+---
+
+## 43. MedTutor-R1: Socratic Personalized Medical Teaching with Multi-Agent Simulation
+
+**Authors:** Zhitao He, Haolin Yang, Zeyu Qin, Yi R Fung
+
+**Source:** arxiv • 2025-12-05
+
+**Summary:** The significant gap between rising demands for clinical training and the scarcity of expert instruction poses a major challenge to medical education. With powerful capabilities in personalized guidance, Large Language Models (LLMs) offer a promising solution to bridge this gap. However, current rese...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.05671v1
+- PDF: https://arxiv.org/pdf/2512.05671v1
+
+*Relevance score: 11.0*
+
+---
+
+## 44. BioMedGPT-Mol: Multi-task Learning for Molecular Understanding and Generation
+
+**Authors:** Chenyang Zuo, Siqi Fan, Zaiqing Nie
+
+**Source:** arxiv • 2025-12-04
+
+**Summary:** Molecules play a crucial role in biomedical research and discovery, particularly in the field of small molecule drug development. Given the rapid advancements in large language models, especially the recent emergence of reasoning models, it is natural to explore how a general-purpose language model ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.04629v2
+- PDF: https://arxiv.org/pdf/2512.04629v2
+
+*Relevance score: 11.0*
+
+---
+
+## 45. Efficient Reinforcement Learning with Semantic and Token Entropy for LLM Reasoning
+
+**Authors:** Hongye Cao, Zhixin Bai, Ziyue Peng, Boyan Wang, Tianpei Yang et al. (8 authors)
+
+**Source:** arxiv • 2025-12-04
+
+**Summary:** Reinforcement learning with verifiable rewards (RLVR) has demonstrated superior performance in enhancing the reasoning capability of large language models (LLMs). However, this accuracy-oriented learning paradigm often suffers from entropy collapse, which reduces policy exploration and limits reason...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.04359v2
+- PDF: https://arxiv.org/pdf/2512.04359v2
+
+*Relevance score: 11.0*
+
+---
+
+## 46. Generative AI Practices, Literacy, and Divides: An Empirical Analysis in the Italian Context
+
+**Authors:** Beatrice Savoldi, Giuseppe Attanasio, Olga Gorodetskaya, Marta Marchiori Manerba, Elisa Bassignana et al. (13 authors)
+
+**Source:** arxiv • 2025-12-03
+
+**Summary:** The rise of Artificial Intelligence (AI) language technologies, particularly generative AI (GenAI) chatbots accessible via conversational interfaces, is transforming digital interactions. While these tools hold societal promise, they also risk widening digital divides due to uneven adoption and low ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.03671v1
+- PDF: https://arxiv.org/pdf/2512.03671v1
+
+*Relevance score: 11.0*
+
+---
+
+## 47. Cyber Humanism in Education: Reclaiming Agency through AI and Learning Sciences
+
+**Authors:** Giovanni Adorni
+
+**Source:** arxiv • 2025-12-18
+
+**Summary:** Generative Artificial Intelligence (GenAI) is rapidly reshaping how knowledge is produced and validated in education. Rather than adding another digital tool, large language models reconfigure reading, writing, and coding into hybrid human-AI workflows, raising concerns about epistemic automation, c...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.16701v1
+- PDF: https://arxiv.org/pdf/2512.16701v1
 
 *Relevance score: 10.0*
-
----
-
-## 39. Learning Continuous Solvent Effects from Transient Flow Data: A Graph Neural Network Benchmark on Catechol Rearrangement
-
-**Authors:** Hongsheng Xing, Qiuxin Si
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** Predicting reaction outcomes across continuous solvent composition ranges remains a critical challenge in organic synthesis and process chemistry. Traditional machine learning approaches often treat solvent identity as a discrete categorical variable, which prevents systematic interpolation and extr...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19530v1
-- PDF: https://arxiv.org/pdf/2512.19530v1
-
-*Relevance score: 9.0*
-
----
-
-## 40. From Retrieval to Reasoning: A Framework for Cyber Threat Intelligence NER with Explicit and Adaptive Instructions
-
-**Authors:** Jiaren Peng, Hongda Sun, Xuan Tian, Cheng Huang, Zeqing Li et al. (6 authors)
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** The automation of Cyber Threat Intelligence (CTI) relies heavily on Named Entity Recognition (NER) to extract critical entities from unstructured text. Currently, Large Language Models (LLMs) primarily address this task through retrieval-based In-Context Learning (ICL). This paper analyzes this main...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19414v1
-- PDF: https://arxiv.org/pdf/2512.19414v1
-
-*Relevance score: 9.0*
-
----
-
-## 41. OmniMoGen: Unifying Human Motion Generation via Learning from Interleaved Text-Motion Instructions
-
-**Authors:** Wendong Bu, Kaihang Pan, Yuze Lin, Jiacheng Li, Kai Shen et al. (9 authors)
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** Large language models (LLMs) have unified diverse linguistic tasks within a single framework, yet such unification remains unexplored in human motion generation. Existing methods are confined to isolated tasks, limiting flexibility for free-form and omni-objective generation. To address this, we pro...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19159v1
-- PDF: https://arxiv.org/pdf/2512.19159v1
-
-*Relevance score: 9.0*
-
----
-
-## 42. HyperLoad: A Cross-Modality Enhanced Large Language Model-Based Framework for Green Data Center Cooling Load Prediction
-
-**Authors:** Haoyu Jiang, Boan Qu, Junjie Zhu, Fanjie Zeng, Xiaojie Lin et al. (6 authors)
-
-**Source:** arxiv • 2025-12-22
-
-**Summary:** The rapid growth of artificial intelligence is exponentially escalating computational demand, inflating data center energy use and carbon emissions, and spurring rapid deployment of green data centers to relieve resource and environmental stress. Achieving sub-minute orchestration of renewables, sto...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.19114v1
-- PDF: https://arxiv.org/pdf/2512.19114v1
-
-*Relevance score: 9.0*
-
----
-
-## 43. Toward Training Superintelligent Software Agents through Self-Play SWE-RL
-
-**Authors:** Yuxiang Wei, Zhiqing Sun, Emily McMilin, Jonas Gehring, David Zhang et al. (9 authors)
-
-**Source:** arxiv • 2025-12-21
-
-**Summary:** While current software agents powered by large language models (LLMs) and agentic reinforcement learning (RL) can boost programmer productivity, their training data (e.g., GitHub issues and pull requests) and environments (e.g., pass-to-pass and fail-to-pass tests) heavily depend on human knowledge ...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18552v1
-- PDF: https://arxiv.org/pdf/2512.18552v1
-
-*Relevance score: 9.0*
-
----
-
-## 44. Secret mixtures of experts inside your LLM
-
-**Authors:** Enric Boix-Adsera
-
-**Source:** arxiv • 2025-12-20
-
-**Summary:** Despite being one of the earliest neural network layers, the Multilayer Perceptron (MLP) is arguably one of the least understood parts of the transformer architecture due to its dense computation and lack of easy visualization. This paper seeks to understand the MLP layers in dense LLM models by hyp...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18452v1
-- PDF: https://arxiv.org/pdf/2512.18452v1
-
-*Relevance score: 9.0*
-
----
-
-## 45. An Agentic AI Framework for Training General Practitioner Student Skills
-
-**Authors:** Victor De Marez, Jens Van Nooten, Luna De Bruyne, Walter Daelemans
-
-**Source:** arxiv • 2025-12-20
-
-**Summary:** Advancements in large language models offer strong potential for enhancing virtual simulated patients (VSPs) in medical education by providing scalable alternatives to resource-intensive traditional methods. However, current VSPs often struggle with medical accuracy, consistent roleplaying, scenario...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.18440v1
-- PDF: https://arxiv.org/pdf/2512.18440v1
-
-*Relevance score: 9.0*
-
----
-
-## 46. AnyTask: an Automated Task and Data Generation Framework for Advancing Sim-to-Real Policy Learning
-
-**Authors:** Ran Gong, Xiaohan Zhang, Jinghuan Shang, Maria Vittoria Minniti, Jigarkumar Patel et al. (14 authors)
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** Generalist robot learning remains constrained by data: large-scale, diverse, and high-quality interaction data are expensive to collect in the real world. While simulation has become a promising way for scaling up data collection, the related tasks, including simulation task design, task-aware scene...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17853v1
-- PDF: https://arxiv.org/pdf/2512.17853v1
-
-*Relevance score: 9.0*
-
----
-
-## 47. Confidence-Credibility Aware Weighted Ensembles of Small LLMs Outperform Large LLMs in Emotion Detection
-
-**Authors:** Menna Elgabry, Ali Hamdi
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** This paper introduces a confidence-weighted, credibility-aware ensemble framework for text-based emotion detection, inspired by Condorcet's Jury Theorem (CJT). Unlike conventional ensembles that often rely on homogeneous architectures, our approach combines architecturally diverse small transformer-...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17630v1
-- PDF: https://arxiv.org/pdf/2512.17630v1
-
-*Relevance score: 9.0*
-
----
-
-## 48. Learning What to Write: Write-Gated KV for Efficient Long-Context Inference
-
-**Authors:** Yen-Chieh Huang, Pi-Cheng Hsiu, Rui Fang, Ming-Syan Chen
-
-**Source:** arxiv • 2025-12-19
-
-**Summary:** Long-context LLM inference is bottlenecked by the quadratic attention complexity and linear KV cache growth. Prior approaches mitigate this via post-hoc selection or eviction but overlook the root inefficiency: indiscriminate writing to persistent memory. In this paper, we formalize KV cache managem...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.17452v2
-- PDF: https://arxiv.org/pdf/2512.17452v2
-
-*Relevance score: 9.0*
 
 ---
