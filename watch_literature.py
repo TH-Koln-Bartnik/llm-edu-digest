@@ -13,13 +13,11 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Optional, Set
-from urllib.parse import urljoin
 import re
 
 import arxiv
 import requests
 from pyzotero import zotero
-from dateutil import parser as dateparser
 
 
 # ==================== Configuration ====================
@@ -28,6 +26,9 @@ from dateutil import parser as dateparser
 ZOTERO_LIBRARY_ID = os.environ.get("ZOTERO_LIBRARY_ID", "")
 ZOTERO_API_KEY = os.environ.get("ZOTERO_API_KEY", "")
 OPEN_ALEX_API_KEY = os.environ.get("OPEN_ALEX_API_KEY", "")
+
+# Contact email for OpenAlex API (polite pool)
+CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "github-bot@users.noreply.github.com")
 
 # File paths
 JOURNALS_CONFIG_PATH = Path(__file__).parent / "journals.json"
@@ -322,9 +323,8 @@ def resolve_openalex_source_id(journal_name: str, issn: List[str], state: State)
         for issn_value in issn:
             try:
                 url = f"https://api.openalex.org/sources?filter=issn:{issn_value}"
-                headers = {}
+                headers = {"User-Agent": f"mailto:{CONTACT_EMAIL}"}
                 if OPEN_ALEX_API_KEY:
-                    headers["User-Agent"] = f"mailto:your-email@example.com"
                     url += f"&api_key={OPEN_ALEX_API_KEY}"
                 
                 response = requests.get(url, headers=headers, timeout=10)
@@ -342,9 +342,8 @@ def resolve_openalex_source_id(journal_name: str, issn: List[str], state: State)
     # Try by name
     try:
         url = f"https://api.openalex.org/sources?search={requests.utils.quote(journal_name)}"
-        headers = {}
+        headers = {"User-Agent": f"mailto:{CONTACT_EMAIL}"}
         if OPEN_ALEX_API_KEY:
-            headers["User-Agent"] = f"mailto:your-email@example.com"
             url += f"&api_key={OPEN_ALEX_API_KEY}"
         
         response = requests.get(url, headers=headers, timeout=10)
@@ -406,9 +405,8 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     
     url = f"https://api.openalex.org/works?filter={filters}&search={requests.utils.quote(search_query)}&per_page={OPENALEX_MAX_RESULTS_PER_JOURNAL}"
     
-    headers = {}
+    headers = {"User-Agent": f"mailto:{CONTACT_EMAIL}"}
     if OPEN_ALEX_API_KEY:
-        headers["User-Agent"] = f"mailto:your-email@example.com"
         url += f"&api_key={OPEN_ALEX_API_KEY}"
     
     try:
@@ -428,7 +426,8 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
             if openalex_id in state.seen_openalex_ids:
                 continue
             
-            doi = work.get("doi", "").replace("https://doi.org/", "") if work.get("doi") else None
+            doi_raw = work.get("doi", "")
+            doi = doi_raw.replace("https://doi.org/", "") if doi_raw else None
             if doi and doi in state.seen_dois:
                 continue
             
@@ -490,8 +489,16 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
 
 def reconstruct_abstract_from_inverted_index(inverted_index: Dict) -> str:
     """Reconstruct abstract text from OpenAlex inverted index."""
+    if not inverted_index:
+        return ""
+    
     # Create a list to hold words at their positions
-    max_pos = max([max(positions) for positions in inverted_index.values()] + [0])
+    # Filter out empty position lists to avoid crashes
+    all_positions = [pos for positions in inverted_index.values() if positions for pos in positions]
+    if not all_positions:
+        return ""
+    
+    max_pos = max(all_positions)
     words = [""] * (max_pos + 1)
     
     for word, positions in inverted_index.items():
