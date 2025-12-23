@@ -1,0 +1,5 @@
+# Configuration for arXiv to Zotero automation
+search_query: "cat:cs.AI OR cat:cs.CL OR cat:cs.LG AND (ti:education OR ti:learning OR ti:teaching OR ti:LLM OR ti:large language model)"
+max_results: 10
+sort_by: "submittedDate"
+sort_order: "descending"

@@ -1,0 +1,4 @@
+arxiv>=2.1.0
+pyzotero>=1.5.18
+requests>=2.31.0
+PyYAML>=6.0.1
