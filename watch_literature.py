@@ -168,17 +168,26 @@ def check_hard_education_intent(paper: Paper, config: Dict) -> bool:
         "pedagogy", "pedagogical", "classroom", "course", "curriculum",
         "assessment", "feedback", "student", "teacher", "instructor",
         "instruction", "instructional", "learner", "edtech", "mooc",
-        "educational", "learning outcomes", "learning analytics",
-        "learning environment", "learning platform", "e-learning"
+        "educational"
     ]
     
-    edu_strong_norm = [normalize_text(t) for t in edu_strong_terms]
+    # Education-specific "learning" phrases (contextual, not bare "learning")
+    # These are acceptable because they indicate education-specific contexts
+    edu_learning_phrases = [
+        "learning outcomes", "learning analytics", "learning experience",
+        "learning environment", "learning platform", "e-learning",
+        "learning management system", "learning design"
+    ]
+    
+    # Combine for gate check
+    all_edu_terms = edu_strong_terms + edu_learning_phrases
+    edu_terms_norm = [normalize_text(t) for t in all_edu_terms]
     
     title_norm = normalize_text(paper.title)
     abstract_norm = normalize_text(paper.abstract)
     
-    # Check if at least one strong education term is present
-    for term in edu_strong_norm:
+    # Check if at least one education term is present
+    for term in edu_terms_norm:
         if term in title_norm or term in abstract_norm:
             return True
     
