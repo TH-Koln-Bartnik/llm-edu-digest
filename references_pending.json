@@ -98,6 +98,33 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2512.03694",
+    "type": "report",
+    "title": "SRPG: Semantically Reconstructed Privacy Guard for Zero-Trust Privacy in Educational Multi-Agent Systems",
+    "author": [
+      {
+        "family": "Guo",
+        "given": "Shuang"
+      },
+      {
+        "family": "Li",
+        "given": "Zihui"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          3
+        ]
+      ]
+    },
+    "abstract": "Multi-Agent Systems (MAS) with large language models (LLMs) enable personalized education but risk leaking minors personally identifiable information (PII) via unstructured dialogue. Existing privacy methods struggle to balance security and utility: role-based access control fails on unstructured text, while naive masking destroys pedagogical context. We propose SRPG, a privacy guard for educational MAS, using a Dual-Stream Reconstruction Mechanism: a strict sanitization stream ensures zero PII leakage, and a context reconstruction stream (LLM driven) recovers mathematical logic. This decouples instructional content from private data, preserving teaching efficacy. Tests on MathDial show SRPG works across models; with GPT-4o, it achieves 0.0000 Attack Success Rate (ASR) (zero leakage) and 0.8267 Exact Match, far outperforming the zero trust Pure LLM baseline (0.2138). SRPG effectively protects minors privacy without sacrificing mathematical instructional quality.",
+    "URL": "http://arxiv.org/abs/2512.03694v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2512.04256",
     "type": "report",
     "title": "On the Role and Impact of GenAI Tools in Software Engineering Education",
@@ -180,6 +207,37 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2512.04555",
+    "type": "report",
+    "title": "ADAPT: Learning Task Mixtures for Budget-Constrained Instruction Tuning",
+    "author": [
+      {
+        "family": "Kadasi",
+        "given": "Pritam"
+      },
+      {
+        "family": "Upperwal",
+        "given": "Abhishek"
+      },
+      {
+        "family": "SIngh",
+        "given": "Mayank"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          4
+        ]
+      ]
+    },
+    "abstract": "We propose ADAPT, a meta-learning algorithm that \\emph{learns} task sampling proportions under an explicit token budget for multi-task instruction tuning. Instead of fixing task weights by hand, \\adapt{} maintains a continuous distribution over tasks and updates it via meta-gradients of a smooth worst-case validation objective, inducing an adaptive curriculum that allocates more tokens to useful tasks while avoiding collapse. We instantiate ADAPT on three $\\sim$1B-parameter open-weight LLMs (Gemma-3-1B, LLaMA-3.2-1B, Qwen-0.6B), training on 20 Natural Instructions task types under budgets of $1\\%$, $5\\%$, and $10\\%$ of the available supervised tokens, and compare against strong supervised fine-tuning baselines with uniform and size-proportional mixing. We conduct evaluations on 11 out-of-domain benchmarks spanning reasoning, reading comprehension, code generation, and instruction following, we find that ADAPT matches or slightly improves average downstream performance relative to the best static mixture, while using fewer effective training tokens and reallocating budget toward harder, benchmark-aligned tasks.",
+    "URL": "http://arxiv.org/abs/2512.04555v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2512.04629",
     "type": "report",
     "title": "BioMedGPT-Mol: Multi-task Learning for Molecular Understanding and Generation",
@@ -208,6 +266,45 @@
     },
     "abstract": "Molecules play a crucial role in biomedical research and discovery, particularly in the field of small molecule drug development. Given the rapid advancements in large language models, especially the recent emergence of reasoning models, it is natural to explore how a general-purpose language model can be efficiently adapted for molecular science applications. In this work, we introduce BioMedGPT-Mol, a molecular language model designed to support molecular understanding and generation tasks. By curating and unifying existing public instruction datasets, we have assembled a large-scale, comprehensive, and high-quality training dataset. The model is then fine-tuned through a meticulously designed multi-task learning framework. On a consolidated benchmark derived from LlaSMol, TOMG-Bench, and MuMOInstruct, BioMedGPT-Mol achieves remarkable performance. Our experimental results demonstrate that a general-purpose reasoning model can be effectively and efficiently post-trained into a professional molecular language model through a well-structured multi-task curriculum. Leveraging these capabilities, we further apply the model to multi-step retrosynthetic planning, achieving state-of-the-art performance on RetroBench and demonstrating its superior efficacy as an end-to-end retrosynthetic planner. We anticipate that our approach can be extended to other biomedical scientific domains.",
     "URL": "http://arxiv.org/abs/2512.04629v2",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.04630",
+    "type": "report",
+    "title": "Reflection-Satisfaction Tradeoff: Investigating Impact of Reflection on Student Engagement with AI-Generated Programming Hints",
+    "author": [
+      {
+        "family": "Choi",
+        "given": "Heeryung"
+      },
+      {
+        "family": "Phung",
+        "given": "Tung"
+      },
+      {
+        "family": "Wu",
+        "given": "Mengyan"
+      },
+      {
+        "family": "Singla",
+        "given": "Adish"
+      },
+      {
+        "family": "Brooks",
+        "given": "Christopher"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          4
+        ]
+      ]
+    },
+    "abstract": "Generative AI tools, such as AI-generated hints, are increasingly integrated into programming education to offer timely, personalized support. However, little is known about how to effectively leverage these hints while ensuring autonomous and meaningful learning. One promising approach involves pairing AI-generated hints with reflection prompts, asking students to review and analyze their learning, when they request hints. This study investigates the interplay between AI-generated hints and different designs of reflection prompts in an online introductory programming course. We conducted a two-trial field experiment. In Trial 1, students were randomly assigned to receive prompts either before or after receiving hints, or no prompt at all. Each prompt also targeted one of three SRL phases: planning, monitoring, and evaluation. In Trial 2, we examined two types of prompt guidance: directed (offering more explicit and structured guidance) and open (offering more general and less constrained guidance). Findings show that students in the before-hint (RQ1), planning (RQ2), and directed (RQ3) prompt groups produced higher-quality reflections but reported lower satisfaction with AI-generated hints than those in other conditions. Immediate performance did not differ across conditions. This negative relationship between reflection quality and hint satisfaction aligns with previous work on student mental effort and satisfaction. Our results highlight the need to reconsider how AI models are trained and evaluated for education, as prioritizing user satisfaction can undermine deeper learning.",
+    "URL": "http://arxiv.org/abs/2512.04630v1",
     "publisher": "arXiv"
   },
   {
@@ -418,6 +515,37 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2512.05967",
+    "type": "report",
+    "title": "Enhancing Retrieval-Augmented Generation with Entity Linking for Educational Platforms",
+    "author": [
+      {
+        "family": "Granata",
+        "given": "Francesco"
+      },
+      {
+        "family": "Poggi",
+        "given": "Francesco"
+      },
+      {
+        "family": "Mongiovì",
+        "given": "Misael"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          5
+        ]
+      ]
+    },
+    "abstract": "In the era of Large Language Models (LLMs), Retrieval-Augmented Generation (RAG) architectures are gaining significant attention for their ability to ground language generation in reliable knowledge sources. Despite their impressive effectiveness in many areas, RAG systems based solely on semantic similarity often fail to ensure factual accuracy in specialized domains, where terminological ambiguity can affect retrieval relevance. This study proposes an enhanced RAG architecture that integrates a factual signal derived from Entity Linking to improve the accuracy of educational question-answering systems in Italian. The system includes a Wikidata-based Entity Linking module and implements three re-ranking strategies to combine semantic and entity-based information: a hybrid score weighting model, reciprocal rank fusion, and a cross-encoder re-ranker. Experiments were conducted on two benchmarks: a custom academic dataset and the standard SQuAD-it dataset. Results show that, in domain-specific contexts, the hybrid schema based on reciprocal rank fusion significantly outperforms both the baseline and the cross-encoder approach, while the cross-encoder achieves the best results on the general-domain dataset. These findings confirm the presence of an effect of domain mismatch and highlight the importance of domain adaptation and hybrid ranking strategies to enhance factual precision and reliability in retrieval-augmented generation. They also demonstrate the potential of entity-aware RAG systems in educational environments, fostering adaptive and reliable AI-based tutoring tools.",
+    "URL": "http://arxiv.org/abs/2512.05967v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2512.06018",
     "type": "report",
     "title": "Uncovering Students' Inquiry Patterns in GenAI-Supported Clinical Practice: An Integration of Epistemic Network Analysis and Sequential Pattern Mining",
@@ -611,6 +739,34 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2512.07143",
+    "type": "report",
+    "title": "A Theoretical Framework of Student Agency in AI- Assisted Learning: A Grounded Theory Approach",
+    "author": [
+      {
+        "family": "Dai",
+        "given": "Yun"
+      },
+      {
+        "family": "Lai",
+        "given": "Sichen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          8
+        ]
+      ]
+    },
+    "abstract": "Generative AI(GenAI) is a kind of AI model capable of producing human-like content in various modalities, including text, image, audio, video, and computer programming. Although GenAI offers great potential for education, its value often depends on students' ability to engage with it actively, responsibly, and critically - qualities central to student agency. Nevertheless, student agency has long been a complex and ambiguous concept in educational discourses, with few empirical studies clarifying its distinct nature and process in AI-assisted learning environments. To address this gap, the qualitative study presented in this article examines how higher education students exercise agency in AI-assisted learning and proposes a theoretical framework using a grounded theory approach. Guided by agentic engagement theory, this article analyzes the authentic experiences of 26 students using data from their GenAI conversation records and cognitive interviews that capture their thought processes and decision-making. The findings identify four key aspects of student agency: initiating and (re)directing, mindful adoption, external help-seeking, and reflective learning. Together, these aspects form an empirically developed framework that characterizes student agency in AI-assisted learning as a proactive, intentional, adaptive, reflective, and iterative process. Based on the empirical findings, theoretical and practical implications are discussed for researchers, educators, and policymakers.",
+    "DOI": "10.1093/9780198945253.003.0009",
+    "URL": "https://doi.org/10.1093/9780198945253.003.0009",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2512.07454",
     "type": "report",
     "title": "Persian-Phi: Efficient Cross-Lingual Adaptation of Compact LLMs via Curriculum Learning",
@@ -712,6 +868,53 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2512.08596",
+    "type": "report",
+    "title": "Examining Student Interactions with a Pedagogical AI-Assistant for Essay Writing and their Impact on Students Writing Quality",
+    "author": [
+      {
+        "family": "Febriantoro",
+        "given": "Wicaksono"
+      },
+      {
+        "family": "Zhou",
+        "given": "Qi"
+      },
+      {
+        "family": "Suraworachet",
+        "given": "Wannapon"
+      },
+      {
+        "family": "Bulathwela",
+        "given": "Sahan"
+      },
+      {
+        "family": "Gauthier",
+        "given": "Andrea"
+      },
+      {
+        "family": "Millan",
+        "given": "Eva"
+      },
+      {
+        "family": "Cukurova",
+        "given": "Mutlu"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          9
+        ]
+      ]
+    },
+    "abstract": "The dynamic nature of interactions between students and GenAI, as well as their relationship to writing quality, remains underexplored. While most research has examined how general-purpose GenAI can support writing, fewer studies have investigated how students interact with pedagogically designed systems across different phases of the writing process. To address this gap, we evaluated a GenAI-driven essay-writing assistant (EWA) designed to support higher education students in argumentative writing. Drawing on 1,282 interaction logs from 32 undergraduates during a two-hour writing session, Sequential Pattern Mining and K-Means clustering were used to identify behavioral patterns. Two clusters emerged: Cluster 1 emphasized outline planning and essay structure, while Cluster 2 focused on content development. A Mann-Whitney U test revealed a moderate effect size (r = 0.36) in the essay Organization dimension, with Cluster 1 showing higher scores. Qualitative analysis indicated that students with better performance actively wrote and shared essay sections with EWA for feedback, rather than interacted passively by asking questions. These findings suggest implications for teaching and system design. Teachers can encourage active engagement, while future EWAs may integrate automatic labeling and monitoring to prompt students to move from questioning to writing, enabling fuller benefits from GenAI-supported learning.",
+    "URL": "http://arxiv.org/abs/2512.08596v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2512.08713",
     "type": "report",
     "title": "Automatic Essay Scoring and Feedback Generation in Basque Language Learning",
@@ -806,6 +1009,37 @@
     },
     "abstract": "Large language models (LLMs) have shown strong performance in data-rich domains such as programming, but their reliability in engineering tasks remains limited. Circuit analysis -- requiring multimodal understanding and precise mathematical reasoning -- highlights these challenges. Although Gemini 2.5 Pro improves diagram interpretation and analog-circuit reasoning, it still struggles to consistently produce correct solutions when given both text and circuit diagrams. At the same time, engineering education needs scalable AI tools capable of generating accurate solutions for tasks such as automated homework feedback and question-answering. This paper presents an enhanced, end-to-end circuit problem solver built on Gemini 2.5 Pro. We first benchmark Gemini on a representative set of undergraduate circuit problems and identify two major failure modes: 1) circuit-recognition hallucinations, particularly incorrect source polarity detection, and 2) reasoning-process hallucinations, such as incorrect current directions. To address recognition errors, we integrate a fine-tuned YOLO detector and OpenCV processing to isolate voltage and current sources, enabling Gemini to re-identify source polarities from cropped images with near-perfect accuracy. To reduce reasoning errors, we introduce an ngspice-based verification loop in which Gemini generates a .cir file, ngspice simulates the circuit, and discrepancies trigger iterative regeneration with optional human-in-the-loop review. Across 83 problems, the proposed pipeline achieves a 97.59% success rate (81 correct solutions), substantially outperforming Gemini 2.5 Pro's original 79.52% accuracy. This system extends LLM capabilities for multimodal engineering problem-solving and supports the creation of high-quality educational datasets and AI-powered instructional tools.",
     "URL": "http://arxiv.org/abs/2512.10159v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.10441",
+    "type": "report",
+    "title": "Decoding Student Minds: Leveraging Conversational Agents for Psychological and Learning Analysis",
+    "author": [
+      {
+        "family": "Chaabene",
+        "given": "Nour El Houda Ben"
+      },
+      {
+        "family": "Hammami",
+        "given": "Hamza"
+      },
+      {
+        "family": "Kahloul",
+        "given": "Laid"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          11
+        ]
+      ]
+    },
+    "abstract": "This paper presents a psychologically-aware conversational agent designed to enhance both learning performance and emotional well-being in educational settings. The system combines Large Language Models (LLMs), a knowledge graph-enhanced BERT (KG-BERT), and a bidirectional Long Short-Term Memory (LSTM) with attention to classify students' cognitive and affective states in real time. Unlike prior chatbots limited to either tutoring or affective support, our approach leverages multimodal data-including textual semantics, prosodic speech features, and temporal behavioral trends-to infer engagement, stress, and conceptual understanding. A pilot study with university students demonstrated improved motivation, reduced stress, and moderate academic gains compared to baseline methods. These results underline the promise of integrating semantic reasoning, multimodal fusion, and temporal modeling to support adaptive, student-centered educational interventions.",
+    "URL": "http://arxiv.org/abs/2512.10441v1",
     "publisher": "arXiv"
   },
   {
@@ -1223,6 +1457,76 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2512.12770",
+    "type": "report",
+    "title": "Curió-Edu 7B: Examining Data Selection Impacts in LLM Continued Pretraining",
+    "author": [
+      {
+        "family": "Almeida",
+        "given": "Thales Sales"
+      },
+      {
+        "family": "Nogueira",
+        "given": "Rodrigo"
+      },
+      {
+        "family": "Pedrini",
+        "given": "Hélio"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          14
+        ]
+      ]
+    },
+    "abstract": "Continued pretraining extends a language model's capabilities by further exposing it to additional data, often tailored to a specific linguistic or domain context. This strategy has emerged as an efficient alternative to full retraining when adapting general-purpose models to new settings. In this work, we investigate this paradigm through Curió 7B, a 7-billion-parameter model derived from LLaMA-2 and trained on 100 billion Portuguese tokens from the ClassiCC-PT corpus - the most extensive Portuguese-specific continued-pretraining effort above the three-billion-parameter scale to date. Beyond scale, we investigate whether quantity alone suffices or whether data quality plays a decisive role in linguistic adaptation. To this end, we introduce Curió-Edu 7B, a variant trained exclusively on the educational and STEM-filtered subset of the same corpus, totaling just 10 billion tokens. Despite using only 10% of the data and 20% of the computation, Curió-Edu 7B surpasses the full-corpus model in our evaluations, demonstrating that data selection can be fundamental even when adapting models with limited prior exposure to the target language. The developed models are available at https://huggingface.co/collections/ClassiCC-Corpus/curio-edu",
+    "URL": "http://arxiv.org/abs/2512.12770v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.12775",
+    "type": "report",
+    "title": "Persistent Personas? Role-Playing, Instruction Following, and Safety in Extended Interactions",
+    "author": [
+      {
+        "family": "Araujo",
+        "given": "Pedro Henrique Luz de"
+      },
+      {
+        "family": "Hedderich",
+        "given": "Michael A."
+      },
+      {
+        "family": "Modarressi",
+        "given": "Ali"
+      },
+      {
+        "family": "Schuetze",
+        "given": "Hinrich"
+      },
+      {
+        "family": "Roth",
+        "given": "Benjamin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          14
+        ]
+      ]
+    },
+    "abstract": "Persona-assigned large language models (LLMs) are used in domains such as education, healthcare, and sociodemographic simulation. Yet, they are typically evaluated only in short, single-round settings that do not reflect real-world usage. We introduce an evaluation protocol that combines long persona dialogues (over 100 rounds) and evaluation datasets to create dialogue-conditioned benchmarks that can robustly measure long-context effects. We then investigate the effects of dialogue length on persona fidelity, instruction-following, and safety of seven state-of-the-art open- and closed-weight LLMs. We find that persona fidelity degrades over the course of dialogues, especially in goal-oriented conversations, where models must sustain both persona fidelity and instruction following. We identify a trade-off between fidelity and instruction following, with non-persona baselines initially outperforming persona-assigned models; as dialogues progress and fidelity fades, persona responses become increasingly similar to baseline responses. Our findings highlight the fragility of persona applications in extended interactions and our work provides a protocol to systematically measure such failures.",
+    "URL": "http://arxiv.org/abs/2512.12775v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2512.13102",
     "type": "report",
     "title": "Socratic Students: Teaching Language Models to Learn by Asking Questions",
@@ -1318,6 +1622,49 @@
     },
     "abstract": "LLM-based software engineering agents are increasingly used in real-world development tasks, often with access to sensitive data or security-critical codebases. Such agents could intentionally sabotage these codebases if they were misaligned. We investigate asynchronous monitoring, in which a monitoring system reviews agent actions after the fact. Unlike synchronous monitoring, this approach does not impose runtime latency, while still attempting to disrupt attacks before irreversible harm occurs. We treat monitor development as an adversarial game between a blue team (who design monitors) and a red team (who create sabotaging agents). We attempt to set the game rules such that they upper bound the sabotage potential of an agent based on Claude 4.1 Opus. To ground this game in a realistic, high-stakes deployment scenario, we develop a suite of 5 diverse software engineering environments that simulate tasks that an agent might perform within an AI developer's internal infrastructure. Over the course of the game, we develop an ensemble monitor that achieves a 6% false negative rate at 1% false positive rate on a held out test environment. Then, we estimate risk of sabotage at deployment time by extrapolating from our monitor's false negative rate. We describe one simple model for this extrapolation, present a sensitivity analysis, and describe situations in which the model would be invalid. Code is available at: https://github.com/UKGovernmentBEIS/async-control.",
     "URL": "http://arxiv.org/abs/2512.13526v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.13658",
+    "type": "report",
+    "title": "Embedding-Based Rankings of Educational Resources based on Learning Outcome Alignment: Benchmarking, Expert Validation, and Learner Performance",
+    "author": [
+      {
+        "family": "Molavi",
+        "given": "Mohammadreza"
+      },
+      {
+        "family": "Moein",
+        "given": "Mohammad"
+      },
+      {
+        "family": "Tavakoli",
+        "given": "Mohammadreza"
+      },
+      {
+        "family": "Faraji",
+        "given": "Abdolali"
+      },
+      {
+        "family": "Mol",
+        "given": "Stefan T."
+      },
+      {
+        "family": "Kismihók",
+        "given": "Gábor"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          15
+        ]
+      ]
+    },
+    "abstract": "As the online learning landscape evolves, the need for personalization is increasingly evident. Although educational resources are burgeoning, educators face challenges selecting materials that both align with intended learning outcomes and address diverse learner needs. Large Language Models (LLMs) are attracting growing interest for their potential to create learning resources that better support personalization, but verifying coverage of intended outcomes still requires human alignment review, which is costly and limits scalability. We propose a framework that supports the cost-effective automation of evaluating alignment between educational resources and intended learning outcomes. Using human-generated materials, we benchmarked LLM-based text-embedding models and found that the most accurate model (Voyage) achieved 79% accuracy in detecting alignment. We then applied the optimal model to LLM-generated resources and, via expert evaluation, confirmed that it reliably assessed correspondence to intended outcomes (83% accuracy). Finally, in a three-group experiment with 360 learners, higher alignment scores were positively related to greater learning performance, chi-squared(2, N = 360) = 15.39, p < 0.001. These findings show that embedding-based alignment scores can facilitate scalable personalization by confirming alignment with learning outcomes, which allows teachers to focus on tailoring content to diverse learner needs.",
+    "URL": "http://arxiv.org/abs/2512.13658v1",
     "publisher": "arXiv"
   },
   {
