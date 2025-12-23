@@ -936,7 +936,8 @@ def import_to_zotero(paper: Paper, zot: zotero.Zotero, collection_keys: Dict[str
             item_data = zot.item(item_key)
             if item_data and "version" in item_data:
                 paper.zotero_item_version = item_data["version"]
-        except:
+        except Exception as e:
+            print(f"  Warning: Could not fetch item version: {e}")
             pass  # Version is optional
         
         print(f"  Created Zotero item: {item_key}")
@@ -1022,8 +1023,8 @@ def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dic
                 print(f"    Found citekey: {citekey}")
                 
                 # Optional: Verify citekey pattern (author+year+optional suffix)
-                # Pattern: starts with letters, contains digits (year), optional letter suffix
-                if not re.match(r'^[a-zA-Z]+\d{4}[a-z]?$', citekey):
+                # Pattern: starts with letters, contains 4-digit year, optional alphanumeric suffix
+                if not re.match(r'^[a-zA-Z]+\d{4}[a-zA-Z0-9]*$', citekey):
                     print(f"    Warning: Citekey '{citekey}' does not match expected pattern (author+year+suffix)")
                 
                 # Update database
@@ -1045,7 +1046,12 @@ def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dic
                 # Citekey not found - check if item is old enough to mark as missing
                 if first_seen:
                     try:
-                        first_seen_dt = datetime.fromisoformat(first_seen.replace("Z", "+00:00"))
+                        # Handle ISO 8601 format with or without timezone
+                        first_seen_clean = first_seen.replace("Z", "")
+                        if "+" in first_seen_clean:
+                            # Already has timezone info, remove it
+                            first_seen_clean = first_seen_clean.split("+")[0]
+                        first_seen_dt = datetime.fromisoformat(first_seen_clean)
                         age_days = (now_utc - first_seen_dt).days
                         
                         if age_days > 30:
@@ -1059,9 +1065,9 @@ def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dic
                         else:
                             print(f"    No citekey found, item age: {age_days} days, keeping as 'pending'")
                             stats["pending"] += 1
-                    except:
+                    except (ValueError, TypeError) as e:
                         # Could not parse date, keep as pending
-                        print(f"    No citekey found, keeping as 'pending'")
+                        print(f"    No citekey found, could not parse date ({e}), keeping as 'pending'")
                         stats["pending"] += 1
                 else:
                     print(f"    No citekey found, keeping as 'pending'")
@@ -1069,6 +1075,13 @@ def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dic
         
         except Exception as e:
             print(f"    Error fetching item {item_key}: {e}")
+            # Differentiate between network/API errors and other errors
+            if "404" in str(e) or "not found" in str(e).lower():
+                print(f"    Item not found in Zotero, may have been deleted")
+            elif "401" in str(e) or "403" in str(e):
+                print(f"    Authentication error, check API credentials")
+            else:
+                print(f"    Temporary error, will retry on next run")
             stats["pending"] += 1
             continue
     
@@ -1130,25 +1143,25 @@ def init_database(db_path: Path) -> Database:
     # Add columns to existing database if they don't exist
     try:
         db.execute("ALTER TABLE works ADD COLUMN citekey_status TEXT DEFAULT 'pending'")
-    except:
-        pass  # Column may already exist
+    except sqlite3.OperationalError:
+        pass  # Column already exists
     
     try:
         db.execute("ALTER TABLE works ADD COLUMN citekey_synced_utc TEXT")
-    except:
-        pass  # Column may already exist
+    except sqlite3.OperationalError:
+        pass  # Column already exists
     
     try:
         db.execute("ALTER TABLE works ADD COLUMN zotero_item_version INTEGER")
-    except:
-        pass  # Column may already exist
+    except sqlite3.OperationalError:
+        pass  # Column already exists
     
     # Create unique index on citekey where not null
     try:
         db.execute("DROP INDEX IF EXISTS idx_citekey")
         db.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_citekey ON works(citekey) WHERE citekey IS NOT NULL AND citekey != ''")
-    except:
-        pass  # Index may already exist or fail due to existing data
+    except sqlite3.OperationalError as e:
+        print(f"Warning: Could not create unique index on citekey: {e}")
     
     return db
 
