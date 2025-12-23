@@ -51,6 +51,10 @@ MAX_RETRIES = 3
 RETRY_DELAY = 2  # seconds
 ARXIV_POLITENESS_DELAY = 3  # seconds between arXiv API calls
 
+# Query term limits for search queries
+MAX_LLM_TERMS_FOR_QUERY = 6  # How many LLM terms to use in search queries
+MAX_EDU_TERMS_FOR_QUERY = 10  # How many education terms to use in search queries
+
 # Education term definitions for filtering and scoring
 # Split into unambiguous setting terms and ambiguous terms that need context
 
@@ -62,7 +66,7 @@ EDU_SETTING_TERMS = [
     "edtech", "mooc", "educational technology",
     "learning outcomes", "learning analytics", "learning experience",
     "learning environment", "learning platform", "e-learning",
-    "learning management system", "learning design"
+    "learning management system", "learning design",
 ]
 
 # Ambiguous terms that can appear in non-education contexts
@@ -70,7 +74,7 @@ EDU_SETTING_TERMS = [
 EDU_AMBIGUOUS_TERMS = [
     "student", "teacher", "curriculum", "assessment", 
     "feedback", "training", "education", "teaching",
-    "instruction", "instructional", "learner"
+    "instruction", "instructional", "learner",
 ]
 
 # Strong negative terms that indicate non-education ML/systems papers
@@ -83,7 +87,7 @@ NEGATIVE_STRONG_TERMS = [
     "benchmark suite", "benchmarking", "mlperf",
     "embodied", "embodied agent", "robot", "robotics",
     "memory bandwidth", "hardware acceleration", "sparse attention",
-    "model compression", "knowledge distillation"
+    "model compression", "knowledge distillation",
 ]
 
 # Disambiguation patterns - exclude these unless EDU_SETTING present
@@ -409,11 +413,11 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     llm_terms = default_rules.get("llm_terms", [])
     
     # Use module-level education term constants (both setting and ambiguous for query)
-    edu_query_terms = EDU_SETTING_TERMS[:10]  # Use top unambiguous terms for query
+    edu_query_terms = EDU_SETTING_TERMS[:MAX_EDU_TERMS_FOR_QUERY]
     
     # Build search query: (LLM terms) AND (education terms)
     # This ensures papers must match BOTH categories
-    llm_query_parts = [f'"{term}"' for term in llm_terms[:6]]  # Use top LLM terms
+    llm_query_parts = [f'"{term}"' for term in llm_terms[:MAX_LLM_TERMS_FOR_QUERY]]
     llm_query = " OR ".join(llm_query_parts)
     
     edu_query_parts = [f'"{term}"' for term in edu_query_terms]
@@ -423,7 +427,7 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     query = f"({llm_query}) AND ({edu_query})"
     
     print(f"arXiv query structure: (LLM terms) AND (EDU_SETTING terms)")
-    print(f"LLM terms: {', '.join(llm_terms[:6])}")
+    print(f"LLM terms: {', '.join(llm_terms[:MAX_LLM_TERMS_FOR_QUERY])}")
     print(f"EDU_SETTING terms: {', '.join(edu_query_terms)}")
     print(f"Max results: {ARXIV_MAX_RESULTS}")
     
@@ -652,10 +656,10 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     llm_terms = default_rules.get("llm_terms", [])
     
     # Use module-level education term constants (setting terms for query)
-    edu_query_terms = EDU_SETTING_TERMS[:6]  # Use top unambiguous terms
+    edu_query_terms = EDU_SETTING_TERMS[:MAX_EDU_TERMS_FOR_QUERY]
     
     # Combine terms for search
-    search_terms = llm_terms[:4] + edu_query_terms
+    search_terms = llm_terms[:MAX_LLM_TERMS_FOR_QUERY] + edu_query_terms
     search_query = " OR ".join(search_terms)
     
     # Date filter
@@ -1420,7 +1424,9 @@ def generate_references_json(db: Database, output_path: Path):
     is_first_run = not output_path.exists()
     
     # Stability logic: Do NOT overwrite references.json with empty file when Synced=0 and Pending>0
-    if synced_count == 0 and pending_count > 0:
+    should_preserve_existing = synced_count == 0 and pending_count > 0
+    
+    if should_preserve_existing:
         if is_first_run:
             # First run: create temporary references.json using work_id as ID
             print("⚠️  First run with pending citekeys: creating temporary references.json with work_id as fallback")
