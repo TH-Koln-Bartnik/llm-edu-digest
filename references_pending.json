@@ -2193,6 +2193,61 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2512.19512",
+    "type": "report",
+    "title": "Anatomy-R1: Enhancing Anatomy Reasoning in Multimodal Large Language Models via Anatomical Similarity Curriculum and Group Diversity Augmentation",
+    "author": [
+      {
+        "family": "Song",
+        "given": "Ziyang"
+      },
+      {
+        "family": "Zang",
+        "given": "Zelin"
+      },
+      {
+        "family": "Chen",
+        "given": "Zuyao"
+      },
+      {
+        "family": "Liang",
+        "given": "Xusheng"
+      },
+      {
+        "family": "Yi",
+        "given": "Dong"
+      },
+      {
+        "family": "Wu",
+        "given": "Jinlin"
+      },
+      {
+        "family": "Liu",
+        "given": "Hongbin"
+      },
+      {
+        "family": "Luo",
+        "given": "Jiebo"
+      },
+      {
+        "family": "Lei",
+        "given": "Zhen."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          22
+        ]
+      ]
+    },
+    "abstract": "Multimodal Large Language Models (MLLMs) have achieved impressive progress in natural image reasoning, yet their potential in medical imaging remains underexplored, especially in clinical anatomical surgical images. Anatomy understanding tasks demand precise understanding and clinically coherent answers, which are difficult to achieve due to the complexity of medical data and the scarcity of high-quality expert annotations. These challenges limit the effectiveness of conventional Supervised Fine-Tuning (SFT) strategies. While recent work has demonstrated that Group Relative Policy Optimization (GRPO) can enhance reasoning in MLLMs without relying on large amounts of data, we find two weaknesses that hinder GRPO's reasoning performance in anatomy recognition: 1) knowledge cannot be effectively shared between different anatomical structures, resulting in uneven information gain and preventing the model from converging, and 2) the model quickly converges to a single reasoning path, suppressing the exploration of diverse strategies. To overcome these challenges, we propose two novel methods. First, we implement a progressive learning strategy called Anatomical Similarity Curriculum Learning by controlling question difficulty via the similarity of answer choices, enabling the model to master complex problems incrementally. Second, we utilize question augmentation referred to as Group Diversity Question Augmentation to expand the model's search space for difficult queries, mitigating the tendency to produce uniform responses. Comprehensive experiments on the SGG-VQA and OmniMedVQA benchmarks show our method achieves a significant improvement across the two benchmarks, demonstrating its effectiveness in enhancing the medical reasoning capabilities of MLLMs. The code can be found in https://github.com/tomato996/Anatomy-R1",
+    "URL": "http://arxiv.org/abs/2512.19512v2",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2512.19682",
     "type": "report",
     "title": "GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators",
@@ -2245,6 +2300,326 @@
     },
     "abstract": "Training capable Large Language Model (LLM) agents is critically bottlenecked by the high cost and static nature of real-world interaction data. We address this by introducing GenEnv, a framework that establishes a difficulty-aligned co-evolutionary game between an agent and a scalable, generative environment simulator. Unlike traditional methods that evolve models on static datasets, GenEnv instantiates a dataevolving: the simulator acts as a dynamic curriculum policy, continuously generating tasks specifically tailored to the agent's ``zone of proximal development''. This process is guided by a simple but effective $α$-Curriculum Reward, which aligns task difficulty with the agent's current capabilities. We evaluate GenEnv on five benchmarks, including API-Bank, ALFWorld, BFCL, Bamboogle, and TravelPlanner. Across these tasks, GenEnv improves agent performance by up to \\textbf{+40.3\\%} over 7B baselines and matches or exceeds the average performance of larger models. Compared to Gemini 2.5 Pro-based offline data augmentation, GenEnv achieves better performance while using 3.3$\\times$ less data. By shifting from static supervision to adaptive simulation, GenEnv provides a data-efficient pathway for scaling agent capabilities.",
     "URL": "http://arxiv.org/abs/2512.19682v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.19903",
+    "type": "report",
+    "title": "How well do Large Language Models Recognize Instructional Moves? Establishing Baselines for Foundation Models in Educational Discourse",
+    "author": [
+      {
+        "family": "Vanacore",
+        "given": "Kirk"
+      },
+      {
+        "family": "Kizilcec",
+        "given": "Rene F."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          22
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) are increasingly adopted in educational technologies for a variety of tasks, from generating instructional materials and assisting with assessment design to tutoring. While prior work has investigated how models can be adapted or optimized for specific tasks, far less is known about how well LLMs perform at interpreting authentic educational scenarios without significant customization. As LLM-based systems become widely adopted by learners and educators in everyday academic contexts, understanding their out-of-the-box capabilities is increasingly important for setting expectations and benchmarking. We compared six LLMs to estimate their baseline performance on a simple but important task: classifying instructional moves in authentic classroom transcripts. We evaluated typical prompting methods: zero-shot, one-shot, and few-shot prompting. We found that while zero-shot performance was moderate, providing comprehensive examples (few-shot prompting) significantly improved performance for state-of-the-art models, with the strongest configuration reaching Cohen's Kappa = 0.58 against expert-coded annotations. At the same time, improvements were neither uniform nor complete: performance varied considerably by instructional move, and higher recall frequently came at the cost of increased false positives. Overall, these findings indicate that foundation models demonstrate meaningful yet limited capacity to interpret instructional discourse, with prompt design helping to surface capability but not eliminating fundamental reliability constraints.",
+    "URL": "http://arxiv.org/abs/2512.19903v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.20714",
+    "type": "report",
+    "title": "From Pilots to Practices: A Scoping Review of GenAI-Enabled Personalization in Computer Science Education",
+    "author": [
+      {
+        "family": "Reihanian",
+        "given": "Iman"
+      },
+      {
+        "family": "Hou",
+        "given": "Yunfei"
+      },
+      {
+        "family": "Sun",
+        "given": "Qingquan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          23
+        ]
+      ]
+    },
+    "abstract": "Generative AI enables personalized computer science education at scale, yet questions remain about whether such personalization supports or undermines learning. This scoping review synthesizes 32 studies (2023-2025) purposively sampled from 259 records to map personalization mechanisms and effectiveness signals in higher-education computer science contexts. We identify five application domains: intelligent tutoring, personalized materials, formative feedback, AI-augmented assessment, and code review, and analyze how design choices shape learning outcomes. Designs incorporating explanation-first guidance, solution withholding, graduated hint ladders, and artifact grounding (student code, tests, and rubrics) consistently show more positive learning processes than unconstrained chat interfaces. Successful implementations share four patterns: context-aware tutoring anchored in student artifacts, multi-level hint structures requiring reflection, composition with traditional CS infrastructure (autograders and rubrics), and human-in-the-loop quality assurance. We propose an exploration-first adoption framework emphasizing piloting, instrumentation, learning-preserving defaults, and evidence-based scaling. Recurrent risks include academic integrity, privacy, bias and equity, and over-reliance, and we pair these with operational mitigation. The evidence supports generative AI as a mechanism for precision scaffolding when embedded in audit-ready workflows that preserve productive struggle while scaling personalized support.",
+    "DOI": "10.3390/ai7010006",
+    "URL": "https://doi.org/10.3390/ai7010006",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.20732",
+    "type": "report",
+    "title": "FEM-Bench: A Structured Scientific Reasoning Benchmark for Evaluating Code-Generating LLMs",
+    "author": [
+      {
+        "family": "Mohammadzadeh",
+        "given": "Saeed"
+      },
+      {
+        "family": "Hamdi",
+        "given": "Erfan"
+      },
+      {
+        "family": "Shor",
+        "given": "Joel"
+      },
+      {
+        "family": "Lejeune",
+        "given": "Emma"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          23
+        ]
+      ]
+    },
+    "abstract": "As LLMs advance their reasoning capabilities about the physical world, the absence of rigorous benchmarks for evaluating their ability to generate scientifically valid physical models has become a critical gap. Computational mechanics, which develops and applies mathematical models and numerical methods to predict the behavior of physical systems under forces, deformation, and constraints, provides an ideal foundation for structured scientific reasoning evaluation. Problems follow clear mathematical structure, enforce strict physical and numerical constraints, and support objective verification. The discipline requires constructing explicit models of physical systems and reasoning about geometry, spatial relationships, and material behavior, connecting directly to emerging AI goals in physical reasoning and world modeling. We introduce FEM-Bench, a computational mechanics benchmark designed to evaluate the ability of LLMs to generate correct finite element method (FEM) and related code. FEM-Bench 2025 contains a suite of introductory but nontrivial tasks aligned with material from a first graduate course on computational mechanics. These tasks capture essential numerical and physical modeling challenges while representing only a small fraction of the complexity present in the discipline. Despite their simplicity, state-of-the-art LLMs do not reliably solve all of them. In a five attempt run, the best performing model at function writing, Gemini 3 Pro, completed 30/33 tasks at least once and 26/33 tasks all five times. The best performing model at unit test writing, GPT-5, had an Average Joint Success Rate of 73.8%. Other popular models showed broad performance variation. FEM-Bench establishes a structured foundation for evaluating AI-generated scientific code, and future iterations will incorporate increasingly sophisticated tasks to track progress as models evolve.",
+    "URL": "http://arxiv.org/abs/2512.20732v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.20780",
+    "type": "report",
+    "title": "Large Language Models Approach Expert Pedagogical Quality in Math Tutoring but Differ in Instructional and Linguistic Profiles",
+    "author": [
+      {
+        "family": "Abdulsalam",
+        "given": "Ramatu Oiza"
+      },
+      {
+        "family": "Aroyehun",
+        "given": "Segun"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          23
+        ]
+      ]
+    },
+    "abstract": "Recent work has explored the use of large language models for generating tutoring responses in mathematics, yet it remains unclear how closely their instructional behavior aligns with expert human practice. We examine this question using a controlled, turn-level comparison in which expert human tutors, novice human tutors, and multiple large language models respond to the same set of math remediation conversation turns. We examine both instructional strategies and linguistic characteristics of tutoring responses, including restating and revoicing, pressing for accuracy, lexical diversity, readability, politeness, and agency. We find that large language models approach expert levels of perceived pedagogical quality on average but exhibit systematic differences in their instructional and linguistic profiles. In particular, large language models tend to underuse restating and revoicing strategies characteristic of expert human tutors, while producing longer, more lexically diverse, and more polite responses. Statistical analyses show that restating and revoicing, lexical diversity, and pressing for accuracy are positively associated with perceived pedagogical quality, whereas higher levels of agentic and polite language are negatively associated. Overall, recent large language models exhibit levels of perceived pedagogical quality comparable to expert human tutors, while relying on different instructional and linguistic strategies. These findings underscore the value of analyzing instructional strategies and linguistic characteristics when evaluating tutoring responses across human tutors and intelligent tutoring systems.",
+    "URL": "http://arxiv.org/abs/2512.20780v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.21041",
+    "type": "report",
+    "title": "When LLMs fall short in Deductive Coding: Model Comparison and Human AI Collaboration Workflow Design",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Zijian"
+      },
+      {
+        "family": "Tang",
+        "given": "Luzhen"
+      },
+      {
+        "family": "Xia",
+        "given": "Mengyu"
+      },
+      {
+        "family": "Li",
+        "given": "Xinyu"
+      },
+      {
+        "family": "Chen",
+        "given": "Naping"
+      },
+      {
+        "family": "Gašević",
+        "given": "Dragan"
+      },
+      {
+        "family": "Fan",
+        "given": "Yizhou"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          24
+        ]
+      ]
+    },
+    "abstract": "With generative artificial intelligence driving the growth of dialogic data in education, automated coding is a promising direction for learning analytics to improve efficiency. This surge highlights the need to understand the nuances of student-AI interactions, especially those rare yet crucial. However, automated coding may struggle to capture these rare codes due to imbalanced data, while human coding remains time-consuming and labour-intensive. The current study examined the potential of large language models (LLMs) to approximate or replace humans in deductive, theory-driven coding, while also exploring how human-AI collaboration might support such coding tasks at scale. We compared the coding performance of small transformer classifiers (e.g., BERT) and LLMs in two datasets, with particular attention to imbalanced head-tail distributions in dialogue codes. Our results showed that LLMs did not outperform BERT-based models and exhibited systematic errors and biases in deductive coding tasks. We designed and evaluated a human-AI collaborative workflow that improved coding efficiency while maintaining coding reliability. Our findings reveal both the limitations of LLMs -- especially their difficulties with semantic similarity and theoretical interpretations and the indispensable role of human judgment -- while demonstrating the practical promise of human-AI collaborative workflows for coding.",
+    "URL": "http://arxiv.org/abs/2512.21041v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.21055",
+    "type": "report",
+    "title": "Making AI Work: An Autoethnography of a Workaround in Higher Education",
+    "author": [
+      {
+        "family": "Lee",
+        "given": "Shang Chieh"
+      },
+      {
+        "family": "Narayan",
+        "given": "Bhuva"
+      },
+      {
+        "family": "Shum",
+        "given": "Simon Buckingham"
+      },
+      {
+        "family": "Ng",
+        "given": "Stella"
+      },
+      {
+        "family": "Kocaballi",
+        "given": "A. Baki"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          24
+        ]
+      ]
+    },
+    "abstract": "Research on the implementation of Generative Artificial Intelligence (GenAI) in higher education often focuses on strategic goals, overlooking the hidden, and often politically charged, labour required to make it functional. This paper provides an insider's account of the sociotechnical friction that arises when an institutional goal of empowering non-technical staff conflicts with the technical limitations of enterprise Large Language Models (LLMs). Through analytic autoethnography, this study examines a GenAI project pushed to an impasse, focusing on a workaround developed to navigate not only technical constraints but also the combined challenge of organisational territoriality and assertions of positional power. Drawing upon Alter's (2014) theory of workarounds, the analysis interprets \"articulation work\" as a form of \"invisible labour\". By engaging with the Information Systems (IS) domains of user innovation and technology-in-practice, this study argues that such user-driven workarounds should be understood not as deviations, but as integral acts of sociotechnical integration. This integration, however, highlights the central paradoxes of modern GenAI where such workarounds for \"unfinished\" systems can simultaneously create unofficial \"shadow\" systems and obscure the crucial, yet invisible, sociotechnical labour involved. The findings suggest that the invisible labour required to integrate GenAI within complex organisational politics is an important, rather than peripheral, component of how it becomes functional in practice.",
+    "URL": "http://arxiv.org/abs/2512.21055v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.21238",
+    "type": "report",
+    "title": "Assessing the Software Security Comprehension of Large Language Models",
+    "author": [
+      {
+        "family": "Siddiq",
+        "given": "Mohammed Latif"
+      },
+      {
+        "family": "Sekerak",
+        "given": "Natalie"
+      },
+      {
+        "family": "Karam",
+        "given": "Antonio"
+      },
+      {
+        "family": "Leal",
+        "given": "Maria"
+      },
+      {
+        "family": "Islam-Gomes",
+        "given": "Arvin"
+      },
+      {
+        "family": "Santos",
+        "given": "Joanna C. S."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          24
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) are increasingly used in software development, but their level of software security expertise remains unclear. This work systematically evaluates the security comprehension of five leading LLMs: GPT-4o-Mini, GPT-5-Mini, Gemini-2.5-Flash, Llama-3.1, and Qwen-2.5, using Blooms Taxonomy as a framework. We assess six cognitive dimensions: remembering, understanding, applying, analyzing, evaluating, and creating. Our methodology integrates diverse datasets, including curated multiple-choice questions, vulnerable code snippets (SALLM), course assessments from an Introduction to Software Security course, real-world case studies (XBOW), and project-based creation tasks from a Secure Software Engineering course. Results show that while LLMs perform well on lower-level cognitive tasks such as recalling facts and identifying known vulnerabilities, their performance degrades significantly on higher-order tasks that require reasoning, architectural evaluation, and secure system creation. Beyond reporting aggregate accuracy, we introduce a software security knowledge boundary that identifies the highest cognitive level at which a model consistently maintains reliable performance. In addition, we identify 51 recurring misconception patterns exhibited by LLMs across Blooms levels.",
+    "URL": "http://arxiv.org/abs/2512.21238v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.21347",
+    "type": "report",
+    "title": "Understanding the Role of Large Language Models in Software Engineering: Evidence from an Industry Survey",
+    "author": [
+      {
+        "family": "Brito",
+        "given": "Vítor Mateus de"
+      },
+      {
+        "family": "Farias",
+        "given": "Kleinner"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          19
+        ]
+      ]
+    },
+    "abstract": "The rapid advancement of Large Language Models (LLMs) is reshaping software engineering by profoundly influencing coding, documentation, and system maintenance practices. As these tools become deeply embedded in developers' daily workflows, understanding how they are used has become essential. This paper reports an empirical study of LLM adoption in software engineering, based on a survey of 46 industry professionals with diverse educational backgrounds and levels of experience. The results reveal positive perceptions of LLMs, particularly regarding faster resolution of technical questions, improved documentation support, and enhanced source code standardization. However, respondents also expressed concerns about cognitive dependence, security risks, and the potential erosion of technical autonomy. These findings underscore the need for critical and supervised use of LLM-based tools. By grounding the discussion in empirical evidence from industry practice, this study bridges the gap between academic discourse and real-world software development. The results provide actionable insights for developers and researchers seeking to adopt and evolve LLM-based technologies in a more effective, responsible, and secure manner, while also motivating future research on their cognitive, ethical, and organizational implications.",
+    "URL": "http://arxiv.org/abs/2512.21347v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.21422",
+    "type": "report",
+    "title": "Teaching People LLM's Errors and Getting it Right",
+    "author": [
+      {
+        "family": "Stringham",
+        "given": "Nathan"
+      },
+      {
+        "family": "Chaleshtori",
+        "given": "Fateme Hashemi"
+      },
+      {
+        "family": "Yan",
+        "given": "Xinyuan"
+      },
+      {
+        "family": "Xu",
+        "given": "Zhichao"
+      },
+      {
+        "family": "Wang",
+        "given": "Bei"
+      },
+      {
+        "family": "Marasović",
+        "given": "Ana"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          24
+        ]
+      ]
+    },
+    "abstract": "People use large language models (LLMs) when they should not. This is partly because they see LLMs compose poems and answer intricate questions, so they understandably, but incorrectly, assume LLMs won't stumble on basic tasks like simple arithmetic. Prior work has tried to address this by clustering instance embeddings into regions where an LLM is likely to fail and automatically describing patterns in these regions. The found failure patterns are taught to users to mitigate their overreliance. Yet, this approach has not fully succeeded. In this analysis paper, we aim to understand why.\n  We first examine whether the negative result stems from the absence of failure patterns. We group instances in two datasets by their meta-labels and evaluate an LLM's predictions on these groups. We then define criteria to flag groups that are sizable and where the LLM is error-prone, and find meta-label groups that meet these criteria. Their meta-labels are the LLM's failure patterns that could be taught to users, so they do exist. We next test whether prompting and embedding-based approaches can surface these known failures. Without this, users cannot be taught about them to reduce their overreliance. We find mixed results across methods, which could explain the negative result. Finally, we revisit the final metric that measures teaching effectiveness. We propose to assess a user's ability to effectively use the given failure patterns to anticipate when an LLM is error-prone. A user study shows a positive effect from teaching with this metric, unlike the human-AI team accuracy. Our findings show that teaching failure patterns could be a viable approach to mitigating overreliance, but success depends on better automated failure-discovery methods and using metrics like ours.",
+    "URL": "http://arxiv.org/abs/2512.21422v1",
     "publisher": "arXiv"
   }
 ]

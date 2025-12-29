@@ -1,149 +1,234 @@
 # LLM Education Literature Digest
 
-*Generated: 2025-12-23 09:44:37 UTC*
+*Generated: 2025-12-29 06:53:06 UTC*
 
-**9 new items**
+**14 new items**
 
-## 1. Embedding-Based Rankings of Educational Resources based on Learning Outcome Alignment: Benchmarking, Expert Validation, and Learner Performance
+## 1. Teaching People LLM's Errors and Getting it Right
 
-**Authors:** Mohammadreza Molavi, Mohammad Moein, Mohammadreza Tavakoli, Abdolali Faraji, Stefan T. Mol et al. (6 authors)
+**Authors:** Nathan Stringham, Fateme Hashemi Chaleshtori, Xinyuan Yan, Zhichao Xu, Bei Wang et al. (6 authors)
 
-**Source:** arxiv • 2025-12-15
+**Source:** arxiv • 2025-12-24
 
-**Summary:** As the online learning landscape evolves, the need for personalization is increasingly evident. Although educational resources are burgeoning, educators face challenges selecting materials that both align with intended learning outcomes and address diverse learner needs. Large Language Models (LLMs)...
+**Summary:** People use large language models (LLMs) when they should not. This is partly because they see LLMs compose poems and answer intricate questions, so they understandably, but incorrectly, assume LLMs won't stumble on basic tasks like simple arithmetic. Prior work has tried to address this by clusterin...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.13658v1
-- PDF: https://arxiv.org/pdf/2512.13658v1
+- Landing page: http://arxiv.org/abs/2512.21422v1
+- PDF: https://arxiv.org/pdf/2512.21422v1
 
-*Relevance score: 10.0*
+*Relevance score: 17.0*
 
 ---
 
-## 2. Persistent Personas? Role-Playing, Instruction Following, and Safety in Extended Interactions
+## 2. Large Language Models Approach Expert Pedagogical Quality in Math Tutoring but Differ in Instructional and Linguistic Profiles
 
-**Authors:** Pedro Henrique Luz de Araujo, Michael A. Hedderich, Ali Modarressi, Hinrich Schuetze, Benjamin Roth
+**Authors:** Ramatu Oiza Abdulsalam, Segun Aroyehun
 
-**Source:** arxiv • 2025-12-14
+**Source:** arxiv • 2025-12-23
 
-**Summary:** Persona-assigned large language models (LLMs) are used in domains such as education, healthcare, and sociodemographic simulation. Yet, they are typically evaluated only in short, single-round settings that do not reflect real-world usage. We introduce an evaluation protocol that combines long person...
+**Summary:** Recent work has explored the use of large language models for generating tutoring responses in mathematics, yet it remains unclear how closely their instructional behavior aligns with expert human practice. We examine this question using a controlled, turn-level comparison in which expert human tuto...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.12775v1
-- PDF: https://arxiv.org/pdf/2512.12775v1
+- Landing page: http://arxiv.org/abs/2512.20780v1
+- PDF: https://arxiv.org/pdf/2512.20780v1
 
-*Relevance score: 9.0*
+*Relevance score: 17.0*
 
 ---
 
-## 3. Decoding Student Minds: Leveraging Conversational Agents for Psychological and Learning Analysis
+## 3. How well do Large Language Models Recognize Instructional Moves? Establishing Baselines for Foundation Models in Educational Discourse
 
-**Authors:** Nour El Houda Ben Chaabene, Hamza Hammami, Laid Kahloul
+**Authors:** Kirk Vanacore, Rene F. Kizilcec
+
+**Source:** arxiv • 2025-12-22
+
+**Summary:** Large language models (LLMs) are increasingly adopted in educational technologies for a variety of tasks, from generating instructional materials and assisting with assessment design to tutoring. While prior work has investigated how models can be adapted or optimized for specific tasks, far less is...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.19903v1
+- PDF: https://arxiv.org/pdf/2512.19903v1
+
+*Relevance score: 17.0*
+
+---
+
+## 4. Anatomy-R1: Enhancing Anatomy Reasoning in Multimodal Large Language Models via Anatomical Similarity Curriculum and Group Diversity Augmentation
+
+**Authors:** Ziyang Song, Zelin Zang, Zuyao Chen, Xusheng Liang, Dong Yi et al. (9 authors)
+
+**Source:** arxiv • 2025-12-22
+
+**Summary:** Multimodal Large Language Models (MLLMs) have achieved impressive progress in natural image reasoning, yet their potential in medical imaging remains underexplored, especially in clinical anatomical surgical images. Anatomy understanding tasks demand precise understanding and clinically coherent ans...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.19512v2
+- PDF: https://arxiv.org/pdf/2512.19512v2
+
+*Relevance score: 17.0*
+
+---
+
+## 5. From Pilots to Practices: A Scoping Review of GenAI-Enabled Personalization in Computer Science Education
+
+**Authors:** Iman Reihanian, Yunfei Hou, Qingquan Sun
+
+**Source:** arxiv • 2025-12-23
+
+**Summary:** Generative AI enables personalized computer science education at scale, yet questions remain about whether such personalization supports or undermines learning. This scoping review synthesizes 32 studies (2023-2025) purposively sampled from 259 records to map personalization mechanisms and effective...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.20714v1
+- PDF: https://arxiv.org/pdf/2512.20714v1
+- DOI: https://doi.org/10.3390/ai7010006
+
+*Relevance score: 16.0*
+
+---
+
+## 6. When LLMs fall short in Deductive Coding: Model Comparison and Human AI Collaboration Workflow Design
+
+**Authors:** Zijian Li, Luzhen Tang, Mengyu Xia, Xinyu Li, Naping Chen et al. (7 authors)
+
+**Source:** arxiv • 2025-12-24
+
+**Summary:** With generative artificial intelligence driving the growth of dialogic data in education, automated coding is a promising direction for learning analytics to improve efficiency. This surge highlights the need to understand the nuances of student-AI interactions, especially those rare yet crucial. Ho...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.21041v1
+- PDF: https://arxiv.org/pdf/2512.21041v1
+
+*Relevance score: 12.0*
+
+---
+
+## 7. Opportunities and Challenges in Harnessing Digital Technology for Effective Teaching and Learning
+
+**Authors:** Zhongzhou Chen, Chandralekha Singh
 
 **Source:** arxiv • 2025-12-11
 
-**Summary:** This paper presents a psychologically-aware conversational agent designed to enhance both learning performance and emotional well-being in educational settings. The system combines Large Language Models (LLMs), a knowledge graph-enhanced BERT (KG-BERT), and a bidirectional Long Short-Term Memory (LS...
+**Summary:** Most of today's educators are in no shortage of digital and online learning technologies available at their fingertips, ranging from Learning Management Systems such as Canvas, Blackboard, or Moodle, online meeting tools, online homework, and tutoring systems, exam proctoring platforms, computer sim...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.10441v1
-- PDF: https://arxiv.org/pdf/2512.10441v1
+- Landing page: http://arxiv.org/abs/2512.10777v1
+- PDF: https://arxiv.org/pdf/2512.10777v1
+- DOI: https://doi.org/10.3390/higheredu4010006
 
-*Relevance score: 9.0*
+*Relevance score: 12.0*
 
 ---
 
-## 4. Examining Student Interactions with a Pedagogical AI-Assistant for Essay Writing and their Impact on Students Writing Quality
+## 8. Assessing the Software Security Comprehension of Large Language Models
 
-**Authors:** Wicaksono Febriantoro, Qi Zhou, Wannapon Suraworachet, Sahan Bulathwela, Andrea Gauthier et al. (7 authors)
+**Authors:** Mohammed Latif Siddiq, Natalie Sekerak, Antonio Karam, Maria Leal, Arvin Islam-Gomes et al. (6 authors)
 
-**Source:** arxiv • 2025-12-09
+**Source:** arxiv • 2025-12-24
 
-**Summary:** The dynamic nature of interactions between students and GenAI, as well as their relationship to writing quality, remains underexplored. While most research has examined how general-purpose GenAI can support writing, fewer studies have investigated how students interact with pedagogically designed sy...
+**Summary:** Large language models (LLMs) are increasingly used in software development, but their level of software security expertise remains unclear. This work systematically evaluates the security comprehension of five leading LLMs: GPT-4o-Mini, GPT-5-Mini, Gemini-2.5-Flash, Llama-3.1, and Qwen-2.5, using Bl...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.08596v1
-- PDF: https://arxiv.org/pdf/2512.08596v1
+- Landing page: http://arxiv.org/abs/2512.21238v1
+- PDF: https://arxiv.org/pdf/2512.21238v1
 
-*Relevance score: 9.0*
+*Relevance score: 11.0*
 
 ---
 
-## 5. Enhancing Retrieval-Augmented Generation with Entity Linking for Educational Platforms
+## 9. Making AI Work: An Autoethnography of a Workaround in Higher Education
 
-**Authors:** Francesco Granata, Francesco Poggi, Misael Mongiovì
+**Authors:** Shang Chieh Lee, Bhuva Narayan, Simon Buckingham Shum, Stella Ng, A. Baki Kocaballi
 
-**Source:** arxiv • 2025-12-05
+**Source:** arxiv • 2025-12-24
 
-**Summary:** In the era of Large Language Models (LLMs), Retrieval-Augmented Generation (RAG) architectures are gaining significant attention for their ability to ground language generation in reliable knowledge sources. Despite their impressive effectiveness in many areas, RAG systems based solely on semantic s...
+**Summary:** Research on the implementation of Generative Artificial Intelligence (GenAI) in higher education often focuses on strategic goals, overlooking the hidden, and often politically charged, labour required to make it functional. This paper provides an insider's account of the sociotechnical friction tha...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.05967v1
-- PDF: https://arxiv.org/pdf/2512.05967v1
+- Landing page: http://arxiv.org/abs/2512.21055v1
+- PDF: https://arxiv.org/pdf/2512.21055v1
 
-*Relevance score: 9.0*
+*Relevance score: 11.0*
 
 ---
 
-## 6. Reflection-Satisfaction Tradeoff: Investigating Impact of Reflection on Student Engagement with AI-Generated Programming Hints
+## 10. FEM-Bench: A Structured Scientific Reasoning Benchmark for Evaluating Code-Generating LLMs
 
-**Authors:** Heeryung Choi, Tung Phung, Mengyan Wu, Adish Singla, Christopher Brooks
+**Authors:** Saeed Mohammadzadeh, Erfan Hamdi, Joel Shor, Emma Lejeune
+
+**Source:** arxiv • 2025-12-23
+
+**Summary:** As LLMs advance their reasoning capabilities about the physical world, the absence of rigorous benchmarks for evaluating their ability to generate scientifically valid physical models has become a critical gap. Computational mechanics, which develops and applies mathematical models and numerical met...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.20732v1
+- PDF: https://arxiv.org/pdf/2512.20732v1
+
+*Relevance score: 11.0*
+
+---
+
+## 11. Understanding the Role of Large Language Models in Software Engineering: Evidence from an Industry Survey
+
+**Authors:** Vítor Mateus de Brito, Kleinner Farias
+
+**Source:** arxiv • 2025-12-19
+
+**Summary:** The rapid advancement of Large Language Models (LLMs) is reshaping software engineering by profoundly influencing coding, documentation, and system maintenance practices. As these tools become deeply embedded in developers' daily workflows, understanding how they are used has become essential. This ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.21347v1
+- PDF: https://arxiv.org/pdf/2512.21347v1
+
+*Relevance score: 11.0*
+
+---
+
+## 12. Singing Timbre Popularity Assessment Based on Multimodal Large Foundation Model
+
+**Authors:** Zihao Wang, Ruibin Yuan, Ziqi Geng, Hengjia Li, Xingwei Qu et al. (10 authors)
+
+**Source:** arxiv • 2025-12-07
+
+**Summary:** Automated singing assessment is crucial for education and entertainment. However, existing systems face two fundamental limitations: reliance on reference tracks, which stifles creative expression, and the simplification of complex performances into non-diagnostic scores based solely on pitch and rh...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2512.06999v1
+- PDF: https://arxiv.org/pdf/2512.06999v1
+- DOI: https://doi.org/10.1145/3746027.3758148
+
+*Relevance score: 11.0*
+
+---
+
+## 13. Developing a General Personal Tutor for Education
+
+**Authors:** Jaan Aru, Kristjan-Julius Laak
 
 **Source:** arxiv • 2025-12-04
 
-**Summary:** Generative AI tools, such as AI-generated hints, are increasingly integrated into programming education to offer timely, personalized support. However, little is known about how to effectively leverage these hints while ensuring autonomous and meaningful learning. One promising approach involves pai...
+**Summary:** The vision of a universal AI tutor has remained elusive, despite decades of effort. Could LLMs be the game-changer? We overview novel issues arising from developing a nationwide AI tutor. We highlight the practical questions that point to specific gaps in our scientific understanding of the learning...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.04630v1
-- PDF: https://arxiv.org/pdf/2512.04630v1
+- Landing page: http://arxiv.org/abs/2512.04869v1
+- PDF: https://arxiv.org/pdf/2512.04869v1
+- DOI: https://doi.org/10.1016/j.tics.2025.09.010
 
-*Relevance score: 9.0*
+*Relevance score: 11.0*
 
 ---
 
-## 7. ADAPT: Learning Task Mixtures for Budget-Constrained Instruction Tuning
+## 14. A Theoretical Framework of Student Agency in AI- Assisted Learning: A Grounded Theory Approach
 
-**Authors:** Pritam Kadasi, Abhishek Upperwal, Mayank SIngh
+**Authors:** Yun Dai, Sichen Lai
 
-**Source:** arxiv • 2025-12-04
+**Source:** arxiv • 2025-12-08
 
-**Summary:** We propose ADAPT, a meta-learning algorithm that \emph{learns} task sampling proportions under an explicit token budget for multi-task instruction tuning. Instead of fixing task weights by hand, \adapt{} maintains a continuous distribution over tasks and updates it via meta-gradients of a smooth wor...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.04555v1
-- PDF: https://arxiv.org/pdf/2512.04555v1
-
-*Relevance score: 9.0*
-
----
-
-## 8. SRPG: Semantically Reconstructed Privacy Guard for Zero-Trust Privacy in Educational Multi-Agent Systems
-
-**Authors:** Shuang Guo, Zihui Li
-
-**Source:** arxiv • 2025-12-03
-
-**Summary:** Multi-Agent Systems (MAS) with large language models (LLMs) enable personalized education but risk leaking minors personally identifiable information (PII) via unstructured dialogue. Existing privacy methods struggle to balance security and utility: role-based access control fails on unstructured te...
+**Summary:** Generative AI(GenAI) is a kind of AI model capable of producing human-like content in various modalities, including text, image, audio, video, and computer programming. Although GenAI offers great potential for education, its value often depends on students' ability to engage with it actively, respo...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2512.03694v1
-- PDF: https://arxiv.org/pdf/2512.03694v1
+- Landing page: http://arxiv.org/abs/2512.07143v1
+- PDF: https://arxiv.org/pdf/2512.07143v1
+- DOI: https://doi.org/10.1093/9780198945253.003.0009
 
-*Relevance score: 9.0*
-
----
-
-## 9. Curió-Edu 7B: Examining Data Selection Impacts in LLM Continued Pretraining
-
-**Authors:** Thales Sales Almeida, Rodrigo Nogueira, Hélio Pedrini
-
-**Source:** arxiv • 2025-12-14
-
-**Summary:** Continued pretraining extends a language model's capabilities by further exposing it to additional data, often tailored to a specific linguistic or domain context. This strategy has emerged as an efficient alternative to full retraining when adapting general-purpose models to new settings. In this w...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2512.12770v1
-- PDF: https://arxiv.org/pdf/2512.12770v1
-
-*Relevance score: 8.0*
+*Relevance score: 10.0*
 
 ---
