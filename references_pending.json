@@ -2621,5 +2621,819 @@
     "abstract": "People use large language models (LLMs) when they should not. This is partly because they see LLMs compose poems and answer intricate questions, so they understandably, but incorrectly, assume LLMs won't stumble on basic tasks like simple arithmetic. Prior work has tried to address this by clustering instance embeddings into regions where an LLM is likely to fail and automatically describing patterns in these regions. The found failure patterns are taught to users to mitigate their overreliance. Yet, this approach has not fully succeeded. In this analysis paper, we aim to understand why.\n  We first examine whether the negative result stems from the absence of failure patterns. We group instances in two datasets by their meta-labels and evaluate an LLM's predictions on these groups. We then define criteria to flag groups that are sizable and where the LLM is error-prone, and find meta-label groups that meet these criteria. Their meta-labels are the LLM's failure patterns that could be taught to users, so they do exist. We next test whether prompting and embedding-based approaches can surface these known failures. Without this, users cannot be taught about them to reduce their overreliance. We find mixed results across methods, which could explain the negative result. Finally, we revisit the final metric that measures teaching effectiveness. We propose to assess a user's ability to effectively use the given failure patterns to anticipate when an LLM is error-prone. A user study shows a positive effect from teaching with this metric, unlike the human-AI team accuracy. Our findings show that teaching failure patterns could be a viable approach to mitigating overreliance, but success depends on better automated failure-discovery methods and using metrics like ours.",
     "URL": "http://arxiv.org/abs/2512.21422v1",
     "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.22404",
+    "type": "report",
+    "title": "Mining the Gold: Student-AI Chat Logs as Rich Sources for Automated Knowledge Gap Detection",
+    "author": [
+      {
+        "family": "Fu",
+        "given": "Quanzhi"
+      },
+      {
+        "family": "Wu",
+        "given": "Qiyu"
+      },
+      {
+        "family": "Williams",
+        "given": "Dan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          26
+        ]
+      ]
+    },
+    "abstract": "With the significant increase in enrollment in computing-related programs over the past 20 years, lecture sizes have grown correspondingly. In large lectures, instructors face challenges on identifying students' knowledge gaps timely, which is critical for effective teaching. Existing classroom response systems rely on instructor-initiated interactions, which limits their ability to capture the spontaneous knowledge gaps that naturally emerge during lectures. With the widespread adoption of LLMs among students, we recognize these student-AI dialogues as a valuable, student-centered data source for identifying knowledge gaps. In this idea paper, we propose QueryQuilt, a multi-agent LLM framework that automatically detects common knowledge gaps in large-scale lectures by analyzing students' chat logs with AI assistants. QueryQuilt consists of two key components: (1) a Dialogue Agent that responds to student questions while employing probing questions to reveal underlying knowledge gaps, and (2) a Knowledge Gap Identification Agent that systematically analyzes these dialogues to identify knowledge gaps across the student population. By generating frequency distributions of identified gaps, instructors can gain comprehensive insights into class-wide understanding. Our evaluation demonstrates promising results, with QueryQuilt achieving 100% accuracy in identifying knowledge gaps among simulated students and 95% completeness when tested on real student-AI dialogue data. These initial findings indicate the system's potential for facilitate teaching in authentic learning environments. We plan to deploy QueryQuilt in actual classroom settings for comprehensive evaluation, measuring its detection accuracy and impact on instruction.",
+    "URL": "http://arxiv.org/abs/2512.22404v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.22496",
+    "type": "report",
+    "title": "Hierarchical Pedagogical Oversight: A Multi-Agent Adversarial Framework for Reliable AI Tutoring",
+    "author": [
+      {
+        "family": "Sadhu",
+        "given": "Saisab"
+      },
+      {
+        "family": "Dhor",
+        "given": "Ashim"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          27
+        ]
+      ]
+    },
+    "abstract": "Large Language Models (LLMs) are increasingly deployed as automated tutors to address educator shortages; however, they often fail at pedagogical reasoning, frequently validating incorrect student solutions (sycophancy) or providing overly direct answers that hinder learning. We introduce Hierarchical Pedagogical Oversight (HPO), a framework that adapts structured adversarial synthesis to educational assessment. Unlike cooperative multi-agent systems that often drift toward superficial consensus, HPO enforces a dialectical separation of concerns: specialist agents first distill dialogue context, which then grounds a moderated, five-act debate between opposing pedagogical critics. We evaluate this framework on the MRBench dataset of 1,214 middle-school mathematics dialogues. Our 8B-parameter model achieves a Macro F1 of 0.845, outperforming GPT-4o (0.812) by 3.3% while using 20 times fewer parameters. These results establish adversarial reasoning as a critical mechanism for deploying reliable, low-compute pedagogical oversight in resource-constrained environments.",
+    "URL": "http://arxiv.org/abs/2512.22496v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.22508",
+    "type": "report",
+    "title": "Predicting LLM Correctness in Prosthodontics Using Metadata and Hallucination Signals",
+    "author": [
+      {
+        "family": "Susanto",
+        "given": "Lucky"
+      },
+      {
+        "family": "Pranawijayana",
+        "given": "Anasta"
+      },
+      {
+        "family": "Sukotjo",
+        "given": "Cortino"
+      },
+      {
+        "family": "Prasad",
+        "given": "Soni"
+      },
+      {
+        "family": "Wijaya",
+        "given": "Derry"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          27
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) are increasingly adopted in high-stakes domains such as healthcare and medical education, where the risk of generating factually incorrect (i.e., hallucinated) information is a major concern. While significant efforts have been made to detect and mitigate such hallucinations, predicting whether an LLM's response is correct remains a critical yet underexplored problem. This study investigates the feasibility of predicting correctness by analyzing a general-purpose model (GPT-4o) and a reasoning-centric model (OSS-120B) on a multiple-choice prosthodontics exam. We utilize metadata and hallucination signals across three distinct prompting strategies to build a correctness predictor for each (model, prompting) pair. Our findings demonstrate that this metadata-based approach can improve accuracy by up to +7.14% and achieve a precision of 83.12% over a baseline that assumes all answers are correct. We further show that while actual hallucination is a strong indicator of incorrectness, metadata signals alone are not reliable predictors of hallucination. Finally, we reveal that prompting strategies, despite not affecting overall accuracy, significantly alter the models' internal behaviors and the predictive utility of their metadata. These results present a promising direction for developing reliability signals in LLMs but also highlight that the methods explored in this paper are not yet robust enough for critical, high-stakes deployment.",
+    "URL": "http://arxiv.org/abs/2512.22508v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.23036",
+    "type": "report",
+    "title": "Problems With Large Language Models for Learner Modelling: Why LLMs Alone Fall Short for Responsible Tutoring in K--12 Education",
+    "author": [
+      {
+        "family": "Hooshyar",
+        "given": "Danial"
+      },
+      {
+        "family": "Yang",
+        "given": "Yeongwook"
+      },
+      {
+        "family": "Šíř",
+        "given": "Gustav"
+      },
+      {
+        "family": "Kärkkäinen",
+        "given": "Tommi"
+      },
+      {
+        "family": "Hämäläinen",
+        "given": "Raija"
+      },
+      {
+        "family": "Cukurova",
+        "given": "Mutlu"
+      },
+      {
+        "family": "Azevedo",
+        "given": "Roger"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          28
+        ]
+      ]
+    },
+    "abstract": "The rapid rise of large language model (LLM)-based tutors in K--12 education has fostered a misconception that generative models can replace traditional learner modelling for adaptive instruction. This is especially problematic in K--12 settings, which the EU AI Act classifies as high-risk domain requiring responsible design. Motivated by these concerns, this study synthesises evidence on limitations of LLM-based tutors and empirically investigates one critical issue: the accuracy, reliability, and temporal coherence of assessing learners' evolving knowledge over time. We compare a deep knowledge tracing (DKT) model with a widely used LLM, evaluated zero-shot and fine-tuned, using a large open-access dataset. Results show that DKT achieves the highest discrimination performance (AUC = 0.83) on next-step correctness prediction and consistently outperforms the LLM across settings. Although fine-tuning improves the LLM's AUC by approximately 8\\% over the zero-shot baseline, it remains 6\\% below DKT and produces higher early-sequence errors, where incorrect predictions are most harmful for adaptive support. Temporal analyses further reveal that DKT maintains stable, directionally correct mastery updates, whereas LLM variants exhibit substantial temporal weaknesses, including inconsistent and wrong-direction updates. These limitations persist despite the fine-tuned LLM requiring nearly 198 hours of high-compute training, far exceeding the computational demands of DKT. Our qualitative analysis of multi-skill mastery estimation further shows that, even after fine-tuning, the LLM produced inconsistent mastery trajectories, while DKT maintained smooth and coherent updates. Overall, the findings suggest that LLMs alone are unlikely to match the effectiveness of established intelligent tutoring systems, and that responsible tutoring requires hybrid frameworks that incorporate learner modelling.",
+    "URL": "http://arxiv.org/abs/2512.23036v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.23053",
+    "type": "report",
+    "title": "LLteacher: A Tool for the Integration of Generative AI into Statistics Assignments",
+    "author": [
+      {
+        "family": "Furfaro",
+        "given": "Emanuela"
+      },
+      {
+        "family": "Mosciatti",
+        "given": "Simone"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          28
+        ]
+      ]
+    },
+    "abstract": "As generative AI becomes increasingly embedded in everyday life, the thoughtful and intentional integration of AI-based tools into statistics education has become essential. We address this need with a focus on homework assignments and we propose the use of LLMs as a companion to complete homework by developing an open-source tool named LLteacher. This LLM-based tool preserves learning processes and it guides students to engage with AI in ways that support their learning, while ensuring alignment with course content and equitable access. We illustrate LLteacher's design and functionality with examples from an undergraduate Statistical Computing course in R, showing how it supports two distinct pedagogical goals: recalling prior knowledge and discovering new concepts. While this is an initial version, LLteacher demonstrates one possible pathway for integrating generative AI into statistics courses, with strong potential for adaptation to other types of classes and assignments.",
+    "URL": "http://arxiv.org/abs/2512.23053v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.23136",
+    "type": "report",
+    "title": "Understanding EFL Learners' Code-Switching and Teachers' Pedagogical Approaches in LLM-Supported Speaking Practice",
+    "author": [
+      {
+        "family": "Park",
+        "given": "Junyeong"
+      },
+      {
+        "family": "Han",
+        "given": "Jieun"
+      },
+      {
+        "family": "Park",
+        "given": "Yeon Su"
+      },
+      {
+        "family": "Lee",
+        "given": "Youngbin"
+      },
+      {
+        "family": "Kim",
+        "given": "Suin"
+      },
+      {
+        "family": "Kim",
+        "given": "Juho"
+      },
+      {
+        "family": "Oh",
+        "given": "Alice"
+      },
+      {
+        "family": "Ahn",
+        "given": "So-Yeon"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          29
+        ]
+      ]
+    },
+    "abstract": "For English as a Foreign Language (EFL) learners, code-switching (CSW), or alternating between their native language and the target language (English), can lower anxiety and ease communication barriers. Large language models (LLMs), with their multilingual abilities, offer new opportunities to support CSW in speaking practice. Yet, the pedagogical design of LLM-based tutors remains underexplored. To this end, we conducted a six-week study of LLM-mediated speaking practice with 20 Korean EFL learners, alongside a qualitative study with nine English teachers who designed and refined responses to learner CSW. Findings show that learners used CSW not only to bridge lexical gaps but also to express cultural and emotional nuance, prompting teachers to employ selective interventions and dynamic scaffolding strategies. We conclude with design implications for bilingual LLM-powered tutors that leverage teachers' expertise to transform CSW into meaningful learning opportunities.",
+    "URL": "http://arxiv.org/abs/2512.23136v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.23587",
+    "type": "report",
+    "title": "Can AI Recognize Its Own Reflection? Self-Detection Performance of LLMs in Computing Education",
+    "author": [
+      {
+        "family": "Burger",
+        "given": "Christopher"
+      },
+      {
+        "family": "Talley",
+        "given": "Karmece"
+      },
+      {
+        "family": "Trotter",
+        "given": "Christina"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          29
+        ]
+      ]
+    },
+    "abstract": "The rapid advancement of Large Language Models (LLMs) presents a significant challenge to academic integrity within computing education. As educators seek reliable detection methods, this paper evaluates the capacity of three prominent LLMs (GPT-4, Claude, and Gemini) to identify AI-generated text in computing-specific contexts. We test their performance under both standard and 'deceptive' prompt conditions, where the models were instructed to evade detection. Our findings reveal a significant instability: while default AI-generated text was easily identified, all models struggled to correctly classify human-written work (with error rates up to 32%). Furthermore, the models were highly susceptible to deceptive prompts, with Gemini's output completely fooling GPT-4. Given that simple prompt alterations significantly degrade detection efficacy, our results demonstrate that these LLMs are currently too unreliable for making high-stakes academic misconduct judgments.",
+    "URL": "http://arxiv.org/abs/2512.23587v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.23601",
+    "type": "report",
+    "title": "Divergent-Convergent Thinking in Large Language Models for Creative Problem Generation",
+    "author": [
+      {
+        "family": "Nguyen",
+        "given": "Manh Hung"
+      },
+      {
+        "family": "Singla",
+        "given": "Adish"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          29
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) have significant potential for generating educational questions and problems, enabling educators to create large-scale learning materials. However, LLMs are fundamentally limited by the ``Artificial Hivemind'' effect, where they generate similar responses within the same model and produce homogeneous outputs across different models. As a consequence, students may be exposed to overly similar and repetitive LLM-generated problems, which harms diversity of thought. Drawing inspiration from Wallas's theory of creativity and Guilford's framework of divergent-convergent thinking, we propose CreativeDC, a two-phase prompting method that explicitly scaffolds the LLM's reasoning into distinct phases. By decoupling creative exploration from constraint satisfaction, our method enables LLMs to explore a broader space of ideas before committing to a final problem. We evaluate CreativeDC for creative problem generation using a comprehensive set of metrics that capture diversity, novelty, and utility. The results show that CreativeDC achieves significantly higher diversity and novelty compared to baselines while maintaining high utility. Moreover, scaling analysis shows that CreativeDC generates a larger effective number of distinct problems as more are sampled, increasing at a faster rate than baseline methods.",
+    "URL": "http://arxiv.org/abs/2512.23601v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.23633",
+    "type": "report",
+    "title": "AI tutoring can safely and effectively support students: An exploratory RCT in UK classrooms",
+    "author": [
+      {
+        "family": "Team",
+        "given": "LearnLM"
+      },
+      {
+        "literal": "Eedi"
+      },
+      {
+        "literal": ":"
+      },
+      {
+        "family": "Wang",
+        "given": "Albert"
+      },
+      {
+        "family": "Rysbek",
+        "given": "Aliya"
+      },
+      {
+        "family": "Huber",
+        "given": "Andrea"
+      },
+      {
+        "family": "Nambiar",
+        "given": "Anjali"
+      },
+      {
+        "family": "Kenolty",
+        "given": "Anna"
+      },
+      {
+        "family": "Caulfield",
+        "given": "Ben"
+      },
+      {
+        "family": "Lilley-Draper",
+        "given": "Beth"
+      },
+      {
+        "family": "Groot",
+        "given": "Bibi"
+      },
+      {
+        "family": "Veprek",
+        "given": "Brian"
+      },
+      {
+        "family": "Burdett",
+        "given": "Chelsea"
+      },
+      {
+        "family": "Willis",
+        "given": "Claire"
+      },
+      {
+        "family": "Barton",
+        "given": "Craig"
+      },
+      {
+        "family": "Smith",
+        "given": "Digory"
+      },
+      {
+        "family": "Mu",
+        "given": "George"
+      },
+      {
+        "family": "Walters",
+        "given": "Harriet"
+      },
+      {
+        "family": "Jurenka",
+        "given": "Irina"
+      },
+      {
+        "family": "Hulls",
+        "given": "Iris"
+      },
+      {
+        "family": "Stalley-Moores",
+        "given": "James"
+      },
+      {
+        "family": "Caton",
+        "given": "Jonathan"
+      },
+      {
+        "family": "Wilkowski",
+        "given": "Julia"
+      },
+      {
+        "family": "Alarakyia",
+        "given": "Kaiz"
+      },
+      {
+        "family": "McKee",
+        "given": "Kevin R."
+      },
+      {
+        "family": "McCafferty",
+        "given": "Liam"
+      },
+      {
+        "family": "Dalton",
+        "given": "Lucy"
+      },
+      {
+        "family": "Kunesch",
+        "given": "Markus"
+      },
+      {
+        "family": "Malubay",
+        "given": "Pauline"
+      },
+      {
+        "family": "Kidson",
+        "given": "Rachel"
+      },
+      {
+        "family": "Wells",
+        "given": "Rich"
+      },
+      {
+        "family": "Wheeler",
+        "given": "Sam"
+      },
+      {
+        "family": "Wiltberger",
+        "given": "Sara"
+      },
+      {
+        "family": "Mohamed",
+        "given": "Shakir"
+      },
+      {
+        "family": "Woodhead",
+        "given": "Simon"
+      },
+      {
+        "family": "Brazão",
+        "given": "Vasco"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          29
+        ]
+      ]
+    },
+    "abstract": "One-to-one tutoring is widely considered the gold standard for personalized education, yet it remains prohibitively expensive to scale. To evaluate whether generative AI might help expand access to this resource, we conducted an exploratory randomized controlled trial (RCT) with $N = 165$ students across five UK secondary schools. We integrated LearnLM -- a generative AI model fine-tuned for pedagogy -- into chat-based tutoring sessions on the Eedi mathematics platform. In the RCT, expert tutors directly supervised LearnLM, with the remit to revise each message it drafted until they would be satisfied sending it themselves. LearnLM proved to be a reliable source of pedagogical instruction, with supervising tutors approving 76.4% of its drafted messages making zero or minimal edits (i.e., changing only one or two characters). This translated into effective tutoring support: students guided by LearnLM performed at least as well as students chatting with human tutors on each learning outcome we measured. In fact, students who received support from LearnLM were 5.5 percentage points more likely to solve novel problems on subsequent topics (with a success rate of 66.2%) than those who received tutoring from human tutors alone (rate of 60.7%). In interviews, tutors highlighted LearnLM's strength at drafting Socratic questions that encouraged deeper reflection from students, with multiple tutors even reporting that they learned new pedagogical practices from the model. Overall, our results suggest that pedagogically fine-tuned AI tutoring systems may play a promising role in delivering effective, individualized learning support at scale.",
+    "URL": "http://arxiv.org/abs/2512.23633v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.23982",
+    "type": "report",
+    "title": "Coding With AI: From a Reflection on Industrial Practices to Future Computer Science and Software Engineering Education",
+    "author": [
+      {
+        "family": "Chang",
+        "given": "Hung-Fu"
+      },
+      {
+        "family": "Shirazi",
+        "given": "MohammadShokrolah"
+      },
+      {
+        "family": "Cao",
+        "given": "Lizhou"
+      },
+      {
+        "family": "Mobasser",
+        "given": "Supannika Koolmanojwong"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          30
+        ]
+      ]
+    },
+    "abstract": "Recent advances in large language models (LLMs) have introduced new paradigms in software development, including vibe coding, AI-assisted coding, and agentic coding, fundamentally reshaping how software is designed, implemented, and maintained. Prior research has primarily examined AI-based coding at the individual level or in educational settings, leaving industrial practitioners' perspectives underexplored. This paper addresses this gap by investigating how LLM coding tools are used in professional practice, the associated concerns and risks, and the resulting transformations in development workflows, with particular attention to implications for computing education. We conducted a qualitative analysis of 57 curated YouTube videos published between late 2024 and 2025, capturing reflections and experiences shared by practitioners. Following a filtering and quality assessment process, the selected sources were analyzed to compare LLM-based and traditional programming, identify emerging risks, and characterize evolving workflows. Our findings reveal definitions of AI-based coding practices, notable productivity gains, and lowered barriers to entry. Practitioners also report a shift in development bottlenecks toward code review and concerns regarding code quality, maintainability, security vulnerabilities, ethical issues, erosion of foundational problem-solving skills, and insufficient preparation of entry-level engineers. Building on these insights, we discuss implications for computer science and software engineering education and argue for curricular shifts toward problem-solving, architectural thinking, code review, and early project-based learning that integrates LLM tools. This study offers an industry-grounded perspective on AI-based coding and provides guidance for aligning educational practices with rapidly evolving professional realities.",
+    "URL": "http://arxiv.org/abs/2512.23982v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.24618",
+    "type": "report",
+    "title": "Youtu-LLM: Unlocking the Native Agentic Potential for Lightweight Large Language Models",
+    "author": [
+      {
+        "family": "Lu",
+        "given": "Junru"
+      },
+      {
+        "family": "Qin",
+        "given": "Jiarui"
+      },
+      {
+        "family": "Qiao",
+        "given": "Lingfeng"
+      },
+      {
+        "family": "Li",
+        "given": "Yinghui"
+      },
+      {
+        "family": "Dai",
+        "given": "Xinyi"
+      },
+      {
+        "family": "Ke",
+        "given": "Bo"
+      },
+      {
+        "family": "He",
+        "given": "Jianfeng"
+      },
+      {
+        "family": "Qiao",
+        "given": "Ruizhi"
+      },
+      {
+        "family": "Yin",
+        "given": "Di"
+      },
+      {
+        "family": "Sun",
+        "given": "Xing"
+      },
+      {
+        "family": "Wu",
+        "given": "Yunsheng"
+      },
+      {
+        "family": "Liu",
+        "given": "Yinsong"
+      },
+      {
+        "family": "Liu",
+        "given": "Shuangyin"
+      },
+      {
+        "family": "Tang",
+        "given": "Mingkong"
+      },
+      {
+        "family": "Lin",
+        "given": "Haodong"
+      },
+      {
+        "family": "Kuang",
+        "given": "Jiayi"
+      },
+      {
+        "family": "Meng",
+        "given": "Fanxu"
+      },
+      {
+        "family": "Tang",
+        "given": "Xiaojuan"
+      },
+      {
+        "family": "Xi",
+        "given": "Yunjia"
+      },
+      {
+        "family": "Huang",
+        "given": "Junjie"
+      },
+      {
+        "family": "Yang",
+        "given": "Haotong"
+      },
+      {
+        "family": "Shen",
+        "given": "Zhenyi"
+      },
+      {
+        "family": "Li",
+        "given": "Yangning"
+      },
+      {
+        "family": "Zhang",
+        "given": "Qianwen"
+      },
+      {
+        "family": "Yu",
+        "given": "Yifei"
+      },
+      {
+        "family": "An",
+        "given": "Siyu"
+      },
+      {
+        "family": "Dong",
+        "given": "Junnan"
+      },
+      {
+        "family": "Wang",
+        "given": "Qiufeng"
+      },
+      {
+        "family": "Wang",
+        "given": "Jie"
+      },
+      {
+        "family": "Chen",
+        "given": "Keyu"
+      },
+      {
+        "family": "Wen",
+        "given": "Wei"
+      },
+      {
+        "family": "Guo",
+        "given": "Taian"
+      },
+      {
+        "family": "Shen",
+        "given": "Zhifeng"
+      },
+      {
+        "family": "Yu",
+        "given": "Daohai"
+      },
+      {
+        "family": "Li",
+        "given": "Jiahao"
+      },
+      {
+        "family": "Li",
+        "given": "Ke"
+      },
+      {
+        "family": "Li",
+        "given": "Zongyi"
+      },
+      {
+        "family": "Tan",
+        "given": "Xiaoyu"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          31
+        ]
+      ]
+    },
+    "abstract": "We introduce Youtu-LLM, a lightweight yet powerful language model that harmonizes high computational efficiency with native agentic intelligence. Unlike typical small models that rely on distillation, Youtu-LLM (1.96B) is pre-trained from scratch to systematically cultivate reasoning and planning capabilities. The key technical advancements are as follows: (1) Compact Architecture with Long-Context Support: Built on a dense Multi-Latent Attention (MLA) architecture with a novel STEM-oriented vocabulary, Youtu-LLM supports a 128k context window. This design enables robust long-context reasoning and state tracking within a minimal memory footprint, making it ideal for long-horizon agent and reasoning tasks. (2) Principled \"Commonsense-STEM-Agent\" Curriculum: We curated a massive corpus of approximately 11T tokens and implemented a multi-stage training strategy. By progressively shifting the pre-training data distribution from general commonsense to complex STEM and agentic tasks, we ensure the model acquires deep cognitive abilities rather than superficial alignment. (3) Scalable Agentic Mid-training: Specifically for the agentic mid-training, we employ diverse data construction schemes to synthesize rich and varied trajectories across math, coding, and tool-use domains. This high-quality data enables the model to internalize planning and reflection behaviors effectively. Extensive evaluations show that Youtu-LLM sets a new state-of-the-art for sub-2B LLMs. On general benchmarks, it achieves competitive performance against larger models, while on agent-specific tasks, it significantly surpasses existing SOTA baselines, demonstrating that lightweight models can possess strong intrinsic agentic capabilities.",
+    "URL": "http://arxiv.org/abs/2512.24618v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2512.24969",
+    "type": "report",
+    "title": "Large language models and the entropy of English",
+    "author": [
+      {
+        "family": "Scheibner",
+        "given": "Colin"
+      },
+      {
+        "family": "Smith",
+        "given": "Lindsay M."
+      },
+      {
+        "family": "Bialek",
+        "given": "William"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          31
+        ]
+      ]
+    },
+    "abstract": "We use large language models (LLMs) to uncover long-ranged structure in English texts from a variety of sources. The conditional entropy or code length in many cases continues to decrease with context length at least to $N\\sim 10^4$ characters, implying that there are direct dependencies or interactions across these distances. A corollary is that there are small but significant correlations between characters at these separations, as we show from the data independent of models. The distribution of code lengths reveals an emergent certainty about an increasing fraction of characters at large $N$. Over the course of model training, we observe different dynamics at long and short context lengths, suggesting that long-ranged structure is learned only gradually. Our results constrain efforts to build statistical physics models of LLMs or language itself.",
+    "URL": "http://arxiv.org/abs/2512.24969v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2601.00493",
+    "type": "report",
+    "title": "Measuring University Students Satisfaction with Traditional Search Engines and Generative AI Tools as Information Sources",
+    "author": [
+      {
+        "family": "Lund",
+        "given": "Brady D."
+      },
+      {
+        "family": "Warren",
+        "given": "Scott J."
+      },
+      {
+        "family": "Teel",
+        "given": "Zoe A."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "abstract": "This study examines university students levels of satisfaction with generative artificial intelligence (AI) tools and traditional search engines as academic information sources. An electronic survey was distributed to students at U.S. universities in late fall 2025, with 236 valid responses received. In addition to demographic information about respondents, frequency of use and levels of satisfaction with both generative AI and traditional search engines were measured. Principal components analysis identified distinct constructs of satisfaction for each information source, while k-means cluster analysis revealed two primary student groups: those highly satisfied with search engines but dissatisfied with AI, and those moderately to highly satisfied with both. Regression analysis showed that frequency of use strongly predicts satisfaction, with international and undergraduate students reporting significantly higher satisfaction with AI tools than domestic and graduate students. Students generally expressed higher levels of satisfaction with traditional search engines over generative AI tools. Those who did prefer AI tools appear to see them more as a complementary source of information rather than a replacement for other sources. These findings stress evolving patterns of student information seeking and use behavior and offer meaningful insights for evaluating and integrating both traditional and AI-driven information sources within higher education.",
+    "URL": "http://arxiv.org/abs/2601.00493v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2601.00497",
+    "type": "report",
+    "title": "STELLAR: A Search-Based Testing Framework for Large Language Model Applications",
+    "author": [
+      {
+        "family": "Sorokin",
+        "given": "Lev"
+      },
+      {
+        "family": "Vasilev",
+        "given": "Ivan"
+      },
+      {
+        "family": "Friedl",
+        "given": "Ken E."
+      },
+      {
+        "family": "Stocco",
+        "given": "Andrea"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "abstract": "Large Language Model (LLM)-based applications are increasingly deployed across various domains, including customer service, education, and mobility. However, these systems are prone to inaccurate, fictitious, or harmful responses, and their vast, high-dimensional input space makes systematic testing particularly challenging. To address this, we present STELLAR, an automated search-based testing framework for LLM-based applications that systematically uncovers text inputs leading to inappropriate system responses. Our framework models test generation as an optimization problem and discretizes the input space into stylistic, content-related, and perturbation features. Unlike prior work that focuses on prompt optimization or coverage heuristics, our work employs evolutionary optimization to dynamically explore feature combinations that are more likely to expose failures. We evaluate STELLAR on three LLM-based conversational question-answering systems. The first focuses on safety, benchmarking both public and proprietary LLMs against malicious or unsafe prompts. The second and third target navigation, using an open-source and an industrial retrieval-augmented system for in-vehicle venue recommendations. Overall, STELLAR exposes up to 4.3 times (average 2.5 times) more failures than the existing baseline approaches.",
+    "URL": "http://arxiv.org/abs/2601.00497v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2601.00570",
+    "type": "report",
+    "title": "User Perceptions of an LLM-Based Chatbot for Cognitive Reappraisal of Stress: Feasibility Study",
+    "author": [
+      {
+        "family": "Bhattacharjee",
+        "given": "Ananya"
+      },
+      {
+        "family": "Suh",
+        "given": "Jina"
+      },
+      {
+        "family": "Chandra",
+        "given": "Mohit"
+      },
+      {
+        "family": "Hernandez",
+        "given": "Javier"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          2
+        ]
+      ]
+    },
+    "abstract": "Cognitive reappraisal is a well-studied emotion regulation strategy that helps individuals reinterpret stressful situations to reduce their impact. Many digital mental health tools struggle to support this process because rigid scripts fail to accommodate how users naturally describe stressors. This study examined the feasibility of an LLM-based single-session intervention (SSI) for workplace stress reappraisal. We assessed short-term changes in stress-related outcomes and examined design tensions during use. We conducted a feasibility study with 100 employees at a large technology company who completed a structured cognitive reappraisal session delivered by a GPT-4o-based chatbot. Pre-post measures included perceived stress intensity, stress mindset, perceived demand, and perceived resources. These outcomes were analyzed using paired Wilcoxon signed-rank tests with correction for multiple comparisons. We also examined sentiment and stress trajectories across conversation quartiles using two RoBERTa-based classifiers and an LLM-based stress rater. Open-ended responses were analyzed using thematic analysis. Results showed significant reductions in perceived stress intensity and significant improvements in stress mindset. Changes in perceived resources and perceived demand trended in expected directions but were not statistically significant. Automated analyses indicated consistent declines in negative sentiment and stress over the course of the interaction. Qualitative findings suggested that participants valued the structured prompts for organizing thoughts, gaining perspective, and feeling acknowledged. Participants also reported tensions around scriptedness, preferred interaction length, and reactions to AI-driven empathy. These findings highlight both the promise and the design constraints of integrating LLMs into DMH interventions for workplace settings.",
+    "URL": "http://arxiv.org/abs/2601.00570v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2601.00730",
+    "type": "report",
+    "title": "Grading Handwritten Engineering Exams with Multimodal Large Language Models",
+    "author": [
+      {
+        "family": "Perš",
+        "given": "Janez"
+      },
+      {
+        "family": "Muhovič",
+        "given": "Jon"
+      },
+      {
+        "family": "Košir",
+        "given": "Andrej"
+      },
+      {
+        "family": "Murovec",
+        "given": "Boštjan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          2
+        ]
+      ]
+    },
+    "abstract": "Handwritten STEM exams capture open-ended reasoning and diagrams, but manual grading is slow and difficult to scale. We present an end-to-end workflow for grading scanned handwritten engineering quizzes with multimodal large language models (LLMs) that preserves the standard exam process (A4 paper, unconstrained student handwriting). The lecturer provides only a handwritten reference solution (100%) and a short set of grading rules; the reference is converted into a text-only summary that conditions grading without exposing the reference scan. Reliability is achieved through a multi-stage design with a format/presence check to prevent grading blank answers, an ensemble of independent graders, supervisor aggregation, and rigid templates with deterministic validation to produce auditable, machine-parseable reports. We evaluate the frozen pipeline in a clean-room protocol on a held-out real course quiz in Slovenian, including hand-drawn circuit schematics. With state-of-the-art backends (GPT-5.2 and Gemini-3 Pro), the full pipeline achieves $\\approx$8-point mean absolute difference to lecturer grades with low bias and an estimated manual-review trigger rate of $\\approx$17% at $D_{\\max}=40$. Ablations show that trivial prompting and removing the reference solution substantially degrade accuracy and introduce systematic over-grading, confirming that structured prompting and reference grounding are essential.",
+    "URL": "http://arxiv.org/abs/2601.00730v1",
+    "publisher": "arXiv"
   }
 ]
