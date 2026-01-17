@@ -52,20 +52,37 @@ RETRY_DELAY = 2  # seconds
 ARXIV_POLITENESS_DELAY = 3  # seconds between arXiv API calls
 
 # Education term definitions for filtering and scoring
-# NO bare "learning" - only education-specific contexts
-EDU_STRONG_TERMS = [
-    "education", "higher education", "teaching", "tutoring", "tutor",
-    "pedagogy", "pedagogical", "classroom", "course", "curriculum",
-    "assessment", "feedback", "student", "teacher", "instructor",
-    "instruction", "instructional", "learner", "edtech", "mooc",
-    "educational"
+# FIX 3: Split into setting terms (strong university/classroom context) vs ambiguous terms
+
+# EDU_SETTING_TERMS: Strong university/classroom context - must match at least one for gate
+EDU_SETTING_TERMS = [
+    "higher education", "university", "college", "undergraduate", "graduate",
+    "postsecondary", "course", "classroom", "lecture", "seminar",
+    "assignment", "grading", "rubric", "learning outcomes", "learning objectives",
+    "instructional design", "pedagogy", "pedagogical", "didactic", "didactics",
+    "teaching", "tutoring", "tutor", "instructor", "edtech", "mooc"
+]
+
+# EDU_AMBIGUOUS_TERMS: Weak signals (also used in ML contexts) - NOT sufficient alone
+EDU_AMBIGUOUS_TERMS = [
+    "student", "teacher", "curriculum", "assessment", "feedback", "training",
+    "learner", "education", "educational", "instruction", "instructional"
 ]
 
 # Education-specific "learning" phrases (contextual, not bare "learning")
 EDU_LEARNING_PHRASES = [
     "learning outcomes", "learning analytics", "learning experience",
     "learning environment", "learning platform", "e-learning",
-    "learning management system", "learning design"
+    "learning management system", "learning design", "learning objectives"
+]
+
+# NEGATIVE_STRONG_TERMS: System/optimization/robotics indicators - exclude unless EDU_SETTING present
+NEGATIVE_STRONG_TERMS = [
+    "quantization", "optimizer", "gpu", "cuda", "scheduling", "kv cache",
+    "inference speedup", "ssd offload", "benchmark", "benchmarking", "embodied",
+    "robot", "robotics", "motion generation", "text2sql", "ner", "named entity recognition",
+    "speech recognition", "world model", "compiler", "kernel", "throughput",
+    "memory bandwidth", "hardware acceleration", "sparse attention", "model compression"
 ]
 
 
@@ -173,32 +190,95 @@ def normalize_text(text: str) -> str:
     return re.sub(r'\s+', ' ', text.lower()).strip()
 
 
-def check_hard_education_intent(paper: Paper, config: Dict) -> bool:
+def check_hard_education_intent(paper: Paper, config: Dict) -> Dict:
     """
-    Hard education-intent gate: paper must contain at least one EDU_STRONG term.
-    This prevents generic ML papers from slipping through.
-    NO bare "learning" - only education-specific contexts.
+    FIX 3: Hard education-intent gate with explainability.
+    Returns dict with: gate_pass (bool), matched_llm, matched_edu_setting, matched_edu_ambiguous,
+                       matched_negative, exclude_reason (str or None)
+    
+    Gate logic:
+    1. Must match at least one LLM term (from config)
+    2. Must match at least one EDU_SETTING_TERM (strong university/classroom context)
+    3. EDU_AMBIGUOUS_TERMS alone are NOT sufficient
+    4. Disambiguation exclusions for curriculum-learning, feedback-loop, distillation contexts
+    5. NEGATIVE_STRONG_TERMS exclude unless EDU_SETTING_TERM present
     """
-    # Combine strong terms and education-specific learning phrases
-    all_edu_terms = EDU_STRONG_TERMS + EDU_LEARNING_PHRASES
-    edu_terms_norm = [normalize_text(t) for t in all_edu_terms]
+    default_rules = config.get("default_rules", {})
+    llm_terms = [normalize_text(t) for t in default_rules.get("llm_terms", [])]
+    
+    edu_setting_norm = [normalize_text(t) for t in EDU_SETTING_TERMS]
+    edu_ambiguous_norm = [normalize_text(t) for t in EDU_AMBIGUOUS_TERMS]
+    negative_terms_norm = [normalize_text(t) for t in NEGATIVE_STRONG_TERMS]
     
     title_norm = normalize_text(paper.title)
     abstract_norm = normalize_text(paper.abstract)
+    full_text = f"{title_norm} {abstract_norm}"
     
-    # Check if at least one education term is present
-    for term in edu_terms_norm:
-        if term in title_norm or term in abstract_norm:
-            return True
+    # Track matches for explainability
+    matched_llm = [t for t in llm_terms if t in full_text]
+    matched_edu_setting = [t for t in edu_setting_norm if t in full_text]
+    matched_edu_ambiguous = [t for t in edu_ambiguous_norm if t in full_text]
+    matched_negative = [t for t in negative_terms_norm if t in full_text]
     
-    return False
+    result = {
+        "gate_pass": False,
+        "matched_llm_terms": matched_llm,
+        "matched_edu_setting_terms": matched_edu_setting,
+        "matched_edu_ambiguous_terms": matched_edu_ambiguous,
+        "matched_negative_terms": matched_negative,
+        "exclude_reason": None
+    }
+    
+    # Rule 1: Must have LLM term
+    if not matched_llm:
+        result["exclude_reason"] = "no_llm_term"
+        return result
+    
+    # Rule 2: Must have at least one EDU_SETTING_TERM for strong context
+    if not matched_edu_setting:
+        result["exclude_reason"] = "no_edu_setting_term"
+        return result
+    
+    # Rule 3: Disambiguation - curriculum learning (ML technique)
+    if "curriculum learning" in full_text:
+        result["exclude_reason"] = "curriculum_learning_ml_context"
+        return result
+    if "curriculum" in full_text and any(x in full_text for x in ["augmentation", "dataset", "training strategy", "similarity curriculum"]):
+        if not any(x in full_text for x in ["course", "classroom", "university", "higher education"]):
+            result["exclude_reason"] = "curriculum_ml_context"
+            return result
+    
+    # Rule 4: Disambiguation - feedback loop (algorithmic/RL)
+    feedback_algo_terms = ["feedback loop", "perceptual feedback", "execution feedback", "reward", "reinforcement learning"]
+    if any(x in full_text for x in feedback_algo_terms):
+        if not any(x in full_text for x in ["course", "classroom", "student", "grading", "assessment"]):
+            result["exclude_reason"] = "feedback_algorithmic_context"
+            return result
+    
+    # Rule 5: Disambiguation - distillation (model compression)
+    if "distillation" in full_text or "teacher-student" in full_text:
+        if not any(x in full_text for x in ["classroom", "tutoring", "course", "university", "higher education", "grading"]):
+            result["exclude_reason"] = "distillation_model_compression"
+            return result
+    
+    # Rule 6: Negative strong terms (system/optimization) - exclude unless strong EDU_SETTING
+    if matched_negative:
+        # Check if we have very strong education context
+        very_strong_edu = any(x in full_text for x in ["university course", "classroom", "higher education", "assignment", "grading", "rubric"])
+        if not very_strong_edu:
+            result["exclude_reason"] = f"system_optimization_context: {matched_negative[0]}"
+            return result
+    
+    # All checks passed
+    result["gate_pass"] = True
+    return result
 
 
 def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Optional[Dict] = None) -> float:
     """
-    Calculate relevance score based on keyword matches in title and abstract.
+    FIX 3: Calculate relevance score based on keyword matches in title and abstract.
     Returns a deterministic, explainable score.
-    Updated to enforce education-intent gating with no bare "learning".
+    Updated to use EDU_SETTING_TERMS and EDU_AMBIGUOUS_TERMS.
     """
     default_rules = config.get("default_rules", {})
     scoring = default_rules.get("relevance_scoring", {})
@@ -227,24 +307,23 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             score += weights.get("llm_term_in_abstract", 3)
             break
     
-    # Strong education terms (from module-level constants)
-    edu_strong_norm = [normalize_text(t) for t in EDU_STRONG_TERMS]
+    # FIX 3: Strong education setting terms (university/classroom context)
+    edu_setting_norm = [normalize_text(t) for t in EDU_SETTING_TERMS]
     
-    for term in edu_strong_norm:
+    for term in edu_setting_norm:
         if term in title_norm:
             score += weights.get("education_term_in_title", 4)
             break
-    for term in edu_strong_norm:
+    for term in edu_setting_norm:
         if term in abstract_norm:
             score += weights.get("education_term_in_abstract", 2)
             break
     
-    # Weak education phrases (only as bonus if strong terms already present)
-    # Uses education-specific "learning" phrases from module constants
-    edu_weak_norm = [normalize_text(p) for p in EDU_LEARNING_PHRASES]
+    # FIX 3: Weak education terms (bonus if present, but not primary signal)
+    edu_ambiguous_norm = [normalize_text(t) for t in EDU_AMBIGUOUS_TERMS]
     
-    for phrase in edu_weak_norm:
-        if phrase in title_norm or phrase in abstract_norm:
+    for term in edu_ambiguous_norm:
+        if term in title_norm or term in abstract_norm:
             score += 1  # Small bonus
             break
     
@@ -255,13 +334,9 @@ def calculate_relevance_score(paper: Paper, config: Dict, journal_config: Option
             score += weights.get("bonus_phrase_in_title", 2)
             break
     
-    # Penalty phrases (optimization/systems papers that are clearly not education)
+    # FIX 3: Enhanced penalty phrases (system/optimization papers)
     penalty_phrases = [normalize_text(p) for p in scoring.get("penalty_phrases_anywhere", [])]
-    penalty_phrases.extend([
-        "quantization", "throughput optimization", "cuda kernel",
-        "inference speedup", "gpu optimization", "memory bandwidth",
-        "model compression", "hardware acceleration", "sparse attention"
-    ])
+    penalty_phrases.extend([normalize_text(t) for t in NEGATIVE_STRONG_TERMS])
     for phrase in penalty_phrases:
         if phrase in title_norm or phrase in abstract_norm:
             score += weights.get("penalty_obvious_non_education", -6)
@@ -306,34 +381,33 @@ def check_education_intent_terms(paper: Paper, journal_config: Dict) -> bool:
 
 # ==================== arXiv Pipeline ====================
 
-def search_arxiv(config: Dict, state: State) -> List[Paper]:
+def search_arxiv(config: Dict, state: State) -> tuple[List[Paper], Dict]:
     """
-    Search arXiv for papers on LLMs in education.
-    Returns list of Paper objects with hard education-intent gating.
-    Query enforces BOTH LLM terms AND education terms (no bare "learning").
+    FIX 3: Search arXiv for papers on LLMs in education with enhanced precision gating.
+    Returns (list of Paper objects, statistics dict with gating details).
+    Query now requires EDU_SETTING_TERMS (not just ambiguous).
     """
     print("\n=== Searching arXiv ===")
     
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
     
-    # Use module-level education term constants
-    edu_strong_terms = EDU_STRONG_TERMS
+    # FIX 3: Use setting terms for query (not ambiguous-only)
+    edu_setting_terms = EDU_SETTING_TERMS
     
-    # Build search query: (LLM terms) AND (education terms)
-    # This ensures papers must match BOTH categories
+    # Build search query: (LLM terms) AND (education setting terms)
     llm_query_parts = [f'"{term}"' for term in llm_terms[:6]]  # Use top LLM terms
     llm_query = " OR ".join(llm_query_parts)
     
-    edu_query_parts = [f'"{term}"' for term in edu_strong_terms[:10]]  # Use top edu terms
+    edu_query_parts = [f'"{term}"' for term in edu_setting_terms[:12]]  # Use top setting terms
     edu_query = " OR ".join(edu_query_parts)
     
     # Combined query with AND operator
     query = f"({llm_query}) AND ({edu_query})"
     
-    print(f"arXiv query structure: (LLM terms) AND (EDU terms)")
+    print(f"arXiv query structure: (LLM terms) AND (EDU_SETTING terms)")
     print(f"LLM terms: {', '.join(llm_terms[:6])}")
-    print(f"EDU terms: {', '.join(edu_strong_terms[:10])}")
+    print(f"EDU_SETTING terms: {', '.join(edu_setting_terms[:12])}")
     print(f"Max results: {ARXIV_MAX_RESULTS}")
     
     search = arxiv.Search(
@@ -345,11 +419,18 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     
     papers = []
     fetched_count = 0
-    gated_out_count = 0
+    stats = {
+        "fetched": 0,
+        "excluded_by_gate": 0,
+        "excluded_by_disambiguation": 0,
+        "excluded_by_negative_terms": 0,
+        "passed": 0
+    }
     
     try:
         results = list(search.results())
         fetched_count = len(results)
+        stats["fetched"] = fetched_count
         print(f"Retrieved {fetched_count} results from arXiv")
         
         for result in results:
@@ -379,18 +460,33 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
                 source_metadata={"arxiv_id": arxiv_id_no_version},
             )
             
-            # Apply hard education-intent gate
-            # This double-checks that education terms are really present
-            if not check_hard_education_intent(paper, config):
-                gated_out_count += 1
+            # FIX 3: Apply enhanced education-intent gate with explainability
+            gate_result = check_hard_education_intent(paper, config)
+            
+            if not gate_result["gate_pass"]:
+                # Track reason for exclusion
+                reason = gate_result["exclude_reason"]
+                if reason == "no_edu_setting_term":
+                    stats["excluded_by_gate"] += 1
+                elif reason and ("curriculum" in reason or "feedback" in reason or "distillation" in reason):
+                    stats["excluded_by_disambiguation"] += 1
+                elif reason and "system_optimization" in reason:
+                    stats["excluded_by_negative_terms"] += 1
+                else:
+                    stats["excluded_by_gate"] += 1
                 continue
             
             paper.education_intent_pass = True
+            # Store explainability in source_metadata
+            paper.source_metadata.update({
+                "gate_result": gate_result,
+            })
             
             # Calculate preliminary score for logging
             paper.relevance_score = calculate_relevance_score(paper, config)
             
             papers.append(paper)
+            stats["passed"] += 1
             
         time.sleep(ARXIV_POLITENESS_DELAY)  # Politeness delay
         
@@ -400,13 +496,16 @@ def search_arxiv(config: Dict, state: State) -> List[Paper]:
     # Sort by score for better logging
     papers.sort(key=lambda p: p.relevance_score, reverse=True)
     
-    print(f"Fetched: {fetched_count}, Gated out (no EDU_STRONG term): {gated_out_count}, Passed: {len(papers)}")
+    print(f"Fetched: {stats['fetched']}, Excluded by gate: {stats['excluded_by_gate']}, "
+          f"Excluded by disambiguation: {stats['excluded_by_disambiguation']}, "
+          f"Excluded by negative terms: {stats['excluded_by_negative_terms']}, "
+          f"Passed: {stats['passed']}")
     if papers:
         print(f"Top 5 titles with education intent and scores:")
         for i, paper in enumerate(papers[:5], 1):
             print(f"  {i}. [{paper.relevance_score:.1f}] {paper.title[:70]}...")
     
-    return papers
+    return papers, stats
 
 
 # ==================== OpenAlex Pipeline ====================
@@ -496,10 +595,10 @@ def resolve_openalex_source_id(journal_name: str, issn: List[str], state: State)
     return None
 
 
-def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_days: int) -> List[Paper]:
+def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_days: int) -> Optional[List[Paper]]:
     """
-    Search OpenAlex for papers in a specific journal.
-    Returns list of Paper objects.
+    FIX 2: Search OpenAlex for papers in a specific journal with detailed logging.
+    Returns list of Paper objects, or None if journal search failed.
     Uses journal:<SOURCE_ID> filter (NOT primary_location.source.id) for correct results.
     """
     journal_name = journal["name"]
@@ -511,21 +610,21 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     
     if not source_info or not source_info.get("source_id"):
         print(f"  ❌ Skipping {journal_name}: could not resolve source ID")
-        return []
+        return None  # Signal failure
     
     source_id = source_info["source_id"]
     source_type = source_info.get("source_type", "unknown")
-    print(f"  ✓ Source ID: {source_id}, Type: {source_type}")
+    print(f"  ✓ Resolved source ID: {source_id}, Type: {source_type}")
     
     # Build search query with LLM and education terms (matching arXiv logic)
     default_rules = config.get("default_rules", {})
     llm_terms = default_rules.get("llm_terms", [])
     
-    # Use module-level education term constants
-    edu_strong_terms = EDU_STRONG_TERMS
+    # Use module-level education term constants (combine setting + ambiguous for OpenAlex)
+    edu_terms = EDU_SETTING_TERMS[:6] + EDU_AMBIGUOUS_TERMS[:4]
     
     # Combine terms for search
-    search_terms = llm_terms[:4] + edu_strong_terms[:6]
+    search_terms = llm_terms[:4] + edu_terms
     search_query = " OR ".join(search_terms)
     
     # Date filter
@@ -551,13 +650,22 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
     if OPEN_ALEX_API_KEY:
         url += f"&api_key={OPEN_ALEX_API_KEY}"
     
-    # Log request URL (without API key for security)
+    # FIX 2: Log request URL (without API key for security)
     url_no_key = url.replace(f"&api_key={OPEN_ALEX_API_KEY}", "&api_key=***") if OPEN_ALEX_API_KEY else url
     print(f"  🌐 Request URL: {url_no_key}")
     
     papers = []
     try:
         response = retry_with_backoff(requests.get, url, headers=headers, timeout=30)
+        
+        # FIX 2: Log HTTP status
+        print(f"  📡 HTTP status: {response.status_code}")
+        
+        if response.status_code != 200:
+            print(f"  ⚠️  WARNING: Non-200 status for {journal_name}: {response.status_code}")
+            print(f"  Response snippet: {response.text[:200]}")
+            return []  # Continue to next journal
+        
         response.raise_for_status()
         data = response.json()
         
@@ -565,6 +673,7 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
         total_count = meta.get("count", 0)
         results = data.get("results", [])
         
+        # FIX 2: Enhanced logging for 0 results
         print(f"  📊 Total matching works: {total_count}, Retrieved in this page: {len(results)}")
         
         if total_count == 0:
@@ -635,8 +744,9 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
                 },
             )
             
-            # Apply education-intent check
-            paper.education_intent_pass = check_hard_education_intent(paper, config)
+            # Apply education-intent check (use enhanced gate for consistency)
+            gate_result = check_hard_education_intent(paper, config)
+            paper.education_intent_pass = gate_result["gate_pass"]
             
             papers.append(paper)
         
@@ -647,8 +757,11 @@ def search_openalex_journal(journal: Dict, config: Dict, state: State, lookback_
         return papers
         
     except Exception as e:
+        # FIX 2: Enhanced error logging
         print(f"  ❌ Error searching OpenAlex for {journal_name}: {e}")
-        return []
+        import traceback
+        print(f"  Traceback: {traceback.format_exc()[:300]}")
+        return []  # Continue to next journal
 
 
 def reconstruct_abstract_from_inverted_index(inverted_index: Dict) -> str:
@@ -672,27 +785,57 @@ def reconstruct_abstract_from_inverted_index(inverted_index: Dict) -> str:
     return " ".join(words).strip()
 
 
-def search_openalex(config: Dict, state: State) -> List[Paper]:
+def search_openalex(config: Dict, state: State) -> tuple[List[Paper], Dict]:
     """
-    Search OpenAlex for papers in whitelisted journals.
-    Returns list of Paper objects.
+    FIX 2: Search OpenAlex for papers in whitelisted journals with enhanced diagnostics.
+    Returns (list of Paper objects, statistics dict).
     """
     print("\n=== Searching OpenAlex ===")
     
+    # FIX 2: Diagnostic logging at start
+    print(f"OPEN_ALEX_API_KEY present: {'yes' if OPEN_ALEX_API_KEY else 'no'}")
+    
     journals = config.get("journals", [])
+    print(f"Loaded {len(journals)} journals from journals.json")
+    
+    if not journals:
+        print("⚠️  OpenAlex skipped: reason=no journals loaded from journals.json")
+        return [], {"executed": False, "skip_reason": "no_journals", "fetched": 0, "curated": 0}
+    
+    if not OPEN_ALEX_API_KEY:
+        print("⚠️  WARNING: OpenAlex API key not configured - requests may be rate-limited")
+    
     lookback_days = config.get("default_rules", {}).get("lookback_days", OPENALEX_LOOKBACK_DAYS)
+    from_date = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
+    print(f"Lookback window: {lookback_days} days; publication_date threshold: >{from_date}")
     
     print(f"Searching {len(journals)} journals")
-    print(f"Lookback window: {lookback_days} days")
+    
+    stats = {
+        "executed": True,
+        "skip_reason": None,
+        "fetched": 0,
+        "curated": 0,
+        "journals_searched": 0,
+        "journals_failed": 0
+    }
     
     all_papers = []
     for journal in journals:
+        stats["journals_searched"] += 1
         papers = search_openalex_journal(journal, config, state, lookback_days)
-        all_papers.extend(papers)
+        if papers is None:  # Failed journal
+            stats["journals_failed"] += 1
+        else:
+            all_papers.extend(papers)
+            stats["fetched"] += len(papers)
         time.sleep(1)  # Politeness delay between journal queries
     
-    print(f"\nFound {len(all_papers)} new papers from OpenAlex (after deduplication)")
-    return all_papers
+    print(f"\nOpenAlex executed: yes")
+    print(f"Found {len(all_papers)} new papers from OpenAlex (after deduplication)")
+    print(f"Journals searched: {stats['journals_searched']}, Failed: {stats['journals_failed']}")
+    
+    return all_papers, stats
 
 
 # ==================== Curation ====================
@@ -986,7 +1129,12 @@ def import_to_zotero(paper: Paper, zot: zotero.Zotero, collection_keys: Dict[str
 
 def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dict[str, int]:
     """
-    Sync citekeys from Zotero to SQLite for items with pending citekeys.
+    FIX 1: Sync citekeys from Zotero to SQLite for items with pending citekeys.
+    
+    Better BibTeX pins citekeys by adding "Citation Key: <key>" as a line in the Extra field.
+    Auto-pinning is controlled by BBT preference "Automatically pin citation key after X seconds".
+    Citekeys won't appear in the cloud until Zotero Desktop + sync has happened.
+    
     Returns dict with statistics: {"candidates": N, "synced": N, "pending": N, "missing": N}
     """
     print("\n=== Syncing Citekeys from Zotero ===")
@@ -1022,26 +1170,31 @@ def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dic
             
             if not item or "data" not in item:
                 print(f"    Warning: Could not fetch item {item_key}")
+                stats["pending"] += 1
                 continue
             
-            # Parse Extra field for Citation Key
+            # FIX 1: Parse Extra field for "Citation Key: <key>" (case-insensitive, whitespace tolerant)
             extra = item["data"].get("extra", "")
             citekey = None
             
-            for line in extra.split("\n"):
-                line = line.strip()
-                if line.startswith("Citation Key:"):
-                    citekey = line.replace("Citation Key:", "").strip()
-                    break
+            if extra:
+                print(f"    Extra field has {len(extra.split(chr(10)))} lines")
+                for line in extra.split("\n"):
+                    line_stripped = line.strip()
+                    # Case-insensitive match for "Citation Key:"
+                    if line_stripped.lower().startswith("citation key:"):
+                        # Extract citekey after "Citation Key:" (handle whitespace)
+                        citekey = line_stripped.split(":", 1)[1].strip()
+                        break
             
             if citekey:
                 # Citekey found - sync it
-                print(f"    Found citekey: {citekey}")
+                print(f"    ✓ Found citekey: {citekey}")
                 
                 # Optional: Verify citekey pattern (author+year+optional suffix)
                 # Pattern: starts with letters, contains 4-digit year, optional alphanumeric suffix
                 if not re.match(r'^[a-zA-Z]+\d{4}[a-zA-Z0-9]*$', citekey):
-                    print(f"    Warning: Citekey '{citekey}' does not match expected pattern (author+year+suffix)")
+                    print(f"    ⚠️  Warning: Citekey '{citekey}' does not match expected pattern (author+year+suffix)")
                 
                 # Update database
                 update_data = {
@@ -1060,6 +1213,7 @@ def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dic
                 
             else:
                 # Citekey not found - check if item is old enough to mark as missing
+                print(f"    No 'Citation Key:' line found in Extra field")
                 if first_seen:
                     try:
                         # Handle ISO 8601 format with or without timezone
@@ -1072,30 +1226,30 @@ def sync_citekeys_from_zotero(db: Database, zot: Optional[zotero.Zotero]) -> Dic
                         
                         if age_days > 30:
                             # Item is old, mark as missing
-                            print(f"    No citekey found, item age: {age_days} days > 30, marking as 'missing'")
+                            print(f"    Item age: {age_days} days > 30, marking as 'missing'")
                             db["works"].update(work_id, {
                                 "citekey_status": "missing",
                                 "last_error": f"No Citation Key after {age_days} days. Open Zotero Desktop to trigger BBT."
                             })
                             stats["missing"] += 1
                         else:
-                            print(f"    No citekey found, item age: {age_days} days, keeping as 'pending'")
+                            print(f"    Item age: {age_days} days, keeping as 'pending'")
                             stats["pending"] += 1
                     except (ValueError, TypeError) as e:
                         # Could not parse date, keep as pending
-                        print(f"    No citekey found, could not parse date ({e}), keeping as 'pending'")
+                        print(f"    Could not parse date ({e}), keeping as 'pending'")
                         stats["pending"] += 1
                 else:
-                    print(f"    No citekey found, keeping as 'pending'")
+                    print(f"    No first_seen_utc, keeping as 'pending'")
                     stats["pending"] += 1
         
         except Exception as e:
-            print(f"    Error fetching item {item_key}: {e}")
+            print(f"    ❌ Error fetching item {item_key}: {e}")
             # Differentiate between network/API errors and other errors
             if "404" in str(e) or "not found" in str(e).lower():
                 print(f"    Item not found in Zotero, may have been deleted")
             elif "401" in str(e) or "403" in str(e):
-                print(f"    Authentication error, check API credentials")
+                print(f"    ⚠️  Authentication error, check API credentials")
             else:
                 print(f"    Temporary error, will retry on next run")
             stats["pending"] += 1
@@ -1223,11 +1377,17 @@ def store_paper_in_db(paper: Paper, db: Database, run_id: str):
     db["works"].upsert(record, pk="work_id")
 
 
-def generate_references_json(db: Database, output_path: Path):
+def generate_references_json(db: Database, output_path: Path) -> Dict[str, int]:
     """
-    Generate CSL-JSON references from database.
-    Only includes items with citekey_status='synced' for stable citations.
-    Creates an additional references_pending.json for transparency.
+    FIX 1: Generate CSL-JSON references from database with protection against overwriting.
+    
+    Logic:
+    - Only includes items with citekey_status='synced' in references.json (stable citations)
+    - Creates references_pending.json for items without synced citekeys (transparency)
+    - NEVER overwrites references.json with empty file when pending>0 and prior file exists
+    - On first-ever run (no prior references.json), writes temporary IDs from work_id
+    
+    Returns dict with counts: {"synced": N, "pending": N, "file_protected": bool}
     """
     print("\n=== Generating references.json ===")
     
@@ -1251,18 +1411,56 @@ def generate_references_json(db: Database, output_path: Path):
     # Sort references by citekey for deterministic output
     references.sort(key=lambda x: x["id"])
     
-    # Write main references.json (only synced items)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(references, f, indent=2, ensure_ascii=False)
+    stats = {
+        "synced": len(references),
+        "pending": len(pending_references),
+        "file_protected": False
+    }
     
-    print(f"Wrote {len(references)} synced references to {output_path}")
+    # FIX 1: Protection logic - never overwrite references.json with empty when pending>0
+    if len(references) == 0 and len(pending_references) > 0:
+        # No synced items yet, but we have pending items
+        if output_path.exists():
+            # Prior references.json exists - protect it, don't overwrite
+            print(f"⚠️  Protection: references.json NOT overwritten (Synced=0, Pending={len(pending_references)})")
+            print(f"   Keeping existing references.json unchanged until citekeys sync from Zotero")
+            stats["file_protected"] = True
+        else:
+            # First-ever run, no prior references.json
+            # Write temporary references using work_id as ID with annotation
+            print(f"⚠️  First run: No prior references.json found")
+            print(f"   Writing {len(pending_references)} items with temporary work_id as citation ID")
+            print(f"   These will be replaced with proper citekeys after Zotero Desktop syncs")
+            
+            # Add annotation to each pending reference
+            for ref in pending_references:
+                if "note" not in ref:
+                    ref["note"] = f"Temporary ID: {ref['id']} - will change after citekey sync from Zotero/BetterBibTeX"
+            
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(pending_references, f, indent=2, ensure_ascii=False)
+            print(f"Wrote {len(pending_references)} temporary references to {output_path}")
     
-    # Write references_pending.json for transparency
+    elif len(references) > 0:
+        # We have synced items - write them
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(references, f, indent=2, ensure_ascii=False)
+        print(f"Wrote {len(references)} synced references to {output_path}")
+    
+    else:
+        # No items at all (synced or pending)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump([], f, indent=2, ensure_ascii=False)
+        print(f"Wrote 0 references to {output_path} (no items found)")
+    
+    # Always write references_pending.json for transparency
     pending_path = output_path.parent / "references_pending.json"
     with open(pending_path, "w", encoding="utf-8") as f:
         json.dump(pending_references, f, indent=2, ensure_ascii=False)
     
     print(f"Wrote {len(pending_references)} pending references to {pending_path}")
+    
+    return stats
 
 
 def _build_csl_item(row: Dict, use_citekey_as_id: bool = True) -> Optional[Dict]:
@@ -1347,26 +1545,46 @@ def _build_csl_item(row: Dict, use_citekey_as_id: bool = True) -> Optional[Dict]
 
 # ==================== Digest Generation ====================
 
-def generate_digest(papers: List[Paper], output_path: Path):
-    """Generate Markdown digest of curated papers."""
+def generate_digest(papers: List[Paper], output_path: Path, citekey_stats: Dict[str, int]):
+    """
+    FIX 1: Generate Markdown digest of curated papers with pending citekey hint.
+    """
     print("\n=== Generating Digest ===")
     
+    lines = [
+        "# LLM Education Literature Digest",
+        "",
+        f"*Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*",
+        "",
+    ]
+    
+    # FIX 1: Add user-facing hint if citekeys are pending
+    if citekey_stats.get("synced", 0) == 0 and citekey_stats.get("pending", 0) > 0:
+        lines.extend([
+            "---",
+            "",
+            "**⚠️  Citation keys are pending:**",
+            "",
+            f"- {citekey_stats['pending']} items imported to Zotero without citation keys yet",
+            "- To generate citation keys: open Zotero Desktop with Better BibTeX plugin enabled and sync",
+            "- Better BibTeX will auto-pin citation keys based on your configured format (e.g., `[auth][year]`)",
+            "- Next workflow run will populate `references.json` with proper citekeys for Quarto/Pandoc citations",
+            "- Current status: `references.json` contains temporary work IDs or is unchanged from last run",
+            "",
+            "---",
+            "",
+        ])
+    
     if not papers:
-        digest_content = f"""# LLM Education Literature Digest
-
-*Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")}*
-
-No new items found in this run.
-"""
+        lines.extend([
+            "No new items found in this run.",
+            ""
+        ])
     else:
-        lines = [
-            "# LLM Education Literature Digest",
-            "",
-            f"*Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}*",
-            "",
+        lines.extend([
             f"**{len(papers)} new items**",
             "",
-        ]
+        ])
         
         for i, paper in enumerate(papers, 1):
             lines.append(f"## {i}. {paper.title}")
@@ -1411,8 +1629,8 @@ No new items found in this run.
             lines.append("")
             lines.append("---")
             lines.append("")
-        
-        digest_content = "\n".join(lines)
+    
+    digest_content = "\n".join(lines)
     
     # Write digest
     with open(output_path, "w", encoding="utf-8") as f:
@@ -1424,7 +1642,10 @@ No new items found in this run.
 # ==================== Main Pipeline ====================
 
 def main():
-    """Main entrypoint for the literature watcher."""
+    """
+    Main entrypoint for the literature watcher.
+    FIX 4: Enhanced error handling - exit 0 for expected conditions, only fail on fatal errors.
+    """
     print("=" * 60)
     print("Weekly Literature Watcher: LLMs in University Didactics")
     print("=" * 60)
@@ -1432,27 +1653,48 @@ def main():
     print(f"Start time: {start_time.strftime('%Y-%m-%d %H:%M:%S UTC')}")
     print()
     
+    # FIX 4: Track workflow health (success/warning/failed)
+    workflow_health = "success"
+    warnings = []
+    
     # Generate run ID
     run_id = start_time.strftime("%Y%m%d_%H%M%S")
     
-    # Validate secrets
+    # Validate secrets (FIX 4: non-fatal warnings)
     if not ZOTERO_LIBRARY_ID or not ZOTERO_API_KEY:
-        print("WARNING: Zotero credentials not configured. Items will not be imported.")
+        warning_msg = "Zotero credentials not configured. Items will not be imported."
+        print(f"⚠️  WARNING: {warning_msg}")
         print("Set ZOTERO_LIBRARY_ID and ZOTERO_API_KEY environment variables.")
+        warnings.append(warning_msg)
+        workflow_health = "warning"
     
     if not OPEN_ALEX_API_KEY:
-        print("WARNING: OpenAlex API key not configured. Requests may be rate-limited.")
+        warning_msg = "OpenAlex API key not configured. Requests may be rate-limited."
+        print(f"⚠️  WARNING: {warning_msg}")
+        warnings.append(warning_msg)
+        # Don't downgrade to warning for missing OpenAlex key alone
     
-    # Initialize database
+    # Initialize database (FIX 4: fatal if fails)
     print("\n=== Initializing Database ===")
-    db = init_database(DB_PATH)
-    print(f"Database initialized: {DB_PATH}")
+    try:
+        db = init_database(DB_PATH)
+        print(f"Database initialized: {DB_PATH}")
+    except Exception as e:
+        print(f"❌ FATAL ERROR: Could not initialize database: {e}")
+        sys.exit(1)
     
-    # Load configuration and state
+    # Load configuration and state (FIX 4: fatal if journals.json missing)
     print("\n=== Loading Configuration ===")
-    config = load_config()
-    print(f"Loaded configuration from {JOURNALS_CONFIG_PATH}")
-    print(f"Journals configured: {len(config.get('journals', []))}")
+    try:
+        if not JOURNALS_CONFIG_PATH.exists():
+            print(f"❌ FATAL ERROR: journals.json not found at {JOURNALS_CONFIG_PATH}")
+            sys.exit(1)
+        config = load_config()
+        print(f"Loaded configuration from {JOURNALS_CONFIG_PATH}")
+        print(f"Journals configured: {len(config.get('journals', []))}")
+    except Exception as e:
+        print(f"❌ FATAL ERROR: Could not load configuration: {e}")
+        sys.exit(1)
     
     # Update lookback days in config
     if "default_rules" not in config:
@@ -1463,7 +1705,7 @@ def main():
     print(f"Loaded state from {STATE_PATH if STATE_PATH.exists() else 'new state'}")
     print(f"Previously seen: {len(state.seen_arxiv_ids)} arXiv, {len(state.seen_openalex_ids)} OpenAlex, {len(state.seen_dois)} DOIs")
     
-    # Resolve Zotero collections
+    # Resolve Zotero collections (FIX 4: non-fatal, only if credentials present)
     zot = None
     collection_keys = {}
     if ZOTERO_LIBRARY_ID and ZOTERO_API_KEY:
@@ -1473,14 +1715,39 @@ def main():
             collection_keys = resolve_zotero_collections(zot)
             print(f"Resolved collections: {collection_keys}")
         except Exception as e:
-            print(f"Error resolving Zotero collections: {e}")
+            error_str = str(e)
+            if "401" in error_str or "403" in error_str:
+                # FIX 4: Authentication errors are fatal if Zotero is required
+                print(f"❌ FATAL ERROR: Zotero authentication failed (401/403): {e}")
+                print("Check ZOTERO_LIBRARY_ID and ZOTERO_API_KEY")
+                sys.exit(1)
+            else:
+                # Other Zotero errors are warnings
+                warning_msg = f"Error resolving Zotero collections: {e}"
+                print(f"⚠️  WARNING: {warning_msg}")
+                warnings.append(warning_msg)
+                workflow_health = "warning"
     
-    # Search pipelines
-    arxiv_papers = search_arxiv(config, state)
-    openalex_papers = search_openalex(config, state)
+    # Search pipelines (FIX 4: non-fatal if return 0 results)
+    arxiv_papers, arxiv_stats = search_arxiv(config, state)
+    openalex_papers, openalex_stats = search_openalex(config, state)
     
     all_papers = arxiv_papers + openalex_papers
     print(f"\n=== Total Papers Collected: {len(all_papers)} ===")
+    
+    # FIX 4: Log warnings if no results (but continue)
+    if arxiv_stats["fetched"] == 0:
+        warning_msg = "arXiv returned 0 results"
+        print(f"⚠️  WARNING: {warning_msg}")
+        warnings.append(warning_msg)
+    
+    if openalex_stats.get("fetched", 0) == 0:
+        if openalex_stats.get("skip_reason"):
+            warning_msg = f"OpenAlex skipped: {openalex_stats['skip_reason']}"
+        else:
+            warning_msg = "OpenAlex returned 0 results"
+        print(f"⚠️  WARNING: {warning_msg}")
+        warnings.append(warning_msg)
     
     # Curate papers
     curated_papers = curate_papers(all_papers, config)
@@ -1488,7 +1755,6 @@ def main():
     # Download PDFs and import to Zotero
     print("\n=== Processing Papers ===")
     successfully_imported = []
-    arxiv_gated = len([p for p in arxiv_papers if not p.education_intent_pass])
     
     for i, paper in enumerate(curated_papers, 1):
         print(f"\n[{i}/{len(curated_papers)}] Processing: {paper.title[:60]}...")
@@ -1532,11 +1798,11 @@ def main():
     # Sync citekeys from Zotero for all pending items
     sync_stats = sync_citekeys_from_zotero(db, zot)
     
-    # Generate digest (only successfully imported items)
-    generate_digest(successfully_imported, DIGEST_PATH)
+    # FIX 1: Generate references.json with protection logic
+    ref_stats = generate_references_json(db, REFERENCES_PATH)
     
-    # Generate references.json
-    generate_references_json(db, REFERENCES_PATH)
+    # FIX 1: Generate digest with citekey hint
+    generate_digest(successfully_imported, DIGEST_PATH, sync_stats)
     
     # Record run in database
     end_time = datetime.now()
@@ -1547,13 +1813,13 @@ def main():
         "run_id": run_id,
         "start_time": start_time.isoformat(),
         "end_time": end_time.isoformat(),
-        "arxiv_fetched": len(arxiv_papers) + arxiv_gated,
-        "arxiv_gated": arxiv_gated,
+        "arxiv_fetched": arxiv_stats["fetched"],
+        "arxiv_gated": arxiv_stats["excluded_by_gate"] + arxiv_stats["excluded_by_disambiguation"] + arxiv_stats["excluded_by_negative_terms"],
         "arxiv_curated": arxiv_curated,
-        "openalex_fetched": len(openalex_papers),
+        "openalex_fetched": openalex_stats.get("fetched", 0),
         "openalex_curated": openalex_curated,
         "total_imported": len(successfully_imported),
-        "errors": "",
+        "errors": "; ".join(warnings) if warnings else "",
     })
     
     # Update state
@@ -1564,19 +1830,39 @@ def main():
     print("\n" + "=" * 60)
     print("SUMMARY")
     print("=" * 60)
-    print(f"arXiv: Fetched {len(arxiv_papers) + arxiv_gated}, Gated {arxiv_gated}, Curated {arxiv_curated}")
-    print(f"OpenAlex: Fetched {len(openalex_papers)}, Curated {openalex_curated}")
+    print(f"arXiv: Fetched {arxiv_stats['fetched']}, "
+          f"Gated {arxiv_stats['excluded_by_gate']}, "
+          f"Disambiguation {arxiv_stats['excluded_by_disambiguation']}, "
+          f"Negative terms {arxiv_stats['excluded_by_negative_terms']}, "
+          f"Curated {arxiv_curated}")
+    print(f"OpenAlex: Fetched {openalex_stats.get('fetched', 0)}, Curated {openalex_curated}")
+    if not openalex_stats.get("executed", True):
+        print(f"  (OpenAlex skipped: {openalex_stats.get('skip_reason', 'unknown')})")
     print(f"Total collected: {len(all_papers)}")
     print(f"Total curated: {len(curated_papers)}")
     print(f"Successfully processed: {len(successfully_imported)}")
     print(f"Citekey sync: Synced={sync_stats['synced']}, Pending={sync_stats['pending']}, Missing={sync_stats['missing']}")
+    if ref_stats.get("file_protected"):
+        print(f"⚠️  references.json protected from overwrite (pending citekeys)")
     print(f"Digest written to: {DIGEST_PATH}")
     print(f"Database written to: {DB_PATH}")
     print(f"References written to: {REFERENCES_PATH}")
     print(f"State saved to: {STATE_PATH}")
     print(f"End time: {end_time.strftime('%Y-%m-%d %H:%M:%S UTC')}")
     print(f"Duration: {(end_time - start_time).total_seconds():.1f} seconds")
+    
+    # FIX 4: Workflow health summary
+    if warnings:
+        print(f"\n⚠️  Warnings ({len(warnings)}):")
+        for w in warnings:
+            print(f"  - {w}")
+    
+    print(f"\n🔍 Workflow health: {workflow_health}")
     print("=" * 60)
+    
+    # FIX 4: Exit 0 for success/warning, only fail on truly fatal issues
+    # (Fatal issues already exited with sys.exit(1) above)
+    sys.exit(0)
 
 
 
