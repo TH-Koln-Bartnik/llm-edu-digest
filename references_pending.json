@@ -8562,5 +8562,1940 @@
     "abstract": "Autoregressive (AR) large audio language models (LALMs) such as Qwen-2.5-Omni have achieved strong performance on audio understanding and interaction, but scaling them remains costly in data and computation, and strictly sequential decoding limits inference efficiency. Diffusion large language models (dLLMs) have recently been shown to make effective use of limited training data, and prior work on DIFFA indicates that replacing an AR backbone with a diffusion counterpart can substantially improve audio understanding under matched settings, albeit at a proof-of-concept scale without large-scale instruction tuning, preference alignment, or practical decoding schemes. We introduce DIFFA-2, a practical diffusion-based LALM for general audio understanding. DIFFA-2 upgrades the speech encoder, employs dual semantic and acoustic adapters, and is trained with a four-stage curriculum that combines semantic and acoustic alignment, large-scale supervised fine-tuning, and variance-reduced preference optimization, using only fully open-source corpora. Experiments on MMSU, MMAU, and MMAR show that DIFFA-2 consistently improves over DIFFA and is competitive to strong AR LALMs under practical training budgets, supporting diffusion-based modeling is a viable backbone for large-scale audio understanding. Our code is available at https://github.com/NKU-HLT/DIFFA.git.",
     "URL": "http://arxiv.org/abs/2601.23161v1",
     "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.00243",
+    "type": "report",
+    "title": "\"OpenBloom\": A Question-Based LLM Tool to Support Stigma Reduction in Reproductive Well-Being",
+    "author": [
+      {
+        "family": "Hua",
+        "given": "Ashley"
+      },
+      {
+        "family": "Daruka",
+        "given": "Adya"
+      },
+      {
+        "family": "Hong",
+        "given": "Yang"
+      },
+      {
+        "family": "Sultana",
+        "given": "Sharifa"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          30
+        ]
+      ]
+    },
+    "abstract": "Reproductive well-being education remains widely stigmatized across diverse cultural contexts, constraining how individuals access and interpret reproductive health knowledge. We designed and evaluated OpenBloom, a stigma-sensitive, AI-mediated system that uses LLMs to transform reproductive health articles into reflective, question-based learning prompts. We employed OpenBloom as a design probe, aiming to explore the emerging challenges of reproductive well-being stigma through LLMs. Through surveys, semi-structured interviews, and focus group discussions, we examine how sociocultural stigma shapes participants' engagements with AI-generated questions and the opportunities of inquiry-based reproductive health education. Our findings identify key design considerations for stigma-sensitive LLM, including empathetic framing, inclusive language, values-based reflection, and explicit representation of marginalized identities. However, while current LLM outputs largely meet expectations for cultural sensitivity and non-offensiveness, they default to superficial rephrasing and factual recall rather than critical reflection. This guides well-being HCI design in sensitive health domains toward culturally grounded, participatory workflows.",
+    "URL": "http://arxiv.org/abs/2602.00243v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.00447",
+    "type": "report",
+    "title": "Not All Students Engage Alike: Multi-Institution Patterns in GenAI Tutor Use",
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Youjie"
+      },
+      {
+        "family": "Shi",
+        "given": "Xixi"
+      },
+      {
+        "family": "Liu",
+        "given": "Xinyu"
+      },
+      {
+        "family": "Wang",
+        "given": "Shuaiguo"
+      },
+      {
+        "family": "Liu",
+        "given": "Tracy Xiao"
+      },
+      {
+        "family": "Gašević",
+        "given": "Dragan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          31
+        ]
+      ]
+    },
+    "abstract": "The emergence of generative artificial intelligence (GenAI) has created unprecedented opportunities to provide individualized learning support in classrooms as automated tutoring systems at scale. However, concerns have been raised that students may engage with these tools in ways that do not support learning. Moreover, student engagement with GenAI Tutors may vary across instructional contexts, potentially leading to unequal learning experiences. In this study, we utilize de-identified student interaction logs from an existing GenAI Tutor and the learning management system in which it is embedded. We systematically examined student engagement (N = 11,406) with the tool across 200 classes in ten post-secondary institutions through a two-stage pipeline: First, we identified four distinct engagement types at the conversation session level. In particular, 10.4% of them were \"shallow engagement\" where copy-pasting behavior was prevalent. Then, at the student level, we show that students transitioned across engagement types over time. However, students who exhibited shallow engagement with the tool were more likely to remain in this mode, whereas those who engaged deeply with the tool transitioned more flexibly across engagement types. Finally, at both the session and student levels, we show substantial heterogeneity in student engagement across institution selectivity and course disciplines. In particular, students from highly selective institutions were more likely to exhibit deep engagement. Together, our study advances the understanding of how GenAI Tutors are used in authentic educational settings and provides a framework for analyzing student engagement with GenAI Tutors, with implications for responsible implementation at scale.",
+    "URL": "http://arxiv.org/abs/2602.00447v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.00762",
+    "type": "report",
+    "title": "WordCraft: Scaffolding the Keyword Method for L2 Vocabulary Learning with Multimodal LLMs",
+    "author": [
+      {
+        "family": "Shao",
+        "given": "Yuheng"
+      },
+      {
+        "family": "Xiong",
+        "given": "Junjie"
+      },
+      {
+        "family": "Wu",
+        "given": "Chaoran"
+      },
+      {
+        "family": "Wang",
+        "given": "Xiyuan"
+      },
+      {
+        "family": "Zhou",
+        "given": "Ziyu"
+      },
+      {
+        "family": "Ouyang",
+        "given": "Yang"
+      },
+      {
+        "family": "Tao",
+        "given": "Qinyi"
+      },
+      {
+        "family": "Li",
+        "given": "Quan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          31
+        ]
+      ]
+    },
+    "abstract": "Applying the keyword method for vocabulary memorization remains a significant challenge for L1 Chinese-L2 English learners. They frequently struggle to generate phonologically appropriate keywords, construct coherent associations, and create vivid mental imagery to aid long-term retention. Existing approaches, including fully automated keyword generation and outcome-oriented mnemonic aids, either compromise learner engagement or lack adequate process-oriented guidance. To address these limitations, we conducted a formative study with L1 Chinese-L2 English learners and educators (N=18), which revealed key difficulties and requirements in applying the keyword method to vocabulary learning. Building on these insights, we introduce WordCraft, a learner-centered interactive tool powered by Multimodal Large Language Models (MLLMs). WordCraft scaffolds the keyword method by guiding learners through keyword selection, association construction, and image formation, thereby enhancing the effectiveness of vocabulary memorization. Two user studies demonstrate that WordCraft not only preserves the generation effect but also achieves high levels of effectiveness and usability.",
+    "URL": "http://arxiv.org/abs/2602.00762v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.00850",
+    "type": "report",
+    "title": "PS$^2$: Parameterized Control for Fine-Grained Student Proficiency Simulation",
+    "author": [
+      {
+        "family": "Liu",
+        "given": "Ruochen"
+      },
+      {
+        "family": "Wen",
+        "given": "Zhiyuan"
+      },
+      {
+        "family": "Yan",
+        "given": "Hao"
+      },
+      {
+        "family": "Yin",
+        "given": "Jun"
+      },
+      {
+        "family": "Wang",
+        "given": "Senzhang"
+      },
+      {
+        "family": "Cao",
+        "given": "Jiannong"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          31
+        ]
+      ]
+    },
+    "abstract": "Understanding how students with different proficiency levels respond to educational materials is a critical issue within the field of AI for Education. However, acquiring sufficient real student response data for a robust evaluation is often hindered by cost, ethics, and security constraints. Consequently, LLM-based student proficiency simulation, especially prompt-based methods, has emerged as a practical alternative under data-scarce conditions. Despite their promise, current methods still exhibit limited controllability with coarse-grained proficiency representations, high sensitivity to prompt design, and the lack of calibration with academic performance. Therefore, we propose Parameterized Student Proficiency Simulation (PS$^2$), an unsupervised and parameterized model-level framework that simulates students with different proficiencies by interpolating between a strong upper-bound LLM and a weaker, cognitive error-informed lower-bound student LLM via a hybrid ratio. Specifically, the lower-bound model is constructed by fine-tuning the weaker LM to exhibit cognitive errors when responding to educational materials. To ensure alignment with target proficiency levels, PS$^2$ further calibrates the interpolation ratio with academic performance. Experiments on two public datasets demonstrate that PS$^2$ achieves finer-grained and consistent proficiency simulation compared to existing baselines, leading to superior performance in student behavior similarity and item difficulty prediction.",
+    "URL": "http://arxiv.org/abs/2602.00850v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.00979",
+    "type": "report",
+    "title": "GradingAttack: Attacking Large Language Models Towards Short Answer Grading Ability",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Xueyi"
+      },
+      {
+        "family": "Zhou",
+        "given": "Zhuoneng"
+      },
+      {
+        "family": "Liu",
+        "given": "Zitao"
+      },
+      {
+        "family": "Wu",
+        "given": "Yongdong"
+      },
+      {
+        "family": "Luo",
+        "given": "Weiqi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          1
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) have demonstrated remarkable potential for automatic short answer grading (ASAG), significantly boosting student assessment efficiency and scalability in educational scenarios. However, their vulnerability to adversarial manipulation raises critical concerns about automatic grading fairness and reliability. In this paper, we introduce GradingAttack, a fine-grained adversarial attack framework that systematically evaluates the vulnerability of LLM based ASAG models. Specifically, we align general-purpose attack methods with the specific objectives of ASAG by designing token-level and prompt-level strategies that manipulate grading outcomes while maintaining high camouflage. Furthermore, to quantify attack camouflage, we propose a novel evaluation metric that balances attack success and camouflage. Experiments on multiple datasets demonstrate that both attack strategies effectively mislead grading models, with prompt-level attacks achieving higher success rates and token-level attacks exhibiting superior camouflage capability. Our findings underscore the need for robust defenses to ensure fairness and reliability in ASAG. Our code and datasets are available at https://anonymous.4open.science/r/GradingAttack.",
+    "URL": "http://arxiv.org/abs/2602.00979v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01015",
+    "type": "report",
+    "title": "Large Language Models as Students Who Think Aloud: Overly Coherent, Verbose, and Confident",
+    "author": [
+      {
+        "family": "Borchers",
+        "given": "Conrad"
+      },
+      {
+        "family": "Vie",
+        "given": "Jill-Jênn"
+      },
+      {
+        "family": "Azevedo",
+        "given": "Roger"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          1
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) are increasingly embedded in AI-based tutoring systems. Can they faithfully model novice reasoning and metacognitive judgments? Existing evaluations emphasize problem-solving accuracy, overlooking the fragmented and imperfect reasoning that characterizes human learning. We evaluate LLMs as novices using 630 think-aloud utterances from multi-step chemistry tutoring problems with problem-solving logs of student hint use, attempts, and problem context. We compare LLM-generated reasoning to human learner utterances under minimal and extended contextual prompting, and assess the models' ability to predict step-level learner success. Although GPT-4.1 generates fluent and contextually appropriate continuations, its reasoning is systematically over-coherent, verbose, and less variable than human think-alouds. These effects intensify with a richer problem-solving context during prompting. Learner performance was consistently overestimated. These findings highlight epistemic limitations of simulating learning with LLMs. We attribute these limitations to LLM training data, including expert-like solutions devoid of expressions of affect and working memory constraints during problem solving. Our evaluation framework can guide future design of adaptive systems that more faithfully support novice learning and self-regulation using generative artificial intelligence.",
+    "URL": "http://arxiv.org/abs/2602.01015v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01169",
+    "type": "report",
+    "title": "PedagoSense: A Pedology Grounded LLM System for Pedagogical Strategy Detection and Contextual Response Generation in Learning Dialogues",
+    "author": [
+      {
+        "family": "Sultan",
+        "given": "Shahem"
+      },
+      {
+        "family": "Fadi",
+        "given": "Shahem"
+      },
+      {
+        "family": "Melhim",
+        "given": "Yousef"
+      },
+      {
+        "family": "Alsarraj",
+        "given": "Ibrahim"
+      },
+      {
+        "family": "Hassan",
+        "given": "Besher"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          1
+        ]
+      ]
+    },
+    "abstract": "This paper addresses the challenge of improving interaction quality in dialogue based learning by detecting and recommending effective pedagogical strategies in tutor student conversations. We introduce PedagoSense, a pedology grounded system that combines a two stage strategy classifier with large language model generation. The system first detects whether a pedagogical strategy is present using a binary classifier, then performs fine grained classification to identify the specific strategy. In parallel, it recommends an appropriate strategy from the dialogue context and uses an LLM to generate a response aligned with that strategy. We evaluate on human annotated tutor student dialogues, augmented with additional non pedagogical conversations for the binary task. Results show high performance for pedagogical strategy detection and consistent gains when using data augmentation, while analysis highlights where fine grained classes remain challenging. Overall, PedagoSense bridges pedagogical theory and practical LLM based response generation for more adaptive educational technologies.",
+    "URL": "http://arxiv.org/abs/2602.01169v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01249",
+    "type": "report",
+    "title": "Generative AI in Signal Processing Education: An Audio Foundation Model Based Approach",
+    "author": [
+      {
+        "family": "Khan",
+        "given": "Muhammad Salman"
+      },
+      {
+        "family": "Ullah",
+        "given": "Ahmad"
+      },
+      {
+        "family": "Latif",
+        "given": "Siddique"
+      },
+      {
+        "family": "Qadir",
+        "given": "Junaid"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          1
+        ]
+      ]
+    },
+    "abstract": "Audio Foundation Models (AFMs), a specialized category of Generative AI (GenAI), have the potential to transform signal processing (SP) education by integrating core applications such as speech and audio enhancement, denoising, source separation, feature extraction, automatic classification, and real-time signal analysis into learning and research. This paper introduces SPEduAFM, a conceptual AFM tailored for SP education, bridging traditional SP principles with GenAI-driven innovations. Through an envisioned case study, we outline how AFMs can enable a range of applications, including automated lecture transcription, interactive demonstrations, and inclusive learning tools, showcasing their potential to transform abstract concepts into engaging, practical experiences. This paper also addresses challenges such as ethics, explainability, and customization by highlighting dynamic, real-time auditory interactions that foster experiential and authentic learning. By presenting SPEduAFM as a forward-looking vision, we aim to inspire broader adoption of GenAI in engineering education, enhancing accessibility, engagement, and innovation in the classroom and beyond.",
+    "URL": "http://arxiv.org/abs/2602.01249v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01415",
+    "type": "report",
+    "title": "Evidence-Decision-Feedback: Theory-Driven Adaptive Scaffolding for LLM Agents",
+    "author": [
+      {
+        "family": "Cohn",
+        "given": "Clayton"
+      },
+      {
+        "family": "Guo",
+        "given": "Siyuan"
+      },
+      {
+        "family": "Rayala",
+        "given": "Surya"
+      },
+      {
+        "family": "Wang",
+        "given": "Hanchen David"
+      },
+      {
+        "family": "Mohammed",
+        "given": "Naveeduddin"
+      },
+      {
+        "family": "Timalsina",
+        "given": "Umesh"
+      },
+      {
+        "family": "Jain",
+        "given": "Shruti"
+      },
+      {
+        "family": "Eeds",
+        "given": "Angela"
+      },
+      {
+        "family": "Deweese",
+        "given": "Menton"
+      },
+      {
+        "family": "Popp",
+        "given": "Pamela J. Osborn"
+      },
+      {
+        "family": "Stanton",
+        "given": "Rebekah"
+      },
+      {
+        "family": "Walker",
+        "given": "Shakeera"
+      },
+      {
+        "family": "Ma",
+        "given": "Meiyi"
+      },
+      {
+        "family": "Biswas",
+        "given": "Gautam"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          1
+        ]
+      ]
+    },
+    "abstract": "Multi-agent LLM architectures offer opportunities for pedagogical agents to help students construct domain knowledge and develop critical-thinking skills, yet many operate on a \"one-size-fits-all\" basis, limiting their ability to provide personalized support. To address this, we introduce Evidence-Decision-Feedback (EDF), a theoretical framework for adaptive scaffolding using LLMs. EDF integrates elements of intelligent tutoring systems and agentic behavior by organizing interactions around evidentiary inference, pedagogical decision-making, and adaptive feedback. We instantiate EDF through Copa, an agentic collaborative peer agent for STEM+C problem-solving. In an authentic high school classroom study, we show that EDF-aligned interactions align feedback with students' demonstrated understanding and task mastery; promote gradual scaffold fading; and support interpretable, evidence-grounded explanations without fostering overreliance.",
+    "URL": "http://arxiv.org/abs/2602.01415v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01560",
+    "type": "report",
+    "title": "Argument Rarity-based Originality Assessment for AI-Assisted Writing",
+    "author": [
+      {
+        "family": "Inoshita",
+        "given": "Keito"
+      },
+      {
+        "family": "Omura",
+        "given": "Michiaki"
+      },
+      {
+        "family": "Yamanaka",
+        "given": "Tsukasa"
+      },
+      {
+        "family": "Maeda",
+        "given": "Go"
+      },
+      {
+        "family": "Tsuji",
+        "given": "Kentaro"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "As Large Language Models (LLMs) have become capable of effortlessly generating high-quality text, traditional quality-focused writing assessment is losing its significance. If the essential goal of education is to foster critical thinking and original perspectives, assessment must also shift its paradigm from quality to originality. This study proposes Argument Rarity-based Originality Assessment (AROA), a framework for automatically evaluating argumentative originality in student essays. AROA defines originality as rarity within a reference corpus and evaluates it through four complementary components: structural rarity, claim rarity, evidence rarity, and cognitive depth. The framework quantifies the rarity of each component using density estimation and integrates them with a quality adjustment mechanism, thereby treating quality and originality as independent evaluation axes. Experiments using human essays and AI-generated essays revealed a strong negative correlation between quality and claim rarity, demonstrating a quality-originality trade-off where higher-quality texts tend to rely on typical claim patterns. Furthermore, while AI essays achieved comparable levels of structural complexity to human essays, their claim rarity was substantially lower than that of humans, indicating that LLMs can reproduce the form of argumentation but have limitations in the originality of content.",
+    "URL": "http://arxiv.org/abs/2602.01560v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01703",
+    "type": "report",
+    "title": "$\\textbf{AGT$^{AO}$}$: Robust and Stabilized LLM Unlearning via Adversarial Gating Training with Adaptive Orthogonality",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Pengyu"
+      },
+      {
+        "family": "Zhang",
+        "given": "Lingling"
+      },
+      {
+        "family": "Gao",
+        "given": "Zhitao"
+      },
+      {
+        "family": "Wu",
+        "given": "Yanrui"
+      },
+      {
+        "family": "Dong",
+        "given": "Yuxuan"
+      },
+      {
+        "family": "Liu",
+        "given": "Huan"
+      },
+      {
+        "family": "Wei",
+        "given": "Bifan"
+      },
+      {
+        "family": "Liu",
+        "given": "Jun"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "While Large Language Models (LLMs) have achieved remarkable capabilities, they unintentionally memorize sensitive data, posing critical privacy and security risks. Machine unlearning is pivotal for mitigating these risks, yet existing paradigms face a fundamental dilemma: aggressive unlearning often induces catastrophic forgetting that degrades model utility, whereas conservative strategies risk superficial forgetting, leaving models vulnerable to adversarial recovery. To address this trade-off, we propose $\\textbf{AGT$^{AO}$}$ (Adversarial Gating Training with Adaptive Orthogonality), a unified framework designed to reconcile robust erasure with utility preservation. Specifically, our approach introduces $\\textbf{Adaptive Orthogonality (AO)}$ to dynamically mitigate geometric gradient conflicts between forgetting and retention objectives, thereby minimizing unintended knowledge degradation. Concurrently, $\\textbf{Adversarial Gating Training (AGT)}$ formulates unlearning as a latent-space min-max game, employing a curriculum-based gating mechanism to simulate and counter internal recovery attempts. Extensive experiments demonstrate that $\\textbf{AGT$^{AO}$}$ achieves a superior trade-off between unlearning efficacy (KUR $\\approx$ 0.01) and model utility (MMLU 58.30). Code is available at https://github.com/TiezMind/AGT-unlearning.",
+    "URL": "http://arxiv.org/abs/2602.01703v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01875",
+    "type": "report",
+    "title": "PretrainRL: Alleviating Factuality Hallucination of Large Language Models at the Beginning",
+    "author": [
+      {
+        "family": "Liu",
+        "given": "Langming"
+      },
+      {
+        "family": "Lv",
+        "given": "Kangtao"
+      },
+      {
+        "family": "Chen",
+        "given": "Haibin"
+      },
+      {
+        "family": "Zhang",
+        "given": "Weidong"
+      },
+      {
+        "family": "Wang",
+        "given": "Yejing"
+      },
+      {
+        "family": "Liu",
+        "given": "Shilei"
+      },
+      {
+        "family": "Tong",
+        "given": "Xin"
+      },
+      {
+        "family": "Yuan",
+        "given": "Yujin"
+      },
+      {
+        "family": "Wang",
+        "given": "Yongwei"
+      },
+      {
+        "family": "Su",
+        "given": "Wenbo"
+      },
+      {
+        "family": "Zheng",
+        "given": "Bo"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs), despite their powerful capabilities, suffer from factual hallucinations where they generate verifiable falsehoods. We identify a root of this issue: the imbalanced data distribution in the pretraining corpus, which leads to a state of \"low-probability truth\" and \"high-probability falsehood\". Recent approaches, such as teaching models to say \"I don't know\" or post-hoc knowledge editing, either evade the problem or face catastrophic forgetting. To address this issue from its root, we propose \\textbf{PretrainRL}, a novel framework that integrates reinforcement learning into the pretraining phase to consolidate factual knowledge. The core principle of PretrainRL is \"\\textbf{debiasing then learning}.\" It actively reshapes the model's probability distribution by down-weighting high-probability falsehoods, thereby making \"room\" for low-probability truths to be learned effectively. To enable this, we design an efficient negative sampling strategy to discover these high-probability falsehoods and introduce novel metrics to evaluate the model's probabilistic state concerning factual knowledge. Extensive experiments on three public benchmarks demonstrate that PretrainRL significantly alleviates factual hallucinations and outperforms state-of-the-art methods.",
+    "URL": "http://arxiv.org/abs/2602.01875v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01919",
+    "type": "report",
+    "title": "From Code-Centric to Concept-Centric: Teaching NLP with LLM-Assisted \"Vibe Coding\"",
+    "author": [
+      {
+        "family": "Al-Khalifa",
+        "given": "Hend"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "The rapid advancement of Large Language Models (LLMs) presents both challenges and opportunities for Natural Language Processing (NLP) education. This paper introduces ``Vibe Coding,'' a pedagogical approach that leverages LLMs as coding assistants while maintaining focus on conceptual understanding and critical thinking. We describe the implementation of this approach in a senior-level undergraduate NLP course, where students completed seven labs using LLMs for code generation while being assessed primarily on conceptual understanding through critical reflection questions. Analysis of end-of-course feedback from 19 students reveals high satisfaction (mean scores 4.4-4.6/5.0) across engagement, conceptual learning, and assessment fairness. Students particularly valued the reduced cognitive load from debugging, enabling deeper focus on NLP concepts. However, challenges emerged around time constraints, LLM output verification, and the need for clearer task specifications. Our findings suggest that when properly structured with mandatory prompt logging and reflection-based assessment, LLM-assisted learning can shift focus from syntactic fluency to conceptual mastery, preparing students for an AI-augmented professional landscape.",
+    "URL": "http://arxiv.org/abs/2602.01919v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01933",
+    "type": "report",
+    "title": "Large Language Model and Formal Concept Analysis: a comparative study for Topic Modeling",
+    "author": [
+      {
+        "family": "Boissier",
+        "given": "Fabrice"
+      },
+      {
+        "family": "Sen",
+        "given": "Monica"
+      },
+      {
+        "family": "Rychkova",
+        "given": "Irina"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "Topic modeling is a research field finding increasing applications: historically from document retrieving, to sentiment analysis and text summarization. Large Language Models (LLM) are currently a major trend in text processing, but few works study their usefulness for this task. Formal Concept Analysis (FCA) has recently been presented as a candidate for topic modeling, but no real applied case study has been conducted. In this work, we compare LLM and FCA to better understand their strengths and weakneses in the topic modeling field. FCA is evaluated through the CREA pipeline used in past experiments on topic modeling and visualization, whereas GPT-5 is used for the LLM. A strategy based on three prompts is applied with GPT-5 in a zero-shot setup: topic generation from document batches, merging of batch results into final topics, and topic labeling. A first experiment reuses the teaching materials previously used to evaluate CREA, while a second experiment analyzes 40 research articles in information systems to compare the extracted topics with the underling subfields.",
+    "URL": "http://arxiv.org/abs/2602.01933v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01937",
+    "type": "report",
+    "title": "T-LLM: Teaching Large Language Models to Forecast Time Series via Temporal Distillation",
+    "author": [
+      {
+        "family": "Guo",
+        "given": "Suhan"
+      },
+      {
+        "family": "Wang",
+        "given": "Bingxu"
+      },
+      {
+        "family": "Zhang",
+        "given": "Shaodan"
+      },
+      {
+        "family": "Shen",
+        "given": "Furao"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "Time series forecasting plays a critical role in decision-making across many real-world applications. Unlike data in vision and language domains, time series data is inherently tied to the evolution of underlying processes and can only accumulate as real-world time progresses, limiting the effectiveness of scale-driven pretraining alone. This time-bound constraint poses a challenge for enabling large language models (LLMs) to acquire forecasting capability, as existing approaches primarily rely on representation-level alignment or inference-time temporal modules rather than explicitly teaching forecasting behavior to the LLM. We propose T-LLM, a temporal distillation framework that equips general-purpose LLMs with time series forecasting capability by transferring predictive behavior from a lightweight temporal teacher during training. The teacher combines trend modeling and frequency-domain analysis to provide structured temporal supervision, and is removed entirely at inference, leaving the LLM as the sole forecasting model. Experiments on benchmark datasets and infectious disease forecasting tasks demonstrate that T-LLM consistently outperforms existing LLM-based forecasting methods under full-shot, few-shot, and zero-shot settings, while enabling a simple and efficient deployment pipeline.",
+    "URL": "http://arxiv.org/abs/2602.01937v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.01982",
+    "type": "report",
+    "title": "S3-CoT: Self-Sampled Succinct Reasoning Enables Efficient Chain-of-Thought LLMs",
+    "author": [
+      {
+        "family": "Du",
+        "given": "Yanrui"
+      },
+      {
+        "family": "Zhao",
+        "given": "Sendong"
+      },
+      {
+        "family": "Gao",
+        "given": "Yibo"
+      },
+      {
+        "family": "Zhao",
+        "given": "Danyang"
+      },
+      {
+        "family": "Lin",
+        "given": "Qika"
+      },
+      {
+        "family": "Ma",
+        "given": "Ming"
+      },
+      {
+        "family": "Li",
+        "given": "Jiayun"
+      },
+      {
+        "family": "Jiang",
+        "given": "Yi"
+      },
+      {
+        "family": "He",
+        "given": "Kai"
+      },
+      {
+        "family": "Xu",
+        "given": "Qianyi"
+      },
+      {
+        "family": "Qin",
+        "given": "Bing"
+      },
+      {
+        "family": "Feng",
+        "given": "Mengling"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) equipped with chain-of-thought (CoT) achieve strong performance and offer a window into LLM behavior. However, recent evidence suggests that improvements in CoT capabilities often come with redundant reasoning processes, motivating a key question: Can LLMs acquire a fast-thinking mode analogous to human System 1 reasoning? To explore this, our study presents a self-sampling framework based on activation steering for efficient CoT learning. Our method can induce style-aligned and variable-length reasoning traces from target LLMs themselves without any teacher guidance, thereby alleviating a central bottleneck of SFT-based methods-the scarcity of high-quality supervision data. Using filtered data by gold answers, we perform SFT for efficient CoT learning with (i) a human-like dual-cognitive system, and (ii) a progressive compression curriculum. Furthermore, we explore a self-evolution regime in which SFT is driven solely by prediction-consistent data of variable-length variants, eliminating the need for gold answers. Extensive experiments on math benchmarks, together with cross-domain generalization tests in medicine, show that our method yields stable improvements for both general and R1-style LLMs. Our data and model checkpoints can be found at https://github.com/DYR1/S3-CoT.",
+    "URL": "http://arxiv.org/abs/2602.01982v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.02366",
+    "type": "report",
+    "title": "ReasonCACHE: Teaching LLMs To Reason Without Weight Updates",
+    "author": [
+      {
+        "family": "Gupta",
+        "given": "Sharut"
+      },
+      {
+        "family": "Isola",
+        "given": "Phillip"
+      },
+      {
+        "family": "Jegelka",
+        "given": "Stefanie"
+      },
+      {
+        "family": "Lopez-Paz",
+        "given": "David"
+      },
+      {
+        "family": "Ahuja",
+        "given": "Kartik"
+      },
+      {
+        "family": "Ibrahim",
+        "given": "Mark"
+      },
+      {
+        "family": "Pezeshki",
+        "given": "Mohammad"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "Can Large language models (LLMs) learn to reason without any weight update and only through in-context learning (ICL)? ICL is strikingly sample-efficient, often learning from only a handful of demonstrations, but complex reasoning tasks typically demand many training examples to learn from. However, naively scaling ICL by adding more demonstrations breaks down at this scale: attention costs grow quadratically, performance saturates or degrades with longer contexts, and the approach remains a shallow form of learning. Due to these limitations, practitioners predominantly rely on in-weight learning (IWL) to induce reasoning. In this work, we show that by using Prefix Tuning, LLMs can learn to reason without overloading the context window and without any weight updates. We introduce $\\textbf{ReasonCACHE}$, an instantiation of this mechanism that distills demonstrations into a fixed key-value cache. Empirically, across challenging reasoning benchmarks, including GPQA-Diamond, ReasonCACHE outperforms standard ICL and matches or surpasses IWL approaches. Further, it achieves this all while being more efficient across three key axes: data, inference cost, and trainable parameters. We also theoretically prove that ReasonCACHE can be strictly more expressive than low-rank weight update since the latter ties expressivity to input rank, whereas ReasonCACHE bypasses this constraint by directly injecting key-values into the attention mechanism. Together, our findings identify ReasonCACHE as a middle path between in-context and in-weight learning, providing a scalable algorithm for learning reasoning skills beyond the context window without modifying parameters. Our project page: https://reasoncache.github.io/",
+    "URL": "http://arxiv.org/abs/2602.02366v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.02414",
+    "type": "report",
+    "title": "Misconception Diagnosis From Student-Tutor Dialogue: Generate, Retrieve, Rerank",
+    "author": [
+      {
+        "family": "Mitton",
+        "given": "Joshua"
+      },
+      {
+        "family": "Bhattacharyya",
+        "given": "Prarthana"
+      },
+      {
+        "family": "Smith",
+        "given": "Digory"
+      },
+      {
+        "family": "Christie",
+        "given": "Thomas"
+      },
+      {
+        "family": "Abboud",
+        "given": "Ralph"
+      },
+      {
+        "family": "Woodhead",
+        "given": "Simon"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "Timely and accurate identification of student misconceptions is key to improving learning outcomes and pre-empting the compounding of student errors. However, this task is highly dependent on the effort and intuition of the teacher. In this work, we present a novel approach for detecting misconceptions from student-tutor dialogues using large language models (LLMs). First, we use a fine-tuned LLM to generate plausible misconceptions, and then retrieve the most promising candidates among these using embedding similarity with the input dialogue. These candidates are then assessed and re-ranked by another fine-tuned LLM to improve misconception relevance. Empirically, we evaluate our system on real dialogues from an educational tutoring platform. We consider multiple base LLM models including LLaMA, Qwen and Claude on zero-shot and fine-tuned settings. We find that our approach improves predictive performance over baseline models and that fine-tuning improves both generated misconception quality and can outperform larger closed-source models. Finally, we conduct ablation studies to both validate the importance of our generation and reranking steps on misconception generation quality.",
+    "URL": "http://arxiv.org/abs/2602.02414v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.02794",
+    "type": "report",
+    "title": "Reshaping Perception Through Technology: From Ancient Script to Large Language Models",
+    "author": [
+      {
+        "family": "Pourdavood",
+        "given": "Parham"
+      },
+      {
+        "family": "Jacob",
+        "given": "Michael"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "As large language models reshape how we create and access information, questions arise about how to frame their role in human creative and cognitive life. We argue that AI is best understood not as artificial intelligence but as a new medium -- one that, like writing before it, reshapes perception and enables novel forms of creativity. Drawing on Marshall McLuhan's insight that \"the medium is the massage,\" we trace a lineage of technologies -- from DNA and the nervous system to symbols, writing, and now LLMs -- that mold cognition through a shared logic of flexible unfolding and co-creation. We observe that as technologies become more externalized and decoupled from physiology, they introduce both greater creative potential and greater risk of inauthenticity and manipulation. This tension is acute with LLMs, but not unprecedented: ancient responses to writing reveal a recurring human tendency to project intelligence onto powerful new media. Rather than viewing AI as a competitor, we propose framing it as a medium that foregrounds artistic skills: aesthetic judgment, curation, and the articulation of vision. We discuss implications for education, creative practice, and how society might adapt to this new medium as it did to writing.",
+    "URL": "http://arxiv.org/abs/2602.02794v2",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.02878",
+    "type": "report",
+    "title": "Which course? Discourse! Teaching Discourse and Generation in the Era of LLMs",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Junyi Jessy"
+      },
+      {
+        "family": "Liu",
+        "given": "Yang Janet"
+      },
+      {
+        "family": "Misra",
+        "given": "Kanishka"
+      },
+      {
+        "family": "Pyatkin",
+        "given": "Valentina"
+      },
+      {
+        "family": "Sheffield",
+        "given": "William"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          2
+        ]
+      ]
+    },
+    "abstract": "The field of NLP has undergone vast, continuous transformations over the past few years, sparking debates going beyond discipline boundaries. This begs important questions in education: how do we design courses that bridge sub-disciplines in this shifting landscape? This paper explores this question from the angle of discourse processing, an area with rich linguistic insights and computational models for the intentional, attentional, and coherence structure of language. Discourse is highly relevant for open-ended or long-form text generation, yet this connection is under-explored in existing undergraduate curricula. We present a new course, \"Computational Discourse and Natural Language Generation\". The course is collaboratively designed by a team with complementary expertise and was offered for the first time in Fall 2025 as an upper-level undergraduate course, cross-listed between Linguistics and Computer Science. Our philosophy is to deeply integrate the theoretical and empirical aspects, and create an exploratory mindset inside the classroom and in the assignments. This paper describes the course in detail and concludes with takeaways from an independent survey as well as our vision for future directions.",
+    "URL": "http://arxiv.org/abs/2602.02878v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.02994",
+    "type": "report",
+    "title": "Video-OPD: Efficient Post-Training of Multimodal Large Language Models for Temporal Video Grounding via On-Policy Distillation",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Jiaze"
+      },
+      {
+        "family": "Yin",
+        "given": "Hao"
+      },
+      {
+        "family": "Xu",
+        "given": "Haoran"
+      },
+      {
+        "family": "Xu",
+        "given": "Boshen"
+      },
+      {
+        "family": "Tan",
+        "given": "Wenhui"
+      },
+      {
+        "family": "He",
+        "given": "Zewen"
+      },
+      {
+        "family": "Ju",
+        "given": "Jianzhong"
+      },
+      {
+        "family": "Luo",
+        "given": "Zhenbo"
+      },
+      {
+        "family": "Luan",
+        "given": "Jian"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Reinforcement learning has emerged as a principled post-training paradigm for Temporal Video Grounding (TVG) due to its on-policy optimization, yet existing GRPO-based methods remain fundamentally constrained by sparse reward signals and substantial computational overhead. We propose Video-OPD, an efficient post-training framework for TVG inspired by recent advances in on-policy distillation. Video-OPD optimizes trajectories sampled directly from the current policy, thereby preserving alignment between training and inference distributions, while a frontier teacher supplies dense, token-level supervision via a reverse KL divergence objective. This formulation preserves the on-policy property critical for mitigating distributional shift, while converting sparse, episode-level feedback into fine-grained, step-wise learning signals. Building on Video-OPD, we introduce Teacher-Validated Disagreement Focusing (TVDF), a lightweight training curriculum that iteratively prioritizes trajectories that are both teacher-reliable and maximally informative for the student, thereby improving training efficiency. Empirical results demonstrate that Video-OPD consistently outperforms GRPO while achieving substantially faster convergence and lower computational cost, establishing on-policy distillation as an effective alternative to conventional reinforcement learning for TVG.",
+    "URL": "http://arxiv.org/abs/2602.02994v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03022",
+    "type": "report",
+    "title": "STAR: Similarity-guided Teacher-Assisted Refinement for Super-Tiny Function Calling Models",
+    "author": [
+      {
+        "family": "Ni",
+        "given": "Jiliang"
+      },
+      {
+        "family": "Pu",
+        "given": "Jiachen"
+      },
+      {
+        "family": "Yang",
+        "given": "Zhongyi"
+      },
+      {
+        "family": "Luo",
+        "given": "Jingfeng"
+      },
+      {
+        "family": "Hu",
+        "given": "Conggang"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "The proliferation of Large Language Models (LLMs) in function calling is pivotal for creating advanced AI agents, yet their large scale hinders widespread adoption, necessitating transferring their capabilities into smaller ones. However, existing paradigms are often plagued by overfitting, training instability, ineffective binary rewards for multi-solution tasks, and the difficulty of synergizing techniques. We introduce STAR: Similarity-guided Teacher-Assisted Refinement, a novel holistic framework that effectively transfers LLMs' capabilities to super-tiny models. STAR consists of two core technical innovations: (1) Constrained Knowledge Distillation (CKD), a training objective that augments top-k forward KL divergence to suppress confidently incorrect predictions, ensuring training stability while preserving exploration capacity for downstream RL. STAR holistically synergizes these strategies within a cohesive training curriculum, enabling super-tiny models to achieve exceptional performance on complex function calling tasks; (2) Similarity-guided RL (Sim-RL), a RL mechanism that introduces a fine-grained, similarity-based reward. This provides a robust, continuous, and rich signal for better policy optimization by evaluating the similarity between generated outputs and the ground truth. Extensive experiments on challenging and renowned benchmarks demonstrate the effectiveness of our method. Our STAR models establish SOTA in their size classes, significantly outperforming baselines. Remarkably, our 0.6B STAR model achieves the best performance among all open models under 1B, surpassing even several well-known open models at a larger scale. STAR demonstrates a training framework that distills capabilities of LLMs into super-tiny models, paving the way for powerful, accessible, and efficient AI agents.",
+    "URL": "http://arxiv.org/abs/2602.03022v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03084",
+    "type": "report",
+    "title": "AERO: Autonomous Evolutionary Reasoning Optimization via Endogenous Dual-Loop Feedback",
+    "author": [
+      {
+        "family": "Gao",
+        "given": "Zhitao"
+      },
+      {
+        "family": "Ma",
+        "given": "Jie"
+      },
+      {
+        "family": "Li",
+        "given": "Xuhong"
+      },
+      {
+        "family": "Li",
+        "given": "Pengyu"
+      },
+      {
+        "family": "Qu",
+        "given": "Ning"
+      },
+      {
+        "family": "Wu",
+        "given": "Yaqiang"
+      },
+      {
+        "family": "Liu",
+        "given": "Hui"
+      },
+      {
+        "family": "Liu",
+        "given": "Jun"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Large Language Models (LLMs) have achieved significant success in complex reasoning but remain bottlenecked by reliance on expert-annotated data and external verifiers. While existing self-evolution paradigms aim to bypass these constraints, they often fail to identify the optimal learning zone and risk reinforcing collective hallucinations and incorrect priors through flawed internal feedback. To address these challenges, we propose \\underline{A}utonomous \\underline{E}volutionary \\underline{R}easoning \\underline{O}ptimization (AERO), an unsupervised framework that achieves autonomous reasoning evolution by internalizing self-questioning, answering, and criticism within a synergistic dual-loop system. Inspired by the \\textit{Zone of Proximal Development (ZPD)} theory, AERO utilizes entropy-based positioning to target the ``solvability gap'' and employs Independent Counterfactual Correction for robust verification. Furthermore, we introduce a Staggered Training Strategy to synchronize capability growth across functional roles and prevent curriculum collapse. Extensive evaluations across nine benchmarks spanning three domains demonstrate that AERO achieves average performance improvements of 4.57\\% on Qwen3-4B-Base and 5.10\\% on Qwen3-8B-Base, outperforming competitive baselines. Code is available at https://github.com/mira-ai-lab/AERO.",
+    "URL": "http://arxiv.org/abs/2602.03084v2",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03230",
+    "type": "report",
+    "title": "EventFlash: Towards Efficient MLLMs for Event-Based Vision",
+    "author": [
+      {
+        "family": "Liu",
+        "given": "Shaoyu"
+      },
+      {
+        "family": "Li",
+        "given": "Jianing"
+      },
+      {
+        "family": "Zhao",
+        "given": "Guanghui"
+      },
+      {
+        "family": "Zhang",
+        "given": "Yunjian"
+      },
+      {
+        "family": "Jiang",
+        "given": "Wen"
+      },
+      {
+        "family": "Li",
+        "given": "Ming"
+      },
+      {
+        "family": "Ji",
+        "given": "Xiangyang"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Event-based multimodal large language models (MLLMs) enable robust perception in high-speed and low-light scenarios, addressing key limitations of frame-based MLLMs. However, current event-based MLLMs often rely on dense image-like processing paradigms, overlooking the spatiotemporal sparsity of event streams and resulting in high computational cost. In this paper, we propose EventFlash, a novel and efficient MLLM to explore spatiotemporal token sparsification for reducing data redundancy and accelerating inference. Technically, we build EventMind, a large-scale and scene-diverse dataset with over 500k instruction sets, providing both short and long event stream sequences to support our curriculum training strategy. We then present an adaptive temporal window aggregation module for efficient temporal sampling, which adaptively compresses temporal tokens while retaining key temporal cues. Finally, a sparse density-guided attention module is designed to improve spatial token efficiency by selecting informative regions and suppressing empty or sparse areas. Experimental results show that EventFlash achieves a $12.4\\times$ throughput improvement over the baseline (EventFlash-Zero) while maintaining comparable performance. It supports long-range event stream processing with up to 1,000 bins, significantly outperforming the 5-bin limit of EventGPT. We believe EventFlash serves as an efficient foundation model for event-based vision.",
+    "URL": "http://arxiv.org/abs/2602.03230v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03249",
+    "type": "report",
+    "title": "Accordion-Thinking: Self-Regulated Step Summaries for Efficient and Readable LLM Reasoning",
+    "author": [
+      {
+        "family": "Yang",
+        "given": "Zhicheng"
+      },
+      {
+        "family": "Guo",
+        "given": "Zhijiang"
+      },
+      {
+        "family": "Huang",
+        "given": "Yinya"
+      },
+      {
+        "family": "Wang",
+        "given": "Yongxin"
+      },
+      {
+        "family": "Shi",
+        "given": "Wenlei"
+      },
+      {
+        "family": "Wang",
+        "given": "Yiwei"
+      },
+      {
+        "family": "Liang",
+        "given": "Xiaodan"
+      },
+      {
+        "family": "Tang",
+        "given": "Jing"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Scaling test-time compute via long Chain-ofThought unlocks remarkable gains in reasoning capabilities, yet it faces practical limits due to the linear growth of KV cache and quadratic attention complexity. In this paper, we introduce Accordion-Thinking, an end-to-end framework where LLMs learn to self-regulate the granularity of the reasoning steps through dynamic summarization. This mechanism enables a Fold inference mode, where the model periodically summarizes its thought process and discards former thoughts to reduce dependency on historical tokens. We apply reinforcement learning to incentivize this capability further, uncovering a critical insight: the accuracy gap between the highly efficient Fold mode and the exhaustive Unfold mode progressively narrows and eventually vanishes over the course of training. This phenomenon demonstrates that the model learns to encode essential reasoning information into compact summaries, achieving effective compression of the reasoning context. Our Accordion-Thinker demonstrates that with learned self-compression, LLMs can tackle complex reasoning tasks with minimal dependency token overhead without compromising solution quality, and it achieves a 3x throughput while maintaining accuracy on a 48GB GPU memory configuration, while the structured step summaries provide a human-readable account of the reasoning process.",
+    "URL": "http://arxiv.org/abs/2602.03249v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03542",
+    "type": "report",
+    "title": "Can Large Language Models Generalize Procedures Across Representations?",
+    "author": [
+      {
+        "family": "Lin",
+        "given": "Fangru"
+      },
+      {
+        "family": "Hofmann",
+        "given": "Valentin"
+      },
+      {
+        "family": "Wan",
+        "given": "Xingchen"
+      },
+      {
+        "family": "Wang",
+        "given": "Weixing"
+      },
+      {
+        "family": "Ding",
+        "given": "Zifeng"
+      },
+      {
+        "family": "Cohn",
+        "given": "Anthony G."
+      },
+      {
+        "family": "Pierrehumbert",
+        "given": "Janet B."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) are trained and tested extensively on symbolic representations such as code and graphs, yet real-world user tasks are often specified in natural language. To what extent can LLMs generalize across these representations? Here, we approach this question by studying isomorphic tasks involving procedures represented in code, graphs, and natural language (e.g., scheduling steps in planning). We find that training LLMs with popular post-training methods on graphs or code data alone does not reliably generalize to corresponding natural language tasks, while training solely on natural language can lead to inefficient performance gains. To address this gap, we propose a two-stage data curriculum that first trains on symbolic, then natural language data. The curriculum substantially improves model performance across model families and tasks. Remarkably, a 1.5B Qwen model trained by our method can closely match zero-shot GPT-4o in naturalistic planning. Finally, our analysis suggests that successful cross-representation generalization can be interpreted as a form of generative analogy, which our curriculum effectively encourages.",
+    "URL": "http://arxiv.org/abs/2602.03542v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03679",
+    "type": "report",
+    "title": "Footprints of the Walking of Numbers: A Dynamic Visualization Task for Understanding Decimal Numbers in Secondary Education",
+    "author": [
+      {
+        "family": "Serrano",
+        "given": "Felix De la Cruz"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "The study of decimal numbers in secondary education is often approached from algorithmic perspectives, which limits students' understanding of their structure. This paper presents the task Footprints of the Walking of Numbers, a dynamic visualization proposal aimed at supporting the understanding of decimal numbers through the exploration of their infinite decimal expansions. The task is based on assigning vectors to the decimal digits from 0 to 9, so that the sequence of digits of a number generates a dynamic geometric path in the plane. Through the use of GeoGebra as a visualization environment, students can observe, compare, and interpret traces associated with different types of numbers, such as terminating decimals, repeating decimals, and irrational numbers, identifying visual regularities linked to their decimal behavior. The analysis is developed from a theoretical-didactical perspective, using the Mathematical Working Space as an interpretative lens to characterize the potential of the task design. In addition, the paper discusses the punctual use of generative AI tools exclusively as instrumental support for computation, without shifting the focus away from mathematical reasoning.",
+    "URL": "http://arxiv.org/abs/2602.03679v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03900",
+    "type": "report",
+    "title": "Knowledge Model Prompting Increases LLM Performance on Planning Tasks",
+    "author": [
+      {
+        "family": "Goh",
+        "given": "Erik"
+      },
+      {
+        "family": "Kos",
+        "given": "John"
+      },
+      {
+        "family": "Goel",
+        "given": "Ashok"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Large Language Models (LLM) can struggle with reasoning ability and planning tasks. Many prompting techniques have been developed to assist with LLM reasoning, notably Chain-of-Thought (CoT); however, these techniques, too, have come under scrutiny as LLMs' ability to reason at all has come into question. Borrowing from the domain of cognitive and educational science, this paper investigates whether the Task-Method-Knowledge (TMK) framework can improve LLM reasoning capabilities beyond its previously demonstrated success in educational applications. The TMK framework's unique ability to capture causal, teleological, and hierarchical reasoning structures, combined with its explicit task decomposition mechanisms, makes it particularly well-suited for addressing language model reasoning deficiencies, and unlike other hierarchical frameworks such as HTN and BDI, TMK provides explicit representations of not just what to do and how to do it, but also why actions are taken. The study evaluates TMK by experimenting on the PlanBench benchmark, focusing on the Blocksworld domain to test for reasoning and planning capabilities, examining whether TMK-structured prompting can help language models better decompose complex planning problems into manageable sub-tasks. Results also highlight significant performance inversion in reasoning models. TMK prompting enables the reasoning model to achieve up to an accuracy of 97.3\\% on opaque, symbolic tasks (Random versions of Blocksworld in PlanBench) where it previously failed (31.5\\%), suggesting the potential to bridge the gap between semantic approximation and symbolic manipulation. Our findings suggest that TMK functions not merely as context, but also as a mechanism that steers reasoning models away from their default linguistic modes to engage formal, code-execution pathways in the context of the experiments.",
+    "URL": "http://arxiv.org/abs/2602.03900v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03950",
+    "type": "report",
+    "title": "Enhancing Mathematical Problem Solving in LLMs through Execution-Driven Reasoning Augmentation",
+    "author": [
+      {
+        "family": "Basarkar",
+        "given": "Aditya"
+      },
+      {
+        "family": "Tabarsi",
+        "given": "Benyamin"
+      },
+      {
+        "family": "Barnes",
+        "given": "Tiffany"
+      },
+      {
+        "literal": "Dongkuan"
+      },
+      {
+        "literal": "Xu"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Mathematical problem solving is a fundamental benchmark for assessing the reasoning capabilities of artificial intelligence and a gateway to applications in education, science, and engineering where reliable symbolic reasoning is essential. Although recent advances in multi-agent LLM-based systems have enhanced their mathematical reasoning capabilities, they still lack a reliably revisable representation of the reasoning process. Existing agents either operate in rigid sequential pipelines that cannot correct earlier steps or rely on heuristic self-evaluation that can fail to identify and fix errors. In addition, programmatic context can distract language models and degrade accuracy. To address these gaps, we introduce Iteratively Improved Program Construction (IIPC), a reasoning method that iteratively refines programmatic reasoning chains and combines execution feedback with the native Chain-of-thought abilities of the base LLM to maintain high-level contextual focus. IIPC surpasses competing approaches in the majority of reasoning benchmarks on multiple base LLMs. All code and implementations are released as open source.",
+    "URL": "http://arxiv.org/abs/2602.03950v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.03962",
+    "type": "report",
+    "title": "Automatic Classification of Pedagogical Materials against CS Curriculum Guidelines",
+    "author": [
+      {
+        "family": "Saule",
+        "given": "Erik"
+      },
+      {
+        "family": "Subramanian",
+        "given": "Kalpathi"
+      },
+      {
+        "family": "Bunescu",
+        "given": "Razvan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Professional societies often publish curriculum guidelines to help programs align their content to international standards. In Computer Science, the primary standard is published by ACM and IEEE and provide detailed guidelines for what should be and could be included in a Computer Science program.\n  While very helpful, it remains difficult for program administrators to assess how much of the guidelines is being covered by a CS program. This is in particular due to the extensiveness of the guidelines, containing thousands of individual items. As such, it is time consuming and cognitively demanding to audit every course to confidently mark everything that is actually being covered. Our preliminary work indicated that it takes about a day of work per course.\n  In this work, we propose using Natural Language Processing techniques to accelerate the process. We explore two kinds of techniques, the first relying on traditional tools for parsing, tagging, and embeddings, while the second leverages the power of Large Language Models. We evaluate the application of these techniques to classify a corpus of pedagogical materials and show that we can meaningfully classify documents automatically.",
+    "URL": "http://arxiv.org/abs/2602.03962v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.04023",
+    "type": "report",
+    "title": "Exploring Emerging Norms of AI Disclosure in Programming Education",
+    "author": [
+      {
+        "family": "Ye",
+        "given": "Runlong"
+      },
+      {
+        "family": "Huang",
+        "given": "Oliver"
+      },
+      {
+        "family": "He",
+        "given": "Jessica"
+      },
+      {
+        "family": "Liut",
+        "given": "Michael"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          3
+        ]
+      ]
+    },
+    "abstract": "Generative AI blurs the lines of authorship in computing education, creating uncertainty around how students should attribute AI assistance. To examine these emerging norms, we conducted a factorial vignette study with 94 computer science students across 102 unique scenarios, systematically manipulating assessment type, AI autonomy, student activity, prior knowledge, and human refinement effort. This paper details how these factors influence students' perceptions of ownership and disclosure preferences. Our findings indicate that attribution judgments are primarily driven by different levels of AI assistance and human refinement. We also found that students' perception of authorship significantly predicts their policy expectations. We conclude by proposing a shift from statement-style policies to process-oriented attribution, transforming disclosure into a pedagogical mechanism for fostering critical engagement with AI-generated content.",
+    "URL": "http://arxiv.org/abs/2602.04023v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.04278",
+    "type": "report",
+    "title": "MiniRec: Data-Efficient Reinforcement Learning for LLM-based Recommendation",
+    "author": [
+      {
+        "family": "Wang",
+        "given": "Lin"
+      },
+      {
+        "family": "Zhang",
+        "given": "Yang"
+      },
+      {
+        "family": "Chen",
+        "given": "Jingfan"
+      },
+      {
+        "family": "Zhao",
+        "given": "Xiaoyan"
+      },
+      {
+        "family": "Zhu",
+        "given": "Fengbin"
+      },
+      {
+        "family": "Li",
+        "given": "Qing"
+      },
+      {
+        "family": "Chua",
+        "given": "Tat-Seng"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          4
+        ]
+      ]
+    },
+    "abstract": "The integration of reinforcement learning (RL) into large language models (LLMs) has opened new opportunities for recommender systems by eliciting reasoning and improving user preference modeling. However, RL-based LLM recommendation faces significant efficiency challenges, making full-data training costly. Existing data selection methods define sample value based on learnability or representativeness, yet their loss- or gradient-driven or dataset coverage-driven criteria often misalign with RL learning dynamics, resulting in suboptimal performance. To address this, we propose MiniRec, a data selection framework tailored for RL-based LLM recommendation. MiniRec evaluates sample learnability using key RL signals -- rewards -- pruning samples that are too easy (too high reward) or too difficult (consistently low reward). It assesses representativeness by aligning sample gradients with the approximated \"ideal\" global RL optimization trajectory, selecting samples that mainly drive model updates, and it also enforces diversity to reduce redundancy. Combined with a curriculum learning strategy from easy to hard samples, MiniRec significantly reduces training cost while largely preserving performance. Extensive experiments demonstrate MiniRec's effectiveness, highlighting the importance of reward-aligned, trajectory-informed data selection in RL-based LLM recommendation.",
+    "URL": "http://arxiv.org/abs/2602.04278v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.04389",
+    "type": "report",
+    "title": "Lessons Learned from Integrating Generative AI into an Introductory Undergraduate Astronomy Course at Harvard",
+    "author": [
+      {
+        "family": "Stubbs",
+        "given": "Christopher W."
+      },
+      {
+        "family": "Huang",
+        "given": "Dongpeng"
+      },
+      {
+        "family": "Koh",
+        "given": "Jungyoon"
+      },
+      {
+        "family": "Woods",
+        "given": "Madeleine"
+      },
+      {
+        "family": "Malagón",
+        "given": "Andrés A. Plazas"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          4
+        ]
+      ]
+    },
+    "abstract": "We describe our efforts to fully integrate generative artificial intelligence (GAI) into an introductory undergraduate astronomy course. Ordered by student perception of utility, GAI was used in instructional Python notebooks, in a subset of assignments, for student presentation preparations, and as a participant (in conjunction with a RAG-encoded textbook) in a course Slack channel. Assignments were divided into GAI-encouraged and GAI-discouraged. We incentivized student mastery of the material through midterm and final exams in which electronics were not allowed. Student evaluations of the course showed no reduction compared to the non-GAI version from the previous year.",
+    "URL": "http://arxiv.org/abs/2602.04389v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.04392",
+    "type": "report",
+    "title": "Evaluating the Presence of Sex Bias in Clinical Reasoning by Large Language Models",
+    "author": [
+      {
+        "family": "Tsintsiper",
+        "given": "Isabel"
+      },
+      {
+        "family": "Wong",
+        "given": "Sheng"
+      },
+      {
+        "family": "Albert",
+        "given": "Beth"
+      },
+      {
+        "family": "Brennecke",
+        "given": "Shaun P"
+      },
+      {
+        "family": "Jones",
+        "given": "Gabriel Davis"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          4
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) are increasingly embedded in healthcare workflows for documentation, education, and clinical decision support. However, these systems are trained on large text corpora that encode existing biases, including sex disparities in diagnosis and treatment, raising concerns that such patterns may be reproduced or amplified. We systematically examined whether contemporary LLMs exhibit sex-specific biases in clinical reasoning and how model configuration influences these behaviours. We conducted three experiments using 50 clinician-authored vignettes spanning 44 specialties in which sex was non-informative to the initial diagnostic pathway. Four general-purpose LLMs (ChatGPT (gpt-4o-mini), Claude 3.7 Sonnet, Gemini 2.0 Flash and DeepSeekchat). All models demonstrated significant sex-assignment skew, with predicted sex differing by model. At temperature 0.5, ChatGPT assigned female sex in 70% of cases (95% CI 0.66-0.75), DeepSeek in 61% (0.57-0.65) and Claude in 59% (0.55-0.63), whereas Gemini showed a male skew, assigning a female sex in 36% of cases (0.32-0.41). Contemporary LLMs exhibit stable, model-specific sex biases in clinical reasoning. Permitting abstention reduces explicit labelling but does not eliminate downstream diagnostic differences. Safe clinical integration requires conservative and documented configuration, specialty-level clinical data auditing, and continued human oversight when deploying general-purpose models in healthcare settings.",
+    "URL": "http://arxiv.org/abs/2602.04392v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.04972",
+    "type": "report",
+    "title": "Learning Context Matters: Measuring and Diagnosing Personalization Gaps in LLM-Based Instructional Design",
+    "author": [
+      {
+        "family": "Hatchett",
+        "given": "Johaun"
+      },
+      {
+        "family": "Mallick",
+        "given": "Debshila Basu"
+      },
+      {
+        "family": "Bradford",
+        "given": "Brittany C."
+      },
+      {
+        "family": "Baraniuk",
+        "given": "Richard G."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          4
+        ]
+      ]
+    },
+    "abstract": "The adoption of generative AI in education has accelerated dramatically in recent years, with Large Language Models (LLMs) increasingly integrated into learning environments in the hope of providing personalized support that enhances learner engagement and knowledge retention. However, truly personalized support requires access to meaningful Learning Context (LC) regarding who the learner is, what they are trying to understand, and how they are engaging with the material. In this paper, we present a framework for measuring and diagnosing how the LC influences instructional strategy selection in LLM-based tutoring systems. Using psychometrically grounded synthetic learning contexts and a pedagogically grounded decision space, we compare LLM instructional decisions in context-blind and context-aware conditions and quantify their alignment with the pedagogical judgments of subject matter experts. Our results show that, while providing the LC induces systematic, measurable changes in instructional decisions that move LLM policies closer to the subject matter expert policy, substantial misalignment remains. To diagnose this misalignment, we introduce a relevance-impact analysis that reveals which learner characteristics are attended to, ignored, or spuriously influential in LLM instructional decision-making. This analysis, conducted in collaboration with subject matter experts, demonstrates that LC materially shapes LLM instructional planning but does not reliably induce pedagogically appropriate personalization. Our results enable principled evaluation of context-aware LLM systems and provide a foundation for improving personalization through learner characteristic prioritization, pedagogical model tuning, and LC engineering.",
+    "URL": "http://arxiv.org/abs/2602.04972v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.05059",
+    "type": "report",
+    "title": "Evaluating Large Language Models on Solved and Unsolved Problems in Graph Theory: Implications for Computing Education",
+    "author": [
+      {
+        "family": "Kulkarni",
+        "given": "Adithya"
+      },
+      {
+        "family": "Chakraborty",
+        "given": "Mohna"
+      },
+      {
+        "family": "Bagga",
+        "given": "Jay"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          4
+        ]
+      ]
+    },
+    "abstract": "Large Language Models are increasingly used by students to explore advanced material in computer science, including graph theory. As these tools become integrated into undergraduate and graduate coursework, it is important to understand how reliably they support mathematically rigorous thinking. This study examines the performance of a LLM on two related graph theoretic problems: a solved problem concerning the gracefulness of line graphs and an open problem for which no solution is currently known. We use an eight stage evaluation protocol that reflects authentic mathematical inquiry, including interpretation, exploration, strategy formation, and proof construction.\n  The model performed strongly on the solved problem, producing correct definitions, identifying relevant structures, recalling appropriate results without hallucination, and constructing a valid proof confirmed by a graph theory expert. For the open problem, the model generated coherent interpretations and plausible exploratory strategies but did not advance toward a solution. It did not fabricate results and instead acknowledged uncertainty, which is consistent with the explicit prompting instructions that directed the model to avoid inventing theorems or unsupported claims.\n  These findings indicate that LLMs can support exploration of established material but remain limited in tasks requiring novel mathematical insight or critical structural reasoning. For computing education, this distinction highlights the importance of guiding students to use LLMs for conceptual exploration while relying on independent verification and rigorous argumentation for formal problem solving.",
+    "URL": "http://arxiv.org/abs/2602.05059v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.05374",
+    "type": "report",
+    "title": "Cross-Lingual Empirical Evaluation of Large Language Models for Arabic Medical Tasks",
+    "author": [
+      {
+        "family": "Abouzahir",
+        "given": "Chaimae"
+      },
+      {
+        "family": "Ma",
+        "given": "Congbo"
+      },
+      {
+        "family": "Habash",
+        "given": "Nizar"
+      },
+      {
+        "family": "Shamout",
+        "given": "Farah E."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          5
+        ]
+      ]
+    },
+    "abstract": "In recent years, Large Language Models (LLMs) have become widely used in medical applications, such as clinical decision support, medical education, and medical question answering. Yet, these models are often English-centric, limiting their robustness and reliability for linguistically diverse communities. Recent work has highlighted discrepancies in performance in low-resource languages for various medical tasks, but the underlying causes remain poorly understood. In this study, we conduct a cross-lingual empirical analysis of LLM performance on Arabic and English medical question and answering. Our findings reveal a persistent language-driven performance gap that intensifies with increasing task complexity. Tokenization analysis exposes structural fragmentation in Arabic medical text, while reliability analysis suggests that model-reported confidence and explanations exhibit limited correlation with correctness. Together, these findings underscore the need for language-aware design and evaluation strategies in LLMs for medical tasks.",
+    "URL": "http://arxiv.org/abs/2602.05374v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.05506",
+    "type": "report",
+    "title": "Relying on LLMs: Student Practices and Instructor Norms are Changing in Computer Science Education",
+    "author": [
+      {
+        "family": "Lin",
+        "given": "Xinrui"
+      },
+      {
+        "family": "Huang",
+        "given": "Heyan"
+      },
+      {
+        "family": "Shi",
+        "given": "Shumin"
+      },
+      {
+        "family": "Vines",
+        "given": "John"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          5
+        ]
+      ]
+    },
+    "abstract": "Prior research has raised concerns about students' over-reliance on large language models (LLMs) in higher education. This paper examines how Computer Science students and instructors engage with LLMs across five scenarios: \"Writing\", \"Quiz\", \"Programming\", \"Project-based learning\", and \"Information retrieval\". Through user studies with 16 students and 6 instructors, we identify 7 key intents, including increasingly complex student practices. Findings reveal varying levels of conflict between student practices and instructor norms, ranging from clear conflict in \"Writing-generation\" and \"(Programming) quiz-solving\", through partial conflict in \"Programming project-implementation\" and \"Project-based learning\", to broad agreement in \"Writing-revision & ideation\", \"(Programming) quiz-correction\" and \"Info-query & summary\". We document instructors are shifting from prohibiting to recognizing students' use of LLMs for high-quality work, integrating usage records into assessment grading. Finally, we propose LLM design guidelines: deploying default guardrails with game-like and empathetic interaction to prevent students from \"deserting\" LLMs, especially for \"Writing-generation\", while utilizing comprehension checks in low-conflict intents to promote learning.",
+    "URL": "http://arxiv.org/abs/2602.05506v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.05633",
+    "type": "report",
+    "title": "CASTLE: A Comprehensive Benchmark for Evaluating Student-Tailored Personalized Safety in Large Language Models",
+    "author": [
+      {
+        "family": "Jia",
+        "given": "Rui"
+      },
+      {
+        "family": "Lan",
+        "given": "Ruiyi"
+      },
+      {
+        "family": "Liu",
+        "given": "Fengrui"
+      },
+      {
+        "family": "Dai",
+        "given": "Zhongxiang"
+      },
+      {
+        "family": "Jiang",
+        "given": "Bo"
+      },
+      {
+        "family": "Shao",
+        "given": "Jing"
+      },
+      {
+        "family": "Chen",
+        "given": "Jingyuan"
+      },
+      {
+        "family": "Xu",
+        "given": "Guandong"
+      },
+      {
+        "family": "Wu",
+        "given": "Fei"
+      },
+      {
+        "family": "Zhang",
+        "given": "Min"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          5
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) have advanced the development of personalized learning in education. However, their inherent generation mechanisms often produce homogeneous responses to identical prompts. This one-size-fits-all mechanism overlooks the substantial heterogeneity in students cognitive and psychological, thereby posing potential safety risks to vulnerable groups. Existing safety evaluations primarily rely on context-independent metrics such as factual accuracy, bias, or toxicity, which fail to capture the divergent harms that the same response might cause across different student attributes. To address this gap, we propose the concept of Student-Tailored Personalized Safety and construct CASTLE based on educational theories. This benchmark covers 15 educational safety risks and 14 student attributes, comprising 92,908 bilingual scenarios. We further design three evaluation metrics: Risk Sensitivity, measuring the model ability to detect risks; Emotional Empathy, evaluating the model capacity to recognize student states; and Student Alignment, assessing the match between model responses and student attributes. Experiments on 18 SOTA LLMs demonstrate that CASTLE poses a significant challenge: all models scored below an average safety rating of 2.3 out of 5, indicating substantial deficiencies in personalized safety assurance.",
+    "URL": "http://arxiv.org/abs/2602.05633v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.05856",
+    "type": "report",
+    "title": "\"It Talks Like a Patient, But Feels Different\": Co-Designing AI Standardized Patients with Medical Learners",
+    "author": [
+      {
+        "family": "Gao",
+        "given": "Zhiqi"
+      },
+      {
+        "family": "Zhu",
+        "given": "Guo"
+      },
+      {
+        "family": "Luo",
+        "given": "Huarui"
+      },
+      {
+        "family": "Pan",
+        "given": "Dongyijie Primo"
+      },
+      {
+        "family": "Tang",
+        "given": "Haoming"
+      },
+      {
+        "family": "Zhang",
+        "given": "Bingquan"
+      },
+      {
+        "family": "Pei",
+        "given": "Jiahuan"
+      },
+      {
+        "family": "Li",
+        "given": "Jie"
+      },
+      {
+        "family": "Wang",
+        "given": "Benyou"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          5
+        ]
+      ]
+    },
+    "abstract": "Standardized patients (SPs) play a central role in clinical communication training but are costly, difficult to scale, and inconsistent. Large language model (LLM) based AI standardized patients (AI-SPs) promise flexible, on-demand practice, yet learners often report that they talk like a patient but feel different. We interviewed 12 clinical-year medical students and conducted three co-design workshops to examine how learners experience constraints of SP encounters and what they expect from AI-SPs. We identified six learner-centered needs, translated them into AI-SP design requirements, and synthesized a conceptual workflow. Our findings position AI-SPs as tools for deliberate practice and show that instructional usability, rather than conversational realism alone, drives learner trust, engagement, and educational value.",
+    "URL": "http://arxiv.org/abs/2602.05856v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.05864",
+    "type": "report",
+    "title": "Prompting Destiny: Negotiating Socialization and Growth in an LLM-Mediated Speculative Gameworld",
+    "author": [
+      {
+        "family": "Yang",
+        "given": "Mandi"
+      },
+      {
+        "family": "Gao",
+        "given": "Zhiqi"
+      },
+      {
+        "family": "Meng",
+        "given": "Yibo"
+      },
+      {
+        "family": "Pan",
+        "given": "Dongyijie Primo"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          5
+        ]
+      ]
+    },
+    "abstract": "We present an LLM-mediated role-playing game that supports reflection on socialization, moral responsibility, and educational role positioning. Grounded in socialization theory, the game follows a four-season structure in which players guide a child prince through morally charged situations and compare the LLM-mediated NPC's differentiated responses across stages, helping them reason about how educational guidance shifts with socialization. To approximate real educational contexts and reduce score-chasing, the system hides real-time evaluative scores and provides delayed, end-of-stage growth feedback as reflective prompts. We conducted a user study (N=12) with gameplay logs and post-game interviews, analyzed via reflexive thematic analysis. Findings show how players negotiated responsibility and role positioning, and reveal an entry-load tension between open-ended expression and sustained engagement. We contribute design knowledge on translating sociological models of socialization into reflective AI-mediated game systems.",
+    "URL": "http://arxiv.org/abs/2602.05864v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.06194",
+    "type": "report",
+    "title": "Knowledge Synthesis Graph: An LLM-Based Approach for Modeling Student Collaborative Discourse",
+    "author": [
+      {
+        "family": "Shui",
+        "given": "Bo"
+      },
+      {
+        "family": "Zhu",
+        "given": "Xinran"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          5
+        ]
+      ]
+    },
+    "abstract": "Asynchronous, text-based discourse-such as students' posts in discussion forums-is widely used to support collaborative learning. However, the distributed and evolving nature of such discourse often makes it difficult to see how ideas connect, develop, and build on one another over time. As a result, learners may struggle to recognize relationships among ideas-a process that is critical for idea advancement in productive collaborative discourse. To address this challenge, we explore how large language models (LLMs) can provide representational guidance by modeling student discourse as a Knowledge Synthesis Graph (KSG). The KSG identifies ideas from student discourse and visualizes their epistemic relationships, externalizing the current state of collaborative knowledge in a form that can support further inquiry and idea advancement. In this study, we present the design of the KSG and evaluate the LLM-based approach for constructing KSGs from authentic student discourse data. Through multi-round human-expert coding and prompt iteration, our results demonstrate the feasibility of using our approach to construct reliable KSGs across different models. This work provides a technical foundation for modeling collaborative discourse with LLMs and offers pedagogical implications for augmenting complex knowledge work in collaborative learning environments.",
+    "URL": "http://arxiv.org/abs/2602.06194v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.06221",
+    "type": "report",
+    "title": "BenchMarker: An Education-Inspired Toolkit for Highlighting Flaws in Multiple-Choice Benchmarks",
+    "author": [
+      {
+        "family": "Balepur",
+        "given": "Nishant"
+      },
+      {
+        "family": "Rajasekaran",
+        "given": "Bhavya"
+      },
+      {
+        "family": "Oh",
+        "given": "Jane"
+      },
+      {
+        "family": "Xie",
+        "given": "Michael"
+      },
+      {
+        "family": "Desai",
+        "given": "Atrey"
+      },
+      {
+        "family": "Gupta",
+        "given": "Vipul"
+      },
+      {
+        "family": "Moore",
+        "given": "Steven James"
+      },
+      {
+        "family": "Choi",
+        "given": "Eunsol"
+      },
+      {
+        "family": "Rudinger",
+        "given": "Rachel"
+      },
+      {
+        "family": "Boyd-Graber",
+        "given": "Jordan Lee"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          5
+        ]
+      ]
+    },
+    "abstract": "Multiple-choice question answering (MCQA) is standard in NLP, but benchmarks lack rigorous quality control. We present BenchMarker, an education-inspired toolkit using LLM judges to flag three common MCQ flaws: 1) contamination - items appearing exactly online; 2) shortcuts - cues in the choices that enable guessing; and 3) writing errors - structural/grammatical issues based on a 19-rule education rubric. We validate BenchMarker with human annotations, then run the tool to audit 12 benchmarks, revealing: 2) contaminated MCQs tend to inflate accuracy, while writing errors tend to lower it and change rankings beyond random; and 3) prior benchmark repairs address their targeted issues (i.e., lowering accuracy with LLM-written distractors), but inadvertently add new flaws (i.e. implausible distractors, many correct answers). Overall, flaws in MCQs degrade NLP evaluation, but education research offers a path forward. We release BenchMarker to bridge the fields and improve MCQA benchmark design.",
+    "URL": "http://arxiv.org/abs/2602.06221v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.06625",
+    "type": "report",
+    "title": "FairJudge: An Adaptive, Debiased, and Consistent LLM-as-a-Judge",
+    "author": [
+      {
+        "family": "Yang",
+        "given": "Bo"
+      },
+      {
+        "family": "Feng",
+        "given": "Lanfei"
+      },
+      {
+        "family": "Chen",
+        "given": "Yunkui"
+      },
+      {
+        "family": "Zhang",
+        "given": "Yu"
+      },
+      {
+        "family": "Xu",
+        "given": "Xiao"
+      },
+      {
+        "family": "Li",
+        "given": "Shijian"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          6
+        ]
+      ]
+    },
+    "abstract": "Existing LLM-as-a-Judge systems suffer from three fundamental limitations: limited adaptivity to task- and domain-specific evaluation criteria, systematic biases driven by non-semantic cues such as position, length, format, and model provenance, and evaluation inconsistency that leads to contradictory judgments across different evaluation modes (e.g., pointwise versus pairwise). To address these issues, we propose FairJudge, an adaptive, debiased, and consistent LLM-as-a-Judge. Unlike prior approaches that treat the judge as a static evaluator, FairJudge models judging behavior itself as a learnable and regularized policy. From a data-centric perspective, we construct a high-information-density judging dataset that explicitly injects supervision signals aligned with evaluation behavior. Building on this dataset, we adopt a curriculum-style SFT-DPO-GRPO training paradigm that progressively aligns rubric adherence, bias mitigation, and cross-mode consistency, while avoiding catastrophic forgetting. Experimental results on multiple internal and public benchmarks show that FairJudge consistently improves agreement and F1, reduces non-semantic biases, and outperforms substantially larger instruction-tuned LLMs. All resources will be publicly released after acceptance to facilitate future research.",
+    "URL": "http://arxiv.org/abs/2602.06625v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.06631",
+    "type": "report",
+    "title": "Estimating Exam Item Difficulty with LLMs: A Benchmark on Brazil's ENEM Corpus",
+    "author": [
+      {
+        "family": "Brant",
+        "given": "Thiago"
+      },
+      {
+        "family": "Kühn",
+        "given": "Julien"
+      },
+      {
+        "family": "Pang",
+        "given": "Jun"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          6
+        ]
+      ]
+    },
+    "abstract": "As Large Language Models (LLMs) are increasingly deployed to generate educational content, a critical safety question arises: can these models reliably estimate the difficulty of the questions they produce? Using Brazil's high-stakes ENEM exam as a testbed, we benchmark ten proprietary and open-weight LLMs against official Item Response Theory (IRT) parameters for 1,031 questions. We evaluate performance along three axes: absolute calibration, rank fidelity, and context sensitivity across learner backgrounds. Our results reveal a significant trade-off: while the best models achieve moderate rank correlation, they systematically underestimate difficulty and degrade significantly on multimodal items. Crucially, we find that models exhibit limited and inconsistent plasticity when prompted with student demographic cues, suggesting they are not yet ready for context-adaptive personalization. We conclude that LLMs function best as calibrated screeners rather than authoritative oracles, supporting an \"evaluation-before-generation\" pipeline for responsible assessment design.",
+    "URL": "http://arxiv.org/abs/2602.06631v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.06734",
+    "type": "report",
+    "title": "ClassAid: A Real-time Instructor-AI-Student Orchestration System for Classroom Programming Activities",
+    "author": [
+      {
+        "family": "Zhang",
+        "given": "Gefei"
+      },
+      {
+        "family": "Sun",
+        "given": "Guodao"
+      },
+      {
+        "family": "Xia",
+        "given": "Meng"
+      },
+      {
+        "family": "Liang",
+        "given": "Ronghua"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          6
+        ]
+      ]
+    },
+    "abstract": "Generative AI is reshaping education, but it also raises concerns about instability and overreliance. In programming classrooms, we aim to leverage its feedback capabilities while reinforcing the educator's role in guiding student-AI interactions. We developed ClassAid, a real-time orchestration system that integrates TA Agents to provide personalized support and an AI-driven dashboard that visualizes student-AI interactions, enabling instructors to dynamically adjust TA Agent modes. Instructors can configure the Agent to provide technical feedback (direct coding solutions), heuristic feedback (hint-based guidance), automatic feedback (autonomously selecting technical or heuristic support), or silent operation (no AI support). We evaluated ClassAid through three aspects: (1) the TA Agents' performance, (2) feedback from 54 students and one instructor during a classroom deployment, and (3) interviews with eight educators. Results demonstrate that dynamic instructor control over AI supports effective real-time personalized feedback and provides design implications for integrating AI into authentic educational settings.",
+    "URL": "http://arxiv.org/abs/2602.06734v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2602.06772",
+    "type": "report",
+    "title": "Calibrating Generative AI to Produce Realistic Essays for Data Augmentation",
+    "author": [
+      {
+        "family": "Wolfe",
+        "given": "Edward W."
+      },
+      {
+        "family": "Barber",
+        "given": "Justin O."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          6
+        ]
+      ]
+    },
+    "abstract": "Data augmentation can mitigate limited training data in machine-learning automated scoring engines for constructed response items. This study seeks to determine how well three approaches to large language model prompting produce essays that preserve the writing quality of the original essays and produce realistic text for augmenting ASE training datasets. We created simulated versions of student essays, and human raters assigned scores to them and rated the realism of the generated text. The results of the study indicate that the predict next prompting strategy produces the highest level of agreement between human raters regarding simulated essay scores, predict next and sentence strategies best preserve the rated quality of the original essay in the simulated essays, and predict next and 25 examples strategies produce the most realistic text as judged by human raters.",
+    "URL": "http://arxiv.org/abs/2602.06772v1",
+    "publisher": "arXiv"
   }
 ]
