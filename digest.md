@@ -1,454 +1,491 @@
 # LLM Education Literature Digest
 
-*Generated: 2026-03-09 07:17:23 UTC*
+*Generated: 2026-03-16 07:48:40 UTC*
 
-**28 new items**
+**30 new items**
 
-## 1. ReflexiCoder: Teaching Large Language Models to Self-Reflect on Generated Code and Self-Correct It via Reinforcement Learning
+## 1. Human-in-the-Loop LLM Grading for Handwritten Mathematics Assessments
 
-**Authors:** Juyong Jiang, Jiasi Shen, Sunghun Kim, Kang Min Yoo, Jeonghoon Kim et al. (6 authors)
+**Authors:** Arne Vanhoyweghen, Vincent Holst, Melika Mobini, Lukas Van de Voorde, Tibo Vanleke et al. (12 authors)
 
-**Source:** arxiv • 2026-03-06
+**Source:** arxiv • 2026-03-13
 
-**Summary:** While Large Language Models (LLMs) have revolutionized code generation, standard "System 1" approaches, generating solutions in a single forward pass, often hit a performance ceiling when faced with complex algorithmic tasks. Existing iterative refinement strategies attempt to bridge this gap at inf...
+**Summary:** Providing timely and individualised feedback on handwritten student work is highly beneficial for learning but difficult to achieve at scale. This challenge has become more pressing as generative AI undermines the reliability of take-home assessments, shifting emphasis toward supervised, in-class ev...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.05863v1
-- PDF: https://arxiv.org/pdf/2603.05863v1
+- Landing page: http://arxiv.org/abs/2603.13083v1
+- PDF: https://arxiv.org/pdf/2603.13083v1
 
 *Relevance score: 17.0*
 
 ---
 
-## 2. STEM Faculty Perspectives on Generative AI in Higher Education
+## 2. Teaching Agile Requirements Engineering: A Stakeholder Simulation with Generative AI
 
-**Authors:** Akila de Silva, Isabel Hyo Jung Song, Hui Yang, Shah Rukh Humayoun
+**Authors:** Eva-Maria Schön, Michael Neumann, Tiago Silva da Silva
 
-**Source:** arxiv • 2026-03-04
+**Source:** arxiv • 2026-03-13
 
-**Summary:** Generative artificial intelligence (GenAI) tools are increasingly present in higher education, yet their adoption has been largely student-driven, requiring instructors to respond to technologies already embedded in classroom practices. While some faculty have embraced GenAI for pedagogical purposes...
+**Summary:** Context: The active involvement of users and customers in agile software development remains a persistent challenge in practice. For this reason, it is important that students in higher education become familiar with good practices in Agile Requirements Engineering during their studies. Objective: O...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.04001v1
-- PDF: https://arxiv.org/pdf/2603.04001v1
+- Landing page: http://arxiv.org/abs/2603.12925v1
+- PDF: https://arxiv.org/pdf/2603.12925v1
 
 *Relevance score: 17.0*
 
 ---
 
-## 3. From Solver to Tutor: Evaluating the Pedagogical Intelligence of LLMs with KMP-Bench
+## 3. How GenAI Mentor Configurations Shape Early Collaborative Dynamics: A Classroom Comparison of Individual and Shared Agents
 
-**Authors:** Weikang Shi, Houxing Ren, Junting Pan, Aojun Zhou, Ke Wang et al. (11 authors)
+**Authors:** Siyu Zha, Weijing Liu, Fei Qin, Jie Cao, Yanjin Wang et al. (9 authors)
 
-**Source:** arxiv • 2026-03-03
+**Source:** arxiv • 2026-03-13
 
-**Summary:** Large Language Models (LLMs) show significant potential in AI mathematical tutoring, yet current evaluations often rely on simplistic metrics or narrow pedagogical scenarios, failing to assess comprehensive, multi-turn teaching effectiveness. In this paper, we introduce KMP-Bench, a comprehensive K-...
+**Summary:** Generative artificial intelligence (GenAI) is increasingly embedded in computer-supported collaborative learning (CSCL), yet little empirical research has unpacked how different configurations of AI participation reshape collaborative processes. This study investigates how GenAI configuration shapes...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.02775v1
-- PDF: https://arxiv.org/pdf/2603.02775v1
+- Landing page: http://arxiv.org/abs/2603.12600v1
+- PDF: https://arxiv.org/pdf/2603.12600v1
 
 *Relevance score: 17.0*
 
 ---
 
-## 4. How students use generative AI for computational modeling in physics
+## 4. TildeOpen LLM: Leveraging Curriculum Learning to Achieve Equitable Language Representation
 
-**Authors:** Karl Henrik Fredly, Tor Ole Odden, Benjamin M. Zwickl
+**Authors:** Toms Bergmanis, Martins Kronis, Ingus Jānis Pretkalniņš, Dāvis Nicmanis, Jeļizaveta Jeļinska et al. (8 authors)
 
-**Source:** arxiv • 2026-03-06
+**Source:** arxiv • 2026-03-09
 
-**Summary:** Generative artificial intelligence (genAI) is becoming increasingly prevalent and capable in physics, particularly for programming-related tasks. How, then, does genAI affect students' computational modeling? We interviewed 19 students who had recently completed an open-ended computational assignmen...
+**Summary:** Large language models often underperform in many European languages due to the dominance of English and a few high-resource languages in training data. This paper presents TildeOpen LLM, a 30-billion-parameter open-weight foundational model trained for 34 European languages to promote linguistic equ...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.06342v1
-- PDF: https://arxiv.org/pdf/2603.06342v1
+- Landing page: http://arxiv.org/abs/2603.08182v1
+- PDF: https://arxiv.org/pdf/2603.08182v1
 
-*Relevance score: 15.0*
+*Relevance score: 17.0*
 
 ---
 
-## 5. An HCI Perspective on Sustainable GenAI Integration in Architectural Design Education
+## 5. Science Literacy: Generative AI as Enabler of Coherence in the Teaching, Learning, and Assessment of Scientific Knowledge and Reasoning
 
-**Authors:** Alex Binh Vinh Duc Nguyen
-
-**Source:** arxiv • 2026-03-03
-
-**Summary:** Generative AI (genAI) is increasingly influencing architectural design practice and is expected to affect, or even transform, the profession, even though its benefits and costs remain unresolved. In response, design schools are increasingly integrating genAI into their curricula. Yet this integratio...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.03059v1
-- PDF: https://arxiv.org/pdf/2603.03059v1
-
-*Relevance score: 15.0*
-
----
-
-## 6. Changing Pedagogical Paradigms: Integrating Generative AI in Mathematics to Enhance Digital Literacy through 'Mathematical Battles with AI'
-
-**Authors:** Maria Moskalenko, Alexander Trifanov, Roman Popkov, Arina Tabieva, Maria Smirnova et al. (7 authors)
-
-**Source:** arxiv • 2026-03-03
-
-**Summary:** This paper introduces `Math Battles with AI', an innovative competitive format designed at ITMO University to redefine the role of generative AI in mathematics education. Moving away from a purely defensive stance, the authors propose an AI agent with intentionally increased hallucination likelihood...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.02955v1
-- PDF: https://arxiv.org/pdf/2603.02955v1
-
-*Relevance score: 15.0*
-
----
-
-## 7. Stan: An LLM-based thermodynamics course assistant
-
-**Authors:** Eric M. Furst, Vasudevan Venkateshwaran
-
-**Source:** arxiv • 2026-03-04
-
-**Summary:** Discussions of AI in education focus predominantly on student-facing tools -- chatbots, tutors, and problem generators -- while the potential for the same infrastructure to support instructors remains largely unexplored. We describe Stan, a suite of tools for an undergraduate chemical engineering th...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.04657v1
-- PDF: https://arxiv.org/pdf/2603.04657v1
-
-*Relevance score: 14.0*
-
----
-
-## 8. Faster, Cheaper, More Accurate: Specialised Knowledge Tracing Models Outperform LLMs
-
-**Authors:** Prarthana Bhattacharyya, Joshua Mitton, Ralph Abboud, Simon Woodhead
-
-**Source:** arxiv • 2026-03-03
-
-**Summary:** Predicting future student responses to questions is particularly valuable for educational learning platforms where it enables effective interventions. One of the key approaches to do this has been through the use of knowledge tracing (KT) models. These are small, domain-specific, temporal models tra...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.02830v1
-- PDF: https://arxiv.org/pdf/2603.02830v1
-
-*Relevance score: 12.0*
-
----
-
-## 9. Knowledge without Wisdom: Measuring Misalignment between LLMs and Intended Impact
-
-**Authors:** Michael Hardy, Yunsung Kim
+**Authors:** Xiaoming Zhai, James W. Pellegrino, Matias Rojas, Jongchan Park, Matthew Nyaaba et al. (7 authors)
 
 **Source:** arxiv • 2026-03-01
 
-**Summary:** LLMs increasingly excel on AI benchmarks, but doing so does not guarantee validity for downstream tasks. This study evaluates the performance of leading foundation models (FMs, i.e., generative pre-trained base LLMs) with out-of-distribution (OOD) tasks of the teaching and learning of schoolchildren...
+**Summary:** This chapter examines the potential of generative AI in enhancing science literacy across the K-16+ grade span, including its benefits as well as the conceptual and practical challenges that doing so presents. It begins with a discussion of what defines science literacy in the era of AI, including h...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.00883v1
-- PDF: https://arxiv.org/pdf/2603.00883v1
+- Landing page: http://arxiv.org/abs/2603.06659v1
+- PDF: https://arxiv.org/pdf/2603.06659v1
+
+*Relevance score: 17.0*
+
+---
+
+## 6. The RIGID Framework: Research-Integrated, Generative AI-Mediated Instructional Design
+
+**Authors:** Yerin Kwak, Zachary A. Pardos
+
+**Source:** arxiv • 2026-03-13
+
+**Summary:** Instructional Design (ID) often faces challenges in incorporating research-based knowledge and pedagogical best practices. Although educational researchers and government agencies emphasize grounding ID in evidence, integrating research findings into everyday design workflows is often complex, as it...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.12781v1
+- PDF: https://arxiv.org/pdf/2603.12781v1
+
+*Relevance score: 16.0*
+
+---
+
+## 7. Investigating student perceptions of creativity and generative ai in computational physics
+
+**Authors:** Pachi Her, Patti Hamerski
+
+**Source:** arxiv • 2026-03-12
+
+**Summary:** Generative Artificial Intelligence (gen-AI) is rapidly becoming more integrated into today's classrooms in all ranges of education. In higher education, Gen-AI is often seen as a resource for students, aiding them in drafting outlines, solving simple mathematical problems, or even decoding or constr...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.12154v1
+- PDF: https://arxiv.org/pdf/2603.12154v1
+- DOI: https://doi.org/10.1119/perc.2024.pr.Her
+
+*Relevance score: 15.0*
+
+---
+
+## 8. Dynamic Multimodal Expression Generation for LLM-Driven Pedagogical Agents: From User Experience Perspective
+
+**Authors:** Ninghao Wan, Jiarun Song, Fuzheng Yang
+
+**Source:** arxiv • 2026-03-10
+
+**Summary:** In virtual reality (VR) educational scenarios, Pedagogical agents (PAs) enhance immersive learning through realistic appearances and interactive behaviors. However, most existing PAs rely on static speech and simple gestures. This limitation reduces their ability to dynamically adapt to the semantic...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.09536v1
+- PDF: https://arxiv.org/pdf/2603.09536v1
+
+*Relevance score: 15.0*
+
+---
+
+## 9. The Future of Feedback: How Can AI Help Transform Feedback to Be More Engaging, Effective, and Scalable?
+
+**Authors:** Jennifer Meyer, Olaf Köller, Thorben Jansen, Johanna Fleckenstein, Michael W. Asher et al. (36 authors)
+
+**Source:** arxiv • 2026-03-12
+
+**Summary:** With digital learning environments becoming more prevalent, the ease with which generative AI enables the scalable production of real-time, automated feedback holds the potential to reshape learning and teaching experiences. This meeting report synthesizes the interdisciplinary perspectives of 50 sc...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.12463v1
+- PDF: https://arxiv.org/pdf/2603.12463v1
 
 *Relevance score: 12.0*
 
 ---
 
-## 10. Evaluating LLMs in the Context of a Functional Programming Course: A Comprehensive Study
+## 10. From Passive Consumption to Active Interaction: Exploring Interactive LLM Scaffolding to Support Learning Engagement
 
-**Authors:** Yihan Zhang, Brigitte Pientka, Xujie Si
+**Authors:** Zixin Chen, Haotian Li, Zhe Liu, Huamin Qu, Xing Xie
 
-**Source:** arxiv • 2026-03-05
+**Source:** arxiv • 2026-03-07
 
-**Summary:** Large-Language Models (LLMs) are changing the way learners acquire knowledge outside the classroom setting. Previous studies have shown that LLMs seem effective in generating to short and simple questions in introductory CS courses using high-resource programming languages such as Java or Python. In...
+**Summary:** Large Language Models (LLMs) are increasingly used as learning companions, providing scaffolded explanations, hints, or step-by-step guidance. However, in current LLM-based learning scenarios, scaffolded content is primarily consumed passively, offering limited support for active learner engagement....
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.05646v1
-- PDF: https://arxiv.org/pdf/2603.05646v1
-- DOI: https://doi.org/10.22152/programming-journal.org/2026/11/5
+- Landing page: http://arxiv.org/abs/2603.07277v1
+- PDF: https://arxiv.org/pdf/2603.07277v1
+- DOI: https://doi.org/10.1145/3772363.3798931
+
+*Relevance score: 12.0*
+
+---
+
+## 11. Marked Pedagogies: Examining Linguistic Biases in Personalized Automated Writing Feedback
+
+**Authors:** Mei Tan, Lena Phalen, Dorottya Demszky
+
+**Source:** arxiv • 2026-03-12
+
+**Summary:** Effective personalized feedback is critical to students' literacy development. Though LLM-powered tools now promise to automate such feedback at scale, LLMs are not language-neutral: they privilege standard academic English and reproduce social stereotypes, raising concerns about how "personalizatio...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.12471v1
+- PDF: https://arxiv.org/pdf/2603.12471v1
+- DOI: https://doi.org/10.1145/3785022.3785113
 
 *Relevance score: 11.0*
 
 ---
 
-## 11. DiSCTT: Consensus-Guided Self-Curriculum for Efficient Test-Time Adaptation in Reasoning
+## 12. DeReason: A Difficulty-Aware Curriculum Improves Decoupled SFT-then-RL Training for General Reasoning
 
-**Authors:** Mohammad Mahdi Moradi, Sudhir Mudur
+**Authors:** Hanxu Hu, Yuxuan Wang, Maggie Huan, Jannis Vamvas, Yinya Huang et al. (7 authors)
 
-**Source:** arxiv • 2026-03-05
+**Source:** arxiv • 2026-03-11
 
-**Summary:** Test-time adaptation offers a promising avenue for improving reasoning performance in large language models without additional supervision, but existing approaches often apply a uniform optimization objective across all inputs, leading to inefficient or unstable adaptation on heterogeneous reasoning...
+**Summary:** Reinforcement learning with Verifiable Rewards (RLVR) has emerged as a powerful paradigm for eliciting reasoning capabilities in large language models, particularly in mathematics and coding. While recent efforts have extended this paradigm to broader general scientific (STEM) domains, the complex i...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.05357v1
-- PDF: https://arxiv.org/pdf/2603.05357v1
+- Landing page: http://arxiv.org/abs/2603.11193v1
+- PDF: https://arxiv.org/pdf/2603.11193v1
 
 *Relevance score: 11.0*
 
 ---
 
-## 12. Wiki-R1: Incentivizing Multimodal Reasoning for Knowledge-based VQA via Data and Sampling Curriculum
+## 13. Beyond the Illusion of Consensus: From Surface Heuristics to Knowledge-Grounded Evaluation in LLM-as-a-Judge
 
-**Authors:** Shan Ning, Longtian Qiu, Xuming He
+**Authors:** Mingyang Song, Mao Zheng, Chenning Xu
 
-**Source:** arxiv • 2026-03-05
+**Source:** arxiv • 2026-03-11
 
-**Summary:** Knowledge-Based Visual Question Answering (KB-VQA) requires models to answer questions about an image by integrating external knowledge, posing significant challenges due to noisy retrieval and the structured, encyclopedic nature of the knowledge base. These characteristics create a distributional g...
+**Summary:** The paradigm of LLM-as-a-judge relies on a critical assumption, namely that high inter-evaluator agreement indicates reliable and objective evaluation. We present two complementary findings that challenge this assumption. \textbf{First}, we demonstrate that this consensus is frequently illusory. We ...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.05256v1
-- PDF: https://arxiv.org/pdf/2603.05256v1
+- Landing page: http://arxiv.org/abs/2603.11027v1
+- PDF: https://arxiv.org/pdf/2603.11027v1
 
 *Relevance score: 11.0*
 
 ---
 
-## 13. Bidirectional Curriculum Generation: A Multi-Agent Framework for Data-Efficient Mathematical Reasoning
+## 14. S-GRADES -- Studying Generalization of Student Response Assessments in Diverse Evaluative Settings
 
-**Authors:** Boren Hu, Xiao Liu, Boci Peng, Xinping Zhao, Xiaoran Shang et al. (7 authors)
+**Authors:** Tasfia Seuti, Sagnik Ray Choudhury
 
-**Source:** arxiv • 2026-03-05
+**Source:** arxiv • 2026-03-10
 
-**Summary:** Enhancing mathematical reasoning in Large Language Models typically demands massive datasets, yet data efficiency remains a critical bottleneck. While Curriculum Learning attempts to structure this process, standard unidirectional approaches (simple-to-complex) suffer from inefficient sample utiliza...
+**Summary:** Evaluating student responses, from long essays to short factual answers, is a key challenge in educational NLP. Automated Essay Scoring (AES) focuses on holistic writing qualities such as coherence and argumentation, while Automatic Short Answer Grading (ASAG) emphasizes factual correctness and conc...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.05120v1
-- PDF: https://arxiv.org/pdf/2603.05120v1
+- Landing page: http://arxiv.org/abs/2603.10233v1
+- PDF: https://arxiv.org/pdf/2603.10233v1
 
 *Relevance score: 11.0*
 
 ---
 
-## 14. The Trilingual Triad Framework: Integrating Design, AI, and Domain Knowledge in No-code AI Smart City Course
+## 15. Preparing Students for AI-Driven Agile Development: A Project-Based AI Engineering Curriculum
+
+**Authors:** Andreas Rausch, Stefan Wittek, Tobias Geger, David Inkermann
+
+**Source:** arxiv • 2026-03-10
+
+**Summary:** Generative AI and agentic tools are reshaping agile software development, yet many engineering curricula still teach agile methods and AI competencies separately and largely lecture-based. This paper presents a project-based AI Engineering curriculum designed to prepare students for AI-driven agile ...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.09599v1
+- PDF: https://arxiv.org/pdf/2603.09599v1
+
+*Relevance score: 11.0*
+
+---
+
+## 16. OddGridBench: Exposing the Lack of Fine-Grained Visual Discrepancy Sensitivity in Multimodal Large Language Models
+
+**Authors:** Tengjin Weng, Wenhao Jiang, Jingyi Wang, Ming Li, Lin Ma et al. (6 authors)
+
+**Source:** arxiv • 2026-03-10
+
+**Summary:** Multimodal large language models (MLLMs) have achieved remarkable performance across a wide range of vision language tasks. However, their ability in low-level visual perception, particularly in detecting fine-grained visual discrepancies, remains underexplored and lacks systematic analysis. In this...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.09326v1
+- PDF: https://arxiv.org/pdf/2603.09326v1
+
+*Relevance score: 11.0*
+
+---
+
+## 17. Sandpiper: Orchestrated AI-Annotation for Educational Discourse at Scale
+
+**Authors:** Daryl Hedley, Doug Pietrzak, Jorge Dias, Ian Burden, Bakhtawar Ahtisham et al. (12 authors)
+
+**Source:** arxiv • 2026-03-09
+
+**Summary:** Digital educational environments are expanding toward complex AI and human discourse, providing researchers with an abundance of data that offers deep insights into learning and instructional processes. However, traditional qualitative analysis remains a labor-intensive bottleneck, severely limiting...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.08406v1
+- PDF: https://arxiv.org/pdf/2603.08406v1
+
+*Relevance score: 11.0*
+
+---
+
+## 18. How Well Do AI Systems Solve AP Physics? A Comparative Evaluation of Large Language Models on Algebra-Based Free Response Questions
+
+**Authors:** Bilas Paul, Jashandeep Kaur, Shantanu Chakraborty, Shruti Shrestha
+
+**Source:** arxiv • 2026-03-08
+
+**Summary:** The rapid advancement of LLMs has generated growing interest in their potential role in physics education and assessment, yet a focused evaluation of their performance on multi-faceted, free-response physics problems remains underexplored. In this study, we systematically evaluate the performance of...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.07457v1
+- PDF: https://arxiv.org/pdf/2603.07457v1
+
+*Relevance score: 11.0*
+
+---
+
+## 19. The Yerkes-Dodson Curve for AI Agents: Emergent Cooperation Under Environmental Pressure in Multi-Agent LLM Simulations
+
+**Authors:** Ivan Pasichnyk
+
+**Source:** arxiv • 2026-03-07
+
+**Summary:** Designing environments that maximize the rate of emergent behavior development in AI agents remains an open problem. We present the first systematic study of stress-performance relationships in large language model (LLM) multi-agent systems, drawing an explicit parallel to the Yerkes-Dodson law from...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.07360v1
+- PDF: https://arxiv.org/pdf/2603.07360v1
+
+*Relevance score: 11.0*
+
+---
+
+## 20. Agora: Teaching the Skill of Consensus-Finding with AI Personas Grounded in Human Voice
+
+**Authors:** Suyash Fulay, Prerna Ravi, Emily Kubin, Shrestha Mohanty, Michiel Bakker et al. (6 authors)
+
+**Source:** arxiv • 2026-03-07
+
+**Summary:** Deliberative democratic theory suggests that civic competence: the capacity to navigate disagreement, weigh competing values, and arrive at collective decisions is not innate but developed through practice. Yet opportunities to cultivate these skills remain limited, as traditional deliberative proce...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.07339v1
+- PDF: https://arxiv.org/pdf/2603.07339v1
+- DOI: https://doi.org/10.1145/3772363.3798888
+
+*Relevance score: 11.0*
+
+---
+
+## 21. Data-Driven Hints in Intelligent Tutoring Systems
+
+**Authors:** Sutapa Dey Tithi, Kimia Fazeli, Dmitri Droujkov, Tahreem Yasir, Xiaoyi Tian et al. (6 authors)
+
+**Source:** arxiv • 2026-03-07
+
+**Summary:** This chapter explores the evolution of data-driven hint generation for intelligent tutoring systems (ITS). The Hint Factory and Interaction Networks have enabled the generation of next-step hints, waypoints, and strategic subgoals from historical student data. Data-driven techniques have also enable...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.07311v1
+- PDF: https://arxiv.org/pdf/2603.07311v1
+
+*Relevance score: 11.0*
+
+---
+
+## 22. Not Too Short, Not Too Long: How LLM Response Length Shapes People's Critical Thinking in Error Detection
+
+**Authors:** Natalie Friedman, Adelaide Nyanyo, Kevin Weatherwax, Lifei Wang, Chengchao Zhu et al. (7 authors)
+
+**Source:** arxiv • 2026-03-06
+
+**Summary:** Large language models (LLMs) have become common decision-support tools across educational and professional contexts, raising questions about how their outputs shape human critical thinking. Prior work suggests that the amount of AI assistance can influence cognitive engagement, yet little is known a...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.06878v1
+- PDF: https://arxiv.org/pdf/2603.06878v1
+
+*Relevance score: 11.0*
+
+---
+
+## 23. Affective economies of AI in digitalised higher education
+
+**Authors:** Karen Gravett
+
+**Source:** openalex • Higher Education • 2026-02-12
+
+**Summary:** Abstract The integration of Generative Artificial Intelligence (GenAI) in higher education has meant that universities are experiencing a significant period of uncertainty and flux. The need to understand how GenAI technologies are shaping students’ evolving experiences of higher education is import...
+
+**Links:**
+- Landing page: https://doi.org/10.1007/s10734-026-01628-y
+- PDF: https://link.springer.com/content/pdf/10.1007/s10734-026-01628-y.pdf
+- DOI: https://doi.org/10.1007/s10734-026-01628-y
+
+*Relevance score: 11.0*
+
+---
+
+## 24. Scaling Laws for Educational AI Agents
+
+**Authors:** Mengsong Wu, Hao Hao, Shuzhen Bi, Keqian Li, Wentao Liu et al. (8 authors)
+
+**Source:** arxiv • 2026-03-12
+
+**Summary:** While scaling laws for Large Language Models (LLMs) have been extensively studied along dimensions of model parameters, training data, and compute, the scaling behavior of LLM-based educational agents remains unexplored. We propose that educational agent capability scales not merely with the underly...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.11709v1
+- PDF: https://arxiv.org/pdf/2603.11709v1
+
+*Relevance score: 9.0*
+
+---
+
+## 25. From Education to Evidence: A Collaborative Practice Research Platform for AI-Integrated Agile Development
+
+**Authors:** Tobias Geger, Andreas Rausch, Ina Schiering, Frauke Stenzel, Stefan Wittek
+
+**Source:** arxiv • 2026-03-11
+
+**Summary:** Agile software development evolves so rapidly that research struggles to remain timely and transferable - an issue heightened by the swift adoption of generative AI and agentic tools. Earlier discussions highlight theory and time gaps, leading to results that often lack clear reuse conditions or arr...
+
+**Links:**
+- Landing page: http://arxiv.org/abs/2603.10679v1
+- PDF: https://arxiv.org/pdf/2603.10679v1
+
+*Relevance score: 9.0*
+
+---
+
+## 26. SuperSkillsStack: Agency, Domain Knowledge, Imagination, and Taste in Human-AI Design Education
 
 **Authors:** Qian Huang, King Wang Poon
 
-**Source:** arxiv • 2026-03-05
+**Source:** arxiv • 2026-03-07
 
-**Summary:** This paper introduces the "Trilingual Triad" framework, a model that explains how students learn to design with generative artificial intelligence (AI) through the integration of Design, AI, and Domain Knowledge. As generative AI rapidly enters higher education, students often engage with these syst...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.05036v1
-- PDF: https://arxiv.org/pdf/2603.05036v1
-
-*Relevance score: 11.0*
-
----
-
-## 15. BioLLMAgent: A Hybrid Framework with Enhanced Structural Interpretability for Simulating Human Decision-Making in Computational Psychiatry
-
-**Authors:** Zuo Fei, Kezhi Wang, Xiaomin Chen, Yizhou Huang
-
-**Source:** arxiv • 2026-03-05
-
-**Summary:** Computational psychiatry faces a fundamental trade-off: traditional reinforcement learning (RL) models offer interpretability but lack behavioral realism, while large language model (LLM) agents generate realistic behaviors but lack structural interpretability. We introduce BioLLMAgent, a novel hybr...
+**Summary:** This study examines how students integrate generative artificial intelligence (AI) into design projects through the lens of the SuperSkillsStack framework, which identifies four key human competencies for effective human-AI collaboration: Agency, Domain Knowledge, Imagination, and Taste. As generati...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.05016v1
-- PDF: https://arxiv.org/pdf/2603.05016v1
-
-*Relevance score: 11.0*
-
----
-
-## 16. Evaluating GPT-5 as a Multimodal Clinical Reasoner: A Landscape Commentary
-
-**Authors:** Alexandru Florea, Shansong Wang, Mingzhe Hu, Qiang Li, Zach Eidex et al. (8 authors)
-
-**Source:** arxiv • 2026-03-05
-
-**Summary:** The transition from task-specific artificial intelligence toward general-purpose foundation models raises fundamental questions about their capacity to support the integrated reasoning required in clinical medicine, where diagnosis demands synthesis of ambiguous patient narratives, laboratory data, ...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.04763v1
-- PDF: https://arxiv.org/pdf/2603.04763v1
-
-*Relevance score: 11.0*
-
----
-
-## 17. Farther the Shift, Sparser the Representation: Analyzing OOD Mechanisms in LLMs
-
-**Authors:** Mingyu Jin, Yutong Yin, Jingcheng Niu, Qingcheng Zeng, Wujiang Xu et al. (10 authors)
-
-**Source:** arxiv • 2026-03-03
-
-**Summary:** In this work, we investigate how Large Language Models (LLMs) adapt their internal representations when encountering inputs of increasing difficulty, quantified as the degree of out-of-distribution (OOD) shift. We reveal a consistent and quantifiable phenomenon: as task difficulty increases, whether...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.03415v1
-- PDF: https://arxiv.org/pdf/2603.03415v1
-
-*Relevance score: 11.0*
-
----
-
-## 18. MemSifter: Offloading LLM Memory Retrieval via Outcome-Driven Proxy Reasoning
-
-**Authors:** Jiejun Tan, Zhicheng Dou, Liancheng Zhang, Yuyang Hu, Yiruo Cheng et al. (6 authors)
-
-**Source:** arxiv • 2026-03-03
-
-**Summary:** As Large Language Models (LLMs) are increasingly used for long-duration tasks, maintaining effective long-term memory has become a critical challenge. Current methods often face a trade-off between cost and accuracy. Simple storage methods often fail to retrieve relevant information, while complex i...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.03379v1
-- PDF: https://arxiv.org/pdf/2603.03379v1
-
-*Relevance score: 11.0*
-
----
-
-## 19. MedGPT-oss: Training a General-Purpose Vision-Language Model for Biomedicine
-
-**Authors:** Kai Zhang, Zhengqing Yuan, Cheng Peng, Songlin Zhao, Mengxian Lyu et al. (13 authors)
-
-**Source:** arxiv • 2026-03-01
-
-**Summary:** Biomedical multimodal assistants have the potential to unify radiology, pathology, and clinical-text reasoning, yet a critical deployment gap remains: top-performing systems are either closed-source or computationally prohibitive, precluding the on-premises deployment required for patient privacy an...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.00842v1
-- PDF: https://arxiv.org/pdf/2603.00842v1
-
-*Relevance score: 11.0*
-
----
-
-## 20. Optimizing In-Context Demonstrations for LLM-based Automated Grading
-
-**Authors:** Yucheng Chu, Hang Li, Kaiqi Yang, Yasemin Copur-Gencturk, Kevin Haudek et al. (7 authors)
-
-**Source:** arxiv • 2026-02-28
-
-**Summary:** Automated assessment of open-ended student responses is a critical capability for scaling personalized feedback in education. While large language models (LLMs) have shown promise in grading tasks via in-context learning (ICL), their reliability is heavily dependent on the selection of few-shot exem...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.00465v1
-- PDF: https://arxiv.org/pdf/2603.00465v1
-
-*Relevance score: 11.0*
-
----
-
-## 21. Confusion-Aware Rubric Optimization for LLM-based Automated Grading
-
-**Authors:** Yucheng Chu, Hang Li, Kaiqi Yang, Yasemin Copur-Gencturk, Joseph Krajcik et al. (7 authors)
-
-**Source:** arxiv • 2026-02-28
-
-**Summary:** Accurate and unambiguous guidelines are critical for large language model (LLM) based graders, yet manually crafting these prompts is often sub-optimal as LLMs can misinterpret expert guidelines or lack necessary domain specificity. Consequently, the field has moved toward automated prompt optimizat...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.00451v1
-- PDF: https://arxiv.org/pdf/2603.00451v1
-
-*Relevance score: 11.0*
-
----
-
-## 22. Bridging Pedagogy and Play: Introducing a Language Mapping Interface for Human-AI Co-Creation in Educational Game Design
-
-**Authors:** Daijin Yang, Erica Kleinman, Casper Harteveld
-
-**Source:** arxiv • 2026-03-04
-
-**Summary:** Educational games can foster critical thinking, problem-solving, and motivation, yet instructors often find it difficult to design games that reliably achieve specific learning outcomes. Existing authoring environments reduce the need for programming expertise, but they do not eliminate the underlyi...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.03644v1
-- PDF: https://arxiv.org/pdf/2603.03644v1
-- DOI: https://doi.org/10.1145/3772363.3798862
-
-*Relevance score: 10.0*
-
----
-
-## 23. VRM: Teaching Reward Models to Understand Authentic Human Preferences
-
-**Authors:** Biao Liu, Ning Xu, Junming Yang, Hao Xu, Xin Geng
-
-**Source:** arxiv • 2026-03-05
-
-**Summary:** Large Language Models (LLMs) have achieved remarkable success across diverse natural language tasks, yet the reward models employed for aligning LLMs often encounter challenges of reward hacking, where the approaches predominantly rely on directly mapping prompt-response pairs to scalar scores, whic...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.04974v1
-- PDF: https://arxiv.org/pdf/2603.04974v1
+- Landing page: http://arxiv.org/abs/2603.07016v1
+- PDF: https://arxiv.org/pdf/2603.07016v1
 
 *Relevance score: 9.0*
 
 ---
 
-## 24. HACHIMI: Scalable and Controllable Student Persona Generation via Orchestrated Agents
+## 27. Geist in the Machine: Simulating Recognition and Inner Dialogue in AI-Mediated Teaching and Research
 
-**Authors:** Yilin Jiang, Fei Tan, Xuanyu Yin, Jing Leng, Aimin Zhou
+**Authors:** Liam Magee
 
-**Source:** arxiv • 2026-03-05
+**Source:** arxiv • 2026-03-11
 
-**Summary:** Student Personas (SPs) are emerging as infrastructure for educational LLMs, yet prior work often relies on ad-hoc prompting or hand-crafted profiles with limited control over educational theory and population distributions. We formalize this as Theory-Aligned and Distribution-Controllable Persona Ge...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.04855v1
-- PDF: https://arxiv.org/pdf/2603.04855v1
-
-*Relevance score: 9.0*
-
----
-
-## 25. Physics Education under the Application of Artificial Intelligence: Bibliometric Analysis Based on Web of Science Core Library (2021-2025)
-
-**Authors:** Chengtian Liang, Yike Qian, Yixuan Lin, Yu Wang
-
-**Source:** arxiv • 2026-02-26
-
-**Summary:** The rapid development of artificial intelligence technology is driving the transformation of physics education from traditional models to intelligent and data-driven approaches. To explore the evolution and cutting-edge hotspots in this field, this study conducted a systematic bibliometric analysis ...
+**Summary:** This paper describes an AI tutoring system built upon two psycho-social theoretic constructs: Hegelian recognition and Freudian psychodynamics. Two related interventions are proposed: recognition-enhanced prompts that instruct an AI tutor to treat the learner as an autonomous subject, and a multi-ag...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.03348v1
-- PDF: https://arxiv.org/pdf/2603.03348v1
-
-*Relevance score: 9.0*
-
----
-
-## 26. Transparent AI for Mathematics: Transformer-Based Large Language Models for Mathematical Entity Relationship Extraction with XAI
-
-**Authors:** Tanjim Taharat Aurpa
-
-**Source:** arxiv • 2026-03-06
-
-**Summary:** Mathematical text understanding is a challenging task due to the presence of specialized entities and complex relationships between them. This study formulates mathematical problem interpretation as a Mathematical Entity Relation Extraction (MERE) task, where operands are treated as entities and ope...
-
-**Links:**
-- Landing page: http://arxiv.org/abs/2603.06348v1
-- PDF: https://arxiv.org/pdf/2603.06348v1
+- Landing page: http://arxiv.org/abs/2603.10450v2
+- PDF: https://arxiv.org/pdf/2603.10450v2
 
 *Relevance score: 8.0*
 
 ---
 
-## 27. BeamPERL: Parameter-Efficient RL with Verifiable Rewards Specializes Compact LLMs for Structured Beam Mechanics Reasoning
+## 28. The internationalization of for-profit higher education institutions in the United States: Seeking legitimacy and responding to market forces via international student mobility
 
-**Authors:** Tarjei Paule Hage, Markus J. Buehler
+**Authors:** Jonah M. Otto, Melissa Whatley, Dante J. Salto
 
-**Source:** arxiv • 2026-03-04
+**Source:** openalex • Higher Education • 2026-02-14
 
-**Summary:** Can reinforcement learning with hard, verifiable rewards teach a compact language model to reason about physics, or does it primarily learn to pattern-match toward correct answers? We study this question by training a 1.5B-parameter reasoning model on beam statics, a classic engineering problem, usi...
+**Summary:** Institutional internationalization has been extensively researched in US higher education, particularly with reference to the public and private nonprofit four-year sector. This study contributes to an emerging body of literature that explores internationalization in other higher education sectors a...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.04124v1
-- PDF: https://arxiv.org/pdf/2603.04124v1
+- Landing page: https://doi.org/10.1007/s10734-025-01619-5
+- PDF: https://link.springer.com/content/pdf/10.1007/s10734-025-01619-5.pdf
+- DOI: https://doi.org/10.1007/s10734-025-01619-5
 
 *Relevance score: 8.0*
 
 ---
 
-## 28. Draft-Thinking: Learning Efficient Reasoning in Long Chain-of-Thought LLMs
+## 29. What do we mean by “AI Integration”? Toward a typology of integrating artificial intelligence in higher education
 
-**Authors:** Jie Cao, Tianwei Lin, Zhenxuan Fan, Bo Yuan, Ziyuan Zhao et al. (8 authors)
+**Authors:** Yulu Hou
 
-**Source:** arxiv • 2026-02-28
+**Source:** openalex • Higher Education • 2025-12-29
 
-**Summary:** Long chain-of-thought~(CoT) has become a dominant paradigm for enhancing the reasoning capability of large reasoning models~(LRMs); however, the performance gains often come with a substantial increase in reasoning budget. Recent studies show that existing CoT paradigms tend to induce systematic ove...
+**Summary:** Abstract Artificial intelligence (AI) is widely recognized as a transformative force in higher education, yet the term “AI integration” remains conceptually underdeveloped. As institutions increasingly adopt AI for teaching, learning, and administrative functions, it becomes urgent to clarify what i...
 
 **Links:**
-- Landing page: http://arxiv.org/abs/2603.00578v1
-- PDF: https://arxiv.org/pdf/2603.00578v1
+- Landing page: https://doi.org/10.1007/s10734-025-01603-z
+- PDF: https://link.springer.com/content/pdf/10.1007/s10734-025-01603-z.pdf
+- DOI: https://doi.org/10.1007/s10734-025-01603-z
+
+*Relevance score: 8.0*
+
+---
+
+## 30. Conceptualising faculty digital literacy for online teaching in higher education: perceptions, practices and pedagogical implications
+
+**Authors:** Zhe (Victor) Zhang, Ayat Tarazi, Raúl Ruiz-Cecilia
+
+**Source:** openalex • Studies in Higher Education • 2025-12-26
+
+**Summary:** Motivated by the lack of systematic research on faculty digital literacy for online teaching in higher education across developing countries, this study seeks to conceptualise the construct of faculty digital literacy by exploring faculty perceptions and practices in online teaching in Palestinian u...
+
+**Links:**
+- Landing page: https://doi.org/10.1080/03075079.2025.2604101
+- DOI: https://doi.org/10.1080/03075079.2025.2604101
 
 *Relevance score: 8.0*
 

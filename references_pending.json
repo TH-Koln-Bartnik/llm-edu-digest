@@ -15373,6 +15373,1160 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2603.06659",
+    "type": "report",
+    "title": "Science Literacy: Generative AI as Enabler of Coherence in the Teaching, Learning, and Assessment of Scientific Knowledge and Reasoning",
+    "author": [
+      {
+        "family": "Zhai",
+        "given": "Xiaoming"
+      },
+      {
+        "family": "Pellegrino",
+        "given": "James W."
+      },
+      {
+        "family": "Rojas",
+        "given": "Matias"
+      },
+      {
+        "family": "Park",
+        "given": "Jongchan"
+      },
+      {
+        "family": "Nyaaba",
+        "given": "Matthew"
+      },
+      {
+        "family": "Cohn",
+        "given": "Clayton"
+      },
+      {
+        "family": "Biswas",
+        "given": "Gautam"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          1
+        ]
+      ]
+    },
+    "abstract": "This chapter examines the potential of generative AI in enhancing science literacy across the K-16+ grade span, including its benefits as well as the conceptual and practical challenges that doing so presents. It begins with a discussion of what defines science literacy in the era of AI, including how AI has changed science and the demand for future citizens to be scientifically literate when AI is applied in their careers and lives. The chapter further discusses why science literacy presents such a challenge in K-16+ educational settings. It then develops an argument for the type of architecture needed for AI to assist in solving the problem by bringing coherence to the teaching, learning, and assessment of science knowledge and reasoning. Components of this architecture are illustrated with respect to the AI tools and capabilities needed for design and implementation. The chapter concludes with a consideration of what has been learned regarding both science literacy and AI, as well as what remains to be learned, including the research and development (R&D) needed, and the generalizability of this science literacy case to other disciplinary learning and knowledge domains.",
+    "URL": "http://arxiv.org/abs/2603.06659v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.06878",
+    "type": "report",
+    "title": "Not Too Short, Not Too Long: How LLM Response Length Shapes People's Critical Thinking in Error Detection",
+    "author": [
+      {
+        "family": "Friedman",
+        "given": "Natalie"
+      },
+      {
+        "family": "Nyanyo",
+        "given": "Adelaide"
+      },
+      {
+        "family": "Weatherwax",
+        "given": "Kevin"
+      },
+      {
+        "family": "Wang",
+        "given": "Lifei"
+      },
+      {
+        "family": "Zhu",
+        "given": "Chengchao"
+      },
+      {
+        "family": "Zhu",
+        "given": "Zeshu"
+      },
+      {
+        "family": "Mountford",
+        "given": "S. Joy"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          6
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) have become common decision-support tools across educational and professional contexts, raising questions about how their outputs shape human critical thinking. Prior work suggests that the amount of AI assistance can influence cognitive engagement, yet little is known about how specific properties of LLM outputs (e.g., response length) impacts users' critical evaluation of information. In this study, we examine whether the length of LLM responses shapes users' accuracy in evaluating LLM-generated reasoning on critical thinking tasks, particularly in interaction with the correctness of the LLM's reasoning. To begin evaluating this, we conducted a within-subjects experiment with 24 participants who completed 15 modified Watson--Glaser critical thinking items, each accompanied by an LLM-generated explanation that varied in length and correctness. Mixed-effects logistic regression revealed a strong and statistically reliable effect of LLM output correctness on participant accuracy, with participants more likely to answer correctly when the LLM's explanation was correct. Response length appeared to moderated this effect: when the LLM output was incorrect, medium-length explanations were associated with higher participant accuracy than either shorter or longer explanations, whereas accuracy remained high across lengths when the LLM output was correct. Together, these findings suggest that response length alone may be insufficient to support critical thinking, and that how reasoning is presented-including a potential advantage of mid-length explanations under some conditions-points to design opportunities for LLM-based decision-support systems that emphasize transparent reasoning and calibrated expressions of certainty.",
+    "URL": "http://arxiv.org/abs/2603.06878v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.07016",
+    "type": "report",
+    "title": "SuperSkillsStack: Agency, Domain Knowledge, Imagination, and Taste in Human-AI Design Education",
+    "author": [
+      {
+        "family": "Huang",
+        "given": "Qian"
+      },
+      {
+        "family": "Poon",
+        "given": "King Wang"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          7
+        ]
+      ]
+    },
+    "abstract": "This study examines how students integrate generative artificial intelligence (AI) into design projects through the lens of the SuperSkillsStack framework, which identifies four key human competencies for effective human-AI collaboration: Agency, Domain Knowledge, Imagination, and Taste. As generative AI increasingly transforms creative practice, design education must consider how human capabilities are cultivated alongside technological tools. Using qualitative thematic analysis, this study analyzes reflective writings from 80 student design teams participating in a human-centered design course. The findings show that students primarily used AI during the early stages of the design process, including brainstorming, information synthesis, and problem framing. However, students consistently relied on human judgment to interpret contextual information, validate AI-generated outputs, and refine design solutions. Domain knowledge derived from field observations enabled students to detect inaccuracies in AI suggestions, while taste played a critical role in evaluating and selecting meaningful ideas. The results suggest that generative AI functions primarily as a cognitive accelerator rather than a replacement for human creativity. The study highlights the importance of cultivating higher-order human capabilities to support effective human-AI collaboration in design education.",
+    "URL": "http://arxiv.org/abs/2603.07016v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.07277",
+    "type": "report",
+    "title": "From Passive Consumption to Active Interaction: Exploring Interactive LLM Scaffolding to Support Learning Engagement",
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Zixin"
+      },
+      {
+        "family": "Li",
+        "given": "Haotian"
+      },
+      {
+        "family": "Liu",
+        "given": "Zhe"
+      },
+      {
+        "family": "Qu",
+        "given": "Huamin"
+      },
+      {
+        "family": "Xie",
+        "given": "Xing"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          7
+        ]
+      ]
+    },
+    "abstract": "Large Language Models (LLMs) are increasingly used as learning companions, providing scaffolded explanations, hints, or step-by-step guidance. However, in current LLM-based learning scenarios, scaffolded content is primarily consumed passively, offering limited support for active learner engagement. Learning science research suggests that effective educational scaffolding depends not only on what support is provided, but also on how learners engage with it. In this work, we explore whether embedding lightweight interactive components into LLM-generated scaffolding responses can promote learning-oriented engagement and improve short-term learning outcomes. We evaluated this approach through a within-subjects laboratory study (N=8). Results provide initial evidence that interactive scaffolding increases learners' perceived engagement and attentional focus, while supporting short-term learning performance. We conclude with design implications for integrating interaction into LLM-generated scaffolding to support active learning engagement.",
+    "DOI": "10.1145/3772363.3798931",
+    "URL": "https://doi.org/10.1145/3772363.3798931",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.07311",
+    "type": "report",
+    "title": "Data-Driven Hints in Intelligent Tutoring Systems",
+    "author": [
+      {
+        "family": "Tithi",
+        "given": "Sutapa Dey"
+      },
+      {
+        "family": "Fazeli",
+        "given": "Kimia"
+      },
+      {
+        "family": "Droujkov",
+        "given": "Dmitri"
+      },
+      {
+        "family": "Yasir",
+        "given": "Tahreem"
+      },
+      {
+        "family": "Tian",
+        "given": "Xiaoyi"
+      },
+      {
+        "family": "Barnes",
+        "given": "Tiffany"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          7
+        ]
+      ]
+    },
+    "abstract": "This chapter explores the evolution of data-driven hint generation for intelligent tutoring systems (ITS). The Hint Factory and Interaction Networks have enabled the generation of next-step hints, waypoints, and strategic subgoals from historical student data. Data-driven techniques have also enabled systems to find the right time to provide hints. We explore further potential data-driven adaptations for problem solving based on behavioral problem solving data and the integration of Large Language Models (LLMs).",
+    "URL": "http://arxiv.org/abs/2603.07311v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.07339",
+    "type": "report",
+    "title": "Agora: Teaching the Skill of Consensus-Finding with AI Personas Grounded in Human Voice",
+    "author": [
+      {
+        "family": "Fulay",
+        "given": "Suyash"
+      },
+      {
+        "family": "Ravi",
+        "given": "Prerna"
+      },
+      {
+        "family": "Kubin",
+        "given": "Emily"
+      },
+      {
+        "family": "Mohanty",
+        "given": "Shrestha"
+      },
+      {
+        "family": "Bakker",
+        "given": "Michiel"
+      },
+      {
+        "family": "Roy",
+        "given": "Deb"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          7
+        ]
+      ]
+    },
+    "abstract": "Deliberative democratic theory suggests that civic competence: the capacity to navigate disagreement, weigh competing values, and arrive at collective decisions is not innate but developed through practice. Yet opportunities to cultivate these skills remain limited, as traditional deliberative processes like citizens' assemblies reach only a small fraction of the population. We present Agora, an early-stage AI-powered platform that uses LLMs to organize authentic human voices on policy issues, helping users build consensus-finding skills by proposing and revising policy recommendations, hearing supporting and opposing perspectives, and receiving feedback on how policy changes affect predicted support. In a preliminary study with 44 university students, participants using the full interface (with access to voice explanations) reported higher levels of problem-solving skills, internal deliberation, and produced higher quality consensus statements compared to a control condition showing only aggregate support distributions. These initial findings point toward a promising direction for scaling civic education.",
+    "DOI": "10.1145/3772363.3798888",
+    "URL": "https://doi.org/10.1145/3772363.3798888",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.07360",
+    "type": "report",
+    "title": "The Yerkes-Dodson Curve for AI Agents: Emergent Cooperation Under Environmental Pressure in Multi-Agent LLM Simulations",
+    "author": [
+      {
+        "family": "Pasichnyk",
+        "given": "Ivan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          7
+        ]
+      ]
+    },
+    "abstract": "Designing environments that maximize the rate of emergent behavior development in AI agents remains an open problem. We present the first systematic study of stress-performance relationships in large language model (LLM) multi-agent systems, drawing an explicit parallel to the Yerkes-Dodson law from cognitive psychology. Using a grid-world survival arena, we conduct 22 experiments across four phases, varying environmental pressure through resource scarcity (upkeep cost) and reproductive competition (sexual selection). Our key finding is that cooperative behavior follows an inverted-U curve: trade interactions peak at 29 under medium pressure (upkeep=5), while both low and extreme pressure produce 8--12 trades. Under extreme pressure, behavioral repertoire collapses to movement-only within 5--12 turns. We further show that sexual selection -- a softer pressure mechanism where all agents survive but not all reproduce -- eliminates inter-agent aggression entirely and produces communicative behavior absent under survival pressure. These results suggest that environmental pressure calibration is a viable curriculum design strategy for LLM agent development, analogous to the inverted-U relationship between arousal and performance in biological systems.",
+    "URL": "http://arxiv.org/abs/2603.07360v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.07457",
+    "type": "report",
+    "title": "How Well Do AI Systems Solve AP Physics? A Comparative Evaluation of Large Language Models on Algebra-Based Free Response Questions",
+    "author": [
+      {
+        "family": "Paul",
+        "given": "Bilas"
+      },
+      {
+        "family": "Kaur",
+        "given": "Jashandeep"
+      },
+      {
+        "family": "Chakraborty",
+        "given": "Shantanu"
+      },
+      {
+        "family": "Shrestha",
+        "given": "Shruti"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          8
+        ]
+      ]
+    },
+    "abstract": "The rapid advancement of LLMs has generated growing interest in their potential role in physics education and assessment, yet a focused evaluation of their performance on multi-faceted, free-response physics problems remains underexplored. In this study, we systematically evaluate the performance of four widely accessible AI systems-ChatGPT 4.1 mini, Gemini 2.5 Flash, Claude 4.0 Sonnet, and DeepSeek R1-on AP Physics 1 and 2 free-response questions administered between 2015 and 2025. Model-generated solutions were produced under standardized exam-style prompting and evaluated by three independent physics experts using official College Board scoring guidelines. All models achieved relatively high mean scores (82-92%), indicating strong capability in structured algebraic problem solving. However, substantial year-to-year variability was observed, particularly for AP Physics 1, where statistical testing revealed no consistent performance hierarchy among models. In contrast, AP Physics 2 results showed statistically significant differences, with Gemini and DeepSeek demonstrating more consistent performance than Claude. A qualitative analysis revealed recurring error patterns across all models, including misinterpretation of diagrams and graphs, incorrect graph construction, incorrect reasoning about vector direction, circuit topology errors, partial and misleading qualitative explanations, and difficulties applying three-dimensional concepts such as the right-hand rule. These findings suggest that while contemporary AI systems can effectively support routine physics problem solving, they remain limited in tasks requiring spatial reasoning, visual interpretation, and conceptual integration. The results highlight both the instructional potential and current pedagogical limitations of AI-assisted learning tools in physics education.",
+    "URL": "http://arxiv.org/abs/2603.07457v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.08182",
+    "type": "report",
+    "title": "TildeOpen LLM: Leveraging Curriculum Learning to Achieve Equitable Language Representation",
+    "author": [
+      {
+        "family": "Bergmanis",
+        "given": "Toms"
+      },
+      {
+        "family": "Kronis",
+        "given": "Martins"
+      },
+      {
+        "family": "Pretkalniņš",
+        "given": "Ingus Jānis"
+      },
+      {
+        "family": "Nicmanis",
+        "given": "Dāvis"
+      },
+      {
+        "family": "Jeļinska",
+        "given": "Jeļizaveta"
+      },
+      {
+        "family": "Rozis",
+        "given": "Roberts"
+      },
+      {
+        "family": "Vīksna",
+        "given": "Rinalds"
+      },
+      {
+        "family": "Pinnis",
+        "given": "Mārcis"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          9
+        ]
+      ]
+    },
+    "abstract": "Large language models often underperform in many European languages due to the dominance of English and a few high-resource languages in training data. This paper presents TildeOpen LLM, a 30-billion-parameter open-weight foundational model trained for 34 European languages to promote linguistic equity and improve performance for low-resource languages. To address the data imbalance, we combine dataset upsampling with a curriculum-based training schedule that alternates between uniform and natural language distributions. The resulting model performs favorably compared to other multilingual LLMs despite being trained with significantly fewer computing resources. Evaluation across multiple multilingual benchmarks shows that TildeOpen surpasses existing open-weight models in text generation and comprehension, particularly for Baltic, Finno-Ugric, and Slavic languages. Human evaluations confirm an up to tenfold reduction in linguistic errors relative to leading baselines. The model and associated resources are fully open-weight and publicly available at huggingface.co/TildeAI/TildeOpen-30b. These outcomes demonstrate that careful data curation and balanced training strategies can substantially enhance multilingual model quality without increasing model size or training volume.",
+    "URL": "http://arxiv.org/abs/2603.08182v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.08406",
+    "type": "report",
+    "title": "Sandpiper: Orchestrated AI-Annotation for Educational Discourse at Scale",
+    "author": [
+      {
+        "family": "Hedley",
+        "given": "Daryl"
+      },
+      {
+        "family": "Pietrzak",
+        "given": "Doug"
+      },
+      {
+        "family": "Dias",
+        "given": "Jorge"
+      },
+      {
+        "family": "Burden",
+        "given": "Ian"
+      },
+      {
+        "family": "Ahtisham",
+        "given": "Bakhtawar"
+      },
+      {
+        "family": "Zhou",
+        "given": "Zhuqian"
+      },
+      {
+        "family": "Vanacore",
+        "given": "Kirk"
+      },
+      {
+        "family": "Marland",
+        "given": "Josh"
+      },
+      {
+        "family": "Slama",
+        "given": "Rachel"
+      },
+      {
+        "family": "Reich",
+        "given": "Justin"
+      },
+      {
+        "family": "Koedinger",
+        "given": "Kenneth"
+      },
+      {
+        "family": "Kizilcec",
+        "given": "René"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          9
+        ]
+      ]
+    },
+    "abstract": "Digital educational environments are expanding toward complex AI and human discourse, providing researchers with an abundance of data that offers deep insights into learning and instructional processes. However, traditional qualitative analysis remains a labor-intensive bottleneck, severely limiting the scale at which this research can be conducted. We present Sandpiper, a mixed-initiative system designed to serve as a bridge between high-volume conversational data and human qualitative expertise. By tightly coupling interactive researcher dashboards with agentic Large Language Model (LLM) engines, the platform enables scalable analysis without sacrificing methodological rigor. Sandpiper addresses critical barriers to AI adoption in education by implementing context-aware, automated de-identification workflows supported by secure, university-housed infrastructure to ensure data privacy. Furthermore, the system employs schema-constrained orchestration to eliminate LLM hallucinations and enforces strict adherence to qualitative codebooks. An integrated evaluations engine allows for the continuous benchmarking of AI performance against human labels, fostering an iterative approach to model refinement and validation. We propose a user study to evaluate the system's efficacy in improving research efficiency, inter-rater reliability, and researcher trust in AI-assisted qualitative workflows.",
+    "URL": "http://arxiv.org/abs/2603.08406v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.09326",
+    "type": "report",
+    "title": "OddGridBench: Exposing the Lack of Fine-Grained Visual Discrepancy Sensitivity in Multimodal Large Language Models",
+    "author": [
+      {
+        "family": "Weng",
+        "given": "Tengjin"
+      },
+      {
+        "family": "Jiang",
+        "given": "Wenhao"
+      },
+      {
+        "family": "Wang",
+        "given": "Jingyi"
+      },
+      {
+        "family": "Li",
+        "given": "Ming"
+      },
+      {
+        "family": "Ma",
+        "given": "Lin"
+      },
+      {
+        "family": "Ming",
+        "given": "Zhong"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          10
+        ]
+      ]
+    },
+    "abstract": "Multimodal large language models (MLLMs) have achieved remarkable performance across a wide range of vision language tasks. However, their ability in low-level visual perception, particularly in detecting fine-grained visual discrepancies, remains underexplored and lacks systematic analysis. In this work, we introduce OddGridBench, a controllable benchmark for evaluating the visual discrepancy sensitivity of MLLMs. OddGridBench comprises over 1,400 grid-based images, where a single element differs from all others by one or multiple visual attributes such as color, size, rotation, or position. Experiments reveal that all evaluated MLLMs, including open-source families such as Qwen3-VL and InternVL3.5, and proprietary systems like Gemini-2.5-Pro and GPT-5, perform far below human levels in visual discrepancy detection. We further propose OddGrid-GRPO, a reinforcement learning framework that integrates curriculum learning and distance-aware reward. By progressively controlling the difficulty of training samples and incorporating spatial proximity constraints into the reward design, OddGrid-GRPO significantly enhances the model's fine-grained visual discrimination ability. We hope OddGridBench and OddGrid-GRPO will lay the groundwork for advancing perceptual grounding and visual discrepancy sensitivity in multimodal intelligence. Code and dataset are available at https://wwwtttjjj.github.io/OddGridBench/.",
+    "URL": "http://arxiv.org/abs/2603.09326v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.09536",
+    "type": "report",
+    "title": "Dynamic Multimodal Expression Generation for LLM-Driven Pedagogical Agents: From User Experience Perspective",
+    "author": [
+      {
+        "family": "Wan",
+        "given": "Ninghao"
+      },
+      {
+        "family": "Song",
+        "given": "Jiarun"
+      },
+      {
+        "family": "Yang",
+        "given": "Fuzheng"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          10
+        ]
+      ]
+    },
+    "abstract": "In virtual reality (VR) educational scenarios, Pedagogical agents (PAs) enhance immersive learning through realistic appearances and interactive behaviors. However, most existing PAs rely on static speech and simple gestures. This limitation reduces their ability to dynamically adapt to the semantic context of instructional content. As a result, interactions often lack naturalness and effectiveness in the teaching process. To address this challenge, this study proposes a large language model (LLM)-driven multimodal expression generation method that constructs semantically sensitive prompts to generate coordinated speech and gesture instructions, enabling dynamic alignment between instructional semantics and multimodal expressive behaviors. A VR-based PA prototype was developed and evaluated through user experience-oriented subjective experiments. Results indicate that dynamically generated multimodal expressions significantly enhance learners' perceived learning effectiveness, engagement, and intention to use, while effectively alleviating feelings of fatigue and boredom during the learning process. Furthermore, the combined dynamic expression of speech and gestures notably enhances learners' perceptions of human-likeness and social presence. The findings provide new insights and design guidelines for building more immersive and naturally expressive intelligent PAs.",
+    "URL": "http://arxiv.org/abs/2603.09536v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.09599",
+    "type": "report",
+    "title": "Preparing Students for AI-Driven Agile Development: A Project-Based AI Engineering Curriculum",
+    "author": [
+      {
+        "family": "Rausch",
+        "given": "Andreas"
+      },
+      {
+        "family": "Wittek",
+        "given": "Stefan"
+      },
+      {
+        "family": "Geger",
+        "given": "Tobias"
+      },
+      {
+        "family": "Inkermann",
+        "given": "David"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          10
+        ]
+      ]
+    },
+    "abstract": "Generative AI and agentic tools are reshaping agile software development, yet many engineering curricula still teach agile methods and AI competencies separately and largely lecture-based. This paper presents a project-based AI Engineering curriculum designed to prepare students for AI-driven agile development by integrating agile practices and AI-enabled engineering throughout the program. We contribute (1) the curriculum concept and guiding principles, (2) a case study of interdisciplinary, AI-enabled agile student projects, and (3) early evidence from a mixed-methods evaluation. In our case study, second-semester bachelor students work in teams over seven two-week sprints on a realistic software product. AI tools are embedded into everyday agile engineering tasks - requirements clarification, backlog refinement, architectural reasoning, coding support, testing, and documentation - paired with reflection on human responsibility and quality. Initial results indicate that the integrated approach supports hands-on competence development in AI-assisted engineering. Key observations highlight the need for agile teaching adaptations due to rapid tool evolution, the critical role of oral verification to ensure foundational learning. We close with lessons learned and recommendations for educators designing agile project-based curricula in the age of AI.",
+    "URL": "http://arxiv.org/abs/2603.09599v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.10233",
+    "type": "report",
+    "title": "S-GRADES -- Studying Generalization of Student Response Assessments in Diverse Evaluative Settings",
+    "author": [
+      {
+        "family": "Seuti",
+        "given": "Tasfia"
+      },
+      {
+        "family": "Choudhury",
+        "given": "Sagnik Ray"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          10
+        ]
+      ]
+    },
+    "abstract": "Evaluating student responses, from long essays to short factual answers, is a key challenge in educational NLP. Automated Essay Scoring (AES) focuses on holistic writing qualities such as coherence and argumentation, while Automatic Short Answer Grading (ASAG) emphasizes factual correctness and conceptual understanding. Despite their shared goal, these paradigms have progressed in isolation with fragmented datasets, inconsistent metrics, and separate communities. We introduce S-GRADES (Studying Generalization of Student Response Assessments in Diverse Evaluative Settings), a web-based benchmark that consolidates 14 diverse grading datasets under a unified interface with standardized access and reproducible evaluation protocols. The benchmark is fully open-source and designed for extensibility, enabling continuous integration of new datasets and evaluation settings. To demonstrate the utility of S-GRADES, we evaluate three state-of-the-art large language models across the benchmark using multiple reasoning strategies in prompting. We further examine the effects of exemplar selection and cross-dataset exemplar transfer. Our analyses illustrate how benchmark-driven evaluation reveals reliability and generalization gaps across essay and short-answer grading tasks, highlighting the importance of standardized, cross-paradigm assessment.",
+    "URL": "http://arxiv.org/abs/2603.10233v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.10450",
+    "type": "report",
+    "title": "Geist in the Machine: Simulating Recognition and Inner Dialogue in AI-Mediated Teaching and Research",
+    "author": [
+      {
+        "family": "Magee",
+        "given": "Liam"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          11
+        ]
+      ]
+    },
+    "abstract": "This paper describes an AI tutoring system built upon two psycho-social theoretic constructs: Hegelian recognition and Freudian psychodynamics. Two related interventions are proposed: recognition-enhanced prompts that instruct an AI tutor to treat the learner as an autonomous subject, and a multi-agent ego/superego architecture where an internal critic reviews tutor output. The paper also describes the nature of the human/machine relationship involved in this research itself, employing a reflexive methodology: Claude Code (Opus 4.5/4.6) builds, evaluates, and documents the AI tutor by authoring a companion scientific paper - a process termed \"vibe scholarship\" - in conjunction with human prompting and suggestion, which is itself documented and analyzed. The companion paper, included as appendix, reports a factorial evaluation across three generation models (DeepSeek V3.2, Haiku 4.5, Gemini Flash 3.0), finding recognition-enhanced prompts produce large, model-independent improvements (d=1.34-1.92) through a calibration mechanism that raises the floor of tutor performance. This result, significant in itself, is combined with the qualitative reflections in this paper to consider impacts of AI on the delicate dynamics of student / teacher and assistant / researcher relations.",
+    "URL": "http://arxiv.org/abs/2603.10450v2",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.10679",
+    "type": "report",
+    "title": "From Education to Evidence: A Collaborative Practice Research Platform for AI-Integrated Agile Development",
+    "author": [
+      {
+        "family": "Geger",
+        "given": "Tobias"
+      },
+      {
+        "family": "Rausch",
+        "given": "Andreas"
+      },
+      {
+        "family": "Schiering",
+        "given": "Ina"
+      },
+      {
+        "family": "Stenzel",
+        "given": "Frauke"
+      },
+      {
+        "family": "Wittek",
+        "given": "Stefan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          11
+        ]
+      ]
+    },
+    "abstract": "Agile software development evolves so rapidly that research struggles to remain timely and transferable - an issue heightened by the swift adoption of generative AI and agentic tools. Earlier discussions highlight theory and time gaps, leading to results that often lack clear reuse conditions or arrive too late for practical decisions. This paper introduces a project-based, AI-integrated agile education platform as a collaborative research environment, positioned between controlled studies and real-world industry. The platform enables rapid inquiry through sprint rhythms, quality gates, and genuine stakeholder involvement. We present a framework specifying iteration structures, recurring events, and quality gates for AI-assisted engineering artifacts. Early results from several semesters - covering project pipeline, cohort growth, and stakeholder participation - show the platform's potential to generate practice-relevant evidence efficiently and with reusable context. Finally, we outline future steps to enhance governance and evidence capture.",
+    "URL": "http://arxiv.org/abs/2603.10679v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.11027",
+    "type": "report",
+    "title": "Beyond the Illusion of Consensus: From Surface Heuristics to Knowledge-Grounded Evaluation in LLM-as-a-Judge",
+    "author": [
+      {
+        "family": "Song",
+        "given": "Mingyang"
+      },
+      {
+        "family": "Zheng",
+        "given": "Mao"
+      },
+      {
+        "family": "Xu",
+        "given": "Chenning"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          11
+        ]
+      ]
+    },
+    "abstract": "The paradigm of LLM-as-a-judge relies on a critical assumption, namely that high inter-evaluator agreement indicates reliable and objective evaluation. We present two complementary findings that challenge this assumption. \\textbf{First}, we demonstrate that this consensus is frequently illusory. We identify and formalize \\textbf{Evaluation Illusion}, a phenomenon where LLM judges generate sophisticated critiques yet anchor scores on shared surface heuristics rather than substantive quality. Through a large-scale study of 105,600 evaluation instances (32 LLMs $\\times$ 3 frontier judges $\\times$ 100 tasks $\\times$ 11 temperatures), we show that model-level agreement (Spearman $ρ= 0.99$) masks fragile sample-level agreement (Pearson $\\bar{r} = 0.72$; absolute agreement ICC $= 0.67$), that merely sharing rubric structure restores 62\\% of total agreement, and that high-quality outputs paradoxically receive the \\textit{least} consistent evaluations. \\textbf{Second}, we demonstrate that dynamically generating evaluation rubrics grounded in domain knowledge produces more meaningful assessment. We introduce MERG (Metacognitive Enhanced Rubric Generation), a knowledge-driven rubric generation framework whose domain-selective effects confirm this. Agreement \\textit{increases} in codified domains (Education +22\\%, Academic +27\\%) where knowledge anchors evaluators on shared standards, while it decreases in subjective domains where genuine evaluative pluralism emerges. These findings suggest that evaluation rubrics should be dynamically enriched with expert knowledge rather than relying on generic criteria, with implications for reward modeling in RLAIF.",
+    "URL": "http://arxiv.org/abs/2603.11027v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.11193",
+    "type": "report",
+    "title": "DeReason: A Difficulty-Aware Curriculum Improves Decoupled SFT-then-RL Training for General Reasoning",
+    "author": [
+      {
+        "family": "Hu",
+        "given": "Hanxu"
+      },
+      {
+        "family": "Wang",
+        "given": "Yuxuan"
+      },
+      {
+        "family": "Huan",
+        "given": "Maggie"
+      },
+      {
+        "family": "Vamvas",
+        "given": "Jannis"
+      },
+      {
+        "family": "Huang",
+        "given": "Yinya"
+      },
+      {
+        "family": "Guo",
+        "given": "Zhijiang"
+      },
+      {
+        "family": "Sennrich",
+        "given": "Rico"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          11
+        ]
+      ]
+    },
+    "abstract": "Reinforcement learning with Verifiable Rewards (RLVR) has emerged as a powerful paradigm for eliciting reasoning capabilities in large language models, particularly in mathematics and coding. While recent efforts have extended this paradigm to broader general scientific (STEM) domains, the complex interplay between supervised fine-tuning (SFT) and RL in these contexts remains underexplored. In this paper, we conduct controlled experiments revealing a critical challenge: for general STEM domains, RL applied directly to base models is highly sample-inefficient and is consistently surpassed by supervised fine-tuning (SFT) on moderate-quality responses. Yet sequential SFT followed by RL can further improve performance, suggesting that the two stages play complementary roles, and that how training data is allocated between them matters. Therefore, we propose DeReason, a difficulty-based data decoupling strategy for general reasoning. DeReason partitions training data by reasoning intensity estimated via LLM-based scoring into reasoning-intensive and non-reasoning-intensive subsets. It allocates broad-coverage, non-reasoning-intensive problems to SFT to establish foundational domain knowledge, and reserves a focused subset of difficult problems for RL to cultivate complex reasoning. We demonstrate that this principled decoupling yields better performance than randomly splitting the data for sequential SFT and RL. Extensive experiments on general STEM and mathematical benchmarks demonstrate that our decoupled curriculum training significantly outperforms SFT-only, RL-only, and random-split baselines. Our work provides a systematic study of the interplay between SFT and RL for general reasoning, offering a highly effective and generalized post-training recipe.",
+    "URL": "http://arxiv.org/abs/2603.11193v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.11709",
+    "type": "report",
+    "title": "Scaling Laws for Educational AI Agents",
+    "author": [
+      {
+        "family": "Wu",
+        "given": "Mengsong"
+      },
+      {
+        "family": "Hao",
+        "given": "Hao"
+      },
+      {
+        "family": "Bi",
+        "given": "Shuzhen"
+      },
+      {
+        "family": "Li",
+        "given": "Keqian"
+      },
+      {
+        "family": "Liu",
+        "given": "Wentao"
+      },
+      {
+        "family": "Song",
+        "given": "Siyu"
+      },
+      {
+        "family": "Zhao",
+        "given": "Hongbo"
+      },
+      {
+        "family": "Zhou",
+        "given": "Aimin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          12
+        ]
+      ]
+    },
+    "abstract": "While scaling laws for Large Language Models (LLMs) have been extensively studied along dimensions of model parameters, training data, and compute, the scaling behavior of LLM-based educational agents remains unexplored. We propose that educational agent capability scales not merely with the underlying model size, but through structured dimensions that we collectively term the Agent Scaling Law: role definition clarity, skill depth, tool completeness, runtime capability, and educator expertise injection. Central to this framework is AgentProfile, a structured JSON-based specification that serves as the mechanism enabling systematic capability growth of educational agents. We present EduClaw, a profile-driven multi-agent platform that operationalizes this scaling law, demonstrating its effectiveness through the construction and deployment of 330+ educational agent profiles encompassing 1,100+ skill modules across K-12 subjects. Our empirical observations suggest that educational agent performance scales predictably with profile structural richness. We identify two complementary scaling axes -- Tool Scaling and Skill Scaling -- as future directions, arguing that the path to more capable educational AI lies not solely in larger models, but in stronger structured capability systems.",
+    "URL": "http://arxiv.org/abs/2603.11709v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.12154",
+    "type": "report",
+    "title": "Investigating student perceptions of creativity and generative ai in computational physics",
+    "author": [
+      {
+        "family": "Her",
+        "given": "Pachi"
+      },
+      {
+        "family": "Hamerski",
+        "given": "Patti"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          12
+        ]
+      ]
+    },
+    "abstract": "Generative Artificial Intelligence (gen-AI) is rapidly becoming more integrated into today's classrooms in all ranges of education. In higher education, Gen-AI is often seen as a resource for students, aiding them in drafting outlines, solving simple mathematical problems, or even decoding or constructing code. In this paper, we analyze essay-based interviews (N=6) from an upper-division computational physics course, in which physics majors addressed their views and attitudes towards Gen-AI and how it affects their learning. We analyzed the concepts of creativity and gen-AI using the Four C Model, a framework encompassing four types of creativity. Our analysis of the data involved coding and characterizing students' definitions of creativity and generative AI. Our findings revealed two main observations: first, students conceptualized their creativity primarily within mini-c and little-c; second, students perceived gen-AI as a resource and learning tool but expressed skepticism regarding its accuracy and creativity.",
+    "DOI": "10.1119/perc.2024.pr.Her",
+    "URL": "https://doi.org/10.1119/perc.2024.pr.Her",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.12463",
+    "type": "report",
+    "title": "The Future of Feedback: How Can AI Help Transform Feedback to Be More Engaging, Effective, and Scalable?",
+    "author": [
+      {
+        "family": "Meyer",
+        "given": "Jennifer"
+      },
+      {
+        "family": "Köller",
+        "given": "Olaf"
+      },
+      {
+        "family": "Jansen",
+        "given": "Thorben"
+      },
+      {
+        "family": "Fleckenstein",
+        "given": "Johanna"
+      },
+      {
+        "family": "Asher",
+        "given": "Michael W."
+      },
+      {
+        "family": "Bichler",
+        "given": "Sarah"
+      },
+      {
+        "family": "Brandl",
+        "given": "Laura"
+      },
+      {
+        "family": "Breitwieser",
+        "given": "Jasmin"
+      },
+      {
+        "family": "Cortina",
+        "given": "Kai S."
+      },
+      {
+        "family": "Cukurova",
+        "given": "Mutlu"
+      },
+      {
+        "family": "Daumiller",
+        "given": "Martin"
+      },
+      {
+        "family": "Deininger",
+        "given": "Hannah"
+      },
+      {
+        "family": "Fischer",
+        "given": "Frank"
+      },
+      {
+        "family": "Gašević",
+        "given": "Dragan"
+      },
+      {
+        "family": "Grütter",
+        "given": "Jeanine"
+      },
+      {
+        "family": "Hilz",
+        "given": "Anna"
+      },
+      {
+        "family": "Jivet",
+        "given": "Ioana"
+      },
+      {
+        "family": "Jovanović",
+        "given": "Jelena"
+      },
+      {
+        "family": "Kizilcec",
+        "given": "Rene F."
+      },
+      {
+        "family": "Kuklick",
+        "given": "Livia"
+      },
+      {
+        "family": "Lindner",
+        "given": "Marlit Annalena"
+      },
+      {
+        "family": "Lipnevich",
+        "given": "Anastasiya"
+      },
+      {
+        "family": "Mertens",
+        "given": "Ute"
+      },
+      {
+        "family": "Meurers",
+        "given": "Detmar"
+      },
+      {
+        "family": "Murayama",
+        "given": "Kou"
+      },
+      {
+        "family": "Nazaretsky",
+        "given": "Tanya"
+      },
+      {
+        "family": "Neumann",
+        "given": "Knut"
+      },
+      {
+        "family": "Panadero",
+        "given": "Ernesto"
+      },
+      {
+        "family": "Pankiewicz",
+        "given": "Maciej"
+      },
+      {
+        "family": "Pardos",
+        "given": "Zachary A."
+      },
+      {
+        "family": "Piech",
+        "given": "Chris"
+      },
+      {
+        "family": "Pünjer",
+        "given": "Hannah"
+      },
+      {
+        "family": "Rummel",
+        "given": "Nikol"
+      },
+      {
+        "family": "Steinbach",
+        "given": "Marlene"
+      },
+      {
+        "family": "Viberg",
+        "given": "Olga"
+      },
+      {
+        "family": "Winstone",
+        "given": "Naomi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          12
+        ]
+      ]
+    },
+    "abstract": "With digital learning environments becoming more prevalent, the ease with which generative AI enables the scalable production of real-time, automated feedback holds the potential to reshape learning and teaching experiences. This meeting report synthesizes the interdisciplinary perspectives of 50 scholars from educational psychology, computer science, science education, and the learning sciences on the use of generative AI for feedback and its promises and risks in educational practice. We highlight points of convergence in the scholarship, identify areas of debate and unresolved challenges, and outline open questions and future directions for research and educational practice that emerged from structured small-group activities designed to bridge disciplinary barriers.",
+    "URL": "http://arxiv.org/abs/2603.12463v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.12471",
+    "type": "report",
+    "title": "Marked Pedagogies: Examining Linguistic Biases in Personalized Automated Writing Feedback",
+    "author": [
+      {
+        "family": "Tan",
+        "given": "Mei"
+      },
+      {
+        "family": "Phalen",
+        "given": "Lena"
+      },
+      {
+        "family": "Demszky",
+        "given": "Dorottya"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          12
+        ]
+      ]
+    },
+    "abstract": "Effective personalized feedback is critical to students' literacy development. Though LLM-powered tools now promise to automate such feedback at scale, LLMs are not language-neutral: they privilege standard academic English and reproduce social stereotypes, raising concerns about how \"personalization\" shapes the feedback students receive. We examine how four widely used LLMs (GPT-4o, GPT-3.5-turbo, Llama-3.3 70B, Llama-3.1 8B) adapt written feedback in response to student attributes. Using 600 eighth-grade persuasive essays from the PERSUADE dataset, we generated feedback under prompt conditions embedding gender, race/ethnicity, learning needs, achievement, and motivation. We analyze lexical shifts across model outputs by adapting the Marked Words framework. Our results reveal systematic, stereotype-aligned shifts in feedback conditioned on presumed student attributes--even when essay content was identical. Feedback for students marked by race, language, or disability often exhibited positive feedback bias and feedback withholding bias--overuse of praise, less substantive critique, and assumptions of limited ability. Across attributes, models tailored not only what content was emphasized but also how writing was judged and how students were addressed. We term these instructional orientations Marked Pedagogies and highlight the need for transparency and accountability in automated feedback tools.",
+    "DOI": "10.1145/3785022.3785113",
+    "URL": "https://doi.org/10.1145/3785022.3785113",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.12600",
+    "type": "report",
+    "title": "How GenAI Mentor Configurations Shape Early Collaborative Dynamics: A Classroom Comparison of Individual and Shared Agents",
+    "author": [
+      {
+        "family": "Zha",
+        "given": "Siyu"
+      },
+      {
+        "family": "Liu",
+        "given": "Weijing"
+      },
+      {
+        "family": "Qin",
+        "given": "Fei"
+      },
+      {
+        "family": "Cao",
+        "given": "Jie"
+      },
+      {
+        "family": "Wang",
+        "given": "Yanjin"
+      },
+      {
+        "family": "Liu",
+        "given": "Yujia"
+      },
+      {
+        "family": "Zhang",
+        "given": "Kaiyi"
+      },
+      {
+        "family": "Gong",
+        "given": "Jiangtao"
+      },
+      {
+        "family": "Xu",
+        "given": "Yingqing"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          13
+        ]
+      ]
+    },
+    "abstract": "Generative artificial intelligence (GenAI) is increasingly embedded in computer-supported collaborative learning (CSCL), yet little empirical research has unpacked how different configurations of AI participation reshape collaborative processes. This study investigates how GenAI configuration shapes collaborative regulation in authentic classroom settings. Two eighth-grade classes engaged in small-group creative problem-solving under two conditions: a shared-AI configuration, in which each group interacted with a single AI mentor, and an individual-AI configuration, in which each student accessed a personal AI instance. Using multi-layer discourse coding combined with lag sequential analysis (LSA) and ordered network analysis (ONA), we examined interaction distribution, AI-student coupling, shared regulation processes, and teacher orchestration. Results reveal distinct regulatory dynamics across configurations. Shared AI access promoted convergence-oriented collaboration, with stronger alignment of shared regulatory states and more coordinated group-level reasoning. In contrast, individual AI access distributed support across learners, producing more exploratory and evaluative cycles but also more fragmented interaction patterns, accompanied by increased teacher intervention to manage divergence. These findings suggest that AI configuration functions as a structural design variable that reorganizes the regulatory ecology of classroom collaboration.",
+    "URL": "http://arxiv.org/abs/2603.12600v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.12781",
+    "type": "report",
+    "title": "The RIGID Framework: Research-Integrated, Generative AI-Mediated Instructional Design",
+    "author": [
+      {
+        "family": "Kwak",
+        "given": "Yerin"
+      },
+      {
+        "family": "Pardos",
+        "given": "Zachary A."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          13
+        ]
+      ]
+    },
+    "abstract": "Instructional Design (ID) often faces challenges in incorporating research-based knowledge and pedagogical best practices. Although educational researchers and government agencies emphasize grounding ID in evidence, integrating research findings into everyday design workflows is often complex, as it requires considering multiple context-specific demands and constraints. To address this persistent gap, this paper explores how research in the learning sciences (LS) can be systematically integrated across ID workflows and how recent advances in generative AI can help operationalize this integration. While ID and LS share a commitment to improving learning experiences through design-oriented approaches in authentic contexts, structured integration between the two fields remains limited, leaving their complementary insights underutilized. We present RIGID (Research-Integrated, Generative AI-Mediated Instructional Design), a unified framework that integrates LS research across ID workflows spanning analysis, design, implementation, and evaluation phases, while leveraging generative AI to mediate this integration at each stage. The RIGID framework provides a systematic approach for enabling research-integrated instructional design that is both operational and context-sensitive, while preserving the central role of human expertise.",
+    "URL": "http://arxiv.org/abs/2603.12781v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.12925",
+    "type": "report",
+    "title": "Teaching Agile Requirements Engineering: A Stakeholder Simulation with Generative AI",
+    "author": [
+      {
+        "family": "Schön",
+        "given": "Eva-Maria"
+      },
+      {
+        "family": "Neumann",
+        "given": "Michael"
+      },
+      {
+        "family": "Silva",
+        "given": "Tiago Silva da"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          13
+        ]
+      ]
+    },
+    "abstract": "Context: The active involvement of users and customers in agile software development remains a persistent challenge in practice. For this reason, it is important that students in higher education become familiar with good practices in Agile Requirements Engineering during their studies. Objective: Our objective is to enable students to learn how to interact with Generative Artificial Intelligence (GenAI) through the use of a stakeholder simulation with AI Personas, while also developing an understanding of the limitations of AI tools in practical contexts. Method: In our courses, we employ a stakeholder simulation using GenAI, in which students conduct interviews with AI Personas through a provided meta-prompt. Based on the outcomes of these interviews, students apply agile practices (e.g., story mapping or impact mapping) to document requirements. The use of GenAI is subsequently reflected upon in a structured group discussion. Results: Through this approach, students gain practical experience by applying state-of-the art agile practices for requirements elicitation and documentation while simultaneously developing an understanding of the technical and ethical limitations associated with the use of generative AI. Conclusion: We have applied this approach over several terms and found that using a meta-prompt provides flexibility, allowing us to remain independent of specific large language model providers.",
+    "URL": "http://arxiv.org/abs/2603.12925v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2603.13083",
+    "type": "report",
+    "title": "Human-in-the-Loop LLM Grading for Handwritten Mathematics Assessments",
+    "author": [
+      {
+        "family": "Vanhoyweghen",
+        "given": "Arne"
+      },
+      {
+        "family": "Holst",
+        "given": "Vincent"
+      },
+      {
+        "family": "Mobini",
+        "given": "Melika"
+      },
+      {
+        "family": "Voorde",
+        "given": "Lukas Van de"
+      },
+      {
+        "family": "Vanleke",
+        "given": "Tibo"
+      },
+      {
+        "family": "Verbruggen",
+        "given": "Bert"
+      },
+      {
+        "family": "Verbeken",
+        "given": "Brecht"
+      },
+      {
+        "family": "Algaba",
+        "given": "Andres"
+      },
+      {
+        "family": "Verboven",
+        "given": "Sam"
+      },
+      {
+        "family": "Guerry",
+        "given": "Marie-Anne"
+      },
+      {
+        "family": "Droogenbroeck",
+        "given": "Filip Van"
+      },
+      {
+        "family": "Ginis",
+        "given": "Vincent"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          13
+        ]
+      ]
+    },
+    "abstract": "Providing timely and individualised feedback on handwritten student work is highly beneficial for learning but difficult to achieve at scale. This challenge has become more pressing as generative AI undermines the reliability of take-home assessments, shifting emphasis toward supervised, in-class evaluation. We present a scalable, end-to-end workflow for LLM-assisted grading of short, pen-and-paper assessments. The workflow spans (1) constructing solution keys, (2) developing detailed rubric-style grading keys used to guide the LLM, and (3) a grading procedure that combines automated scanning and anonymisation, multi-pass LLM scoring, automated consistency checks, and mandatory human verification. We deploy the system in two undergraduate mathematics courses using six low-stakes in-class tests. Empirically, LLM assistance reduces grading time by approximately 23% while achieving agreement comparable to, and in several cases tighter than, fully manual grading. Occasional model errors occur but are effectively contained by the hybrid design. Overall, our results show that carefully embedded human-in-the-loop LLM grading can substantially reduce workload while maintaining fairness and accuracy.",
+    "URL": "http://arxiv.org/abs/2603.13083v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "openalex:W4416703105",
     "type": "article-journal",
     "title": "Leveraging prompt-based LLMs for automated scoring and feedback generation in higher education",
@@ -15409,6 +16563,62 @@
     "container-title": "Computers & Education"
   },
   {
+    "id": "openalex:W7117365585",
+    "type": "article-journal",
+    "title": "Conceptualising faculty digital literacy for online teaching in higher education: perceptions, practices and pedagogical implications",
+    "author": [
+      {
+        "family": "Zhang",
+        "given": "Zhe (Victor)"
+      },
+      {
+        "family": "Tarazi",
+        "given": "Ayat"
+      },
+      {
+        "family": "Ruiz-Cecilia",
+        "given": "Raúl"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          26
+        ]
+      ]
+    },
+    "abstract": "Motivated by the lack of systematic research on faculty digital literacy for online teaching in higher education across developing countries, this study seeks to conceptualise the construct of faculty digital literacy by exploring faculty perceptions and practices in online teaching in Palestinian universities. Drawing on the data collected from questionnaires, interviews and course materials, the study found that faculty showed varied perceptions of online teaching and demonstrated different pedagogical practices in online teaching. The differences in their perceptions and practices appeared to be influenced by varying levels of faculty digital literacy for online teaching in higher education, which was conceptualised in the study as (1) knowledge of affordances and constraints of digital tools, (2) competence to access, evaluate, and create digital content (3) awareness of ethical digital engagement, and (4) willingness to engage in lifelong learning in the digital era. The study also found that all participating teachers recognised the need to support digital transformation amidst social and political turbulence in Palestine. The study concludes by outlining pedagogical implications for online higher education in developing countries.",
+    "DOI": "10.1080/03075079.2025.2604101",
+    "URL": "https://doi.org/10.1080/03075079.2025.2604101",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7117487685",
+    "type": "article-journal",
+    "title": "What do we mean by “AI Integration”? Toward a typology of integrating artificial intelligence in higher education",
+    "author": [
+      {
+        "family": "Hou",
+        "given": "Yulu"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          29
+        ]
+      ]
+    },
+    "abstract": "Abstract Artificial intelligence (AI) is widely recognized as a transformative force in higher education, yet the term “AI integration” remains conceptually underdeveloped. As institutions increasingly adopt AI for teaching, learning, and administrative functions, it becomes urgent to clarify what integration entails. This article proposes a typology of AI integration consisting of three interrelated dimensions: (1) AI as pedagogical infrastructure, which includes tools and platforms that support instruction and academic operations; (2) AI as curricular or professional content, which concerns the teaching of AI-related knowledge and skills; and (3) AI as sociotechnical context, which frames AI as a structural and cultural force shaping educational norms and institutional values. Drawing on insights from educational technology, curriculum studies, and sociotechnical systems, the typology offers a structured lens to support intentional, reflective, and context-sensitive approaches to AI adoption in higher education. By identifying distinct assumptions and implications tied to each dimension, the article contributes to ongoing discussions about equity, ethics, and institutional change in the digital age.",
+    "DOI": "10.1007/s10734-025-01603-z",
+    "URL": "https://doi.org/10.1007/s10734-025-01603-z",
+    "container-title": "Higher Education"
+  },
+  {
     "id": "openalex:W7128439520",
     "type": "article-journal",
     "title": "Assetizing academic content and the emergence of the ‘assetizen’: education platforms, publisher databases, and AI model training",
@@ -15442,6 +16652,62 @@
     "abstract": "Academic content, such as teaching materials and academic publications, has become an economic resource. This has occurred through assetization as the key economic regime in contemporary techno-capitalism. We analyse three cases of academic content being made into revenue-generating assets: (1) universities enclosing online learning content, (2) EdTech platform companies building databases of academic assignments and manuscripts, and (3) academic publishers licensing academic publications to Generative AI companies to train Large Language Models. We find that the licensing of intellectual property rights is the technical-legal instrument that enables assetization and acquisition of proprietary power. This enclosure of economic value has significant consequences for the higher education sector. It (i) changes how academic content is valued and governed, (ii) constructs markets in which assetized content brings economic value to licence holders, and (iii) impacts on core higher education processes, including teaching and learning, pedagogic relations, and staff and student rights. Assetization of academic content (and assetization in HE more broadly) constructs students and staff as a new kind of economic actor – an ‘assetizen’. The assetizen is subject to contract and property law, with diminished educational and social rights as assetization becomes a governance principle in higher education.",
     "DOI": "10.1007/s10734-025-01622-w",
     "URL": "https://doi.org/10.1007/s10734-025-01622-w",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7128685474",
+    "type": "article-journal",
+    "title": "Affective economies of AI in digitalised higher education",
+    "author": [
+      {
+        "family": "Gravett",
+        "given": "Karen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          12
+        ]
+      ]
+    },
+    "abstract": "Abstract The integration of Generative Artificial Intelligence (GenAI) in higher education has meant that universities are experiencing a significant period of uncertainty and flux. The need to understand how GenAI technologies are shaping students’ evolving experiences of higher education is important. This paper asks: what work do emotions do within the way educators and students engage with AI? Engaging Sara Ahmed’s concept of affective economies , and Raymond Williams’ structures of feeling , to explore connections between digital technologies and emotions, I examine how emotions are not simply internal experiences, but circulate through texts, bodies, objects and institutions. Analysing examples of institutional guidelines for students’ use of GenAI technologies, I surface how feelings of excitement, ambivalence, and anxiety imbue current educational AI discourses. I consider how we might understand these emotions and discourses, including how such discourses risk perpetuating educational cultures premised on notions of individualism, as opposed to inclusivity. As AI conversations evolve, I argue that educators should continue to examine the work that emotions do, as well as exploring more collective responses to AI pedagogies.",
+    "DOI": "10.1007/s10734-026-01628-y",
+    "URL": "https://doi.org/10.1007/s10734-026-01628-y",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7128922602",
+    "type": "article-journal",
+    "title": "The internationalization of for-profit higher education institutions in the United States: Seeking legitimacy and responding to market forces via international student mobility",
+    "author": [
+      {
+        "family": "Otto",
+        "given": "Jonah M."
+      },
+      {
+        "family": "Whatley",
+        "given": "Melissa"
+      },
+      {
+        "family": "Salto",
+        "given": "Dante J."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          14
+        ]
+      ]
+    },
+    "abstract": "Institutional internationalization has been extensively researched in US higher education, particularly with reference to the public and private nonprofit four-year sector. This study contributes to an emerging body of literature that explores internationalization in other higher education sectors and forms, using an explanatory mixed methods research approach to examine for-profit higher education institutions. We draw from business, economics, and sociology literature to develop a theoretical framework that helps explain observed internationalization activity within for-profit higher education and apply it to examine trends in in-bound and out-bound international student mobility. Specifically, we focus on the economic rationale for the internationalization of higher education, the notion of for-profit higher education institutions as privately-owned entities, and key theoretical constructs, namely neo-institutionalism, market imperfection, and niche market orientation. The quantitative portion of our study helps us to understand the extent to which actual in-bound and intended out-bound international student mobility is present in for-profit US higher education. Our qualitative analysis informs how for-profit institutions market themselves to compete for international students, what strategies these institutions use to promote study abroad, and the relevance of an institution’s market niche regarding student mobility. Our findings indicate that while neo-institutional theory, market imperfections, and niche market orientation help us understand international student mobility in for-profit higher education, these institutions also vary in which activities and target audiences they exhibit such behavior toward. Given the significant role that for-profit institutions play in the US higher education landscape, analysis of how and why these institutions engage in aspects of internationalization is warranted.",
+    "DOI": "10.1007/s10734-025-01619-5",
+    "URL": "https://doi.org/10.1007/s10734-025-01619-5",
     "container-title": "Higher Education"
   }
 ]
