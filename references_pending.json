@@ -18297,6 +18297,46 @@
     "container-title": "Computers & Education"
   },
   {
+    "id": "openalex:W7134193096",
+    "type": "article-journal",
+    "title": "The influences of country brand authenticity in transnational higher education: student satisfaction at country-branded universities",
+    "author": [
+      {
+        "family": "Wilkins",
+        "given": "Stephen"
+      },
+      {
+        "family": "Hazzam",
+        "given": "Joe"
+      },
+      {
+        "family": "Khan",
+        "given": "M. Z. Islam"
+      },
+      {
+        "family": "Elsayed",
+        "given": "Mayar Farrag"
+      },
+      {
+        "family": "El-Said",
+        "given": "Osman Ahmed"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          7
+        ]
+      ]
+    },
+    "abstract": "The main purpose of this study was to investigate whether a transnational education institution’s perceived country brand authenticity influences students’ judgements of service quality and their satisfaction with their programme and institution. The research also considers the institution’s brand image. An online survey was used to obtain data from 915 higher education students studying at Chinese, German, and United States-affiliated universities located in Egypt, the Sultanate of Oman, and Bangladesh. It was found that an institution’s perceived country brand authenticity is positively related to students’ judgements of service quality and their overall satisfaction. Also, we found that perceived country brand authenticity is an antecedent of the institution’s brand image, while student satisfaction may be an outcome of brand image. Thus, the results confirm the importance of an institution’s country brand authenticity in influencing students’ attitudes, as well as contributing to a strong institutional brand image. To our knowledge, this is the first study to consider the relationship between country brand authenticity and student satisfaction in higher education. The implications of our findings are discussed.",
+    "DOI": "10.1080/07294360.2026.2639620",
+    "URL": "https://doi.org/10.1080/07294360.2026.2639620",
+    "container-title": "Higher Education Research & Development"
+  },
+  {
     "id": "openalex:W7138921752",
     "type": "article-journal",
     "title": "Emotional attitudes toward the use of ChatGPT in U.S. higher education: a corpus-assisted discourse study",
