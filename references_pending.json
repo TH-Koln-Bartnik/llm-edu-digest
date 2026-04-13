@@ -20203,5 +20203,60 @@
     "DOI": "10.1007/s10734-025-01610-0",
     "URL": "https://doi.org/10.1007/s10734-025-01610-0",
     "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7142392985",
+    "type": "article-journal",
+    "title": "Gendered patterns of knowledge production: examining female academics’ research in higher education research in Japan",
+    "author": [
+      {
+        "family": "Kim",
+        "given": "Yangson"
+      },
+      {
+        "family": "Li",
+        "given": "Xin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          28
+        ]
+      ]
+    },
+    "abstract": "Adopting the lens of epistemic injustice, this study examines the structural positioning of female scholars’ knowledge production in higher education research in Japan. Using bibliometrics combined with a manual thematic analysis of 1,419 domestic and international journal articles, we map gendered patterns in publication visibility, co-authorship network positioning, and thematic centrality, with overall and male-authored patterns as reference points. The findings suggest patterned marginalization along three dimensions. First (participation), generational legacies produce a segmented field in which a younger, later-entering female cohort remains underrepresented in domestic flagship journals, while the male founding generation continues to dominate the epistemic core. Second (integration), network structures place women at the periphery of domestic co-authorship clusters, such that even internationally collaborative female scholars rarely occupy bridging roles into the male-dominated core. Third (legitimation), thematic stratification channels female-led work into teaching and internationalization niches while system policy and governance remain a male-dominated epistemic core. Theoretically, this study extends gender inequality discussions beyond academic labor and careers to the gendered disciplinary knowledge production. Practically, it underscores the need for journal- and institution-level measures that foster thematic diversity and equitable recognition. Acknowledging the limitations of bibliometric data in capturing underlying mechanisms, we suggest future qualitative research to examine how these patterns are produced and negotiated in Japan’s distinctive contexts.",
+    "DOI": "10.1007/s10734-026-01641-1",
+    "URL": "https://doi.org/10.1007/s10734-026-01641-1",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7143387206",
+    "type": "article-journal",
+    "title": "Enhancing a large language model with a chain-of-metacognitive reasoning approach increases argumentative writing evaluation accuracy, student writing outcomes, and mental effort",
+    "author": [
+      {
+        "family": "Wang",
+        "given": "Sikai"
+      },
+      {
+        "family": "HEW",
+        "given": "Khe Foon"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          30
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.compedu.2026.105621",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105621",
+    "container-title": "Computers & Education"
   }
 ]
