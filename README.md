@@ -99,19 +99,56 @@ Common log sections:
 
 **This workflow uses Zotero + Better BibTeX as the source of truth for citation keys:**
 
+#### How Citation Keys Work
+
 1. **On Import**: Papers are imported to Zotero **without** citation keys initially
 2. **Better BibTeX Generates Keys**: Open Zotero Desktop (with Better BibTeX plugin installed) to auto-generate citation keys in the format `{author}{year}{a/b/c...}`
-3. **Sync Back**: On the next workflow run, citation keys are synced from Zotero back to the SQLite database
-4. **References Export**: Only papers with synced citation keys appear in `references.json` (for stable Quarto/Pandoc citations)
+3. **Auto-Pinning**: Better BibTeX can be configured to automatically pin citation keys to the "Extra" field as `Citation Key: <key>`
+4. **Sync Back**: On the next workflow run, citation keys are synced from Zotero back to the SQLite database
+5. **References Export**: Only papers with synced citation keys appear in `references.json` (for stable Quarto/Pandoc citations)
 
-**To enable citation keys:**
-- Install [Better BibTeX for Zotero](https://retorque.re/zotero-better-bibtex/)
-- Configure citation key format: `[auth][year]` (author + year, with auto-disambiguation)
-- Open Zotero Desktop periodically to sync and generate keys
+#### Setting Up Better BibTeX for Citation Keys
 
-**Files generated:**
-- `references.json` - Only items with synced citation keys (ready for citations)
+1. **Install Better BibTeX**: 
+   - Download from https://retorque.re/zotero-better-bibtex/installation/
+   - In Zotero Desktop: Tools → Add-ons → Install Add-on From File → select downloaded XPI
+
+2. **Configure Auto-Pin** (Recommended):
+   - In Zotero Desktop: Edit → Settings → Better BibTeX → Citation keys tab
+   - Check "On item change" under "Automatic export"
+   - Set "Citation key formula" to `[auth][year]` for format like `smith2024`
+   - Enable "Pin citation keys" → "Automatically pin citation key after X seconds" (set to 0 for immediate)
+
+3. **Manual Pin** (Alternative):
+   - Right-click any item → Better BibTeX → Pin BibTeX key
+   - Or select multiple items → Better BibTeX → Pin BibTeX key for selected items
+
+4. **Sync to Cloud**:
+   - After pinning, sync your Zotero library (green sync button in toolbar)
+   - Citation keys are stored in the "Extra" field and will sync to Zotero cloud
+   - Next GitHub Actions run will detect and sync them back
+
+#### Files Generated
+
+- `references.json` - Only items with synced citation keys (ready for citations in Quarto/Pandoc)
 - `references_pending.json` - Items still waiting for citation keys (for transparency)
+
+#### Troubleshooting Pending Citation Keys
+
+**If `references.json` is empty or missing expected entries:**
+
+1. Check the digest.md for the pending citekeys warning banner
+2. Verify Better BibTeX is installed in Zotero Desktop
+3. Open Zotero Desktop and wait a few seconds for auto-pinning (if enabled)
+4. Manually pin keys if auto-pinning is not configured: right-click items → Better BibTeX → Pin BibTeX key
+5. Sync your Zotero library to cloud (green sync button)
+6. Trigger a new workflow run (or wait for next scheduled run)
+7. Check workflow logs for "Citekey sync: Synced=X" - X should be >0 after sync
+
+**Workflow behavior:**
+- If `Synced=0` and `Pending>0`, `references.json` is protected from being overwritten (keeps last valid version)
+- On first-ever run (no prior `references.json`), temporary IDs (work_id) are written with annotation
+- Once citekeys sync, proper `references.json` with stable citation keys is written
 
 ### Download Artifacts
 
@@ -178,6 +215,80 @@ By default, the workflow runs **every Monday at 06:15 UTC**. To change this:
 | `Could not resolve source ID` | Journal not found in OpenAlex | This is logged but workflow continues; check if journal name/ISSN needs updating |
 | `No changes to commit` | No new papers found | Expected behavior when no new relevant papers are published |
 | `Permission denied` when pushing | Missing repo write permissions | Check workflow file has `permissions: contents: write` |
+
+### OpenAlex returning 0 results
+
+**Check these items in the workflow logs:**
+
+1. **API Key Status**: Look for "OPEN_ALEX_API_KEY present: yes/no"
+2. **Journals Loaded**: Check "Loaded N journals from journals.json"
+3. **Per-Journal Logs**: Each journal shows:
+   - Resolved source ID (e.g., S123456789)
+   - Filter string used
+   - HTTP status code
+   - Total matching works count
+
+**Common reasons for 0 results:**
+- Lookback window too short (default 90 days) - may need adjustment for low-volume journals
+- Publication date filter excludes all matches
+- Search terms don't match content in that journal
+- Journal source ID resolution failed
+- HTTP errors (check status code in logs)
+
+**Workflow continues**: OpenAlex errors are non-fatal - the workflow logs warnings but exits with success (0)
+
+### arXiv returning too many irrelevant results
+
+The workflow uses precision gating to filter out ML/systems papers:
+
+**Check the summary for:**
+- `Fetched: X` - Total papers retrieved from arXiv
+- `Excluded by gate: Y` - Papers without strong education setting terms
+- `Excluded by disambiguation: Z` - Curriculum-learning, feedback-loop, distillation contexts  
+- `Excluded by negative terms: W` - Quantization, GPU, robotics papers
+- `Passed: N` - Papers that match education criteria
+
+**If too many false positives still pass:**
+- Review the top papers in digest.md
+- Check if they contain strong education terms (university, course, classroom, grading, rubric, etc.)
+- Consider adjusting `EDU_SETTING_TERMS` or `NEGATIVE_STRONG_TERMS` in watch_literature.py
+
+### Citation keys not syncing from Zotero
+
+**Symptoms:**
+- `Citekey sync: Synced=0, Pending=47` in logs
+- `references.json` is empty or missing expected entries
+- Warning banner in digest.md about pending citekeys
+
+**Checklist:**
+
+1. ✅ **Better BibTeX installed**: Check Zotero Desktop → Tools → Add-ons → Better BibTeX is listed
+2. ✅ **Auto-pin enabled** (optional but recommended):
+   - Zotero Desktop → Edit → Settings → Better BibTeX → Citation keys
+   - Check "Automatically pin citation key after X seconds" (set X=0 for immediate)
+3. ✅ **Manual pin** (if auto-pin not configured):
+   - Open Zotero Desktop
+   - Select items imported by workflow (look for "AI-arxiv-pubs" or "AI-peer-reviewed-pubs" collection)
+   - Right-click → Better BibTeX → Pin BibTeX key
+4. ✅ **Sync to cloud**:
+   - Click green sync button in Zotero Desktop toolbar
+   - Wait for sync to complete
+5. ✅ **Trigger new workflow run**:
+   - Go to GitHub Actions → Weekly Literature Watch → Run workflow
+   - Or wait for next scheduled run (Mondays at 06:15 UTC)
+6. ✅ **Verify in logs**:
+   - Check "Citekey sync complete: Synced=X" - X should be >0
+
+**Technical details:**
+- Better BibTeX pins citekeys by adding "Citation Key: smith2024a" to the Extra field
+- The workflow parses this line (case-insensitive, whitespace-tolerant)
+- Items remain "pending" until Zotero Desktop runs BBT and syncs
+- After 30 days without a citekey, status changes to "missing"
+
+**Protection behavior:**
+- Workflow **never overwrites** `references.json` with empty when citekeys are pending
+- Last valid `references.json` is preserved until citekeys sync
+- `references_pending.json` shows current status for transparency
 
 ### PDFs not attaching
 
