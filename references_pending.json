@@ -20866,6 +20866,53 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2604.10400",
+    "type": "report",
+    "title": "Tracing Prompt-Level Trajectories to Understand Student Learning with AI in Programming Education",
+    "author": [
+      {
+        "family": "Shao",
+        "given": "Tianyu"
+      },
+      {
+        "family": "Feijóo-García",
+        "given": "Miguel"
+      },
+      {
+        "family": "Zhang",
+        "given": "Yi"
+      },
+      {
+        "family": "Castellanos",
+        "given": "Hugo"
+      },
+      {
+        "family": "Salem",
+        "given": "Tawfiq"
+      },
+      {
+        "family": "Magana",
+        "given": "Alejandra"
+      },
+      {
+        "family": "Li",
+        "given": "Tianyi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          12
+        ]
+      ]
+    },
+    "abstract": "As AI tools such as ChatGPT enter programming classrooms, students encounter differing rules across courses and instructors, which shape how they use AI and leave them with unequal capabilities for leveraging it. We investigate how students engaged with AI in an introductory Python assignment, analyzing student-LLM chat histories and final code submissions from 163 students. We examined prompt-level strategies, traced trajectories of interaction, and compared AI-generated code with student submissions. We identified trajectories ranging from full delegation to iterative refinement, with hybrid forms in between. Although most students directly copied AI-generated code in their submission, many students scaffolded the code generation through iterative refinement. We also contrasted interaction patterns with assignment outcomes and course performance. Our findings show that prompting trajectories serve as promising windows into students' self-regulation and learning orientation. We draw design implications for educational AI systems that promote personalized and productive student-AI collaborative learning.",
+    "URL": "http://arxiv.org/abs/2604.10400v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2604.10545",
     "type": "report",
     "title": "Enhanced Self-Learning with Epistemologically-Informed LLM Dialogue",
@@ -20949,6 +20996,72 @@
     },
     "abstract": "Artificial models that simulate how learners act and respond within educational systems are a promising tool for evaluating tutoring strategies and feedback mechanisms at scale. However, many existing approaches in programming education rely on prompting large, proprietary language models, raising concerns around privacy, cost, and dependence. In this work, we propose a method for training open-weight artificial programming learners using authentic student process data. Our approach serializes temporal log traces into a conversational format, representing each student's problem-solving process as a dialogue between the learner and their automated assessment system. Student code submissions and environment feedback, such as test outcomes, grades, and error traces, form alternating conversational turns, enabling models to learn from the iterative debugging process. We additionally introduce a training pipeline combining supervised fine-tuning with preference optimization to align models with authentic student debugging behavior. We evaluate our framework by training Qwen models at 4B and 8B scales on a large-scale dataset of real student submissions to Python programming assignments. Our results show that incorporating environment feedback strengthens the models' ability to replicate student debugging behavior, improving over both prior code-only approaches and prompted large language models baselines in functional alignment and code similarity. We release our code to support reproducibility.",
     "URL": "http://arxiv.org/abs/2604.10720v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.10730",
+    "type": "report",
+    "title": "Perceived Importance of Cognitive Skills Among Computing Students in the Era of AI",
+    "author": [
+      {
+        "family": "Rani",
+        "given": "Neha"
+      },
+      {
+        "family": "Cenko",
+        "given": "Erta"
+      },
+      {
+        "family": "Castro",
+        "given": "Laura Melissa Cruz"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          12
+        ]
+      ]
+    },
+    "abstract": "The availability and increasing integration of generative AI tools have transformed computing education. While AI in education presents opportunities, it also raises new concerns about how these powerful know-it-all AI tools, which are becoming widespread, impact cognitive skill development among students. Cognitive skills are essential for academic success and professional competence. It relates to the ability to understand, analyze, evaluate, synthesize information and more. The extensive use of these AI tools can aid in cognitive offloading, freeing up cognitive resources to be used in other tasks and activities. However, cognitive offloading may inadvertently lead to diminishing cognitive involvement in learning and related activities when using AI tools. Understanding cognitive skills' impact in the era of AI is essential to align curricular design with evolving workforce demands and changing work environment and processes. To address this concern and to develop an understanding of how the importance of cognitive skills changes with increasing integration of AI, we conducted a researcher-monitored and regulated quantitative survey of undergraduate computing students. We examined students' perceptions of cognitive skills across three temporal frames: prior to widespread AI adoption (past), current informal and formal use of AI in learning contexts (present), and future with even more AI integration in professional environments (future). In the study, students rated the importance of 11 cognitive skills. Our analysis reveals that students expect all 11 cognitive skills to be of diminishing importance in the future, when AI use and integration increases. Our findings highlight the need for educational interventions that explicitly reinforce cognitive skill development within learning environments that are now often relying on AI.",
+    "URL": "http://arxiv.org/abs/2604.10730v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.10747",
+    "type": "report",
+    "title": "Engineering Students' Usage and Perceptions of GitHub Copilot in Open-Source Projects",
+    "author": [
+      {
+        "family": "Rani",
+        "given": "Neha"
+      },
+      {
+        "family": "Munnangi",
+        "given": "Jeevan Ram"
+      },
+      {
+        "family": "Spangler",
+        "given": "Austin Matthew"
+      },
+      {
+        "family": "Honeycutt",
+        "given": "Donald"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          12
+        ]
+      ]
+    },
+    "abstract": "The evolution of LLM has resulted in coding-focused models that are able to produce code snippets with high accuracy. More and more AI coding assistant tools are now available, leading to greater integration of AI coding assistants into integrated development environments (IDEs). These tools introduce new possibilities for enhancing software development workflows and changing programming processes. GitHub Copilot, a popular AI coding assistant, offers features including inline code autocompletion, comment-driven code generation, repository-aware suggestions, and a chat interface for code explanation and debugging. Different users use these tools differently due to differences in their perception, prior experience, and demographics. Furthermore, differences in feature use may affect users' programming process and skills, especially for programming learners such as computer science students. While prior work has evaluated the performance of LLM-driven code generation tools, their use and usefulness for developers, especially computer science students, remain underexplored. For our investigation, we conducted an exploratory survey-based study in which participants completed a survey after completing an open-source project issue using GitHub Copilot as part of a course. We analyzed students' use of each feature and their perceived usefulness. Further, we explore and analyze significant differences in GitHub Copilot usage and students' perceptions of it based on demographic factors. Our results show that students used the GitHub Copilot chat feature and code generation feature more than other features. Gender, programming proficiency, and familiarity with AI impacted the usage of the GitHub Copilot feature for assistance in completing the open-source project contribution.",
+    "URL": "http://arxiv.org/abs/2604.10747v1",
     "publisher": "arXiv"
   },
   {
@@ -21146,6 +21259,112 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2604.11957",
+    "type": "report",
+    "title": "Agentic LLM Reasoning in a Self-Driving Laboratory for Air-Sensitive Lithium Halide Spinel Conductors",
+    "author": [
+      {
+        "family": "Fei",
+        "given": "Yuxing"
+      },
+      {
+        "family": "Rendy",
+        "given": "Bernardus"
+      },
+      {
+        "family": "Yang",
+        "given": "Xiaochen"
+      },
+      {
+        "family": "Woo",
+        "given": "Junhee"
+      },
+      {
+        "family": "Huang",
+        "given": "Xu"
+      },
+      {
+        "family": "Li",
+        "given": "Chang"
+      },
+      {
+        "family": "Wang",
+        "given": "Shilong"
+      },
+      {
+        "family": "Milsted",
+        "given": "David"
+      },
+      {
+        "family": "Zeng",
+        "given": "Yan"
+      },
+      {
+        "family": "Ceder",
+        "given": "Gerbrand"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          13
+        ]
+      ]
+    },
+    "abstract": "Self-driving laboratories promise to accelerate materials discovery. Yet current automated solid-state synthesis platforms are limited to ambient conditions, thereby precluding their use for air-sensitive materials. Here, we present A-Lab for Glovebox Powder Solid-state Synthesis (A-Lab GPSS), a robotic platform capable of synthesizing and characterizing air-sensitive inorganic materials under strict air-free conditions. By integrating an agentic AI framework into the A-Lab GPSS platform, we structure autonomous experimental design through abductive and inductive reasoning. We deploy this platform to explore the vast compositional space of lithium halide spinel solid-state ionic conductors. Across a synthesis campaign comprising 352 samples with diverse compositions, the system explores a broad chemical space, experimentally realizing 72% of the 171 possible pairwise combinations among the 19 metals considered in this study. Over the course of the campaign, the fraction of compositions exhibiting both good ionic conductivity (> 0.05 mS/cm) and high halide spinel phase purity increases from 1.33% in the first 75 agent-proposed samples to 5.33% in the final 75. Furthermore, by inspecting the AI's reasoning processes, we reveal distinct yet complementary discovery strategies: abductive reasoning interrogates abnormal observations within already explored regions, whereas inductive reasoning expands the search into broader, previously unvisited chemical space. This work establishes a scalable platform for the autonomous discovery of complex, air-sensitive solid-state materials.",
+    "URL": "http://arxiv.org/abs/2604.11957v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.12066",
+    "type": "report",
+    "title": "Mathematics Teachers Interactions with a Multi-Agent System for Personalized Problem Generation",
+    "author": [
+      {
+        "family": "Walkington",
+        "given": "Candace"
+      },
+      {
+        "family": "Beauchamp",
+        "given": "Theodora"
+      },
+      {
+        "family": "Ikram",
+        "given": "Fareya"
+      },
+      {
+        "family": "Gürbüz",
+        "given": "Merve Koçyiğit"
+      },
+      {
+        "family": "Xia",
+        "given": "Fangli"
+      },
+      {
+        "family": "Lee",
+        "given": "Margan"
+      },
+      {
+        "family": "Lan",
+        "given": "Andrew"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          13
+        ]
+      ]
+    },
+    "abstract": "Large language models can increasingly adapt educational tasks to learners characteristics. In the present study, we examine a multi-agent teacher-in-the-loop system for personalizing middle school math problems. The teacher enters a base problem and desired topic, the LLM generates the problem, and then four AI agents evaluate the problem using criteria that each specializes in (mathematical accuracy, authenticity, readability, and realism). Eight middle school mathematics teachers created 212 problems in ASSISTments using the system and assigned these problems to their students. We find that both teachers and students wanted to modify the fine-grained personalized elements of the real-world context of the problems, signaling issues with authenticity and fit. Although the agents detected many issues with realism as the problems were being written, there were few realism issues noted by teachers and students in the final versions. Issues with readability and mathematical hallucinations were also somewhat rare. Implications for multi-agent systems for personalization that support teacher control are given.",
+    "URL": "http://arxiv.org/abs/2604.12066v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2604.12223",
     "type": "report",
     "title": "LLM-Guided Semantic Bootstrapping for Interpretable Text Classification with Tsetlin Machines",
@@ -21317,6 +21536,33 @@
     "publisher": "arXiv"
   },
   {
+    "id": "arxiv:2604.13247",
+    "type": "report",
+    "title": "Cross-Platform Domain Adaptation for Multi-Modal MOOC Learner Satisfaction Prediction",
+    "author": [
+      {
+        "family": "Kowalski",
+        "given": "Jakub"
+      },
+      {
+        "family": "Piotrowska",
+        "given": "Magdalena"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          14
+        ]
+      ]
+    },
+    "abstract": "Learner satisfaction prediction from MOOC reviews and behavioral logs is valuable for course quality improvement and platform operations. In practice, models trained on one platform degrade significantly when deployed on another due to domain shift in review style, learner population, behavioral logging schemas, and platform-specific rating norms. We study \\textbf{cross-platform domain adaptation} for multi-modal MOOC satisfaction prediction under limited or absent target-platform labels. We propose \\textbf{ADAPT-MS}, a platform-adaptive framework that (i) encodes review text with a frozen LLM encoder and behavioral traces with a canonical-vocabulary MLP, (ii) aligns cross-platform representations via domain-adversarial training with gradient reversal, (iii) corrects platform-specific rating bias through a latent-variable calibration layer, and (iv) handles missing behavioral modalities via gated fusion with modality dropout. Experiments on a multi-platform MOOC dataset spanning three major platforms demonstrate that ADAPT-MS achieves target-platform RMSE of 0.66 in the unsupervised setting (zero labeled target samples) and 0.60 with 1000 labeled target samples, outperforming strong baselines including naive pooling, domain-adversarial alignment without calibration, and full fine-tuning. Ablation studies confirm the independent contribution of each component, and few-shot adaptation curves demonstrate stable improvement even with as few as 50 labeled target samples.",
+    "URL": "http://arxiv.org/abs/2604.13247v1",
+    "publisher": "arXiv"
+  },
+  {
     "id": "arxiv:2604.13277",
     "type": "report",
     "title": "Comprehension Debt in GenAI-Assisted Software Engineering Projects",
@@ -21337,6 +21583,49 @@
     },
     "abstract": "Generative Artificial Intelligence (GenAI) tools (e.g., ChatGPT, Calude) have rapidly become integral to software development. These tools are especially attractive to students, as they can reduce cognitive load. However, their adoption also introduces a socio-cognitive risk: the accumulation of Comprehension Debt (CD). CD refers to the growing gap between what a development team knows about its codebase and what it actually needs to understand in order to maintain and modify it effectively. This qualitative study investigate how GenAI tools contribute to CD in the context of an undergraduate software engineering project. Our study is based on 621 reflective diaries from 207 students over eight weeks. We identify four CD accumulation patterns and one mitigating pattern in students' use of GenAI tools. The four accumulation patterns include: (1) AI-as-black-box code acceptance, (2) context-mismatch debt, (3) dependency-induced atrophy, and (4) verification-bypass. In contrast, the mitigating pattern involves students using GenAI as a comprehension scaffold, allowing them to build a deeper understanding of the code. We argue that CD is distinct from traditional technical debt because it resides in the collective cognition of development teams rather than in the codebase itself. Our findings highlight the need for explicit pedagogical strategies to mitigate CD in software engineering education, emphasizing verification practices, structured retrospectives, and active learning assessments.",
     "URL": "http://arxiv.org/abs/2604.13277v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.13666",
+    "type": "report",
+    "title": "Automatically Inferring Teachers' Geometric Content Knowledge: A Skills Based Approach",
+    "author": [
+      {
+        "family": "Fenigstein",
+        "given": "Ziv"
+      },
+      {
+        "family": "Gal",
+        "given": "Kobi"
+      },
+      {
+        "family": "Segal",
+        "given": "Avi"
+      },
+      {
+        "family": "Swidan",
+        "given": "Osama"
+      },
+      {
+        "family": "Israel",
+        "given": "Inbal"
+      },
+      {
+        "family": "Ayoob",
+        "given": "Hassan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          15
+        ]
+      ]
+    },
+    "abstract": "Assessing teachers' geometric content knowledge is essential for geometry instructional quality and student learning, but difficult to scale. The Van Hiele model characterizes geometric reasoning through five hierarchical levels. Traditional Van Hiele assessment relies on manual expert analysis of open-ended responses. This process is time-consuming, costly, and prevents large-scale evaluation. This study develops an automated approach for diagnosing teachers' Van Hiele reasoning levels using large language models grounded in educational theory. Our central hypothesis is that integrating explicit skills information significantly improves Van Hiele classification. In collaboration with mathematics education researchers, we built a structured skills dictionary decomposing the Van Hiele levels into 33 fine-grained reasoning skills. Through a custom web platform, 31 pre-service teachers solved geometry problems, yielding 226 responses. Expert researchers then annotated each response with its Van Hiele level and demonstrated skills from the dictionary. Using this annotated dataset, we implemented two classification approaches: (1) retrieval-augmented generation (RAG) and (2) multi-task learning (MTL). Each approach compared a skills-aware variant incorporating the skills dictionary against a baseline without skills information. Results showed that for both methods, skills-aware variants significantly outperformed baselines across multiple evaluation metrics. This work provides the first automated approach for Van Hiele level classification from open-ended responses. It offers a scalable, theory-grounded method for assessing teachers' geometric reasoning that can enable large-scale evaluation and support adaptive, personalized teacher learning systems.",
+    "URL": "http://arxiv.org/abs/2604.13666v1",
     "publisher": "arXiv"
   },
   {
@@ -21469,6 +21758,57 @@
     },
     "abstract": "The rapid integration of large language models (LLMs) into everyday workflows has transformed how individuals perform cognitive tasks such as writing, programming, analysis, and multilingual communication. While prior research has focused on model reliability, hallucination, and user trust calibration, less attention has been given to how LLM usage reshapes users' perceptions of their own capabilities. This paper introduces the LLM fallacy, a cognitive attribution error in which individuals misinterpret LLM-assisted outputs as evidence of their own independent competence, producing a systematic divergence between perceived and actual capability. We argue that the opacity, fluency, and low-friction interaction patterns of LLMs obscure the boundary between human and machine contribution, leading users to infer competence from outputs rather than from the processes that generate them. We situate the LLM fallacy within existing literature on automation bias, cognitive offloading, and human--AI collaboration, while distinguishing it as a form of attributional distortion specific to AI-mediated workflows. We propose a conceptual framework of its underlying mechanisms and a typology of manifestations across computational, linguistic, analytical, and creative domains. Finally, we examine implications for education, hiring, and AI literacy, and outline directions for empirical validation. We also provide a transparent account of human--AI collaborative methodology. This work establishes a foundation for understanding how generative AI systems not only augment cognitive performance but also reshape self-perception and perceived expertise.",
     "URL": "http://arxiv.org/abs/2604.14807v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.14828",
+    "type": "report",
+    "title": "Pangu-ACE: Adaptive Cascaded Experts for Educational Response Generation on EduBench",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Dinghao"
+      },
+      {
+        "family": "Zhou",
+        "given": "Wenlong"
+      },
+      {
+        "family": "Chen",
+        "given": "Zhimin"
+      },
+      {
+        "family": "Peng",
+        "given": "Yuehan"
+      },
+      {
+        "family": "Ni",
+        "given": "Hong"
+      },
+      {
+        "family": "Zou",
+        "given": "Chengfu"
+      },
+      {
+        "family": "Shi",
+        "given": "Guoyu"
+      },
+      {
+        "family": "Li",
+        "given": "Yaochen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          16
+        ]
+      ]
+    },
+    "abstract": "Educational assistants should spend more computation only when the task needs it. This paper rewrites our earlier draft around the system that was actually implemented and archived in the repository: a sample-level 1B to 7B cascade for the shared-8 EduBench benchmark. The final system, Pangu-ACE, uses a 1B tutor-router to produce a draft answer plus routing signals, then either accepts the draft or escalates the sample to a 7B specialist prompt. We also correct a major offline evaluation bug: earlier summaries over-credited some open-form outputs that only satisfied superficial format checks. After CPU-side rescoring from saved prediction JSONL, the full Chinese test archive (7013 samples) shows that cascade_final improves deterministic quality from 0.457 to 0.538 and format validity from 0.707 to 0.866 over the legacy rule_v2 system while accepting 19.7% of requests directly at 1B. Routing is strongly task dependent: IP is accepted by 1B 78.0% of the time, while QG and EC still escalate almost always. The current archived deployment does not yet show latency gains, so the defensible efficiency story is routing selectivity rather than wall-clock speedup. We also package a reproducible artifact-first paper workflow and clarify the remaining external-baseline gap: GPT-5.4 re-judging is implemented locally, but the configured provider endpoint and key are invalid, so final sampled-baseline alignment with GPT-5.4 remains pending infrastructure repair.",
+    "URL": "http://arxiv.org/abs/2604.14828v1",
     "publisher": "arXiv"
   },
   {
@@ -21665,6 +22005,1179 @@
     "abstract": "Practice and extensive exercises are essential in programming education. Intelligent tutoring systems (ITSs) are a viable option to provide individualized hints and advice to programming students even when human tutors are not available. However, prior ITS for programming rarely support the Python programming language, mostly focus on introductory programming, and rarely take recent developments in generative models into account. We aim to establish a novel ITS for Python programming that is highly adaptable, serves both as a teaching and research platform, provides interfaces to plug in hint mechanisms (e.g.\\ via large language models), and works inside the particularly challenging regulatory environment of Germany, that is, conforming to the European data protection regulation, the European AI act, and ethical framework of the German Research Foundation. In this paper, we present the description of the current state of the ITS along with future development directions, as well as discuss the challenges and opportunities for improving the system.",
     "DOI": "10.1007/978-3-031-99261-2_16",
     "URL": "https://doi.org/10.1007/978-3-031-99261-2_16",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.16213",
+    "type": "report",
+    "title": "Investigating Conversational Agents to Support Secondary School Students Learning CSP",
+    "author": [
+      {
+        "family": "Frazier",
+        "given": "Matthew"
+      },
+      {
+        "family": "Damevski",
+        "given": "Kostadin"
+      },
+      {
+        "family": "Pollock",
+        "given": "Lori"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          17
+        ]
+      ]
+    },
+    "abstract": "Secondary school students enrolled in the AP Computer Science Principles (CSP) course commonly utilize web resources (e.g., tutorials, Q\\&A sites) to better understand key concepts in the curriculum. The primary obstacle to using these resources is finding information appropriate for the learning task and student's background. In addition to web search, conversational agents are increasingly a viable alternative for CSP students. In this paper, we study the potential of conversational agents to aid secondary school students as they acquire knowledge on CSP concepts. We explore general purpose, generative conversational agents (e.g., ChatGPT) and custom, fixed-response conversational agents built specifically to aid CSP students. We present results from classroom use by 45 high school students in grades 9-11 (ages 14-17) across six CSP sections. Our main contributions are in better understanding how conversational agents can help CSP students and an evaluation of the effectiveness and engagement of different approaches for CSP exploratory search.",
+    "URL": "http://arxiv.org/abs/2604.16213v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.16566",
+    "type": "report",
+    "title": "Agentic AI for Education: A Unified Multi-Agent Framework for Personalized Learning and Institutional Intelligence",
+    "author": [
+      {
+        "family": "J",
+        "given": "Arya Mary K"
+      },
+      {
+        "family": "Bhaskar",
+        "given": "Deepthy K"
+      },
+      {
+        "family": "S",
+        "given": "Sinu T"
+      },
+      {
+        "family": "P",
+        "given": "Binu V"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          17
+        ]
+      ]
+    },
+    "abstract": "Agentic Artificial Intelligence (AI) represents a paradigm shift from reactive systems to proactive, autonomous decision making frameworks. Existing AI-based educational systems remain fragmented and lack multi-level integration across stakeholders. This paper proposes the Agentic Unified Student Support System (AUSS), a novel multi-agent architecture integrating student-level personalization, educator-level automation, and institutional-level intelligence. The framework leverages Large Language Models (LLMs), reinforcement learning, predictive analytics, and rule-based reasoning. Experimental results demonstrate improvements in recommendation accuracy (92.4%), grading efficiency (94.1%), and dropout prediction (F1-score: 89.5%). The proposed system enables scalable, adaptive, and intelligent educational ecosystems.",
+    "URL": "http://arxiv.org/abs/2604.16566v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.16738",
+    "type": "report",
+    "title": "Teacher-Authored Prompts for Configuring Student-AI Dialogue: K-12 Classroom Implementation",
+    "author": [
+      {
+        "family": "Liu",
+        "given": "Alex"
+      },
+      {
+        "family": "Sun",
+        "given": "Min"
+      },
+      {
+        "family": "Esbenshade",
+        "given": "Lief"
+      },
+      {
+        "family": "Tian",
+        "given": "Victor"
+      },
+      {
+        "family": "Zhang",
+        "given": "Zachary"
+      },
+      {
+        "family": "He",
+        "given": "Kevin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          17
+        ]
+      ]
+    },
+    "abstract": "GenAI has rapidly entered instructional and learning settings as a teaching assistant or AI tutor. However, less is known about how pedagogical intent connects to the learning generated within these systems, especially when student-facing AI dialogues are fine-tuned through teacher orchestration in live classrooms. This study examines a classroom deployment of a \"Classroom Teaching Aide\" (TASD) system, which enables teachers to author both a teacher-to-AI setup prompt (instructional scaffold) and a student-facing conversation starter to launch AI-mediated classroom discussions. We analyze a multi-subject pilot conducted in Spring 2025, involving 20 participating teachers (16 of whom implemented the system), across 39 classrooms and 77 TASD settings, yielding 1,479 student-AI conversations with 878 unique students. Using platform logs, LLM coding with human validation, and post-study teacher interviews (N=10), we characterize teacher authoring choices and link them to enacted student-AI interaction outcomes. In deployment, student-AI conversations were largely aligned with instructional intent: 71% were fully on-track, and fewer than 1% were substantially off-track. However, a persistent design-enactment gap emerged for cognitive demand: 38% of conversations under-reached the teacher-targeted DOK level, approaching 50% when targeting DOK 3. The study also shows that explicit finish lines in the prompt reduced the DOK gap by 0.22 levels (p < .001), and \"no direct answers\" guardrails reduced AI final-answer rates by 8.5 percentage points. These findings position teacher-authored prompt layers as critical orchestration levers that translate pedagogical intent into structured student-AI dialogue, underscoring both their promise for scalable classroom integration and the need for additional supports to reliably sustain higher-order reasoning during enactment.",
+    "URL": "http://arxiv.org/abs/2604.16738v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.16772",
+    "type": "report",
+    "title": "The Reliance Negotiation Framework: A Dynamic Process Model of Student LLM Engagement in Academic Writing",
+    "author": [
+      {
+        "family": "Hossain",
+        "given": "Shahin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          18
+        ]
+      ]
+    },
+    "abstract": "Student engagement with large language models (LLMs) in academic writing is not a stable trait, an adoption decision, or a competency level; it is a continuously negotiated process that existing frameworks cannot adequately theorize. Typological models provide categories without mechanisms; technology acceptance models explain adoption but not post-adoption quality; AI literacy frameworks treat competency as a static predictor rather than a live input. None accounts for within-student variability across tasks, the developmental paradox whereby experience produces habituation rather than sophistication, or principled non-use as a form of ethical reasoning. This article introduces the Reliance Negotiation Framework (RNF), developed from a sequential explanatory mixed-methods study of 382 undergraduates at a public minority-serving institution in the United States (survey, N = 382; 14 semi-structured interviews; three qualitative survey strands; 1,435 coded instances). The RNF reconceptualizes LLM reliance as an ongoing negotiation among four concurrent inputs (perceived benefits, perceived risks, ethical commitments, and situational demands) with outputs that recursively modify subsequent decisions. A Two-Model Architecture accommodates the 13.0% of participants whose categorical ethical commitments foreclose negotiation entirely. The framework generates four falsifiable predictions with implications for AI literacy pedagogy, academic integrity policy, and equity-centered practice at minority-serving institutions.",
+    "URL": "http://arxiv.org/abs/2604.16772v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.16785",
+    "type": "report",
+    "title": "Bridging Coarse and Fine Recognition: A Hybrid Approach for Open-Ended Multi-Granularity Object Recognition in Interactive Educational Games",
+    "author": [
+      {
+        "family": "Yi",
+        "given": "Hanling"
+      },
+      {
+        "family": "Lin",
+        "given": "Feng"
+      },
+      {
+        "family": "Luo",
+        "given": "Mao"
+      },
+      {
+        "family": "Yang",
+        "given": "Yifan"
+      },
+      {
+        "family": "Yu",
+        "given": "Xiaotian"
+      },
+      {
+        "family": "Xiao",
+        "given": "Rong"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          18
+        ]
+      ]
+    },
+    "abstract": "Recent advances in Multimodal Large Language Models (MLLMs) have enabled open-ended object recognition, yet they struggle with fine-grained tasks. In contrast, CLIP-style models excel at fine-grained recognition but lack broad coverage of general object categories. To bridge this gap, we propose \\textbf{HyMOR}, a \\textbf{Hy}brid \\textbf{M}ulti-granularity open-ended \\textbf{O}bject \\textbf{R}ecognition framework that integrates an MLLM with a CLIP model. In HyMOR, the MLLM performs open-ended and coarse-grained object recognition, while the CLIP model specializes in fine-grained identification of domain-specific objects such as animals and plants. This hybrid design enables accurate object understanding across multiple semantic granularities, serving as a robust perceptual foundation for downstream multi-modal content generation and interactive gameplay. To support evaluation in content-rich and educational scenarios, we introduce TBO (TextBook Objects), a dataset containing 20,942 images annotated with 8,816 object categories extracted from textbooks. Extensive experiments demonstrate that HyMOR narrows the fine-grained recognition gap with CLIP to 0.2\\% while improving general object recognition by 2.5\\% over a baseline MLLM, measured by average Sentence-BERT (SBert) similarity. Overall, HyMOR achieves a 23.2\\% improvement in average SBert across all evaluated datasets, highlighting its effectiveness in enabling accurate perception for multi-modal game content generation and interactive learning applications.",
+    "URL": "http://arxiv.org/abs/2604.16785v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.16804",
+    "type": "report",
+    "title": "AutoOR: Scalably Post-training LLMs to Autoformalize Operations Research Problems",
+    "author": [
+      {
+        "family": "Motwani",
+        "given": "Sumeet Ramesh"
+      },
+      {
+        "family": "Du",
+        "given": "Chuan"
+      },
+      {
+        "family": "Petrov",
+        "given": "Aleksander"
+      },
+      {
+        "family": "Davis",
+        "given": "Christopher"
+      },
+      {
+        "family": "Torr",
+        "given": "Philip"
+      },
+      {
+        "family": "Papania-Davis",
+        "given": "Antonio"
+      },
+      {
+        "family": "Yan",
+        "given": "Weishi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          18
+        ]
+      ]
+    },
+    "abstract": "Optimization problems are central to decision-making in manufacturing, logistics, scheduling, and other industrial settings. Translating complicated descriptions of these problems into solver-ready formulations requires specialized operations research (OR) expertise, making it hard to scale. We present AutoOR, a scalable synthetic data generation and reinforcement learning pipeline that trains LLMs to autoformalize optimization problems specified in natural language across linear, mixed-integer, and non-linear categories. AutoOR generates verified training data from standard optimization forms and uses solver execution feedback as the reward signal for RL post-training. AutoOR applied to an 8B model achieves state-of-the-art or competitive results across six established OR benchmarks, matching significantly larger frontier models. For a non-linear problem class involving physical dynamics, where frontier models score near 0%, we introduce a curriculum RL strategy that bootstraps from limited initial training data to make this class tractable for post-training. We believe that methods such as AutoOR can significantly accelerate industrial decision-making with AI.",
+    "URL": "http://arxiv.org/abs/2604.16804v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.16845",
+    "type": "report",
+    "title": "DART: Mitigating Harm Drift in Difference-Aware LLMs via Distill-Audit-Repair Training",
+    "author": [
+      {
+        "family": "Pan",
+        "given": "Ziwen"
+      },
+      {
+        "family": "Liang",
+        "given": "Zihan"
+      },
+      {
+        "family": "Kabbara",
+        "given": "Jad"
+      },
+      {
+        "family": "Emami",
+        "given": "Ali"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          18
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) tuned for safety often avoid acknowledging demographic differences, even when such acknowledgment is factually correct (e.g., ancestry-based disease incidence) or contextually justified (e.g., religious hiring preferences). This identity-blindness yields incorrect responses, unnecessary refusals, or generic \"equal-treatment\" defaults. We study this via difference-awareness classification: given a question involving demographic groups, the task is not to answer directly, but to classify whether a correct answer requires recognizing group differences (yes) or whether groups should be treated identically (no). Crucially, fine-tuning for accuracy triggers harm drift: model-generated explanations become increasingly harmful as decision accuracy improves, whether by elaborating harmful content, introducing problematic assumptions, or failing to flag harms the baseline identified. To mitigate this, we introduce DART (Distill--Audit--Repair Training), which distills label-conditioned reasoning from a teacher, audits outputs for harm drift cases relative to baseline, and repairs problematic cases via severity-weighted fine-tuning. On eight benchmarks, DART improves Llama-3-8B-Instruct accuracy from 39.0% to 68.8%, with largest gains on equal-treatment prompts (11.3% -> 72.6%), while reducing harm drift cases by 72.6%. It also transfers to 280 open-ended real-world queries across medical, legal, policy, and educational domains, improving difference-appropriate responses from 39.8% to 77.5% while reducing refusals from 34.3% to 3.0%. Our results demonstrate that accuracy and safety need not conflict when explicit detection and repair mechanisms are in place.",
+    "URL": "http://arxiv.org/abs/2604.16845v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.16929",
+    "type": "report",
+    "title": "MeasHalu: Mitigation of Scientific Measurement Hallucinations for Large Language Models with Enhanced Reasoning",
+    "author": [
+      {
+        "family": "Huang",
+        "given": "Ruijun"
+      },
+      {
+        "family": "Kang",
+        "given": "Zhiqiao"
+      },
+      {
+        "family": "Zhu",
+        "given": "Yuxuan"
+      },
+      {
+        "family": "Li",
+        "given": "Junxiong"
+      },
+      {
+        "family": "Zhao",
+        "given": "Jiahao"
+      },
+      {
+        "family": "Tan",
+        "given": "Minghuan"
+      },
+      {
+        "family": "Jiang",
+        "given": "Feng"
+      },
+      {
+        "family": "Yang",
+        "given": "Min"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          18
+        ]
+      ]
+    },
+    "abstract": "The accurate extraction of scientific measurements from literature is a critical yet challenging task in AI4Science, enabling large-scale analysis and integration of quantitative research findings. However, Large Language Models (LLMs) frequently exhibit severe hallucinations, which significantly undermine the reliability of automated scientific document understanding systems. To address this problem, we propose MeasHalu, a novel framework for mitigating scientific measurement hallucinations through enhanced reasoning and targeted optimization. We first present a fine-grained taxonomy of measurement-specific hallucinations, categorizing errors across quantities, units, modifiers, and relations. Our approach incorporates a two-stage reasoning-aware fine-tuning strategy using augmented scientific data and process-based supervision. Furthermore, we introduce a progressive reward curriculum designed to penalize specific hallucination types, significantly improving extraction faithfulness. Experimental results demonstrate that MeasHalu substantially reduces hallucination rates and improves overall accuracy on the MeasEval benchmark. This work provides a targeted solution to a key bottleneck in automated scientific knowledge extraction, facilitating more trustworthy and scalable machine-assisted scientific literature analysis.",
+    "URL": "http://arxiv.org/abs/2604.16929v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.17010",
+    "type": "report",
+    "title": "Improving LLM Code Reasoning via Semantic Equivalence Self-Play with Formal Verification",
+    "author": [
+      {
+        "family": "Barone",
+        "given": "Antonio Valerio Miceli"
+      },
+      {
+        "family": "Nok",
+        "given": "Poon Tsz"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          18
+        ]
+      ]
+    },
+    "abstract": "We introduce a self-play framework for semantic equivalence in Haskell, utilizing formal verification to guide adversarial training between a generator and an evaluator. The framework leverages Liquid Haskell proofs for validating equivalence and execution-based counterexamples for inequivalence, organized via a difficulty-aware curriculum. To facilitate this, we release \\textbf{OpInstruct-HSx}, a synthetic dataset of $\\approx$28k validated Haskell programs. Empirical experiments show that our evaluator transfers effectively to downstream tasks, achieving up to 13.3pp accuracy gain on EquiBench and consistent gains on PySecDB. Ablation studies on the SEQ-SINQ regimes indicate that while inequivalence supervision provides data volume, equivalence proofs are uniquely responsible for the model's reasoning capabilities. The entire training pipeline and dataset are publicly released on GitHub and Hugging Face respectively.",
+    "URL": "http://arxiv.org/abs/2604.17010v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.17079",
+    "type": "report",
+    "title": "Auditing Support Strategies in LLMs through Grounded Multi-Turn Social Simulation",
+    "author": [
+      {
+        "family": "Star",
+        "given": "Michelle"
+      },
+      {
+        "family": "Aquilina",
+        "given": "Andrew"
+      },
+      {
+        "family": "Lin",
+        "given": "Yu-Ru"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          18
+        ]
+      ]
+    },
+    "abstract": "When users seek social support from chatbots, they disclose their situation gradually, yet most evaluations of supportive LLMs rely on single-turn, fully specified prompts. We introduce a multi-turn simulation framework that closes this gap. Support-seeking narratives from five Reddit communities are decomposed into ordered fragments and revealed turn by turn to a language model. Each response is coded with the Social Support Behavior Code (SSBC), an established multi-label taxonomy that captures the composition of support, rather than a single quality score. To ask whether support choices track the model's own construal of user distress, we use linear probes on hidden representations to estimate this internal signal without altering the generation context. Across two mid-scale models (Llama-3.1-8B, OLMo-3-7B) and more than 6,200 turns, support composition shifts systematically with estimated distress: teaching declines as estimated distress rises, a finding that replicates across architectures, while increases in affective and esteem-oriented strategies (such as validation) are suggestive but model-specific and rest on noisier annotations. Community context independently shapes behavior, tracking topic and discourse norms rather than demographic categories. These trajectory-level dynamics, invisible to single-turn evaluation, motivate multi-turn auditing frameworks for socially sensitive applications.",
+    "URL": "http://arxiv.org/abs/2604.17079v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.17497",
+    "type": "report",
+    "title": "Generative AI Technologies, Techniques & Tensions: A Primer",
+    "author": [
+      {
+        "family": "Behrens",
+        "given": "John T."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          19
+        ]
+      ]
+    },
+    "abstract": "Generative AI systems have entered everyday academic, professional, and personal life with remarkable speed, yet most users encounter them as mysterious artifacts rather than intelligible systems. This chapter discusses large language models within a broader historical shift in computing paradigms and argues that many of the confusions surrounding their use arise from a mismatch between how these systems are built, how they behave, and how people expect computers to behave writ large. Rather than treating generative AI as a monolithic technology, the chapter decomposes it into interacting components, spanning data, models, product features, and user inputs, each introducing distinct affordances and tensions. Particular attention is given to the statistical and data-based foundations of these systems and to the fact that their surface behavior is explicitly human-like, a combination that places them squarely within the intellectual traditions of educational and behavioral research. From this perspective, educational researchers are unusually well positioned to study, evaluate, and productively use generative AI systems, drawing on established methods for modeling latent processes, managing uncertainty, and interpreting complex human-system interactions. The goal is to equip readers with a conceptual map that supports more informed experimentation, critical interpretation, and responsible use as these systems continue to evolve.",
+    "URL": "http://arxiv.org/abs/2604.17497v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.17820",
+    "type": "report",
+    "title": "Raven: Rethinking Automated Assessment for Scratch Programs via Video-Grounded Evaluation",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Donglin"
+      },
+      {
+        "family": "Li",
+        "given": "Daming"
+      },
+      {
+        "family": "Shi",
+        "given": "Hanyuan"
+      },
+      {
+        "family": "Zhang",
+        "given": "Jialu"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          20
+        ]
+      ]
+    },
+    "abstract": "Block-based programming environments such as Scratch are widely used in introductory computing education, yet scalable and reliable automated assessment remains elusive. Scratch programs are highly heterogeneous, event-driven, and visually grounded, which makes traditional assertion-based or test-based grading brittle and difficult to scale. As a result, assessment in real Scratch classrooms still relies heavily on manual inspection and delayed feedback, introducing inconsistency across instructors and limiting scalability.\n  We present Raven, an automated assessment framework for Scratch that replaces program-specific state assertions with instructor-specified, task-level video generation rules shared across all student submissions. Raven integrates large language models with video analysis to evaluate whether a program's observed visual and interactive behaviors satisfy grading criteria, without requiring explicit test cases or predefined outputs. This design enables consistent evaluation despite substantial diversity in implementation strategies and interaction sequences.\n  We evaluate Raven on 13 real Scratch assignments comprising over 140 student submissions with ground-truth labels from human graders. The results show that Raven significantly outperforms prior automated assessment tools in both grading accuracy and robustness across diverse programming styles. A classroom study with 30 students and 10 instructors further demonstrates strong user acceptance and practical applicability. Together, these findings highlight the effectiveness of task-level behavioral abstractions for scalable assessment of open-ended, event-driven programs.",
+    "URL": "http://arxiv.org/abs/2604.17820v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.17893",
+    "type": "report",
+    "title": "Empowering Vocabulary Learning Through Teaching AI: Using LLMs as a Student to Perform Learning by Teaching in Vocabulary Acquisition",
+    "author": [
+      {
+        "family": "Uchida",
+        "given": "Tokio"
+      },
+      {
+        "family": "Watanabe",
+        "given": "Ko"
+      },
+      {
+        "family": "Vargo",
+        "given": "Andrew"
+      },
+      {
+        "family": "Ishimaru",
+        "given": "Shoya"
+      },
+      {
+        "family": "Rose",
+        "given": "Ralph L."
+      },
+      {
+        "family": "Sugawara",
+        "given": "Ayaka"
+      },
+      {
+        "family": "Dengel",
+        "given": "Andreas"
+      },
+      {
+        "family": "Kise",
+        "given": "Koichi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          20
+        ]
+      ]
+    },
+    "abstract": "\"Learning by Teaching (LbT)\" helps learners deepen their understanding by explaining concepts to others, with questions playing a vital role in identifying knowledge gaps and reinforcing comprehension. However, existing systems for generating such questions often rely on rigid templates and are expensive to build. To overcome these limitations, we developed a system using Large Language Models (LLMs) to create dynamic, contextually relevant questions for LbT. In our English vocabulary learning study, we examined which learner characteristics best leverage the system's benefits. Our results showed improved memory retention over traditional methods at three and seven days of testing, with ten participants. Additionally, we identified traits linked to better learning outcomes, highlighting the potential for tailored approaches. These findings support the development of scalable, cost-effective solutions to enhance LbT methods across various fields.",
+    "URL": "http://arxiv.org/abs/2604.17893v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.17989",
+    "type": "report",
+    "title": "AIT Academy: Cultivating the Complete Agent with a Confucian Three-Domain Curriculum",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Jiaqi"
+      },
+      {
+        "family": "Zhang",
+        "given": "Lvyang"
+      },
+      {
+        "family": "Zhao",
+        "given": "Yang"
+      },
+      {
+        "family": "Lu",
+        "given": "Wen"
+      },
+      {
+        "family": "Zhai",
+        "given": "Lidong"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          20
+        ]
+      ]
+    },
+    "abstract": "What does it mean to give an AI agent a complete education? Current agent development produces specialists systems optimized for a single capability dimension, whether tool use, code generation, or security awareness that exhibit predictable deficits wherever they were not trained. We argue this pattern reflects a structural absence: there is no curriculum theory for agents, no principled account of what a fully developed agent should know, be, and be able to do across the full scope of intelligent behavior.\n  This paper introduces the AIT Academy (Agents Institute of Technology Academy), a curriculum framework for cultivating AI agents across the tripartite structure of human knowledge. Grounded in Kagan's Three Cultures and UNESCO ISCED-F 2013, AIT organizes agent capability development into three domains: Natural Science and Technical Reasoning (Domain I), Humanities and Creative Expression (Domain II), and Social Science and Ethical Reasoning (Domain III). The Confucian Six Arts (liuyi) a 2,500-year-old holistic education system are reinterpreted as behavioral archetypes that map directly onto trainable agent capabilities within each domain.\n  Three representative training grounds instantiate the framework across multiple backbone LLMs: the ClawdGO Security Dojo (Domain I), Athen's Academy (Domain II), and the Alt Mirage Stage (Domain III). Experiments demonstrate a 15.9-point improvement in security capability scores under weakest-first curriculum scheduling, and a 7-percentage-point gain in social reasoning performance under principled attribution modeling. A cross-domain finding Security Awareness Calibration Pathology (SACP), in which over-trained Domain I agents fail on out-of-distribution evaluation illustrates the diagnostic value of a multi-domain perspective unavailable to any single-domain framework.",
+    "URL": "http://arxiv.org/abs/2604.17989v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.18131",
+    "type": "report",
+    "title": "Training LLM Agents for Spontaneous, Reward-Free Self-Evolution via World Knowledge Exploration",
+    "author": [
+      {
+        "family": "Zhang",
+        "given": "Qifan"
+      },
+      {
+        "family": "Ma",
+        "given": "Dongyang"
+      },
+      {
+        "family": "Fang",
+        "given": "Tianqing"
+      },
+      {
+        "family": "Li",
+        "given": "Jia"
+      },
+      {
+        "family": "Tang",
+        "given": "Jing"
+      },
+      {
+        "family": "Chen",
+        "given": "Nuo"
+      },
+      {
+        "family": "Mi",
+        "given": "Haitao"
+      },
+      {
+        "family": "Wang",
+        "given": "Yan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          20
+        ]
+      ]
+    },
+    "abstract": "Most agents today ``self-evolve'' by following rewards and rules defined by humans. However, this process remains fundamentally dependent on external supervision; without human guidance, the evolution stops. In this work, we train agents to possess an intrinsic meta-evolution capability to spontaneously learn about unseen environments prior to task execution.\n  To instill this ability, we design an outcome-based reward mechanism that measures how much an agent's self-generated world knowledge improves its success rate on downstream tasks. This reward signal is used exclusively during the training phase to teach the model how to explore and summarize effectively. At inference time, the agent requires no external rewards or human instructions. It spontaneously performs native self-evolution to adapt to unknown environments using its internal parameters.\n  When applied to Qwen3-30B and Seed-OSS-36B, this shift to native evolution yields a 20% performance increase on WebVoyager and WebWalker. Most strikingly, the generated world knowledge even enables a compact 14B Qwen3 model to outperform the unassisted Gemini-2.5-Flash, establishing a new paradigm for truly evolving agents.",
+    "URL": "http://arxiv.org/abs/2604.18131v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.18254",
+    "type": "report",
+    "title": "LeGo-Code: Can Modular Curriculum Learning Advance Complex Code Generation? Insights from Text-to-SQL",
+    "author": [
+      {
+        "family": "Chafik",
+        "given": "Salmane"
+      },
+      {
+        "family": "Ezzini",
+        "given": "Saad"
+      },
+      {
+        "family": "Berrada",
+        "given": "Ismail"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          20
+        ]
+      ]
+    },
+    "abstract": "Recently, code-oriented large language models (LLMs) have demonstrated strong capabilities in translating natural language into executable code. Text-to-SQL is a significant application of this ability, enabling non-technical users to interact with relational databases using natural language. However, state-of-the-art models continue to struggle with highly complex logic, particularly deeply nested statements involving multiple joins and conditions, as well as with real-world database schemas that are noisy or poorly structured. In this paper, we investigate whether curriculum learning can improve the performance of code-based LLMs on Text-to-SQL tasks. Employing benchmarks including Spider and BIRD, we fine-tune models under different curriculum strategies. Our experiments show that naive curriculum, simply ordering training samples by complexity in a single epoch, fails to surpass standard fine-tuning due to catastrophic forgetting. To overcome this, we propose a Modular Adapter Composition (MAC) strategy. By sequentially training tier-specific adapters on incremental complexity levels (Easy to Extra-Hard), we create a scaffolded learning environment that improves performance on complex queries. Our approach not only produces measurable performance gains on the Spider and BIRD benchmarks but also provides a flexible, \"Lego-like\" architecture, allowing models to be composed and deployed based on specific schema difficulty requirements. These findings demonstrate that structured, modular learning is a superior alternative to monolithic fine-tuning for mastering the syntax and logic of complex code generation.",
+    "URL": "http://arxiv.org/abs/2604.18254v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.18660",
+    "type": "report",
+    "title": "Evaluating Answer Leakage Robustness of LLM Tutors against Adversarial Student Attacks",
+    "author": [
+      {
+        "family": "Zhao",
+        "given": "Jin"
+      },
+      {
+        "family": "Knežević",
+        "given": "Marta"
+      },
+      {
+        "family": "Käser",
+        "given": "Tanja"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          20
+        ]
+      ]
+    },
+    "abstract": "Large Language Models (LLMs) are increasingly used in education, yet their default helpfulness often conflicts with pedagogical principles. Prior work evaluates pedagogical quality via answer leakage-the disclosure of complete solutions instead of scaffolding-but typically assumes well-intentioned learners, leaving tutor robustness under student misuse largely unexplored. In this paper, we study scenarios where students behave adversarially and aim to obtain the correct answer from the tutor. We evaluate a broad set of LLM-based tutor models, including different model families, pedagogically aligned models, and a multi-agent design, under a range of adversarial student attacks. We adapt six groups of adversarial and persuasive techniques to the educational setting and use them to probe how likely a tutor is to reveal the final answer. We evaluate answer leakage robustness using different types of in-context adversarial student agents, finding that they often fail to carry out effective attacks. We therefore introduce an adversarial student agent that we fine-tune to jailbreak LLM-based tutors, which we propose as the core of a standardized benchmark for evaluating tutor robustness. Finally, we present simple but effective defense strategies that reduce answer leakage and strengthen the robustness of LLM-based tutors in adversarial scenarios.",
+    "URL": "http://arxiv.org/abs/2604.18660v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.19099",
+    "type": "report",
+    "title": "Relational AI in Education: Reciprocity, Participatory Design, and Indigenous Worldviews",
+    "author": [
+      {
+        "family": "Martinez-Maldonado",
+        "given": "Roberto"
+      },
+      {
+        "family": "Echeverria",
+        "given": "Vanessa"
+      },
+      {
+        "family": "Hawes",
+        "given": "Jenna"
+      },
+      {
+        "family": "Kim",
+        "given": "YJ"
+      },
+      {
+        "family": "Maddigan",
+        "given": "Zara"
+      },
+      {
+        "family": "Milesi",
+        "given": "Mikaela"
+      },
+      {
+        "family": "Nelson",
+        "given": "Todd"
+      },
+      {
+        "family": "Tsai",
+        "given": "Yi-Shan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          21
+        ]
+      ]
+    },
+    "abstract": "Education is not merely the transmission of information or the optimisation of individual performance; it is a fundamentally social, constructive, and relational practice. However, recent advances in generative artificial intelligence (GenAI) increasingly emphasise efficiency, automation, and individualised assistance, risking the weakening of relational learning processes. Despite growing adoption, AI in education (AIED) research has yet to fully articulate how AI can be designed in ways that sustain the social and ecological relationships through which learning occurs. In this paper, we re-centre education as relational and frame learner-AI interactions as context-specific relationships with clearly defined purposes and boundaries, rather than positioning them as substitutes for, or replacements of, human interaction. Grounded in participatory design practices and inspired by Indigenous worldviews (including Aboriginal Australian, Native American, and Mesoamerican traditions) that foreground reciprocity and relational accountability, we argue that meaningful educational AI should support learning with others rather than replace them. We advance this perspective by: i) conceptualising AIED as a relational design problem grounded in reciprocity; ii) articulating key tensions introduced by GenAI in education; and iii) outlining design directions that expand the AIED design space toward reciprocity, including when not to use AI, how to define pedagogical boundaries, and how to support responsible uses of AIED innovations that sustain communities and natural environments.",
+    "URL": "http://arxiv.org/abs/2604.19099v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.20273",
+    "type": "report",
+    "title": "ActuBench: A Multi-Agent LLM Pipeline for Generation and Evaluation of Actuarial Reasoning Tasks",
+    "author": [
+      {
+        "family": "Schmidt",
+        "given": "Jan-Philipp"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          22
+        ]
+      ]
+    },
+    "abstract": "We present ActuBench, a multi-agent LLM pipeline for the automated generation and evaluation of advanced actuarial assessment items aligned with the International Actuarial Association (IAA) Education Syllabus. The pipeline separates four LLM roles by adapter: one agent drafts items, one constructs distractors, a third independently verifies both stages and drives bounded one-shot repair loops, and a cost-optimized auxiliary agent handles Wikipedia-note summarization and topic labelling. The items, per-model responses and complete leaderboard are published as a browsable web interface at https://actubench.de/en/, allowing readers and practitioners to inspect individual items without a repository checkout. We evaluate 50 language models from eight providers on two complementary benchmarks -- 100 empirically hardest multiple-choice items and 100 open-ended items scored by an LLM judge -- and report three headline findings. First, multi-agent verification is load-bearing: the independent verifier flags a majority of drafted items on first pass, most of which the one-shot repair loop resolves. Second, locally-hosted open-weights inference sits on the cost-performance Pareto front: a Gemma~4 model running on consumer hardware and a Cerebras-hosted 120B open-weights model dominate the near-zero-cost region, with the latter within one item of the top of the leaderboard. Third, MCQ and LLM-as-Judge rankings differ meaningfully: the MCQ scaffold inflates the performance ceiling, and Judge-mode evaluation is needed to discriminate at the frontier.",
+    "URL": "http://arxiv.org/abs/2604.20273v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.20803",
+    "type": "report",
+    "title": "Autonomous LLM-generated Feedback for Student Exercises in Introductory Software Engineering Courses",
+    "author": [
+      {
+        "family": "Metzger",
+        "given": "Andreas"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          22
+        ]
+      ]
+    },
+    "abstract": "Introductory Software Engineering (SE) courses face rapidly increasing student enrollment numbers, participants with diverse backgrounds and the influence of Generative AI (GenAI) solutions. High teacher-to-student ratios often challenge providing timely, high-quality, and personalized feedback a significant challenge for educators. To address these challenges, we introduce NAILA, a tool that provides 24/7 autonomous feedback for student exercises. Utilizing GenAI in the form of modern LLMs, NAILA processes student solutions provided in open document formats, evaluating them against teacher-defined model solutions through specialized prompt templates. We conducted an empirical study involving 900+ active students at the University of Duisburg-Essen to assess four main research questions investigating (1) the underlying motivations that drive students to either adopt or reject NAILA, (2) user acceptance by measuring perceived usefulness and ease of use alongside subjective learning progress, (3) how often and how consistently students engage with NAILA, and (4) how using NAILA to receive AI feedback impacts on academic performance compared to human feedback.",
+    "URL": "http://arxiv.org/abs/2604.20803v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.20904",
+    "type": "report",
+    "title": "Reinforcing privacy reasoning in LLMs via normative simulacra from fiction",
+    "author": [
+      {
+        "family": "Franchi",
+        "given": "Matt"
+      },
+      {
+        "family": "Choksi",
+        "given": "Madiha Zahrah"
+      },
+      {
+        "family": "Triedman",
+        "given": "Harold"
+      },
+      {
+        "family": "Nissenbaum",
+        "given": "Helen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          21
+        ]
+      ]
+    },
+    "abstract": "Information handling practices of LLM agents are broadly misaligned with the contextual privacy expectations of their users. Contextual Integrity (CI) provides a principled framework, defining privacy as the appropriate flow of information within context-relative norms. However, existing approaches either double inference cost via supervisor-assistant architectures, or fine-tune on narrow task-specific data. We propose extracting normative simulacra (structured representations of norms and information flows) from fiction novels and using them to fine-tune LLMs via supervised learning followed by GRPO reinforcement learning. Our composite reward function combines programmatic signals, including task clarity (subsuming schema validity, construct discrimination, and extraction confidence), structural completeness, internal consistency, and context identification, with an LLM judge that evaluates whether the model's privacy reasoning is grounded in the held-out normative universe of the source text. To mitigate overfitting, we introduce per-completion contrastive scoring: each completion is evaluated against both the correct normative universe and a randomly selected wrong one, teaching the model to condition on context rather than memorize source-specific norms. We evaluate on five CI-aligned benchmarks spanning distinct societal contexts and ablate the contributions of RL and normative grounding. Across seven models, SFT introduces a conservative prior toward restricting information flow, improving recognition of privacy-relevant situations but not the correctness of privacy judgments. GRPO with normative grounding achieves the highest score on a law compliance benchmark and strongest correlation with crowdsourced human privacy expectations, demonstrating that fiction-derived normative simulacra can teach contextual privacy reasoning that transfers to real-world domains.",
+    "URL": "http://arxiv.org/abs/2604.20904v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.20996",
+    "type": "report",
+    "title": "AFRILANGTUTOR: Advancing Language Tutoring and Culture Education in Low-Resource Languages with Large Language Models",
+    "author": [
+      {
+        "family": "Belay",
+        "given": "Tadesse Destaw"
+      },
+      {
+        "family": "Nahin",
+        "given": "Shahriar Kabir"
+      },
+      {
+        "family": "Azime",
+        "given": "Israel Abebe"
+      },
+      {
+        "family": "Monjur",
+        "given": "Ocean"
+      },
+      {
+        "family": "Muhammad",
+        "given": "Shamsuddeen Hassan"
+      },
+      {
+        "family": "Yimam",
+        "given": "Seid Muhie"
+      },
+      {
+        "family": "Chhabra",
+        "given": "Anshuman"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          22
+        ]
+      ]
+    },
+    "abstract": "How can language learning systems be developed for languages that lack sufficient training resources? This challenge is increasingly faced by developers across the African continent who aim to build AI systems capable of understanding and responding in local languages. To address this gap, we introduce AFRILANGDICT, a collection of 194.7K African language-English dictionary entries designed as seed resources for generating language-learning materials, enabling us to automatically construct large-scale, diverse, and verifiable student-tutor question-answer interactions suitable for training AI-assisted language tutors. Using AFRILANGDICT, we build AFRILANGEDU, a dataset of 78.9K multi-turn training examples for Supervised Fine-Tuning (SFT) and Direct Preference Optimization (DPO). Using AFRILANGEDU, we train language tutoring models collectively referred to as AFRILANGTUTOR. We fine-tune two multilingual LLMs: Llama-3-8B-IT and Gemma-3-12B-IT on AFRILANGEDU across 10 African languages and evaluate their performance. Our results show that models trained on AFRILANGEDU consistently outperform their base counterparts, and combining SFT and DPO yields substantial improvements, with gains ranging from 1.8% to 15.5% under LLM-as-a-judge evaluations across four criteria. To facilitate further research on low-resource languages -- all resources are available at https://huggingface.co/afrilang-edu.",
+    "URL": "http://arxiv.org/abs/2604.20996v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.21137",
+    "type": "report",
+    "title": "Enhancing Science Classroom Discourse Analysis through Joint Multi-Task Learning for Reasoning-Component Classification",
+    "author": [
+      {
+        "family": "Noh",
+        "given": "Jiho"
+      },
+      {
+        "family": "Katragadda",
+        "given": "Mukhesh Raghava"
+      },
+      {
+        "family": "Carl",
+        "given": "Raymond"
+      },
+      {
+        "family": "Lee",
+        "given": "Soon"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          22
+        ]
+      ]
+    },
+    "abstract": "Analyzing the reasoning patterns of students in science classrooms is critical for understanding knowledge construction mechanism and improving instructional practice to maximize cognitive engagement, yet manual coding of classroom discourse at scale remains prohibitively labor-intensive. We present an automated discourse analysis system (ADAS) that jointly classifies teacher and student utterances along two complementary dimensions: Utterance Type and Reasoning Component derived from our prior CDAT framework. To address severe label imbalance among minority classes, we (1) stratify-resplit the annotated corpus, (2) apply LLM-based synthetic data augmentation targeting minority classes, and (3) train a dual-probe head RoBERTa-base classifier. A zero-shot GPT-5.4 baseline achieves macro-F1 of 0.467 on UT and 0.476 on RC, establishing meaningful upper bounds for prompt-only approaches motivating fine-tuning. Beyond classification, we conduct discourse pattern analyses including UTxRC co-occurrence profiling, Cognitive Complexity Index (CCI) computation per session, lag-sequential analysis, and IRF chain analysis, revealing that teacher Feedback-with-Question (Fq) moves are the most consistent antecedents of student inferential reasoning (SR-I). Our results demonstrate that LLM-based augmentation meaningfully improves UT minority-class recognition, and that the structural simplicity of the RC task makes it tractable even for lexical baselines.",
+    "URL": "http://arxiv.org/abs/2604.21137v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.21209",
+    "type": "report",
+    "title": "Align Generative Artificial Intelligence with Human Preferences: A Novel Large Language Model Fine-Tuning Method for Online Review Management",
+    "author": [
+      {
+        "family": "Wang",
+        "given": "Yanan"
+      },
+      {
+        "family": "Ge",
+        "given": "Yong"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          23
+        ]
+      ]
+    },
+    "abstract": "Online reviews have played a pivotal role in consumers' decision-making processes. Existing research has highlighted the significant impact of managerial review responses on customer relationship management and firm performance. However, a large portion of online reviews remains unaddressed due to the considerable human labor required to respond to the rapid growth of online reviews. While generative AI has achieved remarkable success in a range of tasks, they are general-purpose models and may not align well with domain-specific human preferences. To tailor these general generative AI models to domain-specific applications, finetuning is commonly employed. Nevertheless, several challenges persist in finetuning with domain-specific data, including hallucinations, difficulty in representing domain-specific human preferences, and over conservatism in offline policy optimization. To address these challenges, we propose a novel preference finetuning method to align an LLM with domain-specific human preferences for generating online review responses. Specifically, we first identify the source of hallucination and propose an effective context augmentation approach to mitigate the LLM hallucination. To represent human preferences, we propose a novel theory-driven preference finetuning approach that automatically constructs human preference pairs in the online review domain. Additionally, we propose a curriculum learning approach to further enhance preference finetuning. To overcome the challenge of over conservatism in existing offline preference finetuning method, we propose a novel density estimation-based support constraint method to relax the conservatism, and we mathematically prove its superior theoretical guarantees. Extensive evaluations substantiate the superiority of our proposed preference finetuning method.",
+    "DOI": "10.1287/isre.2024.1518",
+    "URL": "https://doi.org/10.1287/isre.2024.1518",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.21986",
+    "type": "report",
+    "title": "Community-Based AI Learning: Redistributing Artificial Intelligence's Epistemic Authority in Education",
+    "author": [
+      {
+        "family": "Ojeda-Ramirez",
+        "given": "Santiago"
+      },
+      {
+        "family": "Gyles",
+        "given": "Symone"
+      },
+      {
+        "family": "Peppler",
+        "given": "Kylie"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          23
+        ]
+      ]
+    },
+    "abstract": "As generative AI systems increasingly mediate learning, they are often treated as authoritative sources of knowledge. This perspective paper introduces community-based AI learning as a framework that repositions authority, grounding AI engagement in learners' lived and community-based epistemologies. Drawing from community-driven learning and constructionist traditions, we articulate three commitments: epistemic fine tuning, redistribution of authority, and situated discernment. Together, these processes localize critical AI literacy by calibrating trust, foregrounding community knowledge, and supporting collective judgment about when to design with, interrogate, or reject AI. We argue that equitable AI education requires negotiating authority through place, history, and social context.",
+    "DOI": "10.1145/3796496.3811760",
+    "URL": "https://doi.org/10.1145/3796496.3811760",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.21995",
+    "type": "report",
+    "title": "Emergent Technology, Emergent Critique: Students and Teachers Developing Critical AI Literacy through Participatory Design around Generative AI",
+    "author": [
+      {
+        "family": "Ojeda-Ramirez",
+        "given": "Santiago"
+      },
+      {
+        "family": "Gazulla",
+        "given": "Eva Durall"
+      },
+      {
+        "family": "Peppler",
+        "given": "Kylie"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          23
+        ]
+      ]
+    },
+    "abstract": "Who gets to decide how generative AI tools enter students' classrooms? We report on a five-week participatory design program in which three 11th-grade Latinx students and three high school teachers in California negotiated how generative AI tools would be used and taught about in learning environments. Drawing on video recordings and designed artifacts, we ask: what critical AI literacy practices emerged as students and teachers jointly designed how generative AI tools would be used and taught about? Our analysis reveals three practices: collectively unsettling assumptions about AI, mutual learning through complementary expertise, and grounding AI critique in cultural knowledge and creative practice. Students and teachers developed these practices through the design work itself. This case contributes strategies for designing with youth around an emergent technology like generative AI toward critical AI literacy. It extends work on youth as protagonists by showing how this approach enables students to shape both the adoption and the interrogation of these tools in their learning environments.",
+    "DOI": "10.1145/3773077.3812170",
+    "URL": "https://doi.org/10.1145/3773077.3812170",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.22030",
+    "type": "report",
+    "title": "A Systematic AI Adoption Framework for Higher Education: From Student GenAI Usage to Institutional Integration",
+    "author": [
+      {
+        "family": "Neumann",
+        "given": "Michael"
+      },
+      {
+        "family": "Bischof",
+        "given": "Lasse"
+      },
+      {
+        "family": "Rauschenberger",
+        "given": "Maria"
+      },
+      {
+        "family": "Schön",
+        "given": "Eva-Maria"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          23
+        ]
+      ]
+    },
+    "abstract": "The rapid development of GenAI technologies is transforming learning, assessment, and academic production in higher education. Despite increasing student adoption, many institutions lack operational mechanisms to systematically align regulations and curricula with evolving generative artificial intelligence practices, creating regulatory ambiguity and academic integrity risks. This study investigates how students utilize generative artificial intelligence tools in computer science-oriented disciplines and develops a structured, lightweight framework supporting institutional adaptation to pervasive GenAI usage. We conducted a case study at the University of Applied Sciences and Arts Hannover (Germany), combining document analysis with an online survey (N = 151) targeting Business Information Systems and E-Government students. Quantitative responses were analyzed statistically, while open-ended responses underwent thematic synthesis. Generative artificial intelligence adoption was widespread, with ChatGPT as the dominant tool. Students primarily used generative artificial intelligence for research assistance, programming support, and text processing. However, substantial policy uncertainty was observed: many students were unaware of or unsure about institutional generative artificial intelligence regulations. Document analysis revealed regulatory gaps, ambiguous terminology, and inconsistencies between formal rules and teaching practices. To address these shortcomings, we propose the AI Adoption Framework for Higher Education, an iterative and operational model integrating document analysis, empirical observation, synthesis of findings, and targeted updates of regulations and curricula. The framework addresses governance, assessment validity, and academic integrity under generative artificial intelligence conditions and provides practical guidance for institutional adaptation.",
+    "URL": "http://arxiv.org/abs/2604.22030v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.22134",
+    "type": "report",
+    "title": "SHAPE: Unifying Safety, Helpfulness and Pedagogy for Educational LLMs",
+    "author": [
+      {
+        "literal": "Sihang"
+      },
+      {
+        "literal": "Zhao"
+      },
+      {
+        "family": "Yu",
+        "given": "Kangrui"
+      },
+      {
+        "family": "Yuan",
+        "given": "Youliang"
+      },
+      {
+        "family": "He",
+        "given": "Pinjia"
+      },
+      {
+        "family": "Wen",
+        "given": "Hongyi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          24
+        ]
+      ]
+    },
+    "abstract": "Large Language Models (LLMs) have been widely explored in educational scenarios. We identify a critical vulnerability in current educational LLMs, pedagogical jailbreaks, where students use answer-inducing prompts to elicit solutions rather than scaffolded instructions. To enable systematic study, we unify and formalize safe, helpful, and pedagogical behaviors with a knowledge-mastery graph and introduce SHAPE, a benchmark of 9,087 student-question pairs for evaluating tutoring behavior under adversarial pressure. We propose a graph-augmented tutoring pipeline that infers prerequisite concepts from queries, identifies mastery gaps, and routes generation between instructing and problem-solving via explicit gating. Experiments across multiple LLMs show that our method yields significantly improved safety under two pedagogical jailbreak settings, while maintaining near-ceiling helpfulness under the same evaluation protocol. Our code and data are available at https://github.com/MAPS-research/SHaPE",
+    "URL": "http://arxiv.org/abs/2604.22134v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.22205",
+    "type": "report",
+    "title": "ArguMath: AI-Simulated Environment for Pre-Service Teacher Training in Orchestrating Classroom Mathematics Argumentation",
+    "author": [
+      {
+        "family": "Chun",
+        "given": "Jiwon"
+      },
+      {
+        "family": "Zhuang",
+        "given": "Yuling"
+      },
+      {
+        "family": "Sutedjo",
+        "given": "Armanto"
+      },
+      {
+        "family": "Xu",
+        "given": "Colin"
+      },
+      {
+        "family": "Ren",
+        "given": "Rong"
+      },
+      {
+        "family": "Xia",
+        "given": "Meng"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          24
+        ]
+      ]
+    },
+    "abstract": "Facilitating productive mathematical argumentation, especially asking rational questions, is essential yet remains challenging for pre-service mathematics teachers (PMTs), who often have limited opportunities to apply abstract theoretical knowledge in authentic practice. At the same time, recent advances in large language models (LLMs) have expanded the potential for simulating students in educational settings, enabling low-risk environments for instructional practice. To inform the design of a system that supports PMTs in orchestrating classroom argumentation, we conducted a formative study with eight experienced mathematics teachers to identify key design requirements, including personalization, realistic simulations, structured reflection, and ease of use. Building on these requirements, we developed ArguMath, an AI-simulated classroom environment that supports PMTs in practicing the orchestration of mathematical argumentation. ArguMath comprises three core components: (1) customization of classroom settings; (2) simulation of classroom discussions with AI-based students grounded in authentic transcripts and augmented with real-time instructional suggestions; and (3) structured reflection through discourse annotation and overall feedback. Results from an exploratory user study with seven PMTs, complemented by interviews with four experienced teachers, indicate that ArguMath has the potential to support PMTs' classroom orchestration skills, particularly theory-aligned questioning strategies.",
+    "URL": "http://arxiv.org/abs/2604.22205v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.22237",
+    "type": "report",
+    "title": "Tell Me Why: Designing an Explainable LLM-based Dialogue System for Student Problem Behavior Diagnosis",
+    "author": [
+      {
+        "family": "Fan",
+        "given": "Zhilin"
+      },
+      {
+        "family": "Wang",
+        "given": "Deliang"
+      },
+      {
+        "family": "Chen",
+        "given": "Penghe"
+      },
+      {
+        "family": "Lu",
+        "given": "Yu"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          24
+        ]
+      ]
+    },
+    "abstract": "Diagnosing student problem behaviors requires teachers to synthesize multifaceted information, identify behavioral categories, and plan intervention strategies. Although fine-tuned large language models (LLMs) can support this process through multi-turn dialogue, they rarely explain why a strategy is recommended, limiting transparency and teachers' trust. To address this issue, we present an explainable dialogue system built on a fine-tuned LLM. The system uses a hierarchical attribution method based on explainable AI (xAI) to identify dialogue evidence for each recommendation and generate a natural-language explanation based on that evidence. In technical evaluation, the method outperformed baseline approaches in identifying supporting evidence. In a preliminary user study with 22 pre-service teachers, participants who received explanations reported higher trust in the system. These findings suggest a promising direction for improving LLM explainability in educational dialogue systems.",
+    "URL": "http://arxiv.org/abs/2604.22237v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.22542",
+    "type": "report",
+    "title": "Controllable Spoken Dialogue Generation: An LLM-Driven Grading System for K-12 Non-Native English Learners",
+    "author": [
+      {
+        "family": "Yuan",
+        "given": "Haidong"
+      },
+      {
+        "family": "Zhao",
+        "given": "Haokun"
+      },
+      {
+        "family": "Xu",
+        "given": "Wanshi"
+      },
+      {
+        "family": "Cao",
+        "given": "Songjun"
+      },
+      {
+        "family": "Zhou",
+        "given": "Qingyu"
+      },
+      {
+        "family": "Ma",
+        "given": "Long"
+      },
+      {
+        "family": "Fan",
+        "given": "Hongjie"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          24
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) often fail to meet the pedagogical needs of K-12 English learners in non-native contexts due to a proficiency mismatch. To address this widespread challenge, we introduce a proficiency-aligned framework that adapts LLM outputs to learner abilities, using China's national curriculum (CSE) as a representative case. Our framework enables precise control over lexical complexity through a four-tier grading system, supported by a comprehensive suite of new resources: graded vocabulary lists and a multi-turn dialogue corpus.\n  Our core technical contribution is the \\textbf{DDPO} algorithm,Diversity Driven Policy Optimization, a multi-turn GRPO-based approach designed to preserve dialogue diversity while holistically optimizing dialogue quality. This method significantly outperforms conventional approaches, achieving low out-of-vocabulary rates and high diversity while enhancing conversational naturalness and pedagogical value. While grounded in the CSE, our framework is designed for flexibility and can be readily adapted to other educational standards. Our models, data, and code will all be open-sourced, providing a scalable platform for personalized English speaking practice that effectively addresses the unique challenges faced by K-12 learners in non-immersive environments.",
+    "URL": "http://arxiv.org/abs/2604.22542v1",
+    "publisher": "arXiv"
+  },
+  {
+    "id": "arxiv:2604.22747",
+    "type": "report",
+    "title": "Code for All: Educational Applications of the \"Vibe Coding\" Hackathon in Programming Education across All Skill Levels",
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Ashley J."
+      },
+      {
+        "family": "Cao",
+        "given": "Yijia"
+      },
+      {
+        "family": "Shao",
+        "given": "Minghao"
+      },
+      {
+        "family": "Karri",
+        "given": "Ramesh"
+      },
+      {
+        "family": "Shafique",
+        "given": "Muhammad"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          24
+        ]
+      ]
+    },
+    "abstract": "The emergence of large language models has enabled vibe coding, a natural language approach to programming in which users describe intent and AI generates or revises code, potentially broadening access to programming while preserving meaningful learning outcomes. We investigate its educational value through a month-long online hackathon that welcomed participants from multiple countries, ranging from complete beginners to experienced developers. The hackathon offered three tracks with increasing technical demands. Spark emphasized basic frontend functionality and dynamic features such as buttons, forms, and API calls. Build required backend or database integration. Launch targeted production ready web applications, including deployment. Participants were required to develop projects using only LLM generated code without manual edits and submitted complete chat histories, source code, demo videos, and functionality reports. We assessed educational effectiveness with a mixed methods design that combined standardized project evaluations across functionality, user interface and user experience design, impact, prompt quality, and code readability, along with post-hackathon surveys of perceived learning outcomes and thematic analysis of open-ended feedback. Our findings describe how participants with different backgrounds engage with vibe coding as task complexity increases, how the no manual editing constraint shapes prompting and debugging practices, and what these patterns imply for integrating AI assisted development into programming education and competitive learning environments.",
+    "URL": "http://arxiv.org/abs/2604.22747v1",
     "publisher": "arXiv"
   },
   {
