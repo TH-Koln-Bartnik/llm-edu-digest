@@ -26509,5 +26509,29 @@
     "DOI": "10.1007/s10734-025-01612-y",
     "URL": "https://doi.org/10.1007/s10734-025-01612-y",
     "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7160894528",
+    "type": "article-journal",
+    "title": "Teaching Applied Optimization with Large Language Models",
+    "author": [
+      {
+        "family": "Zhang",
+        "given": "Peter"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          12
+        ]
+      ]
+    },
+    "abstract": "Teachers face both push and pull to address large language models (LLMs) in the classroom. The pull comes from the increasing market demand for critically assessing or using generative AI (GAI) tools, whereas the pressure arises from students’ independent adoption of GAI, regardless of stated classroom policy. A case study at Carnegie Mellon University during fall 2023 with 66 diverse students demonstrated significant shifts when LLMs were used. Notably, office hours for technical Python support dropped significantly, and the learning environment became more equitable, allowing students of varying technical backgrounds to progress at similar rates. Additionally, students showed slight improvements in problem framing but no increase in the time spent analyzing results. Surveys conducted postcourse revealed uniform feedback. Students effectively used ChatGPT for coding tasks such as debugging and learning Python syntax. ChatGPT, combined with OptiGuide, showed useful but unpredictable results in modifying existing models. The survey also highlighted time savings in assignments and projects, especially where clear instructions mimicked the prompts needed for ChatGPT. Interestingly, two distinct student profiles emerged: learners who used ChatGPT to enhance understanding and those who sought to expedite course completion, utilizing any time saved for other activities. Funding: This project is funded in part by Carnegie Mellon University’s Safety21 National University Transportation Center, which is sponsored by the U.S. Department of Transportation. It is also supported by the CMU Block Center for Technology and Society and the CMU Eberly Center for Teaching Excellence and Educational Innovation.",
+    "DOI": "10.1287/ited.2024.0096",
+    "URL": "https://doi.org/10.1287/ited.2024.0096",
+    "container-title": "INFORMS Transactions on Education"
   }
 ]
