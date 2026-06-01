@@ -26533,5 +26533,33 @@
     "DOI": "10.1287/ited.2024.0096",
     "URL": "https://doi.org/10.1287/ited.2024.0096",
     "container-title": "INFORMS Transactions on Education"
+  },
+  {
+    "id": "openalex:W7162785236",
+    "type": "article-journal",
+    "title": "Student agency in Colombian higher education: a dual-pathway model of mediation and moderation between student engagement and academic achievement",
+    "author": [
+      {
+        "family": "Castro",
+        "given": "Uriel Eduardo Torres"
+      },
+      {
+        "family": "Pineda-Báez",
+        "given": "Clelia"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          29
+        ]
+      ]
+    },
+    "abstract": "Abstract This study empirically examines the dual role of student agency—operationalized as agentic engagement—as both a mediating and a moderating mechanism in the relationship between student engagement and academic achievement in Colombian higher education. Drawing on social cognitive and ecological theories, it tests a dual-pathway model where agentic engagement, measured via the Agentic Engagement Scale (AES), assumes distinct functional roles. By analyzing data from 1,713 final-year students across six accredited private universities, this study employs hierarchical regression and structural equation modeling to examine how agentic engagement conditions relationships among key National Survey of Student Engagement (NSSE) indicators. The results indicated that expressive voice (AES2: “I express my preferences and opinions in class”) mediated the relationships between Collaborative Learning and Student–Faculty Interaction and achievement while simultaneously moderating the Student–Faculty Interaction pathway in a compensatory pattern. Although effect sizes were modest, they elucidate partial, context-dependent mechanisms through which agency translates engagement into academic outcomes. The findings underscore the relevance of expressive voice as a situated agentic mechanism and contribute to a relational, process-oriented understanding of educational quality, offering empirical insight into how equitable learning ecologies may be supported without overstating effect magnitudes.",
+    "DOI": "10.1007/s10734-026-01669-3",
+    "URL": "https://doi.org/10.1007/s10734-026-01669-3",
+    "container-title": "Higher Education"
   }
 ]
