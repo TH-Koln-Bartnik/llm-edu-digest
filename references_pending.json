@@ -26332,6 +26332,42 @@
     "container-title": "Higher Education"
   },
   {
+    "id": "openalex:W7142170403",
+    "type": "article-journal",
+    "title": "The impact of international classroom diversity on student performance: evidence from a Dutch University",
+    "author": [
+      {
+        "family": "Haelermans",
+        "given": "Carla"
+      },
+      {
+        "family": "Hendrikse",
+        "given": "Arnold"
+      },
+      {
+        "family": "Smeets",
+        "given": "Chayenne"
+      },
+      {
+        "family": "Bijsmans",
+        "given": "Patrick"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          28
+        ]
+      ]
+    },
+    "abstract": "Abstract These days, higher education is increasingly organized in an international classroom setting. Especially interactive instruction in small groups is influenced by such a setting, but unbiased effects of the international classroom are not unambiguous. Based on rich data of more than 19 000 unique students over 6 years from an international university in the Netherlands, we study whether a higher level of internationalisation in the classroom positively affects Bachelor students’ performance in a setting where students are randomly assigned to small education groups. We find this to largely be the case. There are however differences in effect between academic fields and between different types of students, e.g. different nationalities of students and different years of study. Analyses of course evaluations show that the international classroom is particularly effective for groups in which the teacher encourages the constant use of English as main language during classes and breaks.",
+    "DOI": "10.1007/s10734-026-01644-y",
+    "URL": "https://doi.org/10.1007/s10734-026-01644-y",
+    "container-title": "Higher Education"
+  },
+  {
     "id": "openalex:W7142392985",
     "type": "article-journal",
     "title": "Gendered patterns of knowledge production: examining female academics’ research in higher education research in Japan",
@@ -26387,6 +26423,102 @@
     "container-title": "Computers & Education"
   },
   {
+    "id": "openalex:W7151316517",
+    "type": "article-journal",
+    "title": "Critical thinking performance patterns among Australian and Chinese higher education students: a latent profile analysis",
+    "author": [
+      {
+        "family": "Sun",
+        "given": "Sundance Zhihong"
+      },
+      {
+        "family": "Beswick",
+        "given": "Bruce"
+      },
+      {
+        "family": "Zhang",
+        "given": "Z."
+      },
+      {
+        "family": "Song",
+        "given": "Huan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          7
+        ]
+      ]
+    },
+    "abstract": "This study addresses a tension in the critical thinking (CT) literature. Recent large-scale empirical evidence suggests significant CT gains in higher education across world regions, yet stakeholders such as employers often perceive CT as underdeveloped in graduates, and emerging empirical evidence challenges prevailing assumptions that Eastern students are weaker critical thinkers than their Western peers. We hypothesised that this tension arises from the use of narrow, often implicit CT constructs that capture only part of a broader, multidimensional competence. Adopting a model of CT that includes both cognitive skills and epistemic beliefs, we conducted latent profile analysis on data from higher education students in Australia (N = 233) and China (N = 247). The resulting performance profiles show that students’ CT cannot be adequately described along a single dimension, and that focusing on only one aspect of CT can generate partial or misleading conclusions about CT development across contexts. The study illustrates how explicit use of a multidimensional CT construct can help reconcile conflicting accounts in the literature and offers conceptual and practical guidance for CT theory, assessment, and pedagogy, while underscoring the need for future research with larger and more representative samples.",
+    "DOI": "10.1080/03075079.2026.2653674",
+    "URL": "https://doi.org/10.1080/03075079.2026.2653674",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7152607972",
+    "type": "article-journal",
+    "title": "Using generative artificial intelligence to reimagine feedback in higher education: a collaborative autoethnography",
+    "author": [
+      {
+        "family": "Cooper",
+        "given": "Grant"
+      },
+      {
+        "family": "Ilich",
+        "given": "Kelly"
+      },
+      {
+        "family": "Sturrock",
+        "given": "Keryn"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          9
+        ]
+      ]
+    },
+    "abstract": "This article examines the potential of generative artificial intelligence (GenAI) to reshape feedback practices in higher education. It reports on a proof-of-concept study in which teacher educators recorded oral feedback. These recordings were uploaded to a customised ChatGPT model and restructured in alignment with the assessment rubric. Educators then edited the text to ensure accuracy, appropriate tone, and alignment with the rubric. Using collaborative autoethnography, we analysed our experiences to explore how GenAI reshaped the feedback process. Initial implementation increased workload due to technical challenges and substantial editing demands. Over time, efficiencies improved as prompts and workflows were refined. Some educators reported reduced cognitive demands when speaking rather than typing, although labour shifted towards verification, tone calibration, and rubric alignment. While GenAI output imposed a coherent structure on spoken commentary, human oversight remained essential. Ethical considerations relating to authorship, transparency, and professional responsibility were central throughout. We argue that meaningful integration of GenAI into feedback practices requires careful design, sustained human oversight, and explicit ethical reflection. This study raises important questions about assessment authorship, professional identity, and evolving assessment processes in higher education.",
+    "DOI": "10.1080/02602938.2026.2653889",
+    "URL": "https://doi.org/10.1080/02602938.2026.2653889",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7154589726",
+    "type": "article-journal",
+    "title": "Rethinking teacher quality in Swedish higher education: insights from social sciences student perspectives and Q methodology",
+    "author": [
+      {
+        "family": "Lundberg",
+        "given": "Adrian"
+      },
+      {
+        "family": "Stigmar",
+        "given": "Martin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          16
+        ]
+      ]
+    },
+    "abstract": "The Covid-19 pandemic reshaped university teaching and prompted renewed attention to what constitutes high-quality university teachers. In research, students remain comparatively underrepresented in discussions about what characterizes a high-quality university teacher. This study addresses this gap by examining how the primary recipients of teaching conceptualize teacher quality in post-pandemic higher education. Using Q methodology, 41 social sciences students from different Swedish universities sorted 43 statements reflecting aspects of teacher quality derived from prior research. Factor analysis revealed three distinct and statistically robust design-thinking student personas. Sero, the academic purist, values disciplinary expertise, structure, and transparent assessment; effective teachers are those who know their subject and communicate expectations clearly. Kim, the inclusive collaborator, prioritizes relational ethics, fairness, and psychological safety, viewing high-quality teachers as those who foster equitable and inclusive learning environments. Alexi, the inspired thinker, seeks intellectual challenge, creativity, and emotional engagement, emphasizing teachers who stimulate curiosity and make learning meaningful. Across all three perspectives, students showed strong consensus on the importance of clear communication, coherent course design, and fairness in grading. By contrast, teachers’ personal support and student autonomy in shaping learning processes were ranked as less central markers of quality. Beyond its empirical contribution, the study’s results are presented in a design-thinking framework, offering a practical tool for academic development and pedagogical reflection. The personas invite educators and institutions to recognize the coexistence of multiple expectations and to design learning environments that respond to diverse student needs in a rapidly evolving higher education landscape.",
+    "DOI": "10.1080/03075079.2026.2651935",
+    "URL": "https://doi.org/10.1080/03075079.2026.2651935",
+    "container-title": "Studies in Higher Education"
+  },
+  {
     "id": "openalex:W7155205829",
     "type": "article-journal",
     "title": "The Peradex: a performance-based assessment approach for adaptive expertise using design scenarios and artificial intelligence",
@@ -26416,6 +26548,134 @@
     "abstract": "Higher education has the responsibility to educate students to take up grand societal challenges, such as climate change or threats to global health. To this end, students and professionals need to develop adaptive expertise (AE), which is the ability to perform at a high level when facing new or changing problem situations. Scholars struggle with measurement of AE. Various questionnaires that measure AE are self-assessments, which might lead to bias. We currently lack an unbiased assessment tool for AE. A promising direction lies in the development of design scenarios, presenting real-world, open-ended problems that can be solved. In this paper, we developed an assessment approach called the Peradex (Performance-based Adaptive Expertise). The approach is based on a series of 72 design scenarios using artificial intelligence (AI). Next, we asked a panel of 535 students and young professionals to propose solutions to the problems presented in four of these design scenarios that were presented to them. We used Phi-4, a local large language model, to assess to what extent the solutions demonstrated AE. We conclude that the Peradex is reliable and valid for formative assessment purposes.",
     "DOI": "10.1080/02602938.2026.2653883",
     "URL": "https://doi.org/10.1080/02602938.2026.2653883",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7155512270",
+    "type": "article-journal",
+    "title": "On AI glasses and wearable AI in assessment",
+    "author": [
+      {
+        "family": "Corbin",
+        "given": "Thomas"
+      },
+      {
+        "family": "Sharpe",
+        "given": "Sue"
+      },
+      {
+        "family": "Dawson",
+        "given": "Phillip"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          24
+        ]
+      ]
+    },
+    "abstract": "AI-enabled smart glasses with real-time AI capabilities are now mass-market consumer products, in many cases indistinguishable from ordinary eyewear. They can display AI-generated text within the wearer’s line of sight, process speech through built-in microphones, and read examination materials through integrated cameras, all without producing any reliable external signal. These capabilities are significant for higher education not least because many institutions rely upon the physical exclusion of AI from the point of assessment to assure learning, particularly by way of invigilated exams and interactive orals. This paper introduces the concept of dual transparency to argue that wearable AI erodes the conditions of separability and observability on which the physical exclusion of AI from assessment has come to depend. It argues that attempts to maintain physical exclusion under conditions of dual transparency are likely to lead not to restored security but to a regime of bodily adjudication whose burden falls hardest on students with disabilities, health conditions, and religious dress practices.",
+    "DOI": "10.1080/02602938.2026.2661367",
+    "URL": "https://doi.org/10.1080/02602938.2026.2661367",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7155529050",
+    "type": "article-journal",
+    "title": "A new pedagogical approach to peer review of teaching in higher education",
+    "author": [
+      {
+        "family": "Harper",
+        "given": "Matthew"
+      },
+      {
+        "family": "Patfield",
+        "given": "Sally"
+      },
+      {
+        "family": "Gore",
+        "given": "Jennifer"
+      },
+      {
+        "family": "Prieto",
+        "given": "Elena"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          23
+        ]
+      ]
+    },
+    "abstract": "In the higher education sector, peer review of teaching (PRT) is widely recognised as a productive approach to improving practice through intentional observation and feedback. However, perpetual criticism plagues PRT, including a lack of clarity about what is being reviewed, unstructured and superficial processes for analysis of practice, and feelings of mistrust and anxiety among participants. In this paper, we detail a new approach to PRT that combats these challenges by systematically attending to three domains of professional learning: substantive (content), structural (delivery), and relational (relationships). Our approach uses an evidence-based pedagogical framework, explicit steps and mechanisms for participant engagement, and reciprocal, non-hierarchical modes of interaction that foster collegiality. Drawing on interview data from academics (n = 10) at one Australian university that piloted the approach in 2024, our analysis demonstrates that embedding pedagogical substance, strengthening pedagogical process, and addressing pedagogical relations enhances the PRT experience, producing benefits for academics and the institution while mitigating adverse experiences and negative outcomes. In short, we argue that anchoring PRT in pedagogy not only overcomes common challenges and critiques but opens new possibilities for more effective implementation of academic development in the future.",
+    "DOI": "10.1080/1360144x.2026.2655920",
+    "URL": "https://doi.org/10.1080/1360144x.2026.2655920",
+    "container-title": "International Journal for Academic Development"
+  },
+  {
+    "id": "openalex:W7157318881",
+    "type": "article-journal",
+    "title": "Making a mark by designing from scratch: a swifter assessment scheme for essays, dissertations and data projects",
+    "author": [
+      {
+        "family": "Meese",
+        "given": "Tim S."
+      },
+      {
+        "family": "Hosie",
+        "given": "Charlotte A."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          27
+        ]
+      ]
+    },
+    "abstract": "We critically appraise five well-known types of marking scheme for dissertations, identifying numerous problems including excessive complexity, accessibility, transparency and time costs. Our innovative solution—the Block and Increment (B&I) scheme—was devised from first principles to meet seven design criteria, guided by the hypothetical ‘sigmoidal marker’s assessment function’ (SMAF) where discriminability of perceived quality varies across the marking range. The SMAF leads to three distinct blocks of marks: (i) 40% for fail/pass, (ii) 40% of weighted increment marks on a 3-point scale, and (iii) 20% of marks on a sliding scale. Following successful trials and four years of use, we share the development of this scheme here. We present sufficient detail to enable assessors in other departments, disciplines and universities to readily adapt our approach for their own assessments. Once markers are oriented with the scheme (practically, this amounts to using it for a handful of assessments), marking is straightforward and swift. The scheme also provides a valuable method for providing both quantitative and qualitative feedback to students as well as setting out clear marking criteria for both staff and students.",
+    "DOI": "10.1080/02602938.2026.2658630",
+    "URL": "https://doi.org/10.1080/02602938.2026.2658630",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7160192428",
+    "type": "article-journal",
+    "title": "Are assessments in higher education fair for all? Investigating the association between assessment load and type and students’ academic performance: a longitudinal large-scale data set analysis",
+    "author": [
+      {
+        "family": "Tan",
+        "given": "Yiyi"
+      },
+      {
+        "family": "Hart",
+        "given": "Benjamin"
+      },
+      {
+        "family": "Pickering",
+        "given": "James"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          4
+        ]
+      ]
+    },
+    "abstract": "The persistent awarding gap between advantaged groups and marginalised groups remains a critical concern for higher education. Moving beyond individual-deficit explanations, this study investigates how assessment design, including types and loads, functions as structural impediments for success. Drawing on a large-scale longitudinal data set (2017/18–2024/25) involving 52,420 students represented across 3,606 modules (over 700,000 student-module observations) at a UK university, we employ linear mixed-effects modelling to examine the relationship between assessment design and student performance. Our results reveal that traditional, exam-based assessments are positively associated with academic performance among White students, but negatively associated with the performance of Black students and those from socio-economically disadvantaged backgrounds. Conversely, practice-based and relational assessments appear to function as a pedagogical leveller, particularly for Black students. Furthermore, this study finds a positive association between assessment load and module marks, a result which is significantly more pronounced for socio-economically disadvantaged students. These findings have crucial implications for assessment policies and educational practices in higher education.",
+    "DOI": "10.1080/02602938.2026.2661360",
+    "URL": "https://doi.org/10.1080/02602938.2026.2661360",
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
@@ -26487,6 +26747,46 @@
     "container-title": "Higher Education"
   },
   {
+    "id": "openalex:W7160553724",
+    "type": "article-journal",
+    "title": "Lacking the ‘personal touch’: students’ perceptions of generative artificial intelligence in assessment feedback",
+    "author": [
+      {
+        "family": "Rose",
+        "given": "Sarah E."
+      },
+      {
+        "family": "Taylor",
+        "given": "Louise"
+      },
+      {
+        "family": "Pheiffer",
+        "given": "Gary"
+      },
+      {
+        "family": "Fortune",
+        "given": "Zoë"
+      },
+      {
+        "family": "Wilde",
+        "given": "Natalie"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          6
+        ]
+      ]
+    },
+    "abstract": "Despite the potential usefulness of Generative Artificial Intelligence (GenAI) for providing assessment feedback, little is known about students’ understanding and perceptions of it. Addressing this gap is important to ensure that GenAI-assisted feedback is pedagogically effective, because its value depends on whether students perceive it as credible and worth acting on. Twenty-five students (14 female, mean age = 26.41 years) studying a range of courses at British universities with campuses in the United Kingdom and United Arab Emirates took part in one of seven focus groups (n = 23) or interviews (n = 2). They were asked to explain what are the characteristics of useful feedback, whether they felt that GenAI could provide this, and their feelings about its potential use by tutors. Reflexive thematic analysis generated two overarching themes: ‘characteristics of GenAI feedback’ and ‘use of GenAI in feedback processes’. Together, these demonstrated that students evaluated GenAI as a potentially useful tool for providing objective and individualised feedback, but not necessarily accurate feedback. Fundamentally, they did not believe it could replace human expertise or provide the ‘personal touch’, which supports the theory that effective feedback is dialogic. Findings can be used to guide practice and policy concerning the use of GenAI-assisted assessment feedback.",
+    "DOI": "10.1080/02602938.2026.2658633",
+    "URL": "https://doi.org/10.1080/02602938.2026.2658633",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
     "id": "openalex:W7160697936",
     "type": "article-journal",
     "title": "What does it mean to widen participation? a machine learning analysis of historical and contemporary access discourses",
@@ -26535,6 +26835,62 @@
     "container-title": "INFORMS Transactions on Education"
   },
   {
+    "id": "openalex:W7161585052",
+    "type": "article-journal",
+    "title": "Still white, still male: reading lists and the limits of criminology curriculum reform",
+    "author": [
+      {
+        "family": "Ghuneim",
+        "given": "Lana"
+      },
+      {
+        "family": "Pater",
+        "given": "Naomi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          18
+        ]
+      ]
+    },
+    "abstract": "This study critically examines the racial, gender, and regional representation of authors on reading lists from seven first-year criminology modules at a UK Russell Group university. Drawing on critical race theory and decolonial scholarship, it explores whose knowledge is legitimised through curriculum design and how structural inequalities are reproduced in pedagogical materials. The findings reveal a striking overrepresentation of white, male, and Global North scholars, with racially minoritised and female authors often confined to identity-focused modules. These patterns highlight the epistemic exclusions embedded in criminology’s disciplinary canon and raise urgent questions about efforts to decolonise curricula. The paper argues that transformative reform must go beyond representational inclusion to challenge the institutional, cultural, and epistemological structures that maintain whiteness as the normative centre of criminological knowledge.",
+    "DOI": "10.1080/13562517.2026.2674270",
+    "URL": "https://doi.org/10.1080/13562517.2026.2674270",
+    "container-title": "Teaching in Higher Education"
+  },
+  {
+    "id": "openalex:W7162697312",
+    "type": "article-journal",
+    "title": "Power x prejudice: risk-based assessment on the vulnerability of female Chinese international students in Australia",
+    "author": [
+      {
+        "family": "Hale",
+        "given": "Adrian"
+      },
+      {
+        "family": "Lam",
+        "given": "Dennis"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          28
+        ]
+      ]
+    },
+    "abstract": "Racism and sexism are discriminatory behaviours that are prevalent throughout society, and both have a negative impact on individuals. Further, the intersectionality of racism and sexism has a profoundly damaging effect on its victims. A vulnerable cohort illustrative of this intersectionality impact is female Chinese international students studying in Australia. This study will examine the case studies of four of these students studying at one Australian university. Using a risk management framework, we explore the complex relationship of power and prejudice exercised by male perpetrators relating to the impact on these students, which results in a threat to personal safety or attempted subjugation. This study advocates for stronger support services to be in place to help these students counter potential sexism-racism incidents or to provide post-incident care.",
+    "DOI": "10.1080/07294360.2026.2639618",
+    "URL": "https://doi.org/10.1080/07294360.2026.2639618",
+    "container-title": "Higher Education Research & Development"
+  },
+  {
     "id": "openalex:W7162785236",
     "type": "article-journal",
     "title": "Student agency in Colombian higher education: a dual-pathway model of mediation and moderation between student engagement and academic achievement",
@@ -26560,6 +26916,154 @@
     "abstract": "Abstract This study empirically examines the dual role of student agency—operationalized as agentic engagement—as both a mediating and a moderating mechanism in the relationship between student engagement and academic achievement in Colombian higher education. Drawing on social cognitive and ecological theories, it tests a dual-pathway model where agentic engagement, measured via the Agentic Engagement Scale (AES), assumes distinct functional roles. By analyzing data from 1,713 final-year students across six accredited private universities, this study employs hierarchical regression and structural equation modeling to examine how agentic engagement conditions relationships among key National Survey of Student Engagement (NSSE) indicators. The results indicated that expressive voice (AES2: “I express my preferences and opinions in class”) mediated the relationships between Collaborative Learning and Student–Faculty Interaction and achievement while simultaneously moderating the Student–Faculty Interaction pathway in a compensatory pattern. Although effect sizes were modest, they elucidate partial, context-dependent mechanisms through which agency translates engagement into academic outcomes. The findings underscore the relevance of expressive voice as a situated agentic mechanism and contribute to a relational, process-oriented understanding of educational quality, offering empirical insight into how equitable learning ecologies may be supported without overstating effect magnitudes.",
     "DOI": "10.1007/s10734-026-01669-3",
     "URL": "https://doi.org/10.1007/s10734-026-01669-3",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7162805334",
+    "type": "article-journal",
+    "title": "When technological momentum overshadows pedagogical alignment: a systematic review of AI-generated formative feedback in higher education",
+    "author": [
+      {
+        "family": "Çallı",
+        "given": "Ezgi"
+      },
+      {
+        "family": "Er",
+        "given": "Erkan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          29
+        ]
+      ]
+    },
+    "abstract": "Providing timely and pedagogically meaningful formative feedback remains a persistent challenge in higher education. Advances in generative artificial intelligence (AI), particularly large language models (LLMs), have accelerated research on automating and augmenting feedback processes. This systematic review synthesises 103 empirical studies published between 2020 and 2025 to examine how AI-generated formative feedback is conceptualised, implemented, and evaluated in higher education. The analysis reveals rapid technological expansion, with AI most commonly positioned as a supplementary assistant to enhance feedback efficiency and scalability. While studies frequently report positive learner perceptions and improvements in feedback-related outcomes, evaluations of feedback quality are often indirect and grounded primarily in short-cycle interventions and perceptual measures. Theoretical grounding is uneven and instructor involvement often remains supervisory. Drawing on these patterns, the review identifies a structural alignment challenge across three interdependent layers: foundational pedagogical theory, system design, and interactional practice. The findings suggest that the long-term educational value of AI-generated formative feedback depends less on technical sophistication alone than on principled coordination between pedagogical intent, technological architecture, and human-AI collaboration. The review clarifies structural patterns in the literature and outlines priorities for theory-informed and context-sensitive implementation.",
+    "DOI": "10.1080/02602938.2026.2674230",
+    "URL": "https://doi.org/10.1080/02602938.2026.2674230",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7163146399",
+    "type": "article-journal",
+    "title": "Rethinking learning and teaching cultures in higher education through radical collegiality and student-staff partnerships",
+    "author": [
+      {
+        "family": "O’Leary",
+        "given": "Matt"
+      },
+      {
+        "family": "Jones",
+        "given": "Jenni"
+      },
+      {
+        "family": "Hughes",
+        "given": "Julie"
+      },
+      {
+        "family": "Wright",
+        "given": "Victoria"
+      },
+      {
+        "family": "Cui",
+        "given": "Vanessa"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          2
+        ]
+      ]
+    },
+    "abstract": "This paper contributes to the growing research interest in the quality of learning and teaching in higher education (HE). The paper argues for the rethinking of learning and teaching cultures in HE regarding learning and teaching quality enhancement. Using Fielding’s (1999) ‘radical collegiality’ and Cook-Sather’s (2015) ‘pedagogical partnerships’ as theoretical anchors, the paper interrogates the theory and applied practice of authentic collaboration between students and academic staff. It starts with a critical discussion of the literature on student-staff partnerships and the co-creation of learning and teaching. Drawing on data from a 2-year student-staff partnership project involving three UK universities, it reveals how authentic, collaborative and successful student-staff partnerships evolve over time, are contingent on reconfiguring the power dynamics between both parties and creating shared spaces for these beneficial situated partnerships to be developed. The underpinning values of these partnerships include shared responsibility, mutual respect and reciprocity.Este artículo contribuye al creciente interés en la investigación sobre la calidad del y la enseñanza y el aprendizaje en la Educación Superior (ES). El artículo plantea la necesidad de repensar las culturas de enseñanza y aprendizaje en la ES con el fin de mejorar su calidad.. Utilizando los conceptos de ‘radical collegiality’ de Fielding (1999) y ‘pedagogical partnerships’ de Cook-Sather (2015) como marcos teóricos, el artículo examina la teoría y la práctica aplicada de la colaboración auténtica entre estudiantes y personal docente. Comienza con un análisis crítico de la literatura sobre el partenariado entre estudiantes y personal docente y la cocreación de la enseñanza y elaprendizaje. A partir de datos de un proyecto de partenariado entre estudiantes y personal docente de dos años de duración, en el que participaron tres universidades del Reino Unido, el artículo revela cómo las relaciones auténticas, colaborativas y exitosas entre estudiantes y personal docente evolucionan con el tiempo, cómo dependen de la reconfiguración de la dinámica de poder entre ambas partes, y de la creación de espacios compartidos para el desarrollo de estas colaboraciones beneficiosas y contextualizadas. Los valores fundamentales de estos partenariados incluyen la responsabilidad compartida, el respeto mutuo y la reciprocidad.",
+    "DOI": "10.1080/13562517.2026.2680080",
+    "URL": "https://doi.org/10.1080/13562517.2026.2680080",
+    "container-title": "Teaching in Higher Education"
+  },
+  {
+    "id": "openalex:W7164394090",
+    "type": "article-journal",
+    "title": "Purpose before policy: academic integrity, generative AI, and rhetorical stance",
+    "author": [
+      {
+        "family": "Taylor",
+        "given": "Tristan B."
+      },
+      {
+        "family": "LaCroix",
+        "given": "Travis"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          11
+        ]
+      ]
+    },
+    "abstract": "Abstract The release of ChatGPT in 2022 sparked polarised responses in higher education, from rapid curricular adoption to warnings about academic misconduct and threats to academic integrity. This article argues that whether generative AI (GenAI) use constitutes misconduct depends on a prior question: what is the university’s purpose? We contend that (apparent) rising GenAI-related misconduct cases reflect structural incoherence in the neo-liberal university, where technological enthusiasm, corporate influence, and policy enforcement often conflict. Such misalignment produces moral and institutional ambiguity, leaving students accountable for behaviours implicitly shaped by the institution itself. Drawing on an historical and rhetorical account of the Anglo-American university model, we analyse mission statements from leading university networks to reveal gaps between how institutional ideals are communicated versus how they are implemented. We conclude that universities cannot credibly enforce integrity standards in the age of AI without first ensuring coherence between their stated missions, pedagogical practices, and approaches to emerging technologies.",
+    "DOI": "10.1007/s10734-026-01706-1",
+    "URL": "https://doi.org/10.1007/s10734-026-01706-1",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7164419157",
+    "type": "article-journal",
+    "title": "Replacing written assessment with an oral ISBAR assessment in a 700‑student cohort: cohort‑level outcomes for performance, integrity, and staff experience",
+    "author": [
+      {
+        "family": "Ogle",
+        "given": "Theodora"
+      },
+      {
+        "family": "Jarrett",
+        "given": "Paul"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          10
+        ]
+      ]
+    },
+    "abstract": "Generative artificial intelligence (GenAI) has intensified concerns about the authenticity and integrity of written assessment in higher education. These challenges are particularly relevant in nursing, where safe practice requires clinical reasoning and real‑time decision‑making. This practice‑based evaluation examined the redesign of a written case study into an authentic, oral ISBAR (Identify, Situation, Background, Assessment, Recommendation) assessment in a second‑year undergraduate nursing unit (n = 740). Drawing on routine institutional data including cohort‑level performance outcomes, implementation records, and student and educator feedback, the evaluation assessed whether the oral assessment maintained academic standards while strengthening academic integrity and improving staff experience. Findings demonstrated comparable cohort‑level performance across written (2024) and oral (2025) formats, with stable overall unit means and improved end‑of‑semester examination results. No breaches of academic integrity were identified under the oral format, which incorporated verified identity conditions, invigilated perusal, multiple case variants, and real‑time performance. Educators reported greater confidence in authorship, stronger alignment between assessment evidence and clinical judgement, and a more engaging marking experience; the redesign reduced marking time and cost per student. These results indicate that oral, performance‑based assessment offers a feasible, scalable, and pedagogically aligned response to integrity challenges in GenAI‑mediated learning environments while preserving academic standards.",
+    "DOI": "10.1080/02602938.2026.2684284",
+    "URL": "https://doi.org/10.1080/02602938.2026.2684284",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7165148044",
+    "type": "article-journal",
+    "title": "Constructing choice, reproducing inequality: a critical assessment of accelerated degrees as a widening participation policy in UK higher education",
+    "author": [
+      {
+        "family": "Moussa",
+        "given": "Amine"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          18
+        ]
+      ]
+    },
+    "abstract": "Abstract This paper critically examines the UK government’s promotion of accelerated degrees as a widening participation policy in higher education. Although presented as a flexible and efficient route for non-traditional learners, accelerated degrees have seen limited uptake and minimal impact on participation. Drawing on the Social Construction Framework, the paper analyses key policy documents to explore how target learners are discursively constructed and how these constructions shape policy design. It argues that accelerated degrees were advanced through a policy logic centred on choice, flexibility, and efficiency, but one insufficiently attuned to the structural and institutional conditions shaping participation. The paper further shows that institutional responses to accelerated provision were mediated by sectoral norms and differing understandings of legitimate higher education. It concludes that accelerated degrees are better understood not as a failed universal widening participation tool, but as a policy instrument misaligned with many of the learners it purported to support, while retaining more targeted relevance for mature learners. In doing so, the paper contributes to wider international debates on the limits of market-oriented equity reform in higher education.",
+    "DOI": "10.1007/s10734-026-01711-4",
+    "URL": "https://doi.org/10.1007/s10734-026-01711-4",
     "container-title": "Higher Education"
   }
 ]
