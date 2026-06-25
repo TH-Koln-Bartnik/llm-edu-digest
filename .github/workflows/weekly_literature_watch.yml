@@ -7,6 +7,11 @@ on:
     - cron: '15 6 * * 1'  # Every Monday at 06:15 UTC
   workflow_dispatch:  # Allow manual triggering
 
+# Prevent concurrent runs that could cause push conflicts
+concurrency:
+  group: literature-watch-main
+  cancel-in-progress: false
+
 # Required permissions for committing changes back to repo
 permissions:
   contents: write
@@ -56,10 +61,54 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add digest.md state.json literature.db references.json references_pending.json
+          
           # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "Update literature digest, database and references [automated]"
-            git push
+            exit 0
           fi
+          
+          git commit -m "Update literature digest, database and references [automated]"
+          
+          # Robust push with fetch+rebase+retry to handle concurrent runs
+          MAX_RETRIES=3
+          RETRY_COUNT=0
+          
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            echo "Push attempt $((RETRY_COUNT + 1)) of $MAX_RETRIES"
+            
+            # Fetch latest changes
+            git fetch origin main
+            
+            # Check if rebase is needed
+            LOCAL_COMMIT=$(git rev-parse HEAD)
+            REMOTE_COMMIT=$(git rev-parse origin/main)
+            
+            if [ "$LOCAL_COMMIT" != "$REMOTE_COMMIT" ]; then
+              echo "Local branch behind origin/main, rebasing..."
+              
+              # Rebase on top of origin/main
+              if git rebase origin/main; then
+                echo "Rebase successful"
+              else
+                echo "Rebase failed, aborting rebase and retrying..."
+                git rebase --abort
+                RETRY_COUNT=$((RETRY_COUNT + 1))
+                sleep 5
+                continue
+              fi
+            fi
+            
+            # Attempt push
+            if git push origin HEAD:main; then
+              echo "Push successful"
+              exit 0
+            else
+              echo "Push failed, retrying..."
+              RETRY_COUNT=$((RETRY_COUNT + 1))
+              sleep 5
+            fi
+          done
+          
+          echo "ERROR: Failed to push after $MAX_RETRIES attempts"
+          exit 1
