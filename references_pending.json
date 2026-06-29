@@ -27065,5 +27065,29 @@
     "DOI": "10.1007/s10734-026-01711-4",
     "URL": "https://doi.org/10.1007/s10734-026-01711-4",
     "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7165911872",
+    "type": "article-journal",
+    "title": "Rethinking postgraduate supervision: neuroqueer identity, mental health and relational care in higher education",
+    "author": [
+      {
+        "family": "Maritz",
+        "given": "Jeanette"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          25
+        ]
+      ]
+    },
+    "abstract": "This article examines how neuroqueer postgraduate students navigate higher education environments that increasingly emphasise inclusion, belonging and wellbeing, yet often remain structured around neuronormative and cisheteronormative assumptions. Drawing on a postqualitative, Deleuzian-informed case-assemblage approach, the article explores the postgraduate journey of Lindi, a neuroqueer student in a South African university. The study explores how academic survival emerges through fragmented, relational and more-than-human assemblages of care, supervision and companionship. Rather than positioning belonging as an institutional outcome, the analysis traces how postgraduate life unfolds through shifting material, affective and relational conditions that extend beyond formal supervisory structures. The findings suggest that dominant models of inclusion frequently overlook the complex intersections of neurodivergence, queerness and mental health within postgraduate education. By foregrounding Lindi’s experiences, the article contributes to emerging discussions on postgraduate pedagogy and argues for more relational, responsive and situated approaches to supervision that acknowledge diverse modes of academic becoming.",
+    "DOI": "10.1080/13562517.2026.2694028",
+    "URL": "https://doi.org/10.1080/13562517.2026.2694028",
+    "container-title": "Teaching in Higher Education"
   }
 ]
