@@ -27317,5 +27317,149 @@
     "DOI": "10.1080/02602938.2026.2695376",
     "URL": "https://doi.org/10.1080/02602938.2026.2695376",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7167696646",
+    "type": "article-journal",
+    "title": "Grading in an age of assessment reform: the elephant in the room",
+    "author": [
+      {
+        "family": "Nieminen",
+        "given": "Juuso Henrik"
+      },
+      {
+        "family": "Bearman",
+        "given": "Margaret"
+      },
+      {
+        "family": "Boud",
+        "given": "David"
+      },
+      {
+        "family": "Corbin",
+        "given": "Thomas"
+      },
+      {
+        "family": "Dawson",
+        "given": "Phillip"
+      },
+      {
+        "family": "Tai",
+        "given": "Joanna"
+      },
+      {
+        "family": "Walton",
+        "given": "Jack"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          8
+        ]
+      ]
+    },
+    "abstract": "Higher education sectors worldwide have largely adopted a rhetoric of assessment redesign, calling for fundamental ‘rethinking’, ‘reforming’ and ‘reimagining’ of assessment. This rhetoric is particularly evident in the so-called age of Generative Artificial Intelligence (GenAI). But what about grades? In this conceptual study, we address the elephant in the room, grading: a large looming presence that is nonetheless absent from conversation about assessment reform. By using the surge of GenAI technologies as the context for assessment reforms, we analyse recent responses in grading policy and practice to GenAI technologies by asking what has changed, if anything. We discuss how two approaches to grading in an age of GenAI – AI-proof grading and AI-powered grading – both further reinforce the status quo of grading systems. Next, we conduct a policy review and note a critical silence regarding grades. Based on these two analyses, we showcase that entire programs of assessment are being reworked with little to no thought given to grades. Our study aims to generate broader, sector-wide conversations about how higher education institutions should represent student achievement.",
+    "DOI": "10.1080/02602938.2026.2694451",
+    "URL": "https://doi.org/10.1080/02602938.2026.2694451",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7167814969",
+    "type": "article-journal",
+    "title": "Artificial intelligence and feedback in university education: effectiveness and student perceptions",
+    "author": [
+      {
+        "family": "Grion",
+        "given": "Valentina"
+      },
+      {
+        "family": "Doria",
+        "given": "Beatrice"
+      },
+      {
+        "family": "Agostini",
+        "given": "Daniele"
+      },
+      {
+        "family": "Slaviero",
+        "given": "Giorgia"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          8
+        ]
+      ]
+    },
+    "abstract": "The integration of generative artificial intelligence (AI) into Higher Education has intensified debates about the role of technology in formative assessment. This study examines the effectiveness and practical comparability of AI-generated feedback in a project-based university course, comparing two large language models (GPT-o4-mini and DeepSeek R1) with feedback provided by an expert human teacher. Adopting a quasi-experimental design, 47 student groups (N = 238) were randomly assigned to one of three feedback conditions. Changes in project performance were analysed using non-parametric tests, robust models, and non-inferiority and equivalence analyses. Students’ perceptions were also assessed through a validated questionnaire (N = 200). Results showed significant improvement in project performance from pre- to post-feedback across all conditions (rrb = 0.77), with no significant differences between feedback sources. Equivalence analyses indicated practical comparability between GPT-o4-mini and teacher feedback, while DeepSeek R1 demonstrated non-inferiority. Students’ perceptions of mastery, emotions, and satisfaction were similarly high across conditions. Findings suggest that feedback effectiveness depends less on its source than on the pedagogical architecture in which it is embedded. When supported by strong assessment literacy and explicit criteria, AI-generated feedback can function as a credible component of formative assessment in higher education.",
+    "DOI": "10.1080/02602938.2026.2697962",
+    "URL": "https://doi.org/10.1080/02602938.2026.2697962",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7167819651",
+    "type": "article-journal",
+    "title": "International academic mobility and the temporality of contribution: a morphogenetic analysis of returnee scholars’ engagement in higher education",
+    "author": [
+      {
+        "family": "Akkad",
+        "given": "Ahmad"
+      },
+      {
+        "family": "Hanley",
+        "given": "Natalya"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          9
+        ]
+      ]
+    },
+    "abstract": "While international academic mobility is recognised for personal development and career advancement, existing literature often treats returnee scholars’ contributions to their home institutions as an automatic outcome of mobility. Moving beyond this linear assumption, this paper argues that returnee contributions are not a simple transfer of knowledge but are temporally situated enactments of reflexive agency shaped by the structural and chronopolitical conditions of return contexts. Drawing on 62 semi-structured interviews with returnee scholars from 19 countries in the Near East (Middle East and North Africa) and Eurasian regions, and guided by Archer’s work on reflexivity and morphogenesis within Critical Realism and Transnationalism, the study examines how reflexive capacities cultivated through international mobility are mobilised and enacted upon return in contributing to higher education systems in home contexts. The analysis develops a typology of four contribution modes: past-oriented contributions aimed at redressing historical legacies (slow morphogenesis); present-oriented contributions focused on institutional survival amid crisis (compensatory morphostasis); future-oriented contributions aligned with strategic reform agendas (accelerated morphogenesis); and multi-temporal contributions spanning these modes (layered morphogenesis). Synthesised in an empirically derived conceptual framework, these findings show how different forms of contribution emerge under varying temporal and structural conditions. The paper contributes a temporal perspective to Archer’s morphogenetic approach, challenges linear ‘brain gain’ models, and offers a heuristic for understanding and supporting the context-specific contributions of returnee scholars.",
+    "DOI": "10.1080/03075079.2026.2695258",
+    "URL": "https://doi.org/10.1080/03075079.2026.2695258",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7167907893",
+    "type": "article-journal",
+    "title": "University student agency in genre-sensitive writing: a longitudinal mixed-methods multi-case study of teacher and GenAI feedback",
+    "author": [
+      {
+        "family": "Huo",
+        "given": "Huican"
+      },
+      {
+        "family": "Zhang",
+        "given": "Lawrence Jun"
+      },
+      {
+        "family": "Zhang",
+        "given": "Donglan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          10
+        ]
+      ]
+    },
+    "abstract": "Learner agency is central to effective writing, and yet little is known about how students mobilize evaluative judgement when coordinating teacher feedback with feedback from generative artificial intelligence (GenAI) tools. This longitudinal mixed-methods multiple-case study (N = 10) traced how EFL university learners engaged with hybrid instructor–GenAI feedback across three genre-sequenced tasks (argumentative essay, AE; analytical report, AR; research proposal, RP) and three successive revision rounds (D1→D2→D3) within each task. We identified T = 403 actionable feedback points and defined item-level uptake (U) as the number of actionable points realized in later drafts. Overall, U = 224 were adopted (U/T = 55.6%). Source-specific analyses showed higher uptake for teacher-only feedback than for GenAI-only feedback (61.9% vs. 45.5%), while convergent teacher-GenAI feedback showed the strongest uptake tendency (61/74 = 82.4%). Revision-depth analyses showed task-sequenced variation rather than a simple linear developmental shift: AR showed the strongest concentration of surface-level edits (71.0%) and the highest revision density, whereas AE and RP involved relatively higher proportions of meaning-level edits. Sensitivity analyses using alternative handling of convergent and ambiguous cases did not alter the main source-category pattern. Qualitative joint displays of prompt-response logs, reflective journals, and interviews indicated that learners calibrated their use of teacher and GenAI feedback by evaluating, adapting, rejecting, or sequencing suggestions according to epistemic risk and task demands. The findings show that teacher and GenAI feedback functioned as complementary epistemic resources and that learner agency was reflected in source-sensitive, genre-sequenced evaluative coordination rather than in feedback uptake alone.",
+    "DOI": "10.1080/03075079.2026.2691927",
+    "URL": "https://doi.org/10.1080/03075079.2026.2691927",
+    "container-title": "Studies in Higher Education"
   }
 ]
