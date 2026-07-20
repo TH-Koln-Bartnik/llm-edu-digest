@@ -25888,6 +25888,58 @@
     "publisher": "arXiv"
   },
   {
+    "id": "openalex:W4410313713",
+    "type": "article-journal",
+    "title": "A framework for developing university policies on generative AI governance: a cross-national comparative study",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Ming"
+      },
+      {
+        "family": "Xie",
+        "given": "Qin"
+      },
+      {
+        "family": "Enkhtur",
+        "given": "Ariunaa"
+      },
+      {
+        "family": "Meng",
+        "given": "Shuoyang"
+      },
+      {
+        "family": "Chen",
+        "given": "Lilan"
+      },
+      {
+        "family": "Yamamoto",
+        "given": "Beverley Anne"
+      },
+      {
+        "family": "Cheng",
+        "given": "Fei"
+      },
+      {
+        "family": "Murakami",
+        "given": "Masayuki"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          13
+        ]
+      ]
+    },
+    "abstract": "As generative AI (GAI) becomes increasingly embedded in higher education, universities worldwide are developing policies to govern its ethical, pedagogical, and institutional use. However, these policies vary across national and institutional contexts. We undertake a cross-national analysis of GAI guidelines issued by leading universities in the United States, Japan, and China, identifying key policy orientations and proposing a structured framework to support policy development. Using an extended Technology Acceptance Model as an analytical lens, we examine five domains – Perceived Usefulness and Perceived Ease of Use, Perceived Risk, Facilitating Conditions, Social Influence, and Self-Efficacy, and identify 20 key themes through thematic coding. Together, these findings inform the development of the University Policy Development Framework for Generative AI (UPDF-GAI). Among the sampled institutions, U.S. universities emphasize faculty autonomy, practical application, and policy adaptability, reflecting environments shaped by cutting-edge research and peer collaboration. The Japanese universities analyzed adopt a more government-aligned approach, prioritizing ethics and risk management, but offering comparatively limited guidance on AI implementation and flexibility. The Chinese universities in the sample reflect a centralized, government-led model, focusing on technology application rather than early policy formulation, while actively exploring GAI integration in education and research. Based on these insights, the study proposes the UPDF-GAI, integrating technological, organizational, and social dimensions of policy formation. The framework provides a structured approach for universities to assess policy priorities, navigate tensions between innovation and risk, and strengthen institutional capacity for sustainable GAI governance, contributing to the evolving discourse on AI governance in higher education.",
+    "DOI": "10.1080/03075079.2026.2696496",
+    "URL": "https://doi.org/10.1080/03075079.2026.2696496",
+    "container-title": "Studies in Higher Education"
+  },
+  {
     "id": "openalex:W4416703105",
     "type": "article-journal",
     "title": "Leveraging prompt-based LLMs for automated scoring and feedback generation in higher education",
@@ -27461,5 +27513,149 @@
     "DOI": "10.1080/03075079.2026.2691927",
     "URL": "https://doi.org/10.1080/03075079.2026.2691927",
     "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7168127773",
+    "type": "article-journal",
+    "title": "Governing across deep differences: the inclusive governance model in higher education",
+    "author": [
+      {
+        "family": "Bharwani",
+        "given": "Aleem"
+      },
+      {
+        "family": "Hardcastle",
+        "given": "Lorian"
+      },
+      {
+        "family": "Hayward",
+        "given": "Dana"
+      },
+      {
+        "family": "Lashewicz",
+        "given": "Bonnie"
+      },
+      {
+        "family": "Hart",
+        "given": "Michael"
+      },
+      {
+        "family": "Smith",
+        "given": "Malinda"
+      },
+      {
+        "family": "Mosher",
+        "given": "Dianne"
+      },
+      {
+        "family": "Gereluk",
+        "given": "Dianne"
+      },
+      {
+        "family": "Roach",
+        "given": "Pamela"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          13
+        ]
+      ]
+    },
+    "abstract": "How can universities govern across deep differences in an era of polarization and frayed epistemic trust? Higher education governance too often frames diversity as a risk to be managed rather than a generative force. This article introduces a novel Inclusive Governance Model, co-designed and implemented at a Canadian research university, which operationalizes ethical space, pluralism, and relational accountability. Using participatory action research, 300+ Indigenous Elders and scholars, civil-society leaders, students, staff, and faculty contributed through 54 interviews, 35 focus-groups, and 47 email dialogues. Data were thematically analyzed and returned to participants for prioritization and validation. The circles-of-circles architecture we generated (i) enshrines Indigenous Nations and civil-society organizations as permanent co-decision-makers through parallel paths; (ii) centres trained facilitators to steward dialogue and multi-track diplomacy across worldviews; (iii) connects community-derived priorities to transparent key-performance indicators, resourcing, and accountability loops; and (iv) elevates planetary and future-generations voices, drawing on Indigenous seven-generation thinking and emerging legal norms. Conceptually, the model integrates pluralism, ethical space, relational governance, multi-track diplomacy, and social innovation to move beyond symbolic inclusion toward structural transformation. Practically, it offers a scalable template for faculties – and potentially senates and boards – seeking to host disagreement without erasure and to co-create shared futures across deep difference. Inclusive governance emerges as not only a structural reform but a relational transformation with potential to build trust, enable dialogue, and activate co-creativity across disciplines, sectors, and worldviews.",
+    "DOI": "10.1080/03075079.2026.2669852",
+    "URL": "https://doi.org/10.1080/03075079.2026.2669852",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7168288578",
+    "type": "article-journal",
+    "title": "LLM-derived metrics in second language writing assessment: an explainable AI approach",
+    "author": [
+      {
+        "family": "Hu",
+        "given": "Jingying"
+      },
+      {
+        "family": "Cong",
+        "given": "Yan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          1
+        ]
+      ]
+    },
+    "abstract": "Large language models (LLMs) are increasingly used in educational technology for automated writing assessment, yet most applications rely on prompt-based scoring and feedback generation, which often lack transparency, reproducibility, and interpretability. This study investigates whether model-internal LLM representations can provide interpretable and reproducible metrics for second language (L2) writing assessment. We derived surprisal and perplexity from next-token prediction to quantify linguistic predictability and embedding-based similarity to measure semantic coherence across sentences. These metrics were computed at the token, sentence, and discourse levels using three pretrained Chinese language models and evaluated on 1,196 essays written by Chinese L2 learners across four proficiency levels. Their relationships with 11 established linguistic measures of fluency, lexical sophistication, phraseological complexity, and syntactic complexity were also examined. Results showed that surprisal and perplexity generally decreased with proficiency for the two Traditional Chinese-focused models, indicating greater linguistic predictability in more proficient writing, whereas the multilingual model showed weaker sensitivity. Embedding-based similarity increased with proficiency, reflecting stronger semantic coherence. Combining LLM-derived metrics with classical linguistic features improved proficiency classification and prediction beyond either feature set alone. Correlation and qualitative analyses further demonstrated that the proposed metrics capture complementary aspects of writing while revealing conditions under which their interpretations become less reliable. These findings demonstrate the value of interpretable, model-derived metrics for transparent, reproducible, and scalable AI-supported L2 writing assessment, particularly for underrepresented learner populations and lower-resource languages.",
+    "DOI": "10.1016/j.compedu.2026.105721",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105721",
+    "container-title": "Computers & Education"
+  },
+  {
+    "id": "openalex:W7169520996",
+    "type": "article-journal",
+    "title": "Navigating the moral panic: encouraging appropriate use of GenAI in the classroom rather than condemning innovation as disruption",
+    "author": [
+      {
+        "family": "Krebsbach",
+        "given": "Jennifer M."
+      },
+      {
+        "family": "Cross",
+        "given": "Victoria L."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          17
+        ]
+      ]
+    },
+    "abstract": "Faculty are divided on how to respond to generative artificial intelligence (GenAI). Many respond in similar ways to how faculty responded to other disruptive technologies (e.g. calculators, word processors), fearing that students will cheat more and learn less. Rather than fear GenAI, we view it as the next disruptive technology that will become normalised in the classroom and examine how intentionally integrating it into instruction increases both academic integrity and authenticity. Using data from eight iterations of a lower-division Data Visualisation course, we compare student performance on two quiz types (knowledge and application) in three conditions (pre-GenAI, GenAI-available, and GenAI-integrated). In the GenAI-integrated condition, GenAI use was taught and encouraged. During the GenAI-available quarters, performance on the applied questions decreased and variability increased, indicating that only some students were using GenAI, and ineffectively. When GenAI was embedded into the assessments, applied performance and variability returned to pre-GenAI levels. Knowledge questions fell below baseline with the new format, but so did variability, potentially indicating greater equity across the quiz. By teaching students to use GenAI, we aim to support long-term learning, improve accountability, ensure authenticity, and support instructors in addressing concerns about potentially problematic technology in the classroom.",
+    "DOI": "10.1080/02602938.2026.2686727",
+    "URL": "https://doi.org/10.1080/02602938.2026.2686727",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7169594615",
+    "type": "article-journal",
+    "title": "Cognitive offloading, critical pedagogy, and connectivist learning shape academic responses to generative AI in higher education: transforming resistance into pedagogical care",
+    "author": [
+      {
+        "family": "Crimmins",
+        "given": "Gail"
+      },
+      {
+        "family": "O’Leary",
+        "given": "Erin Sanders"
+      },
+      {
+        "family": "Strempel",
+        "given": "Eileen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          16
+        ]
+      ]
+    },
+    "abstract": "The rapid emergence of generative artificial intelligence (GenAI) has renewed debate in higher education about how technology shapes learning, cognition, and academic practice. This study examines how university educators are responding to GenAI in teaching and learning, with attention to cognitive offloading, professional judgement, and pedagogical values. Guided by connectivist learning theory and critical pedagogy, and informed by UTAUT2 constructs we conducted semi-structured interviews with 30 faculty across disciplines in 2025 and analysed the data using reflexive thematic analysis. Findings reveal a spectrum of responses, combining enthusiasm for GenAI’s creative affordances with concerns about academic integrity, cognitive dependency, cultural bias, environmental sustainability, and digital inclusion. Adoption was shaped by peer norms and institutional signals but consistently mediated by ethical reasoning and commitments to student-centred learning. Participants framed integrity as the preservation of judgement and meaning making, and identified inequities in access and AI literacy as a growing hidden curriculum. They also raised concerns that uncritical use of GenAI may privilege Western epistemic norms and marginalise Indigenous and non-Western ways of knowing. We argue that resistance to GenAI reflects pedagogical care rather than technological reluctance, and that principled approaches are required to safeguard scholarly rigour, equity, and student agency.",
+    "DOI": "10.1080/07294360.2026.2700227",
+    "URL": "https://doi.org/10.1080/07294360.2026.2700227",
+    "container-title": "Higher Education Research & Development"
   }
 ]

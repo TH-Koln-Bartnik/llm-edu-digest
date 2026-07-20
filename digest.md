@@ -1,72 +1,89 @@
 # LLM Education Literature Digest
 
-*Generated: 2026-07-13 09:46:00 UTC*
+*Generated: 2026-07-20 09:32:00 UTC*
 
-**4 new items**
+**5 new items**
 
-## 1. University student agency in genre-sensitive writing: a longitudinal mixed-methods multi-case study of teacher and GenAI feedback
+## 1. LLM-derived metrics in second language writing assessment: an explainable AI approach
 
-**Authors:** Huican Huo, Lawrence Jun Zhang, Donglan Zhang
+**Authors:** Jingying Hu, Yan Cong
 
-**Source:** openalex • Studies in Higher Education • 2026-07-10
+**Source:** openalex • Computers & Education • 2026-07-01
 
-**Summary:** Learner agency is central to effective writing, and yet little is known about how students mobilize evaluative judgement when coordinating teacher feedback with feedback from generative artificial intelligence (GenAI) tools. This longitudinal mixed-methods multiple-case study (N = 10) traced how EFL...
+**Summary:** Large language models (LLMs) are increasingly used in educational technology for automated writing assessment, yet most applications rely on prompt-based scoring and feedback generation, which often lack transparency, reproducibility, and interpretability. This study investigates whether model-inter...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/03075079.2026.2691927
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2691927?needAccess=true
-- DOI: https://doi.org/10.1080/03075079.2026.2691927
+- Landing page: https://doi.org/10.1016/j.compedu.2026.105721
+- PDF: https://www.sciencedirect.com/science/article/pii/S0360131526001600/pdf
+- DOI: https://doi.org/10.1016/j.compedu.2026.105721
 
 *Relevance score: 17.0*
 
 ---
 
-## 2. Grading in an age of assessment reform: the elephant in the room
+## 2. Navigating the moral panic: encouraging appropriate use of GenAI in the classroom rather than condemning innovation as disruption
 
-**Authors:** Juuso Henrik Nieminen, Margaret Bearman, David Boud, Thomas Corbin, Phillip Dawson et al. (7 authors)
+**Authors:** Jennifer M. Krebsbach, Victoria L. Cross
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-07-08
+**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-07-17
 
-**Summary:** Higher education sectors worldwide have largely adopted a rhetoric of assessment redesign, calling for fundamental ‘rethinking’, ‘reforming’ and ‘reimagining’ of assessment. This rhetoric is particularly evident in the so-called age of Generative Artificial Intelligence (GenAI). But what about grade...
+**Summary:** Faculty are divided on how to respond to generative artificial intelligence (GenAI). Many respond in similar ways to how faculty responded to other disruptive technologies (e.g. calculators, word processors), fearing that students will cheat more and learn less. Rather than fear GenAI, we view it as...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2694451
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2694451?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2694451
+- Landing page: https://doi.org/10.1080/02602938.2026.2686727
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2686727?needAccess=true
+- DOI: https://doi.org/10.1080/02602938.2026.2686727
+
+*Relevance score: 17.0*
+
+---
+
+## 3. Cognitive offloading, critical pedagogy, and connectivist learning shape academic responses to generative AI in higher education: transforming resistance into pedagogical care
+
+**Authors:** Gail Crimmins, Erin Sanders O’Leary, Eileen Strempel
+
+**Source:** openalex • Higher Education Research & Development • 2026-07-16
+
+**Summary:** The rapid emergence of generative artificial intelligence (GenAI) has renewed debate in higher education about how technology shapes learning, cognition, and academic practice. This study examines how university educators are responding to GenAI in teaching and learning, with attention to cognitive ...
+
+**Links:**
+- Landing page: https://doi.org/10.1080/07294360.2026.2700227
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/07294360.2026.2700227?needAccess=true
+- DOI: https://doi.org/10.1080/07294360.2026.2700227
+
+*Relevance score: 17.0*
+
+---
+
+## 4. A framework for developing university policies on generative AI governance: a cross-national comparative study
+
+**Authors:** Ming Li, Qin Xie, Ariunaa Enkhtur, Shuoyang Meng, Lilan Chen et al. (8 authors)
+
+**Source:** openalex • Studies in Higher Education • 2026-07-13
+
+**Summary:** As generative AI (GAI) becomes increasingly embedded in higher education, universities worldwide are developing policies to govern its ethical, pedagogical, and institutional use. However, these policies vary across national and institutional contexts. We undertake a cross-national analysis of GAI g...
+
+**Links:**
+- Landing page: https://doi.org/10.1080/03075079.2026.2696496
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2696496?needAccess=true
+- DOI: https://doi.org/10.1080/03075079.2026.2696496
 
 *Relevance score: 11.0*
 
 ---
 
-## 3. Artificial intelligence and feedback in university education: effectiveness and student perceptions
+## 5. Governing across deep differences: the inclusive governance model in higher education
 
-**Authors:** Valentina Grion, Beatrice Doria, Daniele Agostini, Giorgia Slaviero
+**Authors:** Aleem Bharwani, Lorian Hardcastle, Dana Hayward, Bonnie Lashewicz, Michael Hart et al. (9 authors)
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-07-08
+**Source:** openalex • Studies in Higher Education • 2026-07-13
 
-**Summary:** The integration of generative artificial intelligence (AI) into Higher Education has intensified debates about the role of technology in formative assessment. This study examines the effectiveness and practical comparability of AI-generated feedback in a project-based university course, comparing tw...
-
-**Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2697962
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2697962?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2697962
-
-*Relevance score: 11.0*
-
----
-
-## 4. International academic mobility and the temporality of contribution: a morphogenetic analysis of returnee scholars’ engagement in higher education
-
-**Authors:** Ahmad Akkad, Natalya Hanley
-
-**Source:** openalex • Studies in Higher Education • 2026-07-09
-
-**Summary:** While international academic mobility is recognised for personal development and career advancement, existing literature often treats returnee scholars’ contributions to their home institutions as an automatic outcome of mobility. Moving beyond this linear assumption, this paper argues that returnee...
+**Summary:** How can universities govern across deep differences in an era of polarization and frayed epistemic trust? Higher education governance too often frames diversity as a risk to be managed rather than a generative force. This article introduces a novel Inclusive Governance Model, co-designed and impleme...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/03075079.2026.2695258
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2695258?needAccess=true
-- DOI: https://doi.org/10.1080/03075079.2026.2695258
+- Landing page: https://doi.org/10.1080/03075079.2026.2669852
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2669852?needAccess=true
+- DOI: https://doi.org/10.1080/03075079.2026.2669852
 
 *Relevance score: 8.0*
 
