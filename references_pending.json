@@ -27657,5 +27657,61 @@
     "DOI": "10.1080/07294360.2026.2700227",
     "URL": "https://doi.org/10.1080/07294360.2026.2700227",
     "container-title": "Higher Education Research & Development"
+  },
+  {
+    "id": "openalex:W7170201580",
+    "type": "article-journal",
+    "title": "Illuminating complex student realities of artificial intelligence through an entangled pedagogy framework",
+    "author": [
+      {
+        "family": "Fawns",
+        "given": "Tim"
+      },
+      {
+        "family": "Bearman",
+        "given": "Margaret"
+      },
+      {
+        "family": "Corbin",
+        "given": "Thomas"
+      },
+      {
+        "family": "Henderson",
+        "given": "Michael"
+      },
+      {
+        "family": "McLean",
+        "given": "Jan"
+      },
+      {
+        "family": "Matthews",
+        "given": "Kelly"
+      },
+      {
+        "family": "Oberg",
+        "given": "Glenys"
+      },
+      {
+        "family": "Liang",
+        "given": "Yifei"
+      },
+      {
+        "family": "Walton",
+        "given": "Jack"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          24
+        ]
+      ]
+    },
+    "abstract": "Abstract The emergence of widely available Generative AI (GenAI) in higher education demands nuanced responses that acknowledge the diversity of student contexts, conditions, practices and perspectives. Developing such nuanced responses requires attention to how students themselves experience and negotiate GenAI within the complexity of their everyday study and lives. In this paper, we focus on three participants from a broader set of focus groups to explore their perspectives on GenAI in relation to their studies, identities, and practices, and how contextual and personal factors shape these views. Using Fawns’ (2022) entangled pedagogy framework to guide analysis, we illuminate some complex entanglements that characterise students’ engagement with GenAI. Our analysis reveals how our students’ views were entangled with conceptions of learning, institutional governance, moral positions, and contextual considerations. By focusing on just three participants, we were able to examine the tensions and contradictions in how their relationships with GenAI were shaped in relation to circumstances, purposes, values, practices, identities, institutions, educators, peers, and perceived future trajectories. Our results suggest that meaningful action requires creating collaborative spaces where students’ voices are heard, fostering approaches that acknowledge the sociomaterial nature of learning with emerging technologies. We therefore argue that appropriate institutional responses must involve ongoing dialogue with students and attend to the complexity of their contexts and experiences.",
+    "DOI": "10.1007/s10734-026-01730-1",
+    "URL": "https://doi.org/10.1007/s10734-026-01730-1",
+    "container-title": "Higher Education"
   }
 ]
