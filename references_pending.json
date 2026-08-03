@@ -27713,5 +27713,53 @@
     "DOI": "10.1007/s10734-026-01730-1",
     "URL": "https://doi.org/10.1007/s10734-026-01730-1",
     "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7171468392",
+    "type": "article-journal",
+    "title": "Investigating student perceptions of an AI-powered chatbot to support feedback interpretation and uptake in higher education",
+    "author": [
+      {
+        "family": "Abbas",
+        "given": "Noorhan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          27
+        ]
+      ]
+    },
+    "abstract": "Assessment feedback is widely recognised as a powerful influence on learning, yet students often struggle to act on comments they receive. While much research examines AI systems that generate feedback, less attention has been paid to tools supporting engagement with feedback already provided. This study investigates MSc computing students’ perceptions of a proposed AI-powered chatbot for supporting feedback engagement within an online postgraduate programme at a UK research-intensive university. Rather than evaluating a deployed tool, the study explored how students envisaged a chatbot functioning as a dialogic mediator grounded in their submissions and markers’ comments. Data were collected through four focus groups and a structured survey. Thematic analysis revealed disengagement was shaped by structural and affective barriers, including delayed feedback, inconsistent standards, and the social cost of seeking clarification; 69% of respondents wanted to ask questions but did not. Students valued Socratic, dialogic interaction over direct answer provision, saw contextual grounding as essential for trust, and maintained human judgement as a non-negotiable boundary. All respondents rated the tool as at least slightly useful. The findings contribute to feedback literacy and AI in education scholarship by conceptualising AI as a feedback interpreter and offer design guidance for institutionally governed feedback-support tools.",
+    "DOI": "10.1080/02602938.2026.2706016",
+    "URL": "https://doi.org/10.1080/02602938.2026.2706016",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7172096328",
+    "type": "article-journal",
+    "title": "Beyond the detector trap: a human-centred evidentiary framework for fair academic integrity decisions in the generative AI era",
+    "author": [
+      {
+        "family": "Uçan",
+        "given": "Serkan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          1
+        ]
+      ]
+    },
+    "abstract": "Generative AI (GenAI) and large language models have disrupted traditional assumptions about academic writing, authorship, and assessment in higher education. While institutions often rely on AI-detection tools, this approach risks a detector trap: reducing complex academic integrity judgements to mere algorithmic classification of textual origin. This article argues that the central problem is not simply whether AI is present in a submission, but whether verifiable, procedurally fair evidence demonstrates misconduct or a breach of academic standards. Detector scores may prompt closer review, but they must not independently justify disciplinary sanctions. To address this challenge, the article proposes a human-centred evidentiary framework for investigating suspected GenAI misuse. This framework progresses from initial signals to final decisions through four distinct analytic layers: text-internal anomalies, algorithmic indicators, epistemic verification, and structured student-educator dialogue. It classifies concerns by evidentiary reliability into low, medium, or high categories, matching each category with proportionate pedagogical, procedural, or formal institutional responses. By shifting the focus from detection accuracy to defensible decision-making, this article contributes to scholarship and practice in higher education assessment and academic integrity. It concludes that fair institutional practice requires explicit AI-use policies, transparent evidentiary standards, structured opportunities for student response, and innovative assessment designs.",
+    "DOI": "10.1080/02602938.2026.2711422",
+    "URL": "https://doi.org/10.1080/02602938.2026.2711422",
+    "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
