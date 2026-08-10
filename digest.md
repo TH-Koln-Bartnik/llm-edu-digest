@@ -1,37 +1,38 @@
 # LLM Education Literature Digest
 
-*Generated: 2026-08-03 10:03:13 UTC*
+*Generated: 2026-08-10 08:01:08 UTC*
 
 **2 new items**
 
-## 1. Beyond the detector trap: a human-centred evidentiary framework for fair academic integrity decisions in the generative AI era
+## 1. Mapping the landscape of AI governance in higher education
 
-**Authors:** Serkan Uçan
+**Authors:** Magezi Samuel Khoza, Samuel Fosso Wamba, Serge Nyawa
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-08-01
+**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-08-05
 
-**Summary:** Generative AI (GenAI) and large language models have disrupted traditional assumptions about academic writing, authorship, and assessment in higher education. While institutions often rely on AI-detection tools, this approach risks a detector trap: reducing complex academic integrity judgements to m...
+**Summary:** The rapid adoption of Artificial Intelligence (AI), particularly Generative AI (GenAI), has accelerated the need for robust governance in higher education. This study provides a comparative analysis of AI governance frameworks adopted by universities worldwide. A qualitative document analysis was co...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2711422
-- DOI: https://doi.org/10.1080/02602938.2026.2711422
+- Landing page: https://doi.org/10.1080/02602938.2026.2712521
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2712521?needAccess=true
+- DOI: https://doi.org/10.1080/02602938.2026.2712521
 
 *Relevance score: 11.0*
 
 ---
 
-## 2. Investigating student perceptions of an AI-powered chatbot to support feedback interpretation and uptake in higher education
+## 2. Geopolitics and governance: a practitioner research approach to transnational higher education in Hainan’s international education hub
 
-**Authors:** Noorhan Abbas
+**Authors:** Huili Si
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-07-27
+**Source:** openalex • Studies in Higher Education • 2026-08-04
 
-**Summary:** Assessment feedback is widely recognised as a powerful influence on learning, yet students often struggle to act on comments they receive. While much research examines AI systems that generate feedback, less attention has been paid to tools supporting engagement with feedback already provided. This ...
+**Summary:** China’s evolving higher education governance reflects a strategic response to globalization, regional integration, and shifting geopolitical conditions. This study examines Hainan Province, designated as a pilot zone for reform under the Hainan Free Trade Port initiative, where transnational higher ...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2706016
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2706016?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2706016
+- Landing page: https://doi.org/10.1080/03075079.2026.2714436
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2714436?needAccess=true
+- DOI: https://doi.org/10.1080/03075079.2026.2714436
 
 *Relevance score: 8.0*
 

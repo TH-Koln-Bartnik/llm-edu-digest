@@ -27761,5 +27761,61 @@
     "DOI": "10.1080/02602938.2026.2711422",
     "URL": "https://doi.org/10.1080/02602938.2026.2711422",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7172498710",
+    "type": "article-journal",
+    "title": "Geopolitics and governance: a practitioner research approach to transnational higher education in Hainan’s international education hub",
+    "author": [
+      {
+        "family": "Si",
+        "given": "Huili"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          4
+        ]
+      ]
+    },
+    "abstract": "China’s evolving higher education governance reflects a strategic response to globalization, regional integration, and shifting geopolitical conditions. This study examines Hainan Province, designated as a pilot zone for reform under the Hainan Free Trade Port initiative, where transnational higher education (TNHE) serves as a key platform for modernization and global engagement. Focusing on the International Education Hub, a flagship initiative within the Free Trade Port, the research explores how governance is enacted at the intersection of policy frameworks and institutional practice. Guided by Verhoest et al.'s (2004) autonomy framework, this study adopts a qualitative practitioner research approach that combines policy documentary analysis with practitioner reflections. It highlights the interaction between top-down policy directives and bottom-up institutional agency. Drawing on my dual role as practitioner-researcher, the analysis connects policy discourse with the realities of partnership development, showing how governance is interpreted and operationalized in context. Findings indicate that TNHE governance in Hainan follows a hybrid model combining central oversight with selective flexibility. Institutions navigate policy constraints while leveraging regional incentives, producing negotiated forms of autonomy shaped by both regulation and practice. TNHE is also closely aligned with broader geopolitical objectives, linking higher education to talent development, regional integration, and China’s global positioning. This study contributes by conceptualizing TNHE governance as a dynamic, interactive process between state strategy and institutional practice, while offering practical insights for international partners on the importance of alignment and adaptability.",
+    "DOI": "10.1080/03075079.2026.2714436",
+    "URL": "https://doi.org/10.1080/03075079.2026.2714436",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7172526035",
+    "type": "article-journal",
+    "title": "Mapping the landscape of AI governance in higher education",
+    "author": [
+      {
+        "family": "Khoza",
+        "given": "Magezi Samuel"
+      },
+      {
+        "family": "Wamba",
+        "given": "Samuel Fosso"
+      },
+      {
+        "family": "Nyawa",
+        "given": "Serge"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          5
+        ]
+      ]
+    },
+    "abstract": "The rapid adoption of Artificial Intelligence (AI), particularly Generative AI (GenAI), has accelerated the need for robust governance in higher education. This study provides a comparative analysis of AI governance frameworks adopted by universities worldwide. A qualitative document analysis was conducted on 43 publicly accessible AI governance documents collected from 35 universities through official institutional websites. Using thematic analysis, the study examined governance principles, scope, institutional structures, implementation strategies, and future-oriented governance practices. The findings reveal increasing convergence around core ethical principles, particularly fairness, transparency, and accountability, alongside a shift from reactive regulation to proactive governance that supports responsible AI adoption. Universities are increasingly establishing formal oversight structures, integrating AI governance into existing institutional processes, and adopting adaptable ‘living’ policies to respond to technological change. Despite variations in implementation, the findings highlight growing international alignment and underscore the need for collaborative, flexible, and context-sensitive AI governance frameworks that promote innovation while safeguarding ethical and institutional values.",
+    "DOI": "10.1080/02602938.2026.2712521",
+    "URL": "https://doi.org/10.1080/02602938.2026.2712521",
+    "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
