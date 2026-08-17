@@ -26999,6 +26999,54 @@
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
+    "id": "openalex:W7163005630",
+    "type": "article-journal",
+    "title": "The DIPS model: GenAI integration in digital information problem solving by experts and novices",
+    "author": [
+      {
+        "family": "Boetje",
+        "given": "Josien"
+      },
+      {
+        "family": "Graaf",
+        "given": "Zindzi de"
+      },
+      {
+        "family": "Wopereis",
+        "given": "Iwan; id_orcid 0000-0001-8516-9558"
+      },
+      {
+        "family": "Ginkel",
+        "given": "Stan van"
+      },
+      {
+        "family": "Smakman",
+        "given": "Matthijs H. J."
+      },
+      {
+        "family": "Versendaal",
+        "given": "Johan"
+      },
+      {
+        "family": "Barendsen",
+        "given": "Erik"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          1
+        ]
+      ]
+    },
+    "abstract": "In the digital age, academic success increasingly depends on information problem solving (IPS) competence: the ability to find, evaluate, process, and synthesize information into knowledge products. However, generative AI (genAI) transforms how higher education students engage with digital information, challenging models developed for web-based IPS, such as the IPS using Internet (IPS-I) model. Therefore, an empirically grounded model for AI-assisted IPS process is needed. This study decomposes the cognitive activities of the AI-assisted IPS process and pinpoints where students need guidance and support. It empirically refines the IPS-I model through cognitive task analysis of think-aloud protocols from 14 novices (pre-service teachers) and 12 experts (teacher trainers) completing an authentic IPS task using genAI. Through bottom-up analysis of observed behaviors, we identified 25 cognitive activities distributed across six interrelated phases: Define, Search, Select, Process, Synthesize, and Create. Compared to the original IPS-I model, three new and four modified activities emerged, with Regulation remaining a central, cross-cutting metacognitive component. Additionally, experts and novices differed in time allocation across phases, AI tool usage, and sequencing of the IPS phases. Experts exhibited a more iterative process, integrating AI across all phases, including Regulation, and delayed the use of AI. In contrast, novices used AI early, mainly during Search and Create. The resulting Digital Information Problem Solving (DIPS) model provides a refined, empirically grounded framework for understanding and teaching IPS within the context of genAI. This model defines the intended learning outcomes for learning environments aimed at fostering responsible AI use in higher education.",
+    "DOI": "10.1016/j.compedu.2026.105677",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105677",
+    "container-title": "Computers & Education"
+  },
+  {
     "id": "openalex:W7163146399",
     "type": "article-journal",
     "title": "Rethinking learning and teaching cultures in higher education through radical collegiality and student-staff partnerships",
@@ -27817,5 +27865,105 @@
     "DOI": "10.1080/02602938.2026.2712521",
     "URL": "https://doi.org/10.1080/02602938.2026.2712521",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7201957865",
+    "type": "article-journal",
+    "title": "Assessment Arrythmia: restoring rhythms of time, space, and practice in higher education",
+    "author": [
+      {
+        "family": "Winstone",
+        "given": "Naomi"
+      },
+      {
+        "family": "Gravett",
+        "given": "Karen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          8
+        ]
+      ]
+    },
+    "abstract": "Abstract Higher education practice is increasingly shaped by expanding workloads and cultures of acceleration. These pressures are felt acutely in the domain of assessment. As marking cycles shorten, deadlines proliferate, and institutional metrics dominate academic time, assessment risks becoming a site of temporal strain rather than pedagogical care. This paper deploys the concept of arrhythmia as a metaphor for the increasingly fragmented, rushed, and disjointed nature of assessment in higher education. Drawing on contemporary challenges in academic practice, we argue that assessment has lost its pedagogical rhythm, becoming governed by institutional workload clocks rather than learning-centred temporalities. Engaging Lefebvre’s rhythmanalysis, we identify three interrelated symptoms of assessment arrhythmia: unsustainable acceleration and pace; temporal surveillance; and temporal dissonance within modularised curricula. We respond to these conditions by proposing a series of recommendations aimed at restoring more relational, integrated, and temporally aligned approaches to assessment. In doing so, we demonstrate how rhythmanalysis offers a generative framework for rethinking assessment practices and for resisting the culture of speed and intensification that pervades contemporary higher education.",
+    "DOI": "10.1007/s10734-026-01742-x",
+    "URL": "https://doi.org/10.1007/s10734-026-01742-x",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7202197950",
+    "type": "article-journal",
+    "title": "Can GenAI be trained to mimic human markers of extended written assignments in higher education?",
+    "author": [
+      {
+        "family": "Kay",
+        "given": "W"
+      },
+      {
+        "family": "Rutherford",
+        "given": "Stephen"
+      },
+      {
+        "family": "Smith",
+        "given": "David P."
+      },
+      {
+        "family": "Shore",
+        "given": "Andrew M."
+      },
+      {
+        "family": "Francis",
+        "given": "Nigel"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          11
+        ]
+      ]
+    },
+    "abstract": "The rapid rise of Generative Artificial Intelligence (GenAI) has promoted interest in its use for marking student work in Higher Education. Harnessing the pattern-recognition capabilities of Large Language Models (LLMs) may potentially facilitate objective grading of students’ work at scale. This study investigated whether LLMs could mimic human marking of extended written work sufficiently to function as a formative quality benchmarking tool for students. Two versions of a popular GenAI platform, ChatGPT, were used to mark 50 undergraduate bioscience essays against seven assessment criteria under four different prompting conditions. LLM-assigned marks were compared to human marks in both their mean scores and mark variability using distributional modelling. While overall composite marks were often broadly similar between humans and LLMs, substantial discrepances emerged at the individual criterion and essay levels. LLMs generally awarded higher marks than humans, but with significantly reduced variability, resulting in systematic compression of marks towards the centre of the distribution. Lower-scoring essays tended to receive inflated marks, whereas higher-scoring essays received reduced marks relative to human assessment. These findings suggest that current LLMs do not reliably reproduce human judgement in the marking of extended written work, with important implications for assessment practice and GenAI-assisted benchmarking of marks.",
+    "DOI": "10.1080/02602938.2026.2710688",
+    "URL": "https://doi.org/10.1080/02602938.2026.2710688",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7202249895",
+    "type": "article-journal",
+    "title": "Outsiders within: exploring integration strategies of international faculty in chinese higher education institutions",
+    "author": [
+      {
+        "family": "Ding",
+        "given": "Jie"
+      },
+      {
+        "family": "Yang",
+        "given": "Lili"
+      },
+      {
+        "family": "Mlynarski",
+        "given": "Jacob"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          13
+        ]
+      ]
+    },
+    "abstract": "Abstract International faculty (IF) are increasingly recruited to Chinese universities to support knowledge transfer and internationalisation, yet they frequently report experiencing persistent marginal positions. This study examines how IF in Chinese higher education navigate this marginal status. Drawing on thirty semi-structured interviews, we identify five reflexive tactics: playing by the rules, contextual collaboration, negotiating around the rules, tactical non-pursuit, and strategic self-detachment. These tactics are deployed across four domains of institutional integration: cultural norms, interpersonal relations, resources, and academic practice. By foregrounding reflexivity, the analysis reframes integration not as a binary outcome of assimilation or marginalisation, but as a non-linear decision-making process mediated by ethical judgement. The study reveals that integration encompasses not only intercultural competence and resource allocation, but also a strategic balancing of selective engagement and detachment, driven by distinct ethical foci. Findings underscore the value of more inclusive institutional cultures and greater tolerance for outsider-within positions.",
+    "DOI": "10.1007/s10734-026-01724-z",
+    "URL": "https://doi.org/10.1007/s10734-026-01724-z",
+    "container-title": "Higher Education"
   }
 ]

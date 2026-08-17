@@ -1,38 +1,71 @@
 # LLM Education Literature Digest
 
-*Generated: 2026-08-10 08:01:08 UTC*
+*Generated: 2026-08-17 07:13:24 UTC*
 
-**2 new items**
+**4 new items**
 
-## 1. Mapping the landscape of AI governance in higher education
+## 1. Can GenAI be trained to mimic human markers of extended written assignments in higher education?
 
-**Authors:** Magezi Samuel Khoza, Samuel Fosso Wamba, Serge Nyawa
+**Authors:** W Kay, Stephen Rutherford, David P. Smith, Andrew M. Shore, Nigel Francis
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-08-05
+**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-08-11
 
-**Summary:** The rapid adoption of Artificial Intelligence (AI), particularly Generative AI (GenAI), has accelerated the need for robust governance in higher education. This study provides a comparative analysis of AI governance frameworks adopted by universities worldwide. A qualitative document analysis was co...
+**Summary:** The rapid rise of Generative Artificial Intelligence (GenAI) has promoted interest in its use for marking student work in Higher Education. Harnessing the pattern-recognition capabilities of Large Language Models (LLMs) may potentially facilitate objective grading of students’ work at scale. This st...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2712521
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2712521?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2712521
+- Landing page: https://doi.org/10.1080/02602938.2026.2710688
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2710688?needAccess=true
+- DOI: https://doi.org/10.1080/02602938.2026.2710688
 
-*Relevance score: 11.0*
+*Relevance score: 17.0*
 
 ---
 
-## 2. Geopolitics and governance: a practitioner research approach to transnational higher education in Hainan’s international education hub
+## 2. The DIPS model: GenAI integration in digital information problem solving by experts and novices
 
-**Authors:** Huili Si
+**Authors:** Josien Boetje, Zindzi de Graaf, Iwan; id_orcid 0000-0001-8516-9558 Wopereis, Stan van Ginkel, Matthijs H. J. Smakman et al. (7 authors)
 
-**Source:** openalex • Studies in Higher Education • 2026-08-04
+**Source:** openalex • Computers & Education • 2026-06-01
 
-**Summary:** China’s evolving higher education governance reflects a strategic response to globalization, regional integration, and shifting geopolitical conditions. This study examines Hainan Province, designated as a pilot zone for reform under the Hainan Free Trade Port initiative, where transnational higher ...
+**Summary:** In the digital age, academic success increasingly depends on information problem solving (IPS) competence: the ability to find, evaluate, process, and synthesize information into knowledge products. However, generative AI (genAI) transforms how higher education students engage with digital informati...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/03075079.2026.2714436
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2714436?needAccess=true
-- DOI: https://doi.org/10.1080/03075079.2026.2714436
+- Landing page: https://doi.org/10.1016/j.compedu.2026.105677
+- DOI: https://doi.org/10.1016/j.compedu.2026.105677
+
+*Relevance score: 12.0*
+
+---
+
+## 3. Outsiders within: exploring integration strategies of international faculty in chinese higher education institutions
+
+**Authors:** Jie Ding, Lili Yang, Jacob Mlynarski
+
+**Source:** openalex • Higher Education • 2026-08-13
+
+**Summary:** Abstract International faculty (IF) are increasingly recruited to Chinese universities to support knowledge transfer and internationalisation, yet they frequently report experiencing persistent marginal positions. This study examines how IF in Chinese higher education navigate this marginal status. ...
+
+**Links:**
+- Landing page: https://doi.org/10.1007/s10734-026-01724-z
+- PDF: https://link.springer.com/content/pdf/10.1007/s10734-026-01724-z.pdf
+- DOI: https://doi.org/10.1007/s10734-026-01724-z
+
+*Relevance score: 8.0*
+
+---
+
+## 4. Assessment Arrythmia: restoring rhythms of time, space, and practice in higher education
+
+**Authors:** Naomi Winstone, Karen Gravett
+
+**Source:** openalex • Higher Education • 2026-08-08
+
+**Summary:** Abstract Higher education practice is increasingly shaped by expanding workloads and cultures of acceleration. These pressures are felt acutely in the domain of assessment. As marking cycles shorten, deadlines proliferate, and institutional metrics dominate academic time, assessment risks becoming a...
+
+**Links:**
+- Landing page: https://doi.org/10.1007/s10734-026-01742-x
+- PDF: https://link.springer.com/content/pdf/10.1007/s10734-026-01742-x.pdf
+- DOI: https://doi.org/10.1007/s10734-026-01742-x
 
 *Relevance score: 8.0*
 
