@@ -27965,5 +27965,73 @@
     "DOI": "10.1007/s10734-026-01724-z",
     "URL": "https://doi.org/10.1007/s10734-026-01724-z",
     "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7204223160",
+    "type": "article-journal",
+    "title": "Rethinking research-on-research in higher education studies",
+    "author": [
+      {
+        "family": "Pilgrim‐Brown",
+        "given": "Jess"
+      },
+      {
+        "family": "Chen",
+        "given": "Lingxuan"
+      },
+      {
+        "family": "Kedia",
+        "given": "Vedika"
+      },
+      {
+        "family": "Lin",
+        "given": "Julie C.Y."
+      },
+      {
+        "family": "Ma",
+        "given": "Yiran"
+      },
+      {
+        "family": "Ma",
+        "given": "Yunfei"
+      },
+      {
+        "family": "Montero",
+        "given": "Matías"
+      },
+      {
+        "family": "Oancea",
+        "given": "Alis"
+      },
+      {
+        "family": "Shi",
+        "given": "Anding"
+      },
+      {
+        "family": "Wang",
+        "given": "Xiaona"
+      },
+      {
+        "family": "Xu",
+        "given": "Xin"
+      },
+      {
+        "family": "Yu",
+        "given": "Kexin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          26
+        ]
+      ]
+    },
+    "abstract": "Drawing on a twenty-year corpus from Studies in Higher Education (SiHE), we map how the journal engages with Research-on-Research (RoR), as a proxy for understanding the use of qualitative methods in RoR across higher education research. Subsequently, we propose several vignettes that illustrate a notion of being human-centred; combining an ontology of connectedness that accounts for relationality, with a critical ethics of care. We screened 2,418 articles from 2005–2025, identifying 430 RoR papers in our systematic review. Here, the share of RoR papers rose from 5% to 15% (2005–2012), to 15% to 23% (2013–2025). Over half of the papers (n = 239) used qualitative designs, with interviews dominating, and case studies being common. Analytical approaches clustered around thematic and descriptive analyses, indicating a limited methodological toolkit. We therefore propose an expanded palette of methods/methodologies centred on lived experiences, context, and relationships: narrative inquiry, ethnographic observation, multiple-perspective interviews, qualitative network analysis, rhizomatic mapping, critical discourse analysis, and southern collectives. These approaches suggest that informal collaboration, power, and the micro-mechanisms that link situated practice to structural-level patterns hold importance. We argue for an RoR grounded in a critical ethics of care that engages responsibly with AI’s opportunities and risks while resisting extractive logics. Refocusing on people, connections, and situated contexts provides an expansive understanding of how knowledge is created, valued, and governed, enabling us to imagine a more equitable future for research.",
+    "DOI": "10.1080/03075079.2026.2710343",
+    "URL": "https://doi.org/10.1080/03075079.2026.2710343",
+    "container-title": "Studies in Higher Education"
   }
 ]
