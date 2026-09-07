@@ -1,21 +1,21 @@
 # LLM Education Literature Digest
 
-*Generated: 2026-08-31 13:39:04 UTC*
+*Generated: 2026-09-07 12:23:58 UTC*
 
 **1 new items**
 
-## 1. Rethinking research-on-research in higher education studies
+## 1. Assessing from within : the case for autoethnography in higher education assessment and evaluation research
 
-**Authors:** Jess Pilgrim‐Brown, Lingxuan Chen, Vedika Kedia, Julie C.Y. Lin, Yiran Ma et al. (12 authors)
+**Authors:** Edward Ademolu
 
-**Source:** openalex • Studies in Higher Education • 2026-08-26
+**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-08-31
 
-**Summary:** Drawing on a twenty-year corpus from Studies in Higher Education (SiHE), we map how the journal engages with Research-on-Research (RoR), as a proxy for understanding the use of qualitative methods in RoR across higher education research. Subsequently, we propose several vignettes that illustrate a n...
+**Summary:** Assessment and evaluation research in higher education has generated substantial insight into student experience, feedback practices, assessment design, standards, grading, validity, fairness and institutional reform. These debates have been shaped largely through surveys, multivariate and policy an...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/03075079.2026.2710343
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2710343?needAccess=true
-- DOI: https://doi.org/10.1080/03075079.2026.2710343
+- Landing page: https://doi.org/10.1080/02602938.2026.2726498
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2726498?needAccess=true
+- DOI: https://doi.org/10.1080/02602938.2026.2726498
 
 *Relevance score: 8.0*
 

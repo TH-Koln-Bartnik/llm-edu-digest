@@ -28033,5 +28033,29 @@
     "DOI": "10.1080/03075079.2026.2710343",
     "URL": "https://doi.org/10.1080/03075079.2026.2710343",
     "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7204807291",
+    "type": "article-journal",
+    "title": "Assessing from within : the case for autoethnography in higher education assessment and evaluation research",
+    "author": [
+      {
+        "family": "Ademolu",
+        "given": "Edward"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          31
+        ]
+      ]
+    },
+    "abstract": "Assessment and evaluation research in higher education has generated substantial insight into student experience, feedback practices, assessment design, standards, grading, validity, fairness and institutional reform. These debates have been shaped largely through surveys, multivariate and policy analysis, interviews, focus groups, intervention studies, systematic reviews, quantitative modelling and mixed-methods evaluation, approaches that have afforded the field empirical reach and practical authority. This conceptual-methodological piece intervenes in this landscape, advancing autoethnography as a rigorous mode of inquiry into academic judgement and evaluative labour. Its concern is the assessor as an embodied, cognitively active, affectively implicated and institutionally accountable subject whose work is often absorbed into the procedural language of standards, criteria, reliability and quality assurance. Although autoethnography has an established presence within contemporary higher education research, its contribution to assessment studies is comparatively underdeveloped and warrants fuller conceptual articulation. The article argues that autoethnography gives methodological form to cognitive, affective and temporal dimensions of assessment that often sit at the edge of the field’s preferred evidentiary forms. By establishing the assessor’s situated practice as a legitimate ground of methodological inquiry, it repositions academic judgement as lived evaluative labour.",
+    "DOI": "10.1080/02602938.2026.2726498",
+    "URL": "https://doi.org/10.1080/02602938.2026.2726498",
+    "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
