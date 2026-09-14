@@ -28057,5 +28057,33 @@
     "DOI": "10.1080/02602938.2026.2726498",
     "URL": "https://doi.org/10.1080/02602938.2026.2726498",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7212401775",
+    "type": "article-journal",
+    "title": "Epistemic dependence in AI-mediated learning within higher education: a framework for student judgement and responsibility",
+    "author": [
+      {
+        "family": "Du",
+        "given": "Yiran"
+      },
+      {
+        "family": "Yuan",
+        "given": "Yijia"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          12
+        ]
+      ]
+    },
+    "abstract": "Generative artificial intelligence (GenAI) is increasingly embedded in how students search for information, interpret concepts, evaluate work, produce academic text and regulate learning. These uses are not inherently problematic. The educational concern arises when AI begins to make knowledge-related judgements that students are expected to make and justify themselves. This conceptual article develops Epistemic Dependence in AI-Mediated Learning (ED-AIL) as a framework for analysing this problem within higher education. ED-AIL refers to learner–AI relations in which AI-generated outputs become epistemically directive, reducing students’ own verification, interpretation, justification, knowledge production or epistemic regulation. Drawing on social epistemology, epistemic cognition, source evaluation, self-regulated learning, human–AI interaction, assessment, academic governance and quality assurance, the article distinguishes ED-AIL from adjacent constructs including AI literacy, automation bias, cognitive offloading and academic misconduct. It theorises ED-AIL through a mechanism of AI output, learner uptake and judgement displacement, and maps the construct across five domains of learning: knowledge acquisition, conceptual interpretation, epistemic evaluation, knowledge production and epistemic regulation. The framework provides diagnostic implications for pedagogy, assessment, policy and learning assurance, centred on preserving student judgement and epistemic responsibility. It therefore reframes responsible AI use around retained epistemic responsibility.",
+    "DOI": "10.1080/02602938.2026.2732250",
+    "URL": "https://doi.org/10.1080/02602938.2026.2732250",
+    "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
