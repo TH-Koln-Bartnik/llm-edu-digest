@@ -28085,5 +28085,293 @@
     "DOI": "10.1080/02602938.2026.2732250",
     "URL": "https://doi.org/10.1080/02602938.2026.2732250",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7213758217",
+    "type": "article-journal",
+    "title": "How artificial intelligence transforms the feedback ecosystem in higher education",
+    "author": [
+      {
+        "family": "Bearman",
+        "given": "Margaret"
+      },
+      {
+        "family": "Corbin",
+        "given": "Thomas"
+      },
+      {
+        "family": "Walton",
+        "given": "Jack"
+      },
+      {
+        "family": "Tai",
+        "given": "Joanna"
+      },
+      {
+        "family": "Nieminen",
+        "given": "Juuso Henrik"
+      },
+      {
+        "family": "Dawson",
+        "given": "Phillip"
+      },
+      {
+        "family": "Crawford",
+        "given": "Nicole M."
+      },
+      {
+        "family": "Boud",
+        "given": "David J."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          20
+        ]
+      ]
+    },
+    "abstract": "Artificial intelligence (AI) is often presented as solving longstanding challenges of feedback in higher education. Research and commentary tend to focus on how AI can replace educator labour by providing feedback information at scale but this substitution risks simplifying a complex and interconnected set of practices. We draw from Barnett’s work on the ecological university to offer a dynamic, relational view of an ecosystem – where the whole is greater than the sum of its parts. This perspective of the feedback ecosystem sensitised a qualitative study, where data was constituted through participant discussion within two-hour online workshops. Twelve students and 18 educators participated across three workshops; analysis of participant feedback experiences illustrated how feedback relations shift in the presence of AI. To conclude, we suggest that in response to AI, educators can seek to strengthen their feedback relationships with students over time – what we call humans-as-the-loop – in the feedback ecosystem.",
+    "DOI": "10.1080/02602938.2026.2730625",
+    "URL": "https://doi.org/10.1080/02602938.2026.2730625",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7213921733",
+    "type": "article-journal",
+    "title": "Can large language models reproduce higher education grade bands? Cross-model study of calibration and grading bias in authentic student writing",
+    "author": [
+      {
+        "family": "Kerwat",
+        "given": "Logayna"
+      },
+      {
+        "family": "Donaldson",
+        "given": "Daniel L."
+      },
+      {
+        "family": "Mahomed",
+        "given": "Aziza"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          21
+        ]
+      ]
+    },
+    "abstract": "Large Language Models (LLMs) are becoming increasingly used to support higher education assessment, yet evidence of their capability on reproducing authentic institutional grade-band labels remains limited. There is also limited understanding of how different model families vary in their grading behaviour, calibration, and tendency to produce systematic bias under consistent assessment conditions. This study examines whether LLMs can accurately grade university level student assignments using eight distinct pre-trained LLMs. The approach was tested using 114 human-marked university essays, and found that performance differed significantly across model configurations with some models aligning more closely with the human-grades while others showed clear patterns of undergrading. In some cases, models predicted Pass or Fail despite the essays being human-labelled as Merit or Distinction, showing the risk of systematic grading bias under consistent assessment conditions. Overall, the study indicates that large language models may be useful as supervised assessment-support tools, but they are not yet ready to be used independently for marking higher education student writing. Any future use in higher-stakes assessment would require further fine-tuning, a more directive assessment-specific knowledge base, and sustained human supervision.",
+    "DOI": "10.1080/02602938.2026.2734796",
+    "URL": "https://doi.org/10.1080/02602938.2026.2734796",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7213928668",
+    "type": "article-journal",
+    "title": "From bookshelves to bots: academic integrity, generative AI, and the recurring anxiety of higher education",
+    "author": [
+      {
+        "family": "Norton",
+        "given": "Catherine R."
+      },
+      {
+        "family": "O’Keeffe",
+        "given": "Brendan T."
+      },
+      {
+        "family": "Lynch",
+        "given": "Raymond"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          21
+        ]
+      ]
+    },
+    "abstract": "Scholarly concern about academic integrity has repeatedly intensified during periods of technological change that reshape how knowledge is accessed, reproduced, and demonstrated. Across successive shifts, from print to digital platforms, these changes have generated recurring anxieties about authorship, originality, and academic standards, followed by pedagogical and policy adaptations that normalised these tools. In these moments, academic integrity operates less as a fixed moral standard than as a negotiated boundary between acceptable assistance and unacceptable substitution. Contemporary debates surrounding generative artificial intelligence (AI) echo these patterns while introducing new tensions related to scale, opacity, and cognitive delegation. Large language models (LLMs) challenge assessment systems predicated on visible outputs rather than transparent reasoning processes, exposing misalignments between what higher education claims to value – critical thinking, synthesis, and judgement – and what it measures. Rather than constituting a rupture, generative AI exposes the limits of curriculum, pedagogy, and assessment regimes developed for an era of informational scarcity. This perspective argues that the central issue is not tool use itself, but persistent pedagogical practices that conflate academic integrity with learning. We call for integrity frameworks that prioritise process, reasoning, and epistemic agency in technology-rich academic environments.",
+    "DOI": "10.1080/07294360.2026.2733706",
+    "URL": "https://doi.org/10.1080/07294360.2026.2733706",
+    "container-title": "Higher Education Research & Development"
+  },
+  {
+    "id": "openalex:W7213931740",
+    "type": "article-journal",
+    "title": "Higher education aspirations, discipline choices, and university entry experiences of students from equity groups in Vietnam",
+    "author": [
+      {
+        "family": "Ha",
+        "given": "Nguyen Thi Ngoc"
+      },
+      {
+        "family": "Bao",
+        "given": "Nguyen Van"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          21
+        ]
+      ]
+    },
+    "abstract": "This paper is among the first to explore higher education aspirations, discipline choices, and university entry experiences of students from equity groups in Vietnam. Drawing on semi-structured interviews with 12 participants who successfully transitioned into public universities in Vietnam, this study explored the experiences behind a ‘university dream come true’. Findings show that university is not solely an individual aspiration, but rather a collective mission among families from equity backgrounds to secure upward intergenerational mobility. For students determined to pursue higher education, pathways from post-secondary education to university are highly linear, characterised by the absence of alternative options, and a strong perception that failure is not acceptable. They tend to select disciplines that lead to highly respected and stable professions in Vietnamese society such as health, pharmacy, education, and military careers. In terms of university entry experiences, they are largely left with the national examination as their only viable option. Notably, none entered through the state-nominated admissions pathway, despite this scheme being specifically designed for them. The paper concludes by calling for stronger governmental and institutional interventions to ensure more equitable access for students from equity backgrounds in Vietnam.",
+    "DOI": "10.1080/07294360.2026.2730960",
+    "URL": "https://doi.org/10.1080/07294360.2026.2730960",
+    "container-title": "Higher Education Research & Development"
+  },
+  {
+    "id": "openalex:W7214056698",
+    "type": "article-journal",
+    "title": "Trade-offs in assessment and feedback design: a trilemma-based model",
+    "author": [
+      {
+        "family": "Pedlow",
+        "given": "Michelle"
+      },
+      {
+        "family": "Fischer",
+        "given": "Juan"
+      },
+      {
+        "family": "Williams",
+        "given": "Andrew"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          22
+        ]
+      ]
+    },
+    "abstract": "Assessment and feedback design is expected to satisfy an expanding range of educational, institutional and technological demands. Emerging technologies, particularly generative artificial intelligence, have intensified longstanding tensions around what assessment should achieve and what evidence can support credible judgements of learning. Educators are asked to design assessment that is authentic, inclusive, feedback-rich, defensible, scalable and sustainable, yet these aspirations cannot always be maximised simultaneously. Existing assessment and feedback frameworks provide valuable guidance about the characteristics of high-quality practice but offer limited support for making design decisions when legitimate educational priorities compete. This paper proposes the Dual Trilemma Framework as a conceptual lens for navigating these competing demands. The framework comprises an assessment trilemma of authenticity, observability and feasibility, and a feedback trilemma of usability, sources and sustainability. It positions assessment and feedback design as a process of making explicit and defensible trade-offs among competing educational priorities. These trade-offs can be distributed across coherent assessment systems, allowing different activities to make complementary contributions over time. The Dual Trilemma Framework provides educators with a shared conceptual language for making transparent, defensible and contextually appropriate assessment and feedback design decisions while complementing, rather than replacing, existing assessment and feedback frameworks.",
+    "DOI": "10.1080/02602938.2026.2734350",
+    "URL": "https://doi.org/10.1080/02602938.2026.2734350",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7214061747",
+    "type": "article-journal",
+    "title": "From replacement to reform: why higher education should stop fighting exams and start making them formative",
+    "author": [
+      {
+        "family": "Panadero",
+        "given": "Ernesto"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          22
+        ]
+      ]
+    },
+    "abstract": "For decades, influential voices within the formative assessment tradition have positioned exams as the primary obstacle to quality learning in higher education, and reform agendas from Bologna onwards have urged faculty to diversify away from them. This position paper argues that the strategy has failed: evidence from several countries shows that exam-centred assessment remains dominant and is not declining. Rather than continuing to advocate replacement, the paper proposes adding formative functions to the exams faculty already use. It identifies a conceptual error in the reform discourse, the conflation of assessment format with assessment purpose, and shows that the architects of formative assessment never intended to exclude exams from formative practice. The argument draws on the testing effect literature, where meta-analytic effect sizes range from 0.50 to 0.61. Five evidence-based practices are proposed: two-stage exams, exam wrappers, predictive self-assessment, cumulative design, and ungraded diagnostic midterms. A further section considers what generative artificial intelligence changes, and what it does not. The paper calls for a redirection of research, policy, and professional development effort.",
+    "DOI": "10.1080/02602938.2026.2734347",
+    "URL": "https://doi.org/10.1080/02602938.2026.2734347",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7214103524",
+    "type": "article-journal",
+    "title": "Exploring the impact of institutional and disciplinary cultures on feedback processes in higher education",
+    "author": [
+      {
+        "family": "Vargas",
+        "given": "Andréia Escosteguy"
+      },
+      {
+        "family": "Bale",
+        "given": "Richard"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          23
+        ]
+      ]
+    },
+    "abstract": "Feedback has been reframed in the literature as a dialogic process that aims to develop student self-regulation and improve learning. Institutional and disciplinary cultures can impact how feedback processes are designed and enacted. We investigated the role of institutional and disciplinary cultures in shaping feedback practices adopted by teaching fellows on a medical biosciences programme at a UK institution. Data generated by five individual interviews were analysed by reflexive thematic analysis, and our main findings reveal an institutional culture that values the educational development of staff through pedagogical training. This training seemed to be associated with greater awareness of the institutional learning and teaching strategy, and the development of teacher feedback literacy. Participants’ accounts also suggested that the disciplinary feedback culture on this course reflects the institutional strategy. These findings illustrate how disciplinary and institutional cultures can influence feedback practices and highlight the impact of pedagogical training on teaching.",
+    "DOI": "10.1080/13562517.2026.2733990",
+    "URL": "https://doi.org/10.1080/13562517.2026.2733990",
+    "container-title": "Teaching in Higher Education"
+  },
+  {
+    "id": "openalex:W7214112884",
+    "type": "article-journal",
+    "title": "Teaching and the decolonisation of research: structures of theory and inquiry",
+    "author": [
+      {
+        "family": "Alatas",
+        "given": "Syed Farid"
+      },
+      {
+        "family": "Bhatt",
+        "given": "Ibrar"
+      },
+      {
+        "family": "Xiang",
+        "given": "Shuchen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          23
+        ]
+      ]
+    },
+    "abstract": "This article applies Syed Farid Alatas’s two-part framework for decolonisation, critique and construction, and considers what it entails for research training and methods pedagogy in the contemporary university. We argue that the first part, critique, must consider diverse epistemic traditions and the material and conceptual conditions through which research reproduces inequalities. The second part, construction, consisting of reconstruction and original construction, requires a discrete set of pedagogical practices, including problem-genealogy and concept-mining tasks for trainee researchers. Reconstruction deals with already established subject-matter, problem statements, theories, concepts and methods, while original construction, demands, among other things, theoretical and conceptual innovation and methodological pluralism in argumentation, including arts-based research and indigenous storywork. We argue that reconstruction and original construction in the curriculum are inseparable from the reconstruction of the institution itself. Moreover, to have impact for teaching, decolonising commitments must be explicitly written into university partnerships, internationalisation policies, and transnational teaching agreements.",
+    "DOI": "10.1080/13562517.2026.2735435",
+    "URL": "https://doi.org/10.1080/13562517.2026.2735435",
+    "container-title": "Teaching in Higher Education"
+  },
+  {
+    "id": "openalex:W7214337319",
+    "type": "article-journal",
+    "title": "Preserving epistemic authenticity: process-oriented assessment in the age of generative AI",
+    "author": [
+      {
+        "family": "Thapa",
+        "given": "Gayetri Chhetri"
+      },
+      {
+        "family": "Lewis",
+        "given": "Steven"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          25
+        ]
+      ]
+    },
+    "abstract": "The rapid advancement of generative artificial intelligence (AI) has introduced significant challenges for higher education (HE) assessment practices, particularly those relying on unsupervised written tasks. As AI systems become increasingly capable of producing sophisticated academic text, traditional product-oriented assessments face growing pressures to reliably capture ‘authentic’ student learning, reasoning and disciplinary engagement. In response, we argue for a shift towards more process-oriented assessment approaches that foreground how learners interpret, justify and construct understanding over time. Drawing on contemporary scholarship surrounding generative AI, authentic assessment, evaluative judgement and assessment redesign, we examine how process-oriented approaches can offer a more intellectually rigorous and sustainable framework for assessment and evaluation. We also consider broader pedagogical and institutional implications associated with this shift, including educational equity, emotional labour, workload sustainability and what we describe as epistemic authenticity. Additionally, we outline key principles for designing such approaches, including reflective justification, staged task design, dialogic engagement and evaluative transparency. Finally, we conclude that reorienting assessment towards the evaluation of reasoning, interpretation and knowledge construction may provide a more sustainable, intellectually meaningful and pedagogically robust response to the challenges posed by generative AI within HE.",
+    "DOI": "10.1080/02602938.2026.2736679",
+    "URL": "https://doi.org/10.1080/02602938.2026.2736679",
+    "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
