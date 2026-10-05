@@ -1,156 +1,106 @@
 # LLM Education Literature Digest
 
-*Generated: 2026-09-28 13:46:27 UTC*
+*Generated: 2026-10-05 14:28:42 UTC*
 
-**9 new items**
+**6 new items**
 
-## 1. Preserving epistemic authenticity: process-oriented assessment in the age of generative AI
+## 1. An empirical study of ChatGPT use in engineering education: Prompting and performance
 
-**Authors:** Gayetri Chhetri Thapa, Steven Lewis
+**Authors:** Lauren Genith Isaza Domínguez, Antonio Robles-Gómez, Rafael Pastor-Vargas
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-09-25
+**Source:** openalex • The Internet and Higher Education • 2026-07-24
 
-**Summary:** The rapid advancement of generative artificial intelligence (AI) has introduced significant challenges for higher education (HE) assessment practices, particularly those relying on unsupervised written tasks. As AI systems become increasingly capable of producing sophisticated academic text, traditi...
+**Summary:** This study investigates how specific prompting behaviors influence the academic performance of engineering students using ChatGPT. A total of 128 fourth-year students across four engineering programs participated in weekly sessions involving rotating task types: case analysis, engineering design, mu...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2736679
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2736679?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2736679
+- Landing page: https://doi.org/10.1016/j.iheduc.2026.101105
+- PDF: https://www.sciencedirect.com/science/article/pii/S1096751626000321/pdf
+- DOI: https://doi.org/10.1016/j.iheduc.2026.101105
 
-*Relevance score: 17.0*
+*Relevance score: 15.0*
 
 ---
 
-## 2. Can large language models reproduce higher education grade bands? Cross-model study of calibration and grading bias in authentic student writing
+## 2. How AI-vulnerable is Australian higher education assessment? A computational audit of Group of Eight Arts and Humanities units, 2022–2026
 
-**Authors:** Logayna Kerwat, Daniel L. Donaldson, Aziza Mahomed
+**Authors:** Gonzalo Villanueva
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-09-21
+**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-10-01
 
-**Summary:** Large Language Models (LLMs) are becoming increasingly used to support higher education assessment, yet evidence of their capability on reproducing authentic institutional grade-band labels remains limited. There is also limited understanding of how different model families vary in their grading beh...
+**Summary:** Generative AI (GenAI) is profoundly disrupting higher education, prompting educators to redesign course and assessment practices. Yet evidence of the potential impact of GenAI on assessments and subsequent module redesigns remains unclear. Through data scraping and classification, this article audit...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2734796
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2734796?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2734796
+- Landing page: https://doi.org/10.1080/02602938.2026.2740764
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2740764?needAccess=true
+- DOI: https://doi.org/10.1080/02602938.2026.2740764
 
-*Relevance score: 17.0*
+*Relevance score: 12.0*
 
 ---
 
-## 3. From bookshelves to bots: academic integrity, generative AI, and the recurring anxiety of higher education
+## 3. Agency and Adaptation in Human–Technology Configurations: A Fifty-Year Analysis of Computers & Education
 
-**Authors:** Catherine R. Norton, Brendan T. O’Keeffe, Raymond Lynch
+**Authors:** Yuan‐Hsuan Lee, Candace Walkington, Jiun‐Yu Wu
 
-**Source:** openalex • Higher Education Research & Development • 2026-09-21
+**Source:** openalex • Computers & Education • 2026-10-01
 
-**Summary:** Scholarly concern about academic integrity has repeatedly intensified during periods of technological change that reshape how knowledge is accessed, reproduced, and demonstrated. Across successive shifts, from print to digital platforms, these changes have generated recurring anxieties about authors...
+**Summary:** Educational-technology histories are often organized around successive tools, obscuring how action, decision-making, regulation, and adaptive work are distributed among human and technological actors. Drawing on 5,387 papers published in Computers & Education over fifty years, this study examines ho...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/07294360.2026.2733706
-- DOI: https://doi.org/10.1080/07294360.2026.2733706
+- Landing page: https://doi.org/10.1016/j.compedu.2026.105757
+- PDF: https://www.sciencedirect.com/science/article/pii/S0360131526001971/pdf
+- DOI: https://doi.org/10.1016/j.compedu.2026.105757
 
-*Relevance score: 17.0*
+*Relevance score: 9.0*
 
 ---
 
-## 4. Trade-offs in assessment and feedback design: a trilemma-based model
+## 4. Conceptualising Human–AI Collaboration Competency for hybrid intelligence: towards learner agency through a metacognitive perspective
 
-**Authors:** Michelle Pedlow, Juan Fischer, Andrew Williams
+**Authors:** Belle Dang, Yvonne Hong, Cathal Doyle, Andy Nguyen
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-09-22
+**Source:** openalex • Studies in Higher Education • 2026-09-28
 
-**Summary:** Assessment and feedback design is expected to satisfy an expanding range of educational, institutional and technological demands. Emerging technologies, particularly generative artificial intelligence, have intensified longstanding tensions around what assessment should achieve and what evidence can...
+**Summary:** The growing integration of artificial intelligence (AI), especially generative AI and emerging agentic AI systems, in higher education raises urgent questions about curriculum design and the competencies required for meaningful human-AI collaboration. Although existing frameworks address technical a...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2734350
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2734350?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2734350
+- Landing page: https://doi.org/10.1080/03075079.2026.2740136
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2740136?needAccess=true
+- DOI: https://doi.org/10.1080/03075079.2026.2740136
+
+*Relevance score: 9.0*
+
+---
+
+## 5. From rubric fairness to student engagement: the mediating role of feedback usefulness and metacognitive awareness
+
+**Authors:** Sheena Choi, Chokdee Kanathanavanich, Rebecca R. Essig, Julia Smith, Nichaya Suntornpithug
+
+**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-10-03
+
+**Summary:** Rubrics are widely used in higher education to clarify assessment criteria and structure feedback. However, research has less often examined how students’ perceptions of rubric-based assessment are associated with learning engagement and metacognitive processes. Drawing on Self-Regulated Learning (S...
+
+**Links:**
+- Landing page: https://doi.org/10.1080/02602938.2026.2740137
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2740137?needAccess=true
+- DOI: https://doi.org/10.1080/02602938.2026.2740137
 
 *Relevance score: 8.0*
 
 ---
 
-## 5. From replacement to reform: why higher education should stop fighting exams and start making them formative
+## 6. Navigating assessment literacy in higher education: a multi-institutional study of university teachers’ perceptions, practices and professional growth
 
-**Authors:** Ernesto Panadero
+**Authors:** Anna Steen-Utheim, Hanne Maria Bingen
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-09-22
+**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-09-30
 
-**Summary:** For decades, influential voices within the formative assessment tradition have positioned exams as the primary obstacle to quality learning in higher education, and reform agendas from Bologna onwards have urged faculty to diversify away from them. This position paper argues that the strategy has fa...
-
-**Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2734347
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2734347?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2734347
-
-*Relevance score: 8.0*
-
----
-
-## 6. How artificial intelligence transforms the feedback ecosystem in higher education
-
-**Authors:** Margaret Bearman, Thomas Corbin, Jack Walton, Joanna Tai, Juuso Henrik Nieminen et al. (8 authors)
-
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-09-20
-
-**Summary:** Artificial intelligence (AI) is often presented as solving longstanding challenges of feedback in higher education. Research and commentary tend to focus on how AI can replace educator labour by providing feedback information at scale but this substitution risks simplifying a complex and interconnec...
+**Summary:** Given the crucial role assessment literacy plays in university teachers’ professional role, this article investigates how university teachers understand, maintain and develop their assessment literacy within their institutional contexts, and the opportunities and barriers they encounter in their pra...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2730625
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2730625?needAccess=true
-- DOI: https://doi.org/10.1080/02602938.2026.2730625
-
-*Relevance score: 8.0*
-
----
-
-## 7. Exploring the impact of institutional and disciplinary cultures on feedback processes in higher education
-
-**Authors:** Andréia Escosteguy Vargas, Richard Bale
-
-**Source:** openalex • Teaching in Higher Education • 2026-09-23
-
-**Summary:** Feedback has been reframed in the literature as a dialogic process that aims to develop student self-regulation and improve learning. Institutional and disciplinary cultures can impact how feedback processes are designed and enacted. We investigated the role of institutional and disciplinary culture...
-
-**Links:**
-- Landing page: https://doi.org/10.1080/13562517.2026.2733990
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/13562517.2026.2733990?needAccess=true
-- DOI: https://doi.org/10.1080/13562517.2026.2733990
-
-*Relevance score: 8.0*
-
----
-
-## 8. Teaching and the decolonisation of research: structures of theory and inquiry
-
-**Authors:** Syed Farid Alatas, Ibrar Bhatt, Shuchen Xiang
-
-**Source:** openalex • Teaching in Higher Education • 2026-09-23
-
-**Summary:** This article applies Syed Farid Alatas’s two-part framework for decolonisation, critique and construction, and considers what it entails for research training and methods pedagogy in the contemporary university. We argue that the first part, critique, must consider diverse epistemic traditions and t...
-
-**Links:**
-- Landing page: https://doi.org/10.1080/13562517.2026.2735435
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/13562517.2026.2735435?needAccess=true
-- DOI: https://doi.org/10.1080/13562517.2026.2735435
-
-*Relevance score: 8.0*
-
----
-
-## 9. Higher education aspirations, discipline choices, and university entry experiences of students from equity groups in Vietnam
-
-**Authors:** Nguyen Thi Ngoc Ha, Nguyen Van Bao
-
-**Source:** openalex • Higher Education Research & Development • 2026-09-21
-
-**Summary:** This paper is among the first to explore higher education aspirations, discipline choices, and university entry experiences of students from equity groups in Vietnam. Drawing on semi-structured interviews with 12 participants who successfully transitioned into public universities in Vietnam, this st...
-
-**Links:**
-- Landing page: https://doi.org/10.1080/07294360.2026.2730960
-- PDF: https://www.tandfonline.com/doi/pdf/10.1080/07294360.2026.2730960?needAccess=true
-- DOI: https://doi.org/10.1080/07294360.2026.2730960
+- Landing page: https://doi.org/10.1080/02602938.2026.2739346
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2739346?needAccess=true
+- DOI: https://doi.org/10.1080/02602938.2026.2739346
 
 *Relevance score: 8.0*
 

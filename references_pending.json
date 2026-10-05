@@ -27707,6 +27707,38 @@
     "container-title": "Higher Education Research & Development"
   },
   {
+    "id": "openalex:W7170132259",
+    "type": "article-journal",
+    "title": "An empirical study of ChatGPT use in engineering education: Prompting and performance",
+    "author": [
+      {
+        "family": "Domínguez",
+        "given": "Lauren Genith Isaza"
+      },
+      {
+        "family": "Robles-Gómez",
+        "given": "Antonio"
+      },
+      {
+        "family": "Pastor-Vargas",
+        "given": "Rafael"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          24
+        ]
+      ]
+    },
+    "abstract": "This study investigates how specific prompting behaviors influence the academic performance of engineering students using ChatGPT. A total of 128 fourth-year students across four engineering programs participated in weekly sessions involving rotating task types: case analysis, engineering design, multi-step problem-solving, and experimental data analysis. A Python-based interface connected students to ChatGPT-4o via the API, logging all interactions and implementing stratified randomization of AI access across the 16-week semester. Written assignments were used for both grading and analyzing AI content integration. Ten metrics were designed to capture student behaviors—eight focusing on prompting (AI Query Count, Query Depth and Structure, Query Efficiency, Prompt Refinement Depth, Response Utility, Response Complexity, Response Reliance, and AI-Driven Problem-Solving) and two assessing writing quality (Structural Complexity Score and Content Richness and Information Density Score). Inter-metric analysis examined how these behaviors related to one another and to academic performance. Results showed that AI Query Efficiency, which reflects how effectively students crafted clear, well-structured prompts, and AI-Driven Problem-Solving, which captures how strategically they integrated AI output into their reasoning, were the strongest predictors of academic success. These findings were supported by Mann–Whitney U tests comparing AI and non-AI groups, as well as Spearman correlations, Random Forest regressors, partial dependence plots, principal component analysis, and mixed-effects modeling, and remained significant even after accounting for students' cumulative GPA. The results suggest that prompting strategy plays a meaningful role in shaping how effectively students use AI in engineering education.",
+    "DOI": "10.1016/j.iheduc.2026.101105",
+    "URL": "https://doi.org/10.1016/j.iheduc.2026.101105",
+    "container-title": "The Internet and Higher Education"
+  },
+  {
     "id": "openalex:W7170201580",
     "type": "article-journal",
     "title": "Illuminating complex student realities of artificial intelligence through an entangled pedagogy framework",
@@ -28372,6 +28404,166 @@
     "abstract": "The rapid advancement of generative artificial intelligence (AI) has introduced significant challenges for higher education (HE) assessment practices, particularly those relying on unsupervised written tasks. As AI systems become increasingly capable of producing sophisticated academic text, traditional product-oriented assessments face growing pressures to reliably capture ‘authentic’ student learning, reasoning and disciplinary engagement. In response, we argue for a shift towards more process-oriented assessment approaches that foreground how learners interpret, justify and construct understanding over time. Drawing on contemporary scholarship surrounding generative AI, authentic assessment, evaluative judgement and assessment redesign, we examine how process-oriented approaches can offer a more intellectually rigorous and sustainable framework for assessment and evaluation. We also consider broader pedagogical and institutional implications associated with this shift, including educational equity, emotional labour, workload sustainability and what we describe as epistemic authenticity. Additionally, we outline key principles for designing such approaches, including reflective justification, staged task design, dialogic engagement and evaluative transparency. Finally, we conclude that reorienting assessment towards the evaluation of reasoning, interpretation and knowledge construction may provide a more sustainable, intellectually meaningful and pedagogically robust response to the challenges posed by generative AI within HE.",
     "DOI": "10.1080/02602938.2026.2736679",
     "URL": "https://doi.org/10.1080/02602938.2026.2736679",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7214594193",
+    "type": "article-journal",
+    "title": "Conceptualising Human–AI Collaboration Competency for hybrid intelligence: towards learner agency through a metacognitive perspective",
+    "author": [
+      {
+        "family": "Dang",
+        "given": "Belle"
+      },
+      {
+        "family": "Hong",
+        "given": "Yvonne"
+      },
+      {
+        "family": "Doyle",
+        "given": "Cathal"
+      },
+      {
+        "family": "Nguyen",
+        "given": "Andy"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          28
+        ]
+      ]
+    },
+    "abstract": "The growing integration of artificial intelligence (AI), especially generative AI and emerging agentic AI systems, in higher education raises urgent questions about curriculum design and the competencies required for meaningful human-AI collaboration. Although existing frameworks address technical and ethical dimensions, they neither clearly specify collaboration competencies within graduate profiles nor give sufficient attention to learner agency in AI-integrated learning contexts. This study proposes the Human-AI Collaboration Competency (HACC) framework, a holistic model that conceptualises human-AI collaboration as a dynamic configuration of disciplinary expertise, AI competency, and metacognitive competency. Rather than treating AI skills as discrete additions, HACC positions hybrid competency as central to students’ capacity to engage with AI critically, strategically, and responsibly. To examine its conceptual and practical relevance, we conducted semi-structured interviews with 24 educators (N = 24) across disciplines and role levels, generating 1,650 analysis units. Epistemic Network Analysis (ENA) was used to model structural connections among HACC dimensions and compare conceptual patterns across groups. The findings provide preliminary support for the framework and illuminate how related competencies are perceived and prioritised in practice. The study offers a basis for rethinking curriculum design in higher education that foregrounds disciplinary grounding and metacognitive competency as central to sustaining learner agency.",
+    "DOI": "10.1080/03075079.2026.2740136",
+    "URL": "https://doi.org/10.1080/03075079.2026.2740136",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7214997838",
+    "type": "article-journal",
+    "title": "Navigating assessment literacy in higher education: a multi-institutional study of university teachers’ perceptions, practices and professional growth",
+    "author": [
+      {
+        "family": "Steen-Utheim",
+        "given": "Anna"
+      },
+      {
+        "family": "Bingen",
+        "given": "Hanne Maria"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          30
+        ]
+      ]
+    },
+    "abstract": "Given the crucial role assessment literacy plays in university teachers’ professional role, this article investigates how university teachers understand, maintain and develop their assessment literacy within their institutional contexts, and the opportunities and barriers they encounter in their practices. Addressing these issues is crucial for advancing assessment literacy in higher education and supporting student learning. Data were generated through semi-structured interviews with 16 university teachers from 8 institutions in Norway. Using reflexive thematic analysis, the findings identified tensions in university teachers’ assessment literacy. Assessment literacy is perceived as a pedagogical, purposeful practice where balancing learning and judgement is central, as experience-based, while navigating a gap between practice and formal training. Assessment emerged as a major responsibility, often carried out alone while collaboration is longed for; yet assessment literacy was also understood as a collaborative endeavour where shared professional reflection is highly valued. AI in assessment was experienced as caught between enthusiasm and ambivalence, with discipline-specific opportunities and concerns. Additionally, institutional barriers to assessment were characterised by university teachers wanting change while facing constraints. The article offers a rich picture of university teachers’ perspectives and experiences with assessment literacy in their contexts and discusses implications for practice.",
+    "DOI": "10.1080/02602938.2026.2739346",
+    "URL": "https://doi.org/10.1080/02602938.2026.2739346",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7215068431",
+    "type": "article-journal",
+    "title": "Agency and Adaptation in Human–Technology Configurations: A Fifty-Year Analysis of Computers & Education",
+    "author": [
+      {
+        "family": "Lee",
+        "given": "Yuan‐Hsuan"
+      },
+      {
+        "family": "Walkington",
+        "given": "Candace"
+      },
+      {
+        "family": "Wu",
+        "given": "Jiun‐Yu"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          1
+        ]
+      ]
+    },
+    "abstract": "Educational-technology histories are often organized around successive tools, obscuring how action, decision-making, regulation, and adaptive work are distributed among human and technological actors. Drawing on 5,387 papers published in Computers & Education over fifty years, this study examines how Agency and Adaptation were configured and redistributed across learners, educators, communities, institutions, and technological systems. A purposive calibration corpus of 48 papers containing explicit Agency discourse was coded using eight Agency–Adaptation indicators comprising 63 category levels. Applying an 18-topic structural topic model as semantic infrastructure, category probabilities were projected to the full corpus through a theta-weighted linear mixture with Dirichlet-style smoothing. Clustering identified five recurring profiles: system agency–programmed adaptation, teacher/institutional agency–orchestrated adaptation, community agency–collaborative adaptation, learner agency–customization-based adaptation, and system agency–algorithmic adaptation. Although period-level distributions of prominent individual categories changed modestly, the relative prevalence of the five profiles shifted substantially, while all five continued to coexist. Historical change involved the recombination and redistribution of human and technological responsibilities, not a uniform movement from human to technological control. An exploratory analysis identified 71 GenAI-explicit papers published during 2023–2026. These papers appeared across all five profiles during this period but were concentrated in system-programmed configurations and were comparatively uncommon in learner-customization configurations relative to contemporaneous non-GenAI papers. The findings show that technological innovation alone does not specify where agency resides or how adaptation is enacted. Understanding educational-technology development requires examining complete arrangements of actors, authority, regulation, and adaptive work, including whether increasingly adaptive systems preserve meaningful opportunities for human direction, evaluation, and recalibration.",
+    "DOI": "10.1016/j.compedu.2026.105757",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105757",
+    "container-title": "Computers & Education"
+  },
+  {
+    "id": "openalex:W7215111160",
+    "type": "article-journal",
+    "title": "How AI-vulnerable is Australian higher education assessment? A computational audit of Group of Eight Arts and Humanities units, 2022–2026",
+    "author": [
+      {
+        "family": "Villanueva",
+        "given": "Gonzalo"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          1
+        ]
+      ]
+    },
+    "abstract": "Generative AI (GenAI) is profoundly disrupting higher education, prompting educators to redesign course and assessment practices. Yet evidence of the potential impact of GenAI on assessments and subsequent module redesigns remains unclear. Through data scraping and classification, this article audits 15,587 annual Arts and Humanities unit records and 53,915 assessment items across Australia’s Group of Eight universities from 2022 to 2026. This article presents the AI Vulnerability Index (AIVI) which rates assessment exposure against relative GenAI capabilities in each year. At all seven institutions with comparable data, average exposure rose sharply between 2022 and 2024 and remained above 2022 levels in 2026, although subsequent trends differed between institutions. In 2026, very-high-exposure items accounted for 53.1% to 70.7% of allocated marks, while 53.1% to 79.1% of units scored at least 0.60. Exposure was concentrated in unsupervised writing, especially take-home essays and research reports. Institutional policy categories showed no clear pattern of lower exposure. High exposure, however, is not intrinsically undesirable. Where GenAI use is authorised and aligned with learning outcomes, it may offer a pedagogical opportunity. Governance should therefore examine the mix of assessments, the intended role of GenAI, and evidence of learning required of students.",
+    "DOI": "10.1080/02602938.2026.2740764",
+    "URL": "https://doi.org/10.1080/02602938.2026.2740764",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7218557703",
+    "type": "article-journal",
+    "title": "From rubric fairness to student engagement: the mediating role of feedback usefulness and metacognitive awareness",
+    "author": [
+      {
+        "family": "Choi",
+        "given": "Sheena"
+      },
+      {
+        "family": "Kanathanavanich",
+        "given": "Chokdee"
+      },
+      {
+        "family": "Essig",
+        "given": "Rebecca R."
+      },
+      {
+        "family": "Smith",
+        "given": "Julia"
+      },
+      {
+        "family": "Suntornpithug",
+        "given": "Nichaya"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          3
+        ]
+      ]
+    },
+    "abstract": "Rubrics are widely used in higher education to clarify assessment criteria and structure feedback. However, research has less often examined how students’ perceptions of rubric-based assessment are associated with learning engagement and metacognitive processes. Drawing on Self-Regulated Learning (SRL) Theory, this study examines relationships among perceived rubric fairness and transparency, perceived usefulness of rubric-based feedback, metacognitive awareness, and motivation and engagement. A total of 113 survey responses were collected across multiple disciplines at a comprehensive U.S. university; 104 complete responses were included in the analyses. Regression and mediation analyses tested the proposed relationships. Students who perceived rubrics as fair and transparent were more likely to perceive rubric-based feedback as useful. Feedback usefulness was strongly associated with metacognitive awareness, which was in turn strongly associated with motivation and engagement. Mediation analysis indicated a significant indirect association between feedback usefulness and motivation and engagement through metacognitive awareness. The findings are consistent with metacognitive awareness serving as one pathway linking perceived feedback usefulness with motivation and engagement, although the cross-sectional design does not establish temporal or causal relationships.",
+    "DOI": "10.1080/02602938.2026.2740137",
+    "URL": "https://doi.org/10.1080/02602938.2026.2740137",
     "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
