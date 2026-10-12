@@ -28565,5 +28565,65 @@
     "DOI": "10.1080/02602938.2026.2740137",
     "URL": "https://doi.org/10.1080/02602938.2026.2740137",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7221081459",
+    "type": "article-journal",
+    "title": "Shifting grounds: funding, collaboration and professional orientations among higher education researchers",
+    "author": [
+      {
+        "family": "Pausits",
+        "given": "Attila"
+      },
+      {
+        "family": "Godonoga",
+        "given": "Ana"
+      },
+      {
+        "family": "Popović",
+        "given": "Milica"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          8
+        ]
+      ]
+    },
+    "abstract": "Higher education research has expanded as a heterogeneous field shaped by competitive funding, international collaboration and expectations of societal relevance. This article examines how higher education researchers perceive these changes and how funding, collaboration, dissemination and engagement practices are associated with professional orientations. The analysis draws on an exploratory online survey conducted in spring 2025 with 122 respondents connected to international higher education research networks, with strong European representation. Descriptive statistics, exploratory associations, clustering techniques and open-ended responses examine perceived funding priorities, collaboration patterns, engagement practices and professional profiles. Findings suggest that collaboration remains largely researcher-centred, while stakeholder engagement often occurs later in the research process. Respondents perceive funding priorities as increasingly oriented towards digital transformation, applied research and short-term policy relevance. The article contributes an exploratory typology and argues that higher education researchers are better understood as a differentiated and unevenly positioned group than as a coherent global profession.",
+    "DOI": "10.1080/03075079.2026.2744575",
+    "URL": "https://doi.org/10.1080/03075079.2026.2744575",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7221114772",
+    "type": "article-journal",
+    "title": "Artificial Intelligence in Higher Education (2019–2026): A Systematic Review of Applications and an Evidence-Derived Multi-Axial Taxonomy",
+    "author": [
+      {
+        "family": "Ranieri",
+        "given": "Maria"
+      },
+      {
+        "family": "Biagini",
+        "given": "Gabriele"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          1
+        ]
+      ]
+    },
+    "abstract": "Generative and agentic artificial intelligence (AI) have expanded AI functions in higher education, challenging taxonomies developed before the generative-AI wave. Following PRISMA 2020, we reviewed 228 peer-reviewed journal publications from January 2019 to March 2026. The publication was the coding unit; codes represented the dominant educational AI use foregrounded in each publication. Inter-coder agreement was near-perfect for the Axis 1 coding scheme (Cohen’s κ = 0.98) and substantial overall for the observed interpretive distinctions (κ = 0.69–0.78). Full-corpus mapping placed 164 of 228 publications (71.9%) outside the four original Zawacki-Richter et al. (2019) categories, but this included transversal ethics/governance and adjacent scholarly-practice literature. The functional-adequacy test therefore used the 154 publications with a classifiable application-focused function: 64 (41.6%) fit the original four categories, whereas 90 (58.4%) required one of three additional domains—AI-enabled student support, content creation and instructional design, or institutional analytics and management. This result was essentially unchanged after removing the 2023 cohort (39/67, 58.2%), and all three added domains persisted in the held-out 2026 search block. Within functional categories, applications also differed in agency, epistemic position, and pedagogy. For agency, the corpus supports an observed assistive–augmentative–delegative gradient; the autonomous endpoint is retained as a prospective theoretical category rather than an empirically validated level. Pedagogical paradigm was less stable and remains the most provisional interpretive axis. We propose a configurational four-axis framework with ethics and equity as a transversal layer, intended to support decisions about oversight, verification, pedagogical alignment and governance rather than to predict educational outcomes.",
+    "DOI": "10.1016/j.compedu.2026.105761",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105761",
+    "container-title": "Computers & Education"
   }
 ]
