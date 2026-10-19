@@ -28091,6 +28091,38 @@
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
+    "id": "openalex:W7211935466",
+    "type": "article-journal",
+    "title": "Rethinking citizenship education in China’s transnational higher education: an expanded dialogic pedagogical perspective",
+    "author": [
+      {
+        "family": "Liu",
+        "given": "Dan"
+      },
+      {
+        "family": "Curdt‐Christiansen",
+        "given": "Xiao Lan"
+      },
+      {
+        "family": "Bao",
+        "given": "Min"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          8
+        ]
+      ]
+    },
+    "abstract": ": Research on students’ perceptions of Citizenship Education (CE) in China remains limited, particularly within Transnational Higher Education (TNHE) settings. Using a qualitative approach with 19 students enrolled in TNHE programmes in China, this study examines students’ experiences of CE and their views on effective pedagogical practices. Drawing on Freire’s (2000a) dialogic approach, the findings reveal that students are generally dissatisfied with rigid teaching practices and the perceived misalignment between CE content and their disciplinary fields. Participants advocate for more interactive, practice-oriented, and contextually relevant approaches that integrate multiple voices, including learner voices, disciplinary knowledge, and local cultural contexts, thereby situating CE within authentic social, academic, and cultural settings. In response, this study proposes an expanded dialogic perspective for CE in TNHE, conceptualising pedagogy as a dialogic process shaped by interactions among epistemic, disciplinary, and cultural voices within hybrid institutional contexts marked by intersecting relations of knowledge, power, and cultural mediation.",
+    "DOI": "10.1080/13562517.2026.2728978",
+    "URL": "https://doi.org/10.1080/13562517.2026.2728978",
+    "container-title": "Teaching in Higher Education"
+  },
+  {
     "id": "openalex:W7212401775",
     "type": "article-journal",
     "title": "Epistemic dependence in AI-mediated learning within higher education: a framework for student judgement and responsibility",
@@ -28625,5 +28657,57 @@
     "DOI": "10.1016/j.compedu.2026.105761",
     "URL": "https://doi.org/10.1016/j.compedu.2026.105761",
     "container-title": "Computers & Education"
+  },
+  {
+    "id": "openalex:W7221753532",
+    "type": "article-journal",
+    "title": "What counts as international research collaboration? The gap between conceptualisation and operationalisation in higher education research evaluation",
+    "author": [
+      {
+        "family": "Yong",
+        "given": "Xinzi Ow"
+      },
+      {
+        "family": "Oldac",
+        "given": "Yusuf İkbal"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          14
+        ]
+      ]
+    },
+    "abstract": "International research collaboration (IRC) is now a central feature of higher education systems and is increasingly used as evidence of institutional quality, research excellence, and internationalisation. IRC is usually evaluated through co-authorships, especially international co-authored publications identified through author affiliation data. Literature has typically analysed IRC through bibliometric mappings of countries, institutions, disciplines, and researchers, or by examining the determinants and effects of collaboration. Less attention has been given to the concept-operation gap: whether the indicators used to evaluate IRC adequately correspond to the broader meanings attached to collaboration in higher education policy, research evaluation, and institutional strategy. This study examines that gap through a systematic review of 723 studies from Scopus, Web of Science, and ProQuest Social Science. It combines bibliometric mapping of the full corpus with close content analysis of a purposive subset of 94 studies and covers Chinese-language as well as English-language publications. The findings show that IRC is conceptually plural but operationally compressed. It is conceptualised as a process, relationship, orientation, output, and policy instrument, but operationalised predominantly through publication-visible indicators. Across the corpus, 97.2% of studies incorporate at least one bibliometric element, most commonly international co-authorship inferred from affiliation data. This concentration privileges formal, indexable, and publication-visible collaboration, while making capacity building, co-supervision, mentoring, informal intellectual exchange, and long-term partnership development harder to recognise. The study is novel in showing how IRC becomes a metricised governance object and calls for more reflexive approaches to evaluating international collaboration in higher education.",
+    "DOI": "10.1007/s10734-026-01788-x",
+    "URL": "https://doi.org/10.1007/s10734-026-01788-x",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7222147851",
+    "type": "article-journal",
+    "title": "Exploring AI-resistant assessments: insights from Large Language Models creating and completing their own research assessments",
+    "author": [
+      {
+        "family": "Rensburg",
+        "given": "Joalise Janse van"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          15
+        ]
+      ]
+    },
+    "abstract": "Higher education institutions have been grappling with the impact of Large Language Models (LLMs) on teaching and learning. LLMs like ChatGPT, Claude, and DeepSeek, can produce high-quality text with a single prompt. This is particularly concerning in research modules, where students are expected to showcase their work in a text-based format. In this study, ChatGPT, Claude, and DeepSeek were prompted to develop three research assessments that an LLM should not be able to complete and were subsequently prompted with the instructions generated. The purpose was to explore the influence of assessment instructions and characteristics on the ability of these models to generate complete responses. The instructions and characteristics included written text, oral discussions, physical attendance, contextual access, realistic content, lecturer approval, and the inclusion of multiple components. The most influential characteristic was the inclusion of an oral component. Other noteworthy characteristics were requiring students to attend live events and including multiple staged components. These findings contribute to the ongoing exploration of assessment design in the age of AI and LLMs.",
+    "DOI": "10.1080/02602938.2026.2744231",
+    "URL": "https://doi.org/10.1080/02602938.2026.2744231",
+    "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
