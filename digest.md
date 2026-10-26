@@ -1,53 +1,55 @@
 # LLM Education Literature Digest
 
-*Generated: 2026-10-19 13:02:07 UTC*
+*Generated: 2026-10-26 12:51:50 UTC*
 
 **3 new items**
 
-## 1. Exploring AI-resistant assessments: insights from Large Language Models creating and completing their own research assessments
+## 1. Artificial learning: how sessional academics view contract cheating and digital academic misconduct in assessment
 
-**Authors:** Joalise Janse van Rensburg
+**Authors:** Lovasoa Andriamora, Lorna Andriamora, Lorna Andriamora, Lorna Andriamora
 
-**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-10-15
+**Source:** openalex • Assessment & Evaluation in Higher Education • 2026-10-21
 
-**Summary:** Higher education institutions have been grappling with the impact of Large Language Models (LLMs) on teaching and learning. LLMs like ChatGPT, Claude, and DeepSeek, can produce high-quality text with a single prompt. This is particularly concerning in research modules, where students are expected to...
+**Summary:** This study investigated sessional academics’ perceptions of student misconduct in tertiary education assessments, focusing on contract cheating, misuse of generative artificial intelligence (GenAI) and unauthorised use of smart devices. Using a qualitative research design grounded in the interpretiv...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/02602938.2026.2744231
-- DOI: https://doi.org/10.1080/02602938.2026.2744231
+- Landing page: https://doi.org/10.1080/02602938.2026.2750362
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/02602938.2026.2750362?needAccess=true
+- DOI: https://doi.org/10.1080/02602938.2026.2750362
 
-*Relevance score: 17.0*
+*Relevance score: 12.0*
 
 ---
 
-## 2. What counts as international research collaboration? The gap between conceptualisation and operationalisation in higher education research evaluation
+## 2. Learner agency and human-AI collaboration: shaping hybrid intelligence for the future of higher education
 
-**Authors:** Xinzi Ow Yong, Yusuf İkbal Oldac
+**Authors:** Andy Nguyen, Davy Tsz Kit Ng, Xianghan O’Dea, Cecilia Ka Yuk Chan
 
-**Source:** openalex • Higher Education • 2026-10-14
+**Source:** openalex • Studies in Higher Education • 2026-10-21
 
-**Summary:** International research collaboration (IRC) is now a central feature of higher education systems and is increasingly used as evidence of institutional quality, research excellence, and internationalisation. IRC is usually evaluated through co-authorships, especially international co-authored publicat...
+**Summary:** Artificial intelligence (AI), particularly generative AI, has transformed the higher education landscape with remarkable speed, reshaping how students learn, produce academic work, and interact wit...
 
 **Links:**
-- Landing page: https://doi.org/10.1007/s10734-026-01788-x
-- PDF: https://link.springer.com/content/pdf/10.1007/s10734-026-01788-x.pdf
-- DOI: https://doi.org/10.1007/s10734-026-01788-x
+- Landing page: https://doi.org/10.1080/03075079.2026.2747551
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/03075079.2026.2747551?needAccess=true
+- DOI: https://doi.org/10.1080/03075079.2026.2747551
 
-*Relevance score: 8.0*
+*Relevance score: 11.0*
 
 ---
 
-## 3. Rethinking citizenship education in China’s transnational higher education: an expanded dialogic pedagogical perspective
+## 3. Exploring Vietnamese EMI lecturers’ agency in an era of higher education internationalisation and performativity
 
-**Authors:** Dan Liu, Xiao Lan Curdt‐Christiansen, Min Bao
+**Authors:** Nguyen Minh Chau Pham, Oksana Razoumova
 
-**Source:** openalex • Teaching in Higher Education • 2026-09-08
+**Source:** openalex • Teaching in Higher Education • 2026-10-16
 
-**Summary:** : Research on students’ perceptions of Citizenship Education (CE) in China remains limited, particularly within Transnational Higher Education (TNHE) settings. Using a qualitative approach with 19 students enrolled in TNHE programmes in China, this study examines students’ experiences of CE and thei...
+**Summary:** Internationalisation of higher education is an emerging trend around the world, including Vietnam, where universities are forming global partnerships, enhancing student and staff mobility, and incorporating English as a tool for content delivery with an aim to improve global competitiveness and attr...
 
 **Links:**
-- Landing page: https://doi.org/10.1080/13562517.2026.2728978
-- DOI: https://doi.org/10.1080/13562517.2026.2728978
+- Landing page: https://doi.org/10.1080/13562517.2026.2746680
+- PDF: https://www.tandfonline.com/doi/pdf/10.1080/13562517.2026.2746680?needAccess=true
+- DOI: https://doi.org/10.1080/13562517.2026.2746680
 
 *Relevance score: 8.0*
 

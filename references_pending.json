@@ -28709,5 +28709,105 @@
     "DOI": "10.1080/02602938.2026.2744231",
     "URL": "https://doi.org/10.1080/02602938.2026.2744231",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7222783032",
+    "type": "article-journal",
+    "title": "Exploring Vietnamese EMI lecturers’ agency in an era of higher education internationalisation and performativity",
+    "author": [
+      {
+        "family": "Pham",
+        "given": "Nguyen Minh Chau"
+      },
+      {
+        "family": "Razoumova",
+        "given": "Oksana"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          16
+        ]
+      ]
+    },
+    "abstract": "Internationalisation of higher education is an emerging trend around the world, including Vietnam, where universities are forming global partnerships, enhancing student and staff mobility, and incorporating English as a tool for content delivery with an aim to improve global competitiveness and attract international students. The rising influence of market-oriented logics in higher education has profoundly shaped the professional landscape for English medium instruction (EMI) lecturers, particularly in the way they are positioned within institutional systems and the rising dominance of performativity. This study aims to investigate how tertiary educators in Vietnam enact agency in English medium instruction business programmes under performative pressures in a higher education context. The findings and discussion suggest that, while EMI is often positioned as a major drive for internationalisation and quality enhancement, its implementation is deeply entangled with shifting definitions of professionalism, accountability mechanisms, and constrained educators’ agency.",
+    "DOI": "10.1080/13562517.2026.2746680",
+    "URL": "https://doi.org/10.1080/13562517.2026.2746680",
+    "container-title": "Teaching in Higher Education"
+  },
+  {
+    "id": "openalex:W7223094482",
+    "type": "article-journal",
+    "title": "Learner agency and human-AI collaboration: shaping hybrid intelligence for the future of higher education",
+    "author": [
+      {
+        "family": "Nguyen",
+        "given": "Andy"
+      },
+      {
+        "family": "Ng",
+        "given": "Davy Tsz Kit"
+      },
+      {
+        "family": "O’Dea",
+        "given": "Xianghan"
+      },
+      {
+        "family": "Chan",
+        "given": "Cecilia Ka Yuk"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          21
+        ]
+      ]
+    },
+    "abstract": "Artificial intelligence (AI), particularly generative AI, has transformed the higher education landscape with remarkable speed, reshaping how students learn, produce academic work, and interact wit...",
+    "DOI": "10.1080/03075079.2026.2747551",
+    "URL": "https://doi.org/10.1080/03075079.2026.2747551",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7223156070",
+    "type": "article-journal",
+    "title": "Artificial learning: how sessional academics view contract cheating and digital academic misconduct in assessment",
+    "author": [
+      {
+        "family": "Andriamora",
+        "given": "Lovasoa"
+      },
+      {
+        "family": "Andriamora",
+        "given": "Lorna"
+      },
+      {
+        "family": "Andriamora",
+        "given": "Lorna"
+      },
+      {
+        "family": "Andriamora",
+        "given": "Lorna"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          21
+        ]
+      ]
+    },
+    "abstract": "This study investigated sessional academics’ perceptions of student misconduct in tertiary education assessments, focusing on contract cheating, misuse of generative artificial intelligence (GenAI) and unauthorised use of smart devices. Using a qualitative research design grounded in the interpretivist paradigm, interviews were conducted with 20 experienced sessional academics from diverse institutions in Sydney. Participants identified misconduct as driven by a combination of contextual pressures, institutional shortcomings and student-specific challenges, such as language barriers and fear of failure. They reported relying on intuitive cues – disconnected content, generic writing, and fake references – to detect misconduct while expressing concerns over limited institutional support and unreliable detection tools. Recommendations include rethinking assessment design, enhancing student support and redefining the meaning and objective of ‘education and learning’. A significant theme was the call for systemic educational reform, including redefining learning outcomes to emphasise critical thinking, ethical reasoning and real-world skills. The findings underscore the need for proactive, pedagogically grounded responses to academic integrity challenges in an era increasingly shaped by digital technologies.",
+    "DOI": "10.1080/02602938.2026.2750362",
+    "URL": "https://doi.org/10.1080/02602938.2026.2750362",
+    "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
