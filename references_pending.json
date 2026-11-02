@@ -28091,6 +28091,38 @@
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
+    "id": "openalex:W7208813681",
+    "type": "article-journal",
+    "title": "“To teach or not to teach” conundrum: developing students' teamwork skills via technology-supported self and peer assessment in collaborative group work",
+    "author": [
+      {
+        "family": "Sridharan",
+        "given": "Bhavani"
+      },
+      {
+        "family": "McKay",
+        "given": "Jade"
+      },
+      {
+        "family": "Do",
+        "given": "Yen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          5
+        ]
+      ]
+    },
+    "abstract": "Self and peer assessment have significant potential to address the challenges of collaborative group work and support the development of workplace-ready soft skills. Research emphatically demonstrates the imperative of comprehensively developing students’ capabilities in teamwork, evaluative judgement, and feedback processes to achieve meaningful educational outcomes. Yet, empirical evaluations of such interventions remain limited. To address this gap, the study integrated self and peer assessment into the curriculum using a pedagogy-informed digital platform. Employing a quasi-experimental design, it evaluates the impact of teamwork and feedback literacy interventions on students’ performance across metacognitive, affective and cognitive domains. The findings demonstrate that literacy interventions significantly improved teamwork skills and helped narrow performance gaps between equity and non-equity students. However, their effects varied across outcomes and student cohorts. The intervention improved self-evaluation among non-equity students but not equity students, while group work performance improved among equity students but declined among non-equity students. These counterintuitive trends suggest a backwash effect and an ‘off-the-curve phenomenon’, where the same intervention produces opposing outcomes across groups. Accordingly, we advocate for sophisticated, cohort-specific approaches to address unmet literacy needs, equipping educators with targeted strategies to ensure positive intervention outcomes.",
+    "DOI": "10.1080/07294360.2026.2722379",
+    "URL": "https://doi.org/10.1080/07294360.2026.2722379",
+    "container-title": "Higher Education Research & Development"
+  },
+  {
     "id": "openalex:W7211935466",
     "type": "article-journal",
     "title": "Rethinking citizenship education in China’s transnational higher education: an expanded dialogic pedagogical perspective",
@@ -28123,6 +28155,110 @@
     "container-title": "Teaching in Higher Education"
   },
   {
+    "id": "openalex:W7212001223",
+    "type": "article-journal",
+    "title": "Assessment design under imperfect information: generative AI, disclosure, and student response in higher education",
+    "author": [
+      {
+        "family": "Mohamed",
+        "given": "Ben Haj Rhouma"
+      },
+      {
+        "family": "Temimi",
+        "given": "Akram"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          9
+        ]
+      ]
+    },
+    "abstract": "Generative AI has unsettled a core assumption of higher education assessment: that a submitted product provides credible evidence of a student’s own reasoning, effort, and judgement. This article reframes the issue as assessment validity under imperfect information rather than academic integrity alone. It argues that responses to AI should be judged less by policy labels—prohibition, monitoring, permission, or redesign—and more by the student response they make most attractive. A stylised response-region model compares three choices: no AI use, disclosed AI use, and hidden AI use. The model shows that rules, monitoring, disclosure, and redesign operate through different channels and succeed only when they align the student’s most attractive response with the assessment purpose. Two findings are central. First, deterrence under imperfect detection depends on discrimination between hidden AI use and legitimate work, not on a detector’s raw catch rate; when false positives rise too quickly, stronger monitoring can damage trust and increase concealment. Second, disclosure promotes transparency only when honesty is clear, safe, and educationally meaningful. The article closes with a purpose-first design matrix linking assessment aims to rules, monitoring, disclosure, and rubric criteria.",
+    "DOI": "10.1080/02602938.2026.2729791",
+    "URL": "https://doi.org/10.1080/02602938.2026.2729791",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7212045632",
+    "type": "article-journal",
+    "title": "Detecting the undetectable? Reassessing academic misconduct procedures in the era of generative AI",
+    "author": [
+      {
+        "family": "Teichmann",
+        "given": "Fabian Maximilian Johannes"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          9
+        ]
+      ]
+    },
+    "abstract": "Faced with generative artificial intelligence (AI), many universities have reached for their academic misconduct procedures: detect prohibited use, prove it, and punish it. This article argues that those procedures rest on a premise the technology has dismantled – that prohibited use can be detected and proved. Detection tools are unreliable, biased, and opaque, and skilled or lightly edited AI use is, in the general case, undetectable. A procedure built on detecting the undetectable produces unfairness without effectiveness: students are accused on scores they cannot interrogate, the burden of proof is quietly reversed, and the harm of false accusation falls hardest on the already disadvantaged. Drawing on procedural justice theory and proportionality, the article proposes a reassessment in two movements: (1) making the misconduct procedure procedurally fair, evidence-calibrated, and proportionate where allegations are genuinely warranted; and (2) shifting institutional effort from policing undetectable use towards validity-centred, authentic, and acceptable-use assessment design, so that the procedure contracts to the narrow domain where it can operate justly. Implementation guidance addresses equity, conscientious non-use, and workload, and the recommendations are distilled by stakeholder. The answer to undetectable AI is better assessment, not better surveillance.",
+    "DOI": "10.1080/02602938.2026.2728036",
+    "URL": "https://doi.org/10.1080/02602938.2026.2728036",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7212127513",
+    "type": "article-journal",
+    "title": "Student evaluation of teaching through the lens of activity theory: an exploration of academics’ perceptions and experiences",
+    "author": [
+      {
+        "family": "Fisher",
+        "given": "Jenna"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          10
+        ]
+      ]
+    },
+    "abstract": "Student evaluations of teaching (SET) remain a commonly used tool to measure teaching quality in higher education, despite there being several known limitations and challenges with this method of evaluation. Whilst there is an abundance of research on SET generally, this small-scale qualitative study used semi-structured interviews to explore how academics perceive, and experience SET and how SET influences teaching practice and professional development. The study used activity theory as a conceptual framework in the design and analysis to explore tensions and contradictions that are present in the evaluative practices of SET. The paper argues that despite known limitations, academics use SET to reflect on and develop their teaching practice, fostering professional development. SET are multi-faceted, and this paper argues that an agreed definition of teaching quality is needed, and a more holistic and multi-perspective approach is required to accurately measure effective teaching. This paper calls for institutions to ensure academics are supported and trained in how to engage with SET in a way that protects their wellbeing.",
+    "DOI": "10.1080/02602938.2026.2725804",
+    "URL": "https://doi.org/10.1080/02602938.2026.2725804",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7212156444",
+    "type": "article-journal",
+    "title": "Students’ agency in GenAI-mediated group assessment: an ecological-emergent perspective",
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Xinjie"
+      },
+      {
+        "family": "Zou",
+        "given": "Tracy X. P."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          9
+        ]
+      ]
+    },
+    "abstract": "Generative artificial intelligence (GenAI) is reshaping higher education assessment, yet how it affects group-based assessment remains largely underexplored. Drawing on an ecological-emergent approach to student agency, complemented by capability-based and epistemic perspectives, this study examines how undergraduate student teachers exercise agency when using GenAI in an authentic group assessment within a multicultural education course. We conducted 15 focus group interviews with 52 students, along with a one-on-one interview with the course instructor. Reflexive thematic analysis generated three patterns: (1) cooperation-oriented agency, in which students intensified GenAI use to enhance group coherence and performance; (2) normative agency, in which students restrained GenAI use to protect authenticity, fairness, originality, and diversity of perspectives; and (3) non-enacted agency, as students’ GenAI practices remained unchanged in group work, and no group norms on GenAI use were formed. Our analysis suggests that students’ engagement with GenAI is co-constructed through an interplay of various forces, including students’ experiences and perceptions of collaboration, peer relations, assessment design, and the course instructor’s framing, offering implications for redesigning group-based assessment in the GenAI era.",
+    "DOI": "10.1080/02602938.2026.2730644",
+    "URL": "https://doi.org/10.1080/02602938.2026.2730644",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
     "id": "openalex:W7212401775",
     "type": "article-journal",
     "title": "Epistemic dependence in AI-mediated learning within higher education: a framework for student judgement and responsibility",
@@ -28149,6 +28285,38 @@
     "DOI": "10.1080/02602938.2026.2732250",
     "URL": "https://doi.org/10.1080/02602938.2026.2732250",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7213663492",
+    "type": "article-journal",
+    "title": "Fostering collaboration skills in higher education: the development and validation of the collaboration skills questionnaire (CSQ)",
+    "author": [
+      {
+        "family": "Sjølie",
+        "given": "Ela"
+      },
+      {
+        "family": "Rødsjø",
+        "given": "Eline"
+      },
+      {
+        "family": "Petegem",
+        "given": "Peter Van"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          19
+        ]
+      ]
+    },
+    "abstract": "Collaboration is increasingly recognised as a core graduate competence, yet research on how such skills can be fostered in higher education remains fragmented and often lacks validated measures. This study presents and validates the Collaboration Skills Questionnaire (CSQ), a multidimensional instrument designed to examine students’ perceived collaboration skills in higher education. The CSQ was developed through an iterative process involving review of existing frameworks and instruments, expert-informed selection of dimensions, pilot testing, and prior validation work. It measures five dimensions: interpersonal, interdisciplinary, conflict management, and positive and negative feedback skills.Data were collected from 2,137 master’s students across eight faculties enrolled in a large interdisciplinary project-based learning course explicitly designed to foster collaboration skills. Exploratory and confirmatory factor analyses, together with tests of convergent and discriminant validity, supported the five-factor structure and demonstrated acceptable internal consistency across scales. Scores on all five dimensions increased significantly from pretest to posttest, with medium effect sizes; the strongest gains were observed in negative feedback skills. Gender differences were identified in four dimensions, while interdisciplinary skills did not differ significantly across gender or faculty.The study contributes a validated instrument for examining students’ perceived collaboration skills in larger higher education populations. It complements small-scale and process-oriented studies of student collaboration in higher education and provides support for educators to identify dimensions of collaboration that may require targeted pedagogical attention.",
+    "DOI": "10.1080/03075079.2026.2734544",
+    "URL": "https://doi.org/10.1080/03075079.2026.2734544",
+    "container-title": "Studies in Higher Education"
   },
   {
     "id": "openalex:W7213758217",
@@ -28631,6 +28799,34 @@
     "container-title": "Studies in Higher Education"
   },
   {
+    "id": "openalex:W7221110161",
+    "type": "article-journal",
+    "title": "Show your working: ergative assessment for knowledge-building",
+    "author": [
+      {
+        "family": "Whitworth",
+        "given": "Andrew"
+      },
+      {
+        "family": "Soliman",
+        "given": "Dina"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          9
+        ]
+      ]
+    },
+    "abstract": "Traditional assessment practices in higher education prioritise end-of-course outputs, reducing intellectual work to singular artefacts and obscuring the cognitive efforts that produce them. This conceptual paper explores an alternative, ergative approach, as a framework for assessment in HE that foregrounds discourse and collective knowledge work. Drawing on Bakhtin’s theory of dialogics and Scardamalia and Bereiter’s work on knowledge building, the ergative approach emphasises iterative, situated discourse, in an observation-feedback cycle, incorporating different modalities of information. Its basis is the idea of the ‘professional practicum’ in which learners are performing knowledge-building practice. These performances are reflected upon through feedback provided in multiple forms, scaffolding students as dialogic agents. The ergative approach can be positioned as one response to the proliferation of generative AI, which further challenges the traditional HE assessment paradigm, as students may rely on AI-generated outputs that produce coherent text without engaging in authentic knowledge-building.",
+    "DOI": "10.1080/13562517.2026.2735430",
+    "URL": "https://doi.org/10.1080/13562517.2026.2735430",
+    "container-title": "Teaching in Higher Education"
+  },
+  {
     "id": "openalex:W7221114772",
     "type": "article-journal",
     "title": "Artificial Intelligence in Higher Education (2019–2026): A Systematic Review of Applications and an Evidence-Derived Multi-Axial Taxonomy",
@@ -28739,6 +28935,30 @@
     "container-title": "Teaching in Higher Education"
   },
   {
+    "id": "openalex:W7222862109",
+    "type": "article-journal",
+    "title": "Paying with time: English, time inheritance, and the case for temporal linguistic justice in higher education",
+    "author": [
+      {
+        "family": "Xu",
+        "given": "Cora Lingling"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          26
+        ]
+      ]
+    },
+    "abstract": "Abstract English proficiency is widely regarded as both a mechanism of inequality and a potential route out of it. This conceptual article argues that these two accounts share a common analytical blind spot: neither attends systematically to time — specifically, to the inherited temporal conditions under which English is acquired, performed, and institutionally recognised in higher education. Drawing on the time inheritance framework by Xu and the broader canon of sociology of time, this article introduces the ‘ temporal ledger ’ of English: the tally of time costs and savings that acquiring and performing English demands. The ledger is structurally unbalanced: those who inherit the most disadvantaged temporal conditions pay the longest acquisition premium, bear the heaviest participation burdens in English-medium higher education, and face a systematic recognition tax through which institutional and perceptual mechanisms discount their English regardless of its actual quality. Even when English successfully functions as a temporal accelerator, compressing otherwise foreclosed trajectories, the recognition mechanism of global higher education imposes further temporal costs that compound inherited disadvantage. This structural paradox cannot be addressed by access interventions alone. The article proposes temporal linguistic justice as a new policy concept demanding institutional redress across three levels: K-12 pipeline conditions, higher education gatekeeping and participation, and the recognition norms of global knowledge production. The time inheritance framework, this article concludes, offers the analytical tools to interrogate the English question not only as a matter of who can participate, but of whose time that participation is designed to cost.",
+    "DOI": "10.1007/s10734-026-01802-2",
+    "URL": "https://doi.org/10.1007/s10734-026-01802-2",
+    "container-title": "Higher Education"
+  },
+  {
     "id": "openalex:W7223094482",
     "type": "article-journal",
     "title": "Learner agency and human-AI collaboration: shaping hybrid intelligence for the future of higher education",
@@ -28808,6 +29028,34 @@
     "abstract": "This study investigated sessional academics’ perceptions of student misconduct in tertiary education assessments, focusing on contract cheating, misuse of generative artificial intelligence (GenAI) and unauthorised use of smart devices. Using a qualitative research design grounded in the interpretivist paradigm, interviews were conducted with 20 experienced sessional academics from diverse institutions in Sydney. Participants identified misconduct as driven by a combination of contextual pressures, institutional shortcomings and student-specific challenges, such as language barriers and fear of failure. They reported relying on intuitive cues – disconnected content, generic writing, and fake references – to detect misconduct while expressing concerns over limited institutional support and unreliable detection tools. Recommendations include rethinking assessment design, enhancing student support and redefining the meaning and objective of ‘education and learning’. A significant theme was the call for systemic educational reform, including redefining learning outcomes to emphasise critical thinking, ethical reasoning and real-world skills. The findings underscore the need for proactive, pedagogically grounded responses to academic integrity challenges in an era increasingly shaped by digital technologies.",
     "DOI": "10.1080/02602938.2026.2750362",
     "URL": "https://doi.org/10.1080/02602938.2026.2750362",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7224346926",
+    "type": "article-journal",
+    "title": "Artificial intelligence (AI) proposals to counter AI cheating by students in non-invigilated assessment",
+    "author": [
+      {
+        "family": "Lieske",
+        "given": "Scott N."
+      },
+      {
+        "family": "Wadley",
+        "given": "David"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          29
+        ]
+      ]
+    },
+    "abstract": "Since ChatGPT3′s chatbot interface appeared in November 2022, AI cheating has re-incarnated a challenge for academia. It is accentuated in non-invigilated contexts during term as projects, essays and other documents are submitted (possibly) prior to proctored examinations. Cheating can be interpreted strategically as the institutional level, whereas its tactical expression examined in this article applies at the student-instructor interface. Here, we turn AI upon itself to see if it can address the dilemma it has created. A literature review regarding AI-facilitated cheating precedes a record of public and initial academic reactions. Having calibrated the problem, a method for addressing it is advanced. It enlists a set of AI large language models (LLMs) and search engines to rank six techniques by effectiveness in countering AI cheating. Analysis includes: descriptive assessment of model outputs; frequency counting, ranking and determination of unique and common techniques; and qualitative comparison of the suggestions tendered. The discussion relates the characteristics of the composite approaches to traditional assessment and evaluation. Ideas for ongoing research, and key recommendations form the conclusions.",
+    "DOI": "10.1080/02602938.2026.2751526",
+    "URL": "https://doi.org/10.1080/02602938.2026.2751526",
     "container-title": "Assessment & Evaluation in Higher Education"
   }
 ]
