@@ -28463,6 +28463,38 @@
     "container-title": "Higher Education Research & Development"
   },
   {
+    "id": "openalex:W7213937931",
+    "type": "article-journal",
+    "title": "Exploring learner agency in an AI-supported simulation environment for complex systems education",
+    "author": [
+      {
+        "family": "Su",
+        "given": "Man"
+      },
+      {
+        "family": "Nair",
+        "given": "Amit"
+      },
+      {
+        "family": "Nagashima",
+        "given": "Tomohiro"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          21
+        ]
+      ]
+    },
+    "abstract": "This study investigates how university students enact learner agency in an AI-supported simulation environment designed to teach complex systems through animal flocking phenomena. Using a 2 × 2 factorial design, we manipulated parameter-control (access to simulation slider change) and questioning AI agent (access to an optional LLM-based conversational agent). Fifty-five students’ learning gains and interaction logs were included in the final analysis. Although all conditions demonstrated significant pre–post improvement, no main or interaction effects of choice configurations emerged after controlling for prior knowledge. Log analyses revealed that learning gains were associated with how choice was enacted rather than whether it was available. Sustained and focused parameter manipulation in the most conceptually complex lesson predicted higher gains, whereas extensive interaction in simpler lessons did not. Engagement with the conversational AI agent varied widely and was not directly associated with learning outcomes. Findings suggest that productive learner agency means more than simply having choices in AI-based digital learning environments, the capacity to make decisions and enact choices when learning becomes more difficult over time need to be supported.",
+    "DOI": "10.1080/03075079.2026.2733930",
+    "URL": "https://doi.org/10.1080/03075079.2026.2733930",
+    "container-title": "Studies in Higher Education"
+  },
+  {
     "id": "openalex:W7214056698",
     "type": "article-journal",
     "title": "Trade-offs in assessment and feedback design: a trilemma-based model",
@@ -28883,6 +28915,34 @@
     "container-title": "Higher Education"
   },
   {
+    "id": "openalex:W7222130096",
+    "type": "article-journal",
+    "title": "Do students experience character growth during higher education? Evidence from a large, multi-institutional study",
+    "author": [
+      {
+        "family": "Prinzing",
+        "given": "Michael"
+      },
+      {
+        "family": "Ratchford",
+        "given": "Juliette L."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          2
+        ]
+      ]
+    },
+    "abstract": "Abstract Decades of theoretical work in education research and developmental psychology suggest that students’ time in higher education is a critical period in their personal and moral development. Indeed, many institutions of higher education explicitly seek to promote students’ character growth. Yet empirical evidence regarding character growth during higher education remains limited. The present study ( N = 473,627 undergraduates at 414 United States colleges and universities) used mixed-effects models to examine students’ character growth across four years in higher education and to test whether such growth is moderated academic major, institutional characteristics, or students’ engagement in their campus communities. Results indicated that students do experience significant growth during their years in higher education. However, academic major and institutional type accounted for little variation. Instead, specific forms of community engagement, including participation in student organizations, mentorship and conversations about social and cultural issues, emerged as clear moderators. Alongside theoretical implications, the findings have practical significance. The factors that appear to play the largest roles in shaping students’ growth are precisely those that staff, faculty, and administrators can influence, for example by prioritizing mentorship and promoting organizational involvement and dialogue across differences.",
+    "DOI": "10.1007/s10734-026-01793-0",
+    "URL": "https://doi.org/10.1007/s10734-026-01793-0",
+    "container-title": "Higher Education"
+  },
+  {
     "id": "openalex:W7222147851",
     "type": "article-journal",
     "title": "Exploring AI-resistant assessments: insights from Large Language Models creating and completing their own research assessments",
@@ -29057,5 +29117,69 @@
     "DOI": "10.1080/02602938.2026.2751526",
     "URL": "https://doi.org/10.1080/02602938.2026.2751526",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7225401532",
+    "type": "article-journal",
+    "title": "The rise of neo-collegiality: how shifting notions of expertise are reconfiguring collegial practice in higher education",
+    "author": [
+      {
+        "family": "Guyottot",
+        "given": "Olivier"
+      },
+      {
+        "family": "Stensaker",
+        "given": "Bjørn"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          6
+        ]
+      ]
+    },
+    "abstract": "Collegiality is often portrayed as a declining principle of academic life in contemporary higher education, progressively displaced by managerialism and external steering. This conceptual article argues that such an account overlooks a more subtle transformation: collegiality is not disappearing but being reconfigured by profound shifts in the nature of expertise and the renegotiation of legitimacy that follows. The paper first clarifies the multidimensional nature of collegiality, encompassing formal governance arrangements, everyday peer relations, and the collective production and validation of knowledge, before identifying the internal and external challenges reshaping them. It then develops an analytical framework of neo-collegiality, defined as a hybrid configuration emerging from the dynamic interaction between evolving forms of expertise and their corresponding bases of legitimacy. Central to this framework is a knowledge-centred dimension that does not simply add to, but actively reorients, the governance and social dimensions of collegiate life. Neo-collegiality reframes institutional change in universities as an active reconfiguration rather than a decline, moving analysis beyond the collegiality-managerialism dichotomy. The paper concludes by outlining a research agenda offering scholars and institutional leaders a renewed analytical language for navigating the transformations reshaping higher education.",
+    "DOI": "10.1080/03075079.2026.2756477",
+    "URL": "https://doi.org/10.1080/03075079.2026.2756477",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7225404652",
+    "type": "article-journal",
+    "title": "From burden to balance: a latent profile analysis of students’ load during the transition to higher education",
+    "author": [
+      {
+        "family": "Gehreke",
+        "given": "Laura"
+      },
+      {
+        "family": "Hirschberger",
+        "given": "Stephanie"
+      },
+      {
+        "family": "Fladerer",
+        "given": "Martin Paul"
+      },
+      {
+        "family": "Kauffeld",
+        "given": "Simone"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          6
+        ]
+      ]
+    },
+    "abstract": "The transition from secondary education to higher education poses significant challenges, often increasing psychological load, particularly in STEM fields and among women, which may raise dropout risk. This study examines load profiles of students during the study entry phase (1st–3rd semester) using latent profile analysis (LPA) based on five cohorts of a large national student survey in Germany (N = 12, 282). Seven different latent profiles were identified across all cohorts, reflecting different configurations of load factors. While some students experienced minimal to moderate load across all domains, others faced high academic, financial, social, or navigational load. The ‘high all-around load profile’ was consistently present across all cohorts. Women were more likely to experience high academic, economic, and navigational load, while STEM students were overrepresented in academically burdened profiles. Students with minimal to moderate load had the lowest dropout intention, whereas those with multiple load factors, particularly without strong social support, showed a higher dropout intention. However, participation in support programs and their perceived usefulness did not differ significantly between profiles. These findings indicate that students experience load in different ways rather than uniformly across all domains. Therefore, universities should implement targeted support measures that specifically address academic, financial and social load factors. This requires a prior analysis of individual load factors to develop tailored interventions for different student groups, potentially contributing to long-term academic success.",
+    "DOI": "10.1080/03075079.2026.2755375",
+    "URL": "https://doi.org/10.1080/03075079.2026.2755375",
+    "container-title": "Studies in Higher Education"
   }
 ]
