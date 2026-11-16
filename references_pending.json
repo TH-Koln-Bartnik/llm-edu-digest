@@ -25940,6 +25940,34 @@
     "container-title": "Studies in Higher Education"
   },
   {
+    "id": "openalex:W4413966176",
+    "type": "article-journal",
+    "title": "Generative AI as Scaffolding for Operations Research Education: Framework, Classroom Evaluation, and Design Principles",
+    "author": [
+      {
+        "family": "Armas",
+        "given": "Luis Fernando Pérez"
+      },
+      {
+        "family": "KOSSMAN",
+        "given": "Stephania"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          10
+        ]
+      ]
+    },
+    "abstract": "Operations research (OR) education requires students to progress through a demanding sequence of cognitive transitions, from problem framing and mathematical formulation to computational implementation, validation, and interpretation, yet scalable instructional support for these transitions remains limited. This article proposes a task-centered framework that maps generative artificial intelligence (GenAI) support functions to the main bottlenecks of OR learning and specifies the instructor role needed at each stage. We illustrate the framework through six use cases, organized by implementation complexity and evaluated in terms of pedagogical role and risks. We then evaluate one classroom implementation in depth: a study in which 66 master’s students used a customized GPT companion to implement and solve a quadratic multiknapsack case in Python and Pyomo. Mixed-methods evidence from pre-post surveys, regression and mediation analyses, a compact path model, and qualitative coding shows that the intervention worked through manageability rather than task ease. Confidence gains were large and concentrated in the computational stages of OR modeling ([Formula: see text] overall). The findings suggest that GenAI is most valuable in OR education not when it removes difficulty, but when it makes difficult modeling and implementation tasks manageable enough for students to engage, persist, and learn. Supplemental Material: The online appendices are available at https://doi.org/10.1287/ited.2025.0167 .",
+    "DOI": "10.1287/ited.2025.0167",
+    "URL": "https://doi.org/10.1287/ited.2025.0167",
+    "container-title": "INFORMS Transactions on Education"
+  },
+  {
     "id": "openalex:W4416703105",
     "type": "article-journal",
     "title": "Leveraging prompt-based LLMs for automated scoring and feedback generation in higher education",
@@ -27191,6 +27219,46 @@
     "container-title": "Teaching in Higher Education"
   },
   {
+    "id": "openalex:W7166122503",
+    "type": "article-journal",
+    "title": "‘A bit of chaos and madness’: the AI assessment scale and the work of assessment reform",
+    "author": [
+      {
+        "family": "Perkins",
+        "given": "Mike"
+      },
+      {
+        "family": "Postma",
+        "given": "Darius"
+      },
+      {
+        "family": "Roe",
+        "given": "Jasper"
+      },
+      {
+        "family": "Sisay",
+        "given": "Susan"
+      },
+      {
+        "family": "Holdcroft",
+        "given": "Craig"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          29
+        ]
+      ]
+    },
+    "abstract": "Generative artificial intelligence (GenAI) has intensified pressure on universities to redesign assessment while maintaining integrity, equity, and validity. Frameworks such as the Artificial Intelligence Assessment Scale (AIAS) offer one response, but evidence of how faculty experience their implementation remains limited. This qualitative study examines AIAS implementation as two parallel cases: a private international university in Vietnam, which adopted the first version institution-wide, and a public UK university, which adopted the revised version in a single school. Data from five focus groups with 30 faculty members were analysed using hybrid thematic analysis, with Critical AI Literacy as a sensitising concept. Six themes were developed: recognising and integrating AI, facilitating conditions, building capacity, pathways to adoption, ethics in practice, and reframing pedagogy. Faculty valued the AIAS as a shared language for legitimising GenAI use, clarifying boundaries, and prompting reflection on assessment design. However, they described implementation as shaped by governance, tool access, faculty confidence, workload, integrity concerns, disciplinary context, and alignment with learning outcomes. Their accounts suggest the AIAS could prompt authentic assessment design and student engagement, but may become a compliance layer when disconnected from those conditions. The study contributes evidence on the conditions through which GenAI frameworks reach pedagogical enactment.",
+    "DOI": "10.1080/02602938.2026.2724300",
+    "URL": "https://doi.org/10.1080/02602938.2026.2724300",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
     "id": "openalex:W7166524431",
     "type": "article-journal",
     "title": "Navigating forcibly displaced learners’ pathways to higher education and beyond: Ukrainian students in French higher education",
@@ -27999,6 +28067,42 @@
     "container-title": "Higher Education"
   },
   {
+    "id": "openalex:W7203874509",
+    "type": "article-journal",
+    "title": "No Funny Business: Instructor Humour as Pedagogical Leadership in Transformational Teaching",
+    "author": [
+      {
+        "family": "Cohen",
+        "given": "Naor"
+      },
+      {
+        "family": "Alexander",
+        "given": "Sean"
+      },
+      {
+        "family": "Powell",
+        "given": "Declan"
+      },
+      {
+        "family": "Turner",
+        "given": "Nick"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          20
+        ]
+      ]
+    },
+    "abstract": "Humour can shape classroom dynamics, yet its pedagogical significance depends on how students interpret its instructional and relational meaning. This study examines how instructors’ use of course-related and self-disparaging humour relates to students’ perceptions of transformational teaching, and whether these relationships vary as a function of students’ educational orientations. Drawing on Instructional Humour Processing Theory (IHPT) and transformational teaching frameworks, we conceptualize instructional humour as a social-cognitive cue that students may use to infer instructional relevance and relational approachability. Using hierarchical regression analyses of survey data from 362 Canadian undergraduate business students, both humour types were positively associated with perceptions of transformational teaching (course-related B = 1.67, p < .001; self-disparaging B = 0.77, p = .001). A small interaction indicated that the positive association between self-disparaging humour and transformational teaching was weaker among students high in learning orientation ( B = −0.06, p = .044). Grade orientation did not moderate either relationship. These findings suggest that instructional humour is associated with transformational teaching perceptions in ways consistent with both instructional relevance and relational interpretation, while the association involving self-disparaging humour appears more contingent on student motivation. The study integrates IHPT with leadership-based teaching models and suggests that instructors’ use of humour as a pedagogical leadership behaviour may require calibration to students’ motivational orientations.",
+    "DOI": "10.1177/14697874261472896",
+    "URL": "https://doi.org/10.1177/14697874261472896",
+    "container-title": "Active Learning in Higher Education"
+  },
+  {
     "id": "openalex:W7204223160",
     "type": "article-journal",
     "title": "Rethinking research-on-research in higher education studies",
@@ -28067,6 +28171,156 @@
     "container-title": "Studies in Higher Education"
   },
   {
+    "id": "openalex:W7204508222",
+    "type": "article-journal",
+    "title": "Learning by comparing: internal feedback and evaluative judgement in peer assessment with comparative judgement",
+    "author": [
+      {
+        "family": "Hoffelinck",
+        "given": "Marie"
+      },
+      {
+        "family": "Housen",
+        "given": "Marie"
+      },
+      {
+        "family": "Pirard",
+        "given": "Florence"
+      },
+      {
+        "family": "Verpoorten",
+        "given": "Dominique"
+      },
+      {
+        "family": "Ciura",
+        "given": "Krystel"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          8
+        ]
+      ]
+    },
+    "abstract": "A comparative judgement peer assessment (CJ-PA) pedagogical activity was implemented in a master’s course in early childhood education. At about mid-semester, students submitted a draft of their final essay and were required to make pairwise comparisons of their peers’ works, choosing the one they found better and commenting on the quality of the productions. Drawing on the concept of internal feedback, the study analyses how students engage in multiple forms of comparisons while participating in the CJ-PA activity. By qualitatively analysing longitudinal interviews conducted during the process, the study shows that both engaging in peer assessment by making CJ and receiving peer comments create internal feedback opportunities. Furthermore, the study demonstrates that evaluative judgement is central to internal feedback generation in CJ-PA. Indeed, by prompting students to make comparisons, CJ-PA fosters the identification of differences. It is then through an evaluative judgement process that students can make sense of the identified differences and determine what actions they should undertake to improve their own work. Overall, the findings suggest that CJ-PA shifts students from passive recipients of feedback to active arbiters of quality, fostering critical thinking and self-regulated learning.",
+    "DOI": "10.1080/02602938.2026.2725799",
+    "URL": "https://doi.org/10.1080/02602938.2026.2725799",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7204581279",
+    "type": "article-journal",
+    "title": "The design framework for pedagogical agents supporting constructivist learning with generative AI",
+    "author": [
+      {
+        "family": "Liu",
+        "given": "Chen‐Chung"
+      },
+      {
+        "family": "Tsai",
+        "given": "Chin‐Chung"
+      },
+      {
+        "family": "Yilmaz",
+        "given": "Ramazan"
+      },
+      {
+        "family": "Wu",
+        "given": "Jiun‐Yu"
+      },
+      {
+        "family": "Ranieri",
+        "given": "Maria"
+      },
+      {
+        "family": "Zou",
+        "given": "Di"
+      },
+      {
+        "family": "Archambault",
+        "given": "Leanna"
+      },
+      {
+        "family": "Braak",
+        "given": "Johan van"
+      },
+      {
+        "family": "Biswas",
+        "given": "Gautam"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          28
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.compedu.2026.105744",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105744",
+    "container-title": "Computers & Education"
+  },
+  {
+    "id": "openalex:W7204590111",
+    "type": "article-journal",
+    "title": "Corrigendum to “LLM-derived metrics in second language writing assessment: an explainable AI approach” [Computers & Education 254 (2026) 105721]",
+    "author": [
+      {
+        "family": "Hu",
+        "given": "Jingying"
+      },
+      {
+        "family": "Cong",
+        "given": "Yan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          28
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.compedu.2026.105740",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105740",
+    "container-title": "Computers & Education"
+  },
+  {
+    "id": "openalex:W7204594857",
+    "type": "article-journal",
+    "title": "Towards conceptualising internal feedback in higher education: implications for feedback research and practice",
+    "author": [
+      {
+        "family": "Wang",
+        "given": "Shuang"
+      },
+      {
+        "family": "Yu",
+        "given": "Shulin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          28
+        ]
+      ]
+    },
+    "abstract": "Traditionally, feedback has been viewed as an external input from teachers, peers, or digital tools that guides students’ learning. However, scholarship increasingly recognises feedback as a dynamic, interactive process and emphasises the importance of internal feedback, which is the self-generated evaluative information learners produce for sustainable learning. This conceptual review article synthesises existing feedback models that address internal feedback processes implicitly and explicitly and categorises them into four types: Cybernetics Models, Internal Mechanism Models, Interactive Feedback Loop Models, and Feedback Literacy Frameworks. The review identifies common mechanisms across these models, including metacognitive activities, cognitive strategies, emotional and motivational regulation, and behavioural engagement, which contribute to the recursive and multidimensional nature of the internal feedback process. By synthesising theoretical frameworks and highlighting key research gaps, this article provides a conceptual framework for understanding the internal feedback process and its implications for future research and educational practice.",
+    "DOI": "10.1080/02602938.2026.2721320",
+    "URL": "https://doi.org/10.1080/02602938.2026.2721320",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
     "id": "openalex:W7204807291",
     "type": "article-journal",
     "title": "Assessing from within : the case for autoethnography in higher education assessment and evaluation research",
@@ -28088,6 +28342,74 @@
     "abstract": "Assessment and evaluation research in higher education has generated substantial insight into student experience, feedback practices, assessment design, standards, grading, validity, fairness and institutional reform. These debates have been shaped largely through surveys, multivariate and policy analysis, interviews, focus groups, intervention studies, systematic reviews, quantitative modelling and mixed-methods evaluation, approaches that have afforded the field empirical reach and practical authority. This conceptual-methodological piece intervenes in this landscape, advancing autoethnography as a rigorous mode of inquiry into academic judgement and evaluative labour. Its concern is the assessor as an embodied, cognitively active, affectively implicated and institutionally accountable subject whose work is often absorbed into the procedural language of standards, criteria, reliability and quality assurance. Although autoethnography has an established presence within contemporary higher education research, its contribution to assessment studies is comparatively underdeveloped and warrants fuller conceptual articulation. The article argues that autoethnography gives methodological form to cognitive, affective and temporal dimensions of assessment that often sit at the edge of the field’s preferred evidentiary forms. By establishing the assessor’s situated practice as a legitimate ground of methodological inquiry, it repositions academic judgement as lived evaluative labour.",
     "DOI": "10.1080/02602938.2026.2726498",
     "URL": "https://doi.org/10.1080/02602938.2026.2726498",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7205006963",
+    "type": "article-journal",
+    "title": "The transparency paradox of generic rubrics: making clinical reasoning visible in postgraduate healthcare assessment",
+    "author": [
+      {
+        "family": "Mokbel",
+        "given": "Kinan"
+      },
+      {
+        "family": "Almukbel",
+        "given": "Reham"
+      },
+      {
+        "family": "Najim",
+        "given": "Ahmed"
+      },
+      {
+        "family": "Abdollahzadeh",
+        "given": "Esmaeel"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          2
+        ]
+      ]
+    },
+    "abstract": "Generic assessment rubrics are widely used in higher education to support transparency, consistency and feedback. However, in professionally-oriented postgraduate education, generic descriptors such as ‘critical analysis’, ‘application to practice’ and ‘clear recommendations’ may not make disciplinary judgement sufficiently visible. This reflective and conceptual practice article explores how a generic Level-7 rubric for a case-based postgraduate healthcare assessment was redesigned to make clinical reasoning more explicit. The revised criteria foregrounded problem recognition, evidence selection, contextual interpretation, risk weighing, defensible recommendation-making, and safe next actions including monitoring, counselling, escalation and follow-up. Drawing on literature on criterion-based assessment, tacit standards, feedback literacy, evaluative judgement, inclusive assessment, authenticity, clinical reasoning and rubric design, the article argues that generic rubrics become educationally weaker when they are not translated into the reasoning practices of the field. A five-stage model is proposed: identify the disciplinary judgement, surface hidden marker language, translate generic descriptors into observable reasoning, align feedback with action, and calibrate through examples. The model offers a practical framework for translating broad academic criteria into discipline-specific expectations without reducing intellectual challenge. The article concludes that discipline-specific rubrics can make standards more legible, support marker dialogue, and help students understand how academic knowledge becomes professionally defensible action.",
+    "DOI": "10.1080/02602938.2026.2725797",
+    "URL": "https://doi.org/10.1080/02602938.2026.2725797",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7207592698",
+    "type": "article-journal",
+    "title": "Calibrating GenAI and human feedback in higher education assessment design: a mixed-methods study of university teachers",
+    "author": [
+      {
+        "family": "Yu",
+        "given": "Siliang"
+      },
+      {
+        "family": "Wang",
+        "given": "Chao"
+      },
+      {
+        "family": "Zhang",
+        "given": "Qianxiao"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          3
+        ]
+      ]
+    },
+    "abstract": "Generative artificial intelligence (GenAI) is reshaping feedback and assessment design in higher education, yet little is known about how university teachers combine GenAI with professional human feedback when revising instructional designs. Drawing on teacher feedback literacy, assessment design, technology acceptance and calibrated trust, this explanatory sequential mixed-methods study examined 515 Chinese university teachers who had used both sources in a single revision episode. A source-specific path model showed that feedback quality was associated with perceived usefulness and pedagogical credibility for both sources. For each source, feedback quality was indirectly associated with perceived instructional design improvement through usefulness and with teaching self-efficacy through pedagogical credibility. Interviews with 16 purposively sampled teachers helped interpret these patterns. Teachers used GenAI to expand design options, structure activities, generate examples and draft rubrics, while drawing on human feedback to assess feasibility, validate assessment decisions, check disciplinary standards, identify ethical risks and consider classroom enactment. We conceptualise this process as calibrated feedback orchestration and discuss implications for AI-assisted feedback in higher education.",
+    "DOI": "10.1080/02602938.2026.2726497",
+    "URL": "https://doi.org/10.1080/02602938.2026.2726497",
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
@@ -28121,6 +28443,34 @@
     "DOI": "10.1080/07294360.2026.2722379",
     "URL": "https://doi.org/10.1080/07294360.2026.2722379",
     "container-title": "Higher Education Research & Development"
+  },
+  {
+    "id": "openalex:W7211866697",
+    "type": "article-journal",
+    "title": "Student Perceptions of Multiple Active Learning Methods in Large Lecture Science Classes in Higher Education: A Qualitative Perspective",
+    "author": [
+      {
+        "family": "Walker",
+        "given": "Kate Ireton"
+      },
+      {
+        "family": "McComas",
+        "given": "William F."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          6
+        ]
+      ]
+    },
+    "abstract": "Large lecture courses in science present a significant challenge in effectively engaging all students while gauging their understanding of the content. Active learning requires students to be engaged, and this can be done through a variety of methods. Examples include discussions, physical activities, and hands-on applications of what they have learned. However, a major unaddressed challenge in science instruction is how to design and implement such active learning strategies in high-enrollment courses. This study addresses a critical gap in the research literature by examining the impact of consistently applying a suite of active learning strategies within a large undergraduate Human Physiology course. The findings offer valuable insights for enhancing science instruction using active modalities. These researchers implemented three active learning modalities: kinesthetic/movement-based activities, discussions, and problem-based learning. To isolate the effect of the learning modality itself, rather than the specific content, each modality was rotated across different units of content throughout the semester in a human physiology course. Qualitative data were collected through an end-of-semester survey and course evaluations. Students responded overwhelmingly positively to the active learning environment, reporting that the activities were enjoyable and expressed belief that this enhanced their understanding and recall. They also indicated that active learning instruction improved knowledge retention and their confidence in comprehending the course material.",
+    "DOI": "10.1177/14697874261483275",
+    "URL": "https://doi.org/10.1177/14697874261483275",
+    "container-title": "Active Learning in Higher Education"
   },
   {
     "id": "openalex:W7211935466",
@@ -28259,6 +28609,142 @@
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
+    "id": "openalex:W7212165840",
+    "type": "article-journal",
+    "title": "Research-based teaching and the predicament of assessment: rethinking evaluation challenges through the sociology of regimes of engagement",
+    "author": [
+      {
+        "family": "Ryberg",
+        "given": "Marie Larsen"
+      },
+      {
+        "family": "Carlsen",
+        "given": "Mathilde Hjerrild"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          11
+        ]
+      ]
+    },
+    "abstract": "Abstract Research-based teaching offers valuable learning opportunities by involving students in research and inquiry. However, employing these approaches within standardised university assessment frameworks may create tensions. Drawing on ethnographic research from a university-wide initiative to integrate research in teaching, this article examines how assessment practices interact with pedagogies of research-based teaching. Our analysis shows that academics and students experience a discrepancy between how students engage in processes of research and when focusing on the final assessment. Drawing on the sociology of regimes of engagement, we analyse these experiences as reflecting tensions between different ways of engaging and the various benefits or goods they involve. We show how a tension between an explorative engagement (oriented towards discovery) and an engagement in plan (focused on predefined outcomes) predominates these experiences and practices of research-based teaching. Our analysis highlights how teachers sustain an explorative engagement within plural regimes through a delicate art of composition, creating protected spaces for exploration or modifying assessment formats to accommodate the research processes. Through this analysis, we show that research-based teaching is often guided by an emphasis on open inquiry. We argue that challenges of evaluation extend beyond aligning assessment with student activities, but reflect a more profound predicament concerning the coexistence in modern universities of environments that dispose different ways of engaging, each with distinct goods and losses for individuals. We contend that strengthening the integration of research and teaching in higher education requires recognising the tensions between plural engagement regimes and their implications for teaching and assessment.",
+    "DOI": "10.1007/s10734-026-01765-4",
+    "URL": "https://doi.org/10.1007/s10734-026-01765-4",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7212185167",
+    "type": "article-journal",
+    "title": "AI-interaction literacy: reflections on how generative AI might be used to support self-regulated learning in higher education",
+    "author": [
+      {
+        "family": "Brunnström",
+        "given": "Linus"
+      },
+      {
+        "family": "Palmqvist",
+        "given": "Lisa"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          10
+        ]
+      ]
+    },
+    "abstract": "This reflective paper explores how Generative Artificial Intelligence (GenAI) can function as a conversational partner for self-regulated learning in higher education, and how such use complicates assessment. Using an illustrative interaction with a GenAI chatbot based on a take-home examination question from cognitive science, ‘Do machines think?’, we apply the Structure of observed learning outcome (SOLO) taxonomy, to analyse qualitative differences in the structural complexity of the interaction itself. Our demonstration reveals that GenAI’s default output consistently remained at the quantitative, multistructural phase, producing polished but pedagogically thin responses, and that reaching the qualitative phase required repeated meta-level interventions from the learner, including requests for simplification and structured learning support. Critically, this process demanded the very self-regulatory skills the tool was expected to support. We introduce the concept of AI-interaction literacy to describe the capacity to steer, evaluate, and learn from iterative GenAI interaction, and argue that unguided use may disproportionately benefit already advantaged students. We conclude with three propositions: students should treat GenAI as a critical dialogue partner; teachers should explicitly teach AI-interaction literacy with attention to equity; and take-home assessments should emphasise evaluating knowledge at the qualitative phase of the SOLO taxonomy.",
+    "DOI": "10.1080/02602938.2026.2731261",
+    "URL": "https://doi.org/10.1080/02602938.2026.2731261",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7212185198",
+    "type": "article-journal",
+    "title": "Managing the shift to programme-level assessment: structural barriers, stakeholder experiences and mechanisms of sustained transition",
+    "author": [
+      {
+        "family": "Francis",
+        "given": "Nigel"
+      },
+      {
+        "family": "Blundell-Birtill",
+        "given": "Pam"
+      },
+      {
+        "family": "Davies",
+        "given": "Mark W"
+      },
+      {
+        "family": "Fall",
+        "given": "Lewis"
+      },
+      {
+        "family": "Hartley",
+        "given": "P."
+      },
+      {
+        "family": "James",
+        "given": "Ryan"
+      },
+      {
+        "family": "Rutherford",
+        "given": "Stephen"
+      },
+      {
+        "family": "Tree",
+        "given": "David"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          9
+        ]
+      ]
+    },
+    "abstract": "Programme-level assessment (PLA) has gained traction in higher education policy and practice, yet examples of successful implementation remain limited. This systematic review synthesises 28 empirical and conceptual studies to examine the structural and governance factors shaping PLA implementation across institutional and disciplinary contexts. The findings are presented thematically, examining institutional architecture, stakeholder experience and transition mechanisms. Three main arguments are developed: that implementation failure is primarily architectural rather than cultural; that programmatic assessment and Integrated Programme Assessment (IPA) are analytically distinct models with structurally different capacities to address the architecture problem and that mechanisms which sustain successful transition work by redistributing the cost-benefit asymmetry of implementation rather than by asking individuals to absorb it. The evidence base remains heavily concentrated in health and professional education, and findings should be applied to other disciplinary contexts with caution.",
+    "DOI": "10.1080/02602938.2026.2724543",
+    "URL": "https://doi.org/10.1080/02602938.2026.2724543",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7212360179",
+    "type": "article-journal",
+    "title": "From landscapes to flowscapes: prospects for space and place in higher education",
+    "author": [
+      {
+        "family": "Elkington",
+        "given": "Sam"
+      },
+      {
+        "family": "Dickinson",
+        "given": "Jill"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          12
+        ]
+      ]
+    },
+    "abstract": "In this article, we bring together insights from a series of recent learning space initiatives, alongside wider, emerging, and associated advancements in learning space research, and seek to move the discourse beyond totalising critiques of higher education learning spaces. We argue for the need to consider spaces for learning according to their levels of entanglement and depth, and the new topologies of connection, social meaning, and practice that they promote. This manifests as advancing a participatory paradigm of spatial practice that values the complexity and richness of the learning process, and encompasses multiple enactments, interactions, and exchanges that characterise contemporary, hybrid educational environments. When viewed from this perspective, a different kind of spatial unity appears; namely, Flows. We present and discuss the concept of the Flowscape as a means of grasping and explicating contemporary post-digital learning environments along emerging dimensions of complexity, connectivity, and spacing. As an interpretative device, the Flowscape offers valuable, timely opportunities for generating and mobilising radical awareness and openness to question tendencies towards spatial essentialism and reductive accounts of normative spatial practice in higher education.",
+    "DOI": "10.1080/07294360.2026.2722410",
+    "URL": "https://doi.org/10.1080/07294360.2026.2722410",
+    "container-title": "Higher Education Research & Development"
+  },
+  {
     "id": "openalex:W7212401775",
     "type": "article-journal",
     "title": "Epistemic dependence in AI-mediated learning within higher education: a framework for student judgement and responsibility",
@@ -28285,6 +28771,70 @@
     "DOI": "10.1080/02602938.2026.2732250",
     "URL": "https://doi.org/10.1080/02602938.2026.2732250",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7213557042",
+    "type": "article-journal",
+    "title": "The paradox of control: organizational innovations in the Chinese doctoral education system",
+    "author": [
+      {
+        "family": "Li",
+        "given": "Wenzhuo"
+      },
+      {
+        "family": "Zhou",
+        "given": "Yisu"
+      },
+      {
+        "family": "Zhang",
+        "given": "Xi"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          17
+        ]
+      ]
+    },
+    "abstract": "How do organizations innovate under tight state control? This study examines this paradox through the lens of cross-border joint doctoral programs (CJDPs) developed by Chinese research institutes to circumvent strict doctoral admission quotas. Despite operating within one of the world's most centralized higher education systems, Chinese research institutes have created CJDPs with cross-border universities to enable expanded doctoral enrollment outside formal planning mechanisms. We integrate innovation theory, institutional entrepreneurship, and gray-zone governance perspectives to analyze how organizations navigate systemic constraints in highly regulated environments. Using an exploratory qualitative case study of a large public research institute and its partnerships with four cross-border programs, we trace the initiation, implementation, and eventual regulatory challenges of CJDPs from 2019 to 2025. Our findings reveal that organizations can leverage institutional heterogeneity across regulatory jurisdictions, utilizing strategic positions and relationship networks to establish innovative programs that simultaneously comply with and circumvent centralized control. However, the strategic exploitation of regulatory ambiguity ultimately triggered policy intervention. In 2025, degree certification failures forced program termination, demonstrating the double-edged nature of ambiguity-based compliance. Nevertheless, it did not eliminate the underlying organizational pressures that drove innovation. This research contributes to understanding how organizations pursue strategic innovation in centralized systems globally and illuminates the tensions between organizational entrepreneurship and regulatory stability.",
+    "DOI": "10.1080/03075079.2026.2731447",
+    "URL": "https://doi.org/10.1080/03075079.2026.2731447",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7213559040",
+    "type": "article-journal",
+    "title": "Imperfect design and teaching for uncertainty",
+    "author": [
+      {
+        "family": "Fawns",
+        "given": "Tim"
+      },
+      {
+        "family": "Carvalho",
+        "given": "Lucila"
+      },
+      {
+        "family": "Markauskaitė",
+        "given": "Lina"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          17
+        ]
+      ]
+    },
+    "abstract": "Educational discourse often conveys ideals of perfection, via optimisation, seamlessness, and ‘guaranteed’ learning outcomes. Teaching and learning are, thereby, framed as linear, controllable processes where educators implement evidence-based methods and students respond in predictable ways. In practice, higher education is shaped by imperfection: misalignments between intentions and outcomes, messy interactions, unpredictable constraints, and social, material, and institutional conditions. Rather than failures, such imperfections are both inevitable and generative. Analysing autoethnographic vignettes of teaching practice through an epistemic games lens, we show how deviations from design intentions create unexpected learning opportunities through domesticating (working with rather than correcting) imperfection. We call for a shift from the pursuit of perfection toward more open, critical conversations with students about teaching, learning, and disciplinary knowledge. Our analysis highlights the value of acknowledging complexity, creating space for student agency, and embracing emergence over optimisation as a guiding principle for educational design and practice.",
+    "DOI": "10.1080/13562517.2026.2731588",
+    "URL": "https://doi.org/10.1080/13562517.2026.2731588",
+    "container-title": "Teaching in Higher Education"
   },
   {
     "id": "openalex:W7213663492",
@@ -28368,6 +28918,30 @@
     "abstract": "Artificial intelligence (AI) is often presented as solving longstanding challenges of feedback in higher education. Research and commentary tend to focus on how AI can replace educator labour by providing feedback information at scale but this substitution risks simplifying a complex and interconnected set of practices. We draw from Barnett’s work on the ecological university to offer a dynamic, relational view of an ecosystem – where the whole is greater than the sum of its parts. This perspective of the feedback ecosystem sensitised a qualitative study, where data was constituted through participant discussion within two-hour online workshops. Twelve students and 18 educators participated across three workshops; analysis of participant feedback experiences illustrated how feedback relations shift in the presence of AI. To conclude, we suggest that in response to AI, educators can seek to strengthen their feedback relationships with students over time – what we call humans-as-the-loop – in the feedback ecosystem.",
     "DOI": "10.1080/02602938.2026.2730625",
     "URL": "https://doi.org/10.1080/02602938.2026.2730625",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7213779459",
+    "type": "article-journal",
+    "title": "Which inference is at risk? Assessment validity reasoning and generative AI",
+    "author": [
+      {
+        "family": "Weidlich",
+        "given": "Joshua"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          20
+        ]
+      ]
+    },
+    "abstract": "Generative artificial intelligence has unsettled higher education assessment because it changes what student performances can reasonably be taken to mean. This conceptual article further develops a validity-centred account of this disruption, distinguishing several problems that are often collapsed in debate: construct underrepresentation, construct-irrelevant variance, attribution of performance, conditional extrapolation, and unsupported score use. It then proposes a practical reasoning sequence for assessment redesign that begins with specifying the intended claim and the AI conditions, proceeds through threat diagnosis and proportionate design response, and ends with local evidence. A compact Validity Reasoning Matrix illustrates how course and program teams can align concerns, threatened inferences, redesigns, and evidence needs. The contribution is both conceptual and practical: it offers a language for moving beyond detection and generic AI-proofing and a usable structure for defending assessment claims in AI-inclusive higher education.",
+    "DOI": "10.1080/02602938.2026.2734795",
+    "URL": "https://doi.org/10.1080/02602938.2026.2734795",
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
@@ -28675,6 +29249,30 @@
     "container-title": "Studies in Higher Education"
   },
   {
+    "id": "openalex:W7214699885",
+    "type": "article-journal",
+    "title": "From Code Sprints to Classrooms: Hackathons as Experiential Learning Tools for Engagement, Collaboration, and Graduate Employability",
+    "author": [
+      {
+        "family": "Richardson",
+        "given": "Colin Mark"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          28
+        ]
+      ]
+    },
+    "abstract": "This study investigates Hackathon pedagogy as an intentional instructional design for active and experiential learning in postgraduate higher education. Rather than viewing the Hackathon as a one-off event, the research conceptualises it as a structured, time-bounded pedagogical approach that integrates collaboration, creativity, and industry engagement into the curriculum. Drawing on experiential learning theory and inclusive pedagogy, this study explores how this format supports student engagement, skill development, and perceived employability. Using a qualitative case study approach, data were collected from 18 postgraduate students through post-event surveys combining closed-ended and open-ended reflections, supplemented by instructor observations. Descriptive quantitative data offered contextual insight, while thematic analysis revealed five interconnected themes: applied learning and relevance, teamwork and collaboration, industry engagement and employability, inclusivity and participation challenges, and event structure and scaffolding. Findings demonstrate that when designed pedagogically, Hackathons foster authentic, high-impact learning experiences that promote the application of theory to practice, professional identity formation, and transferable skill development. However, the study also highlights the importance of scaffolding and role clarity to ensure equitable participation and inclusivity among diverse learners. The paper contributes to emerging discussions on active learning and curriculum innovation by framing Hackathon pedagogy as a replicable model of experiential learning rather than an isolated co-curricular activity. Implications are offered for educators seeking to embed industry-engaged, inclusive, and employability-focused pedagogies across related disciplines.",
+    "DOI": "10.1177/14697874261487163",
+    "URL": "https://doi.org/10.1177/14697874261487163",
+    "container-title": "Active Learning in Higher Education"
+  },
+  {
     "id": "openalex:W7214997838",
     "type": "article-journal",
     "title": "Navigating assessment literacy in higher education: a multi-institutional study of university teachers’ perceptions, practices and professional growth",
@@ -28759,6 +29357,66 @@
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
+    "id": "openalex:W7215126908",
+    "type": "article-journal",
+    "title": "Topic landscapes and cross-period semantic connections in Computers & Education",
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Xieling"
+      },
+      {
+        "family": "Zou",
+        "given": "Di"
+      },
+      {
+        "family": "Xie",
+        "given": "Haoran"
+      },
+      {
+        "family": "Qin",
+        "given": "S. Joe"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          1
+        ]
+      ]
+    },
+    "abstract": "For the 50th anniversary of Computers & Education, this study describes the topic landscape and cross-period semantic connections among 5,226 articles published from 1980 to 18 June 2026. Independently fitted BERTopic models for 1980–2003, 2004–2013, 2014–2019, and 2020–2026 identified 11, 15, 18, and 9 non-noise topics, respectively. We examine publication shares, exploratory annual trends, semantic similarity networks between adjacent periods, and within-period associations with a predefined artificial intelligence (AI) vocabulary. The retained semantic similarity networks include 22, 30, and 36 topic-level connections across the three adjacent-period comparisons. These networks consist mainly of one-to-many and many-to-many components rather than one-to-one correspondences. The 2014–2019 and 2020–2026 comparison contains one many-to-many component without unlinked nodes, whereas the earlier comparisons contain multiple connected components and several unlinked target topics. In 2020–2026, online learning and teacher competence have the largest publication shares, while generative AI shows the strongest association with the selected AI vocabulary. These analyses provide descriptive evidence on topic prevalence, annual trends, cross-period semantic similarity, and AI vocabulary association. The results should be interpreted within the scope of corpus coverage, modeling decisions, period definitions, and vocabulary selection, and do not imply causal relations or historical processes beyond the observed semantic patterns.",
+    "DOI": "10.1016/j.compedu.2026.105758",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105758",
+    "container-title": "Computers & Education"
+  },
+  {
+    "id": "openalex:W7215781944",
+    "type": "article-journal",
+    "title": "Motivational authentic assessment: a conceptual framework for assessment design in higher education",
+    "author": [
+      {
+        "family": "Martin",
+        "given": "Christopher"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          2
+        ]
+      ]
+    },
+    "abstract": "Authentic assessment is widely used in higher education to connect learning with disciplinary, professional and societal practice. Its motivational value, however, is often assumed rather than explained. This conceptual article uses Self-Determination Theory (SDT) to examine how assessment environments may support or frustrate students’ autonomy, competence and relatedness. A critical, integrative synthesis of authentic assessment and SDT scholarship informs a six-stage Motivational Framework for Authentic Assessment Design. The framework treats authenticity as relational and experienced, not as a fixed property of a task, and places the learner’s motivational experience at the centre of design. Illustrative examples from biochemistry, early childhood studies, statistics and teacher education show how the framework can be used across disciplinary and professional contexts. The analysis identifies qualifications: examinations can contain authentic features; professional relevance depends on staff currency and whose values are privileged; choice without structure may weaken rather than support autonomy; and inclusive design must anticipate disability, neurodiversity and varied preferences for collaboration. The article argues that authentic tasks create opportunities for meaningful engagement but cannot secure it. Their value depends on the package of teaching, scaffolding, feedback and relationships through which students encounter assessment. It concludes with design questions and priorities for empirical evaluation.",
+    "DOI": "10.1080/02602938.2026.2740128",
+    "URL": "https://doi.org/10.1080/02602938.2026.2740128",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
     "id": "openalex:W7218557703",
     "type": "article-journal",
     "title": "From rubric fairness to student engagement: the mediating role of feedback usefulness and metacognitive awareness",
@@ -28797,6 +29455,153 @@
     "DOI": "10.1080/02602938.2026.2740137",
     "URL": "https://doi.org/10.1080/02602938.2026.2740137",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7220423497",
+    "type": "article-journal",
+    "title": "Integrated Programme Assessment: quantitative evidence that curriculum transformation delivers",
+    "author": [
+      {
+        "family": "Miceli",
+        "given": "Mathieu Di"
+      },
+      {
+        "family": "Tree",
+        "given": "David"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          5
+        ]
+      ]
+    },
+    "abstract": "Integrated Programme Assessment (IPA) is an approach to curriculum design in which assessment is organised at programme rather than module level, enabling synoptic assessments requiring students to integrate knowledge and skills across a programme rather than within isolated modules. IPA is advocated on the claims that it reduces assessment volume and increases authenticity, neither of which has been subjected to empirical scrutiny using quantitative before-and-after data from real programme transformations. This study applies an established analytical tool for measuring and mapping assessment authenticity to STEM degree programmes at two universities before and after transition to IPA. The two institutions implemented IPA to substantially different degrees: one adopted IPA across the full programme while the other transitioned approximately a third of its curriculum. At one institution assessment volume fell significantly alongside significant gains in authenticity. At the other, no significant change in assessment volume was observed yet authenticity gains were similarly significant. Post-IPA, assessments at both institutions showed a more coherent year-on-year progression in authenticity, consistent with principles of sustainable assessment. These findings provide quantitative evidence of changes following IPA transition, with volume reduction observed following full implementation and authenticity gains following both full and partial redesign.",
+    "DOI": "10.1080/02602938.2026.2739378",
+    "URL": "https://doi.org/10.1080/02602938.2026.2739378",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7220654471",
+    "type": "article-journal",
+    "title": "Corrigendum to “An empirical study of ChatGPT use in engineering education: Prompting and performance” [Intern. High. Educ. 71 (2026) 101105]",
+    "author": [
+      {
+        "family": "Domínguez",
+        "given": "Lauren Genith Isaza"
+      },
+      {
+        "family": "Robles-Gómez",
+        "given": "Antonio"
+      },
+      {
+        "family": "Vargas",
+        "given": "Rafael"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.iheduc.2026.101117",
+    "URL": "https://doi.org/10.1016/j.iheduc.2026.101117",
+    "container-title": "The Internet and Higher Education"
+  },
+  {
+    "id": "openalex:W7220696927",
+    "type": "article-journal",
+    "title": "‘ChatGPT can make mistakes’: pedagogically problematic discourses on generative AI in higher education",
+    "author": [
+      {
+        "family": "Olsson",
+        "given": "Elizabeth M."
+      },
+      {
+        "family": "Johansson",
+        "given": "Evelina"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          6
+        ]
+      ]
+    },
+    "abstract": "Fill in the blank: Generative AI (genAI) is a ________. This seemingly simplistic exercise reveals more than you might think, especially if you are a teacher. While most agree that words have implications, few have interrogated the pedagogical consequences of the dominant genAI discourses circulating in higher education. This Point of Departure argues that these discourses – often originating from big tech companies – shape how teachers and, ultimately, students understand and engage with genAI. Drawing on a poststructuralist view of discourse analysis and Lea and Street’s [1998. Student writing in higher education: An academic literacies approach. Studies in Higher Education 23, no. 2: 157–72] Academic Literacies framework, we argue that dominant utopian and dystopian framings focus on technological capabilities at the expense of pedagogical consequences. In response, we propose a human-centred model of discursive engagement that foregrounds discourses of curiosity, criticality, and collaboration. Ultimately, we aim to help teachers appreciate how the discourses they use to describe genAI affect how their students learn.",
+    "DOI": "10.1080/13562517.2026.2739306",
+    "URL": "https://doi.org/10.1080/13562517.2026.2739306",
+    "container-title": "Teaching in Higher Education"
+  },
+  {
+    "id": "openalex:W7221053315",
+    "type": "article-journal",
+    "title": "Fifty years of higher education research: past, present and future",
+    "author": [
+      {
+        "family": "Sá",
+        "given": "Creso M."
+      },
+      {
+        "family": "Slowey",
+        "given": "Maria"
+      },
+      {
+        "family": "Cowley",
+        "given": "Summer"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          3
+        ]
+      ]
+    },
+    "abstract": "As Studies in Higher Education marks five decades since it was first published, in this 50th Anniversary Issue we wish to celebrate not only how the journal has grown in scale but also how it has d...",
+    "DOI": "10.1080/03075079.2026.2743196",
+    "URL": "https://doi.org/10.1080/03075079.2026.2743196",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7221081071",
+    "type": "article-journal",
+    "title": "Partial English-medium instruction as a participation condition: appraisal, coping, and transition in higher education",
+    "author": [
+      {
+        "family": "Warnby",
+        "given": "Marcus"
+      },
+      {
+        "family": "Bylund",
+        "given": "Jasmine"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          9
+        ]
+      ]
+    },
+    "abstract": "Abstract While full English-medium instruction (EMI) has been widely studied, partial EMI remains under-theorised despite being common in higher education. This article develops a conceptual account of partial EMI as a tacit condition for participation in otherwise national/majority-language programmes. Drawing on Lazarus and Folkman’s transactional model of stress and coping and Nicholson’s transition cycle, we argue that selective English-medium demands may become psychologically consequential through students’ appraisals of demands and coping resources, and temporally consequential when repeated encounters reactivate transition rather than allow adjustment to stabilise. Four retrospective interview accounts from novice students in Swedish higher education serve as illustrative cases through which the conceptual argument is developed. The conceptual analysis illustrates how English-language encounters may be appraised as threat, harm/loss, or challenge and negotiated through coping efforts such as adapting through effort, avoiding and withdrawing, reframing and improvising, and seeking recognition and informal solidarity. It further illustrates how such encounters may be repeatedly reactivated across transition phases. Rather than identifying new student strategies, the article reframes familiar practices as appraisal-linked coping responses to participation conditions in which English appears selectively and without consistent institutional recognition. It contributes to EMI and transition research by showing how tacit language demands may shift responsibility for adaptation onto students, raising questions about recognition, scaffolding, and post-entry equity in partial EMI.",
+    "DOI": "10.1007/s10734-026-01766-3",
+    "URL": "https://doi.org/10.1007/s10734-026-01766-3",
+    "container-title": "Higher Education"
   },
   {
     "id": "openalex:W7221081459",
@@ -28887,6 +29692,138 @@
     "container-title": "Computers & Education"
   },
   {
+    "id": "openalex:W7221186907",
+    "type": "article-journal",
+    "title": "Dropped-score policies as flexible assessment design: counterfactual evidence on grade benefits and equity in undergraduate STEM courses",
+    "author": [
+      {
+        "family": "Erdmann",
+        "given": "Robert M."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          9
+        ]
+      ]
+    },
+    "abstract": "Grading rules shape how student performance is translated into consequential outcomes, yet routine flexibility policies are rarely evaluated empirically. This study examines dropped-score policies as a form of assessment design by comparing observed final grades with counterfactual grades reconstructed without the policy. The analysis included 3,991 student-enrolments across 68 undergraduate STEM courses. We assessed grade changes, transcript-relevant threshold crossings, and variation in policy benefit by demographic characteristics and prior academic achievement. Dropped-score policies produced small but widespread increases (mean 1.16 percentage points; median 0.76), with 92.5% of enrolments receiving a positive benefit. Course-relative benefits and threshold-crossing rates were similar by first-generation status, whether students were classified as Black, Indigenous, or people of colour, and ethnicity; differences by sex were statistically detectable but substantively very small. Students with lower prior grade point averages received greater course-relative benefits. These findings position dropped-score policies as broadly distributed flexibility mechanisms rather than policies whose benefits were concentrated in particular demographic groups. The practical effects of flexibility depend on course-level grading structures and the amount of grade movement those structures permit. Counterfactual reconstruction offers a scalable approach for evaluating how grading rules distribute benefits within authentic higher education assessment systems.",
+    "DOI": "10.1080/02602938.2026.2741682",
+    "URL": "https://doi.org/10.1080/02602938.2026.2741682",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7221330388",
+    "type": "article-journal",
+    "title": "Beyond the buzz: analyzing (re)politicization in higher education",
+    "author": [
+      {
+        "family": "Fraenkel",
+        "given": "Yishai"
+      },
+      {
+        "family": "Bamberger",
+        "given": "Annette"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          10
+        ]
+      ]
+    },
+    "abstract": "Abstract In contemporary higher education studies, ‘politicization’ is frequently invoked when describing state-university tensions, yet the term often serves as a rhetorical device rather than an analytical tool. Drawing on scholarship in political science and sociology, we address this conceptual ambiguity by introducing four divergent approaches to defining and operationalizing ‘politicization’ in the field of higher education. We proceed to illustrate the usefulness of one of these, the Sheffield School, which approaches politicization as a deliberate governance strategy involving institutional, rule-based, and preference-shaping tactics. We apply it to the Israeli higher education system (2010–2025), a case historically characterized by strong ‘arm’s-length’ autonomy that is ostensibly facing state encroachment. Employing a predominantly qualitative approach and multiple methods (legislative analysis and elite interviews), supplemented by descriptive statistics based on Israel’s Council for Higher Education’s composition, we reveal a distinct trajectory of (re)politicization in recent years. The findings demonstrate how the state has eroded arm’s-length bodies by weaponizing ‘student rights’ legislation to intervene in academic autonomy and by engineering the regulator’s membership to marginalize research universities, perceived as overly liberal. We argue that politicization manifests as a purposive administrative process, often bipartisan and fueled by anti-elitist narratives. Our analysis offers a blueprint for detecting politicization of HE governance in democracies, particularly those facing neo-nationalist pressures.",
+    "DOI": "10.1007/s10734-026-01787-y",
+    "URL": "https://doi.org/10.1007/s10734-026-01787-y",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7221363247",
+    "type": "article-journal",
+    "title": "From workload to verified learning: reframing ECTS for AI-rich assessment",
+    "author": [
+      {
+        "family": "Pablo-Martí",
+        "given": "Federico"
+      },
+      {
+        "family": "Fernández",
+        "given": "Carlos Mir"
+      },
+      {
+        "family": "Lucio",
+        "given": "Juan José de"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          10
+        ]
+      ]
+    },
+    "abstract": "Generative artificial intelligence (GenAI) weakens a practical assumption in the European Credit Transfer and Accumulation System (ECTS): that estimated student workload remains a credible proxy for learning when assessment evidence is interpretable. This conceptual article examines what follows when academic products are routinely produced through hybrid human–AI cognition. Drawing on Kane’s interpretation/use argument, assessment-security scholarship and recent work on GenAI in higher education, it reconstructs ECTS as an inferential system in which scores, generalisation, extrapolation and credit-awarding uses must all be warranted. The analysis shows that opaque take-home production can weaken each link: scoring may misread distributed authorship, generalisation becomes unstable, extrapolation to learning outcomes is less secure, and credit awards risk retaining administrative form without evidential force. The article proposes verified learning as a credit-level validity condition and specifies four safeguards: programme-level alignment, authentic transfer tasks, process visibility with declared AI use, and strategic controlled verification. It also identifies equity and governance conditions required for these safeguards to support, rather than undermine, comparability across ECTS-based institutions in AI-rich assessment environments. The contribution is to connect task-level assessment validity to credit legitimacy and to translate that connection into practical design and quality-assurance implications for European higher education policy.",
+    "DOI": "10.1080/02602938.2026.2744230",
+    "URL": "https://doi.org/10.1080/02602938.2026.2744230",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7221675942",
+    "type": "article-journal",
+    "title": "Interpreting aberrant testing events in remote assessments: Innocuous or malicious?",
+    "author": [
+      {
+        "family": "Belzak",
+        "given": "William C. M."
+      },
+      {
+        "family": "Attali",
+        "given": "Yigal"
+      },
+      {
+        "family": "Baig",
+        "given": "Basim"
+      },
+      {
+        "family": "Hastings",
+        "given": "Rose"
+      },
+      {
+        "family": "Brem",
+        "given": "Connor"
+      },
+      {
+        "family": "Munson",
+        "given": "Liberty"
+      },
+      {
+        "family": "Kleeman",
+        "given": "John"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          13
+        ]
+      ]
+    },
+    "abstract": "Remote assessments are increasingly utilized in education and professional certification due to their accessibility and convenience. However, ensuring test security in these environments presents significant challenges, particularly in distinguishing between innocuous activity and more malicious behaviors. To address this, we introduce the Continuum of Deception (COD) framework, which ranks aberrant testing events along three dimensions: malicious intent, risk to score integrity, and verifiability. This framework guides empirical investigations across three complementary studies. Study 1 examines expert rankings of aberrant events and finds strong agreement on malicious intent and risk but less agreement on verifiability. Study 2 analyzes score changes among repeat test takers and finds that some flagged events, particularly speaking-related ones, are associated with large score gains. Study 3 evaluates proctoring agreement and finds that events detected with machine or AI assistance, such as plagiarism, are identified more consistently than events based on human observation alone, such as looking away excessively. We use these findings to develop a four-tier system of consequences for test takers, based on the severity of an event and how reliably it can be verified. By integrating theoretical and empirical insights, this research provides a structured approach to balancing test integrity with fairness in remote assessments.",
+    "DOI": "10.1016/j.compedu.2026.105765",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105765",
+    "container-title": "Computers & Education"
+  },
+  {
     "id": "openalex:W7221753532",
     "type": "article-journal",
     "title": "What counts as international research collaboration? The gap between conceptualisation and operationalisation in higher education research evaluation",
@@ -28913,6 +29850,86 @@
     "DOI": "10.1007/s10734-026-01788-x",
     "URL": "https://doi.org/10.1007/s10734-026-01788-x",
     "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7221770401",
+    "type": "article-journal",
+    "title": "Everyday geopolitical governance: perspectives of faculty and chinese doctoral students in U.S. higher education",
+    "author": [
+      {
+        "family": "Huang",
+        "given": "Futao"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          14
+        ]
+      ]
+    },
+    "abstract": "Universities increasingly operate in a geopolitical environment in which international collaboration, research security, academic mobility, and technological competition are closely intertwined. Yet less is known about how geopolitical change is translated into routine academic practice. This article introduces Everyday Geopolitical Governance as a framework for examining that translation. The concept is newly developed in this study but draws on critical and feminist work on everyday geopolitics, organizational approaches to university governance, and scholarship on anticipatory action under uncertainty. The study draws on semi-structured interviews with 19 participants affiliated with U.S. higher education institutions: 14 faculty members (four U.S.-born and ten China-origin scholars) and five Chinese doctoral students. Using reflexive thematic analysis, the study examines how participants described changes in collaboration, research administration, mobility, and career planning. The analysis is interpretive and does not seek statistical comparison across participant sub-groups. Three interrelated mechanisms emerged from the analysis. Organizational mediation captures how universities translate geopolitical priorities into procedures and routines; differentiated vulnerability describes how exposure to uncertainty varies with disciplinary, career-stage, institutional, and national positioning; and anticipatory adaptation explains how academics adjust present decisions in light of possible future policy or political change. Within this sample, geopolitical governance was experienced less as direct state intervention than as a combination of institutional mediation and anticipatory professional judgement. The framework connects geopolitical transformation, university governance, and academic agency while remaining attentive to the bounded perspectives represented in the study.",
+    "DOI": "10.1007/s10734-026-01792-1",
+    "URL": "https://doi.org/10.1007/s10734-026-01792-1",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7221775207",
+    "type": "article-journal",
+    "title": "Do the numbers hold up? Grades, personality and the validity of student evaluations of teaching in an Omani foundation programme",
+    "author": [
+      {
+        "family": "Al-Abri",
+        "given": "Ahmed Salim Abdullah"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          14
+        ]
+      ]
+    },
+    "abstract": "Student evaluations of teaching (SET) carry high-stakes consequences, yet what they measure remains contested, and Arab Gulf evidence is scarce. Prompted by an institutional dispute in which teachers argued their ratings were unreliable and unfairly depressed by examination marks, this study examined the determinants and stability of SET in an Omani general foundation programme. A 40-item instrument, developed locally and supported by confirmatory factor analysis (four correlated factors; CFI = 0.87; composite reliabilities 0.85 to 0.97), was administered twice across the mid-term boundary to 411 students, 89 of them twice. Contrary to the teachers’ complaint, within-student ratings did not move once marks were known (|dz| = 0.02), and satisfaction with marks did not differentiate them. Yet the data resist a reassuring reading: perceived teacher personality was by far the strongest correlate of ratings and overlapped with them so heavily (r = 0.67) that the two are hard to separate; students’ own sense of evaluation responsibility and self-study skills contributed independently; and test–retest reliability over a median of 45 days was only 0.50 despite near-perfect stability in group means. Ratings showing no detectable effect of timing, mark satisfaction or gender can still fail to track teaching quality. Reliability is not validity.",
+    "DOI": "10.1080/02602938.2026.2746332",
+    "URL": "https://doi.org/10.1080/02602938.2026.2746332",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7221775688",
+    "type": "article-journal",
+    "title": "“ChatGPT Says You’re Wrong!” How Generative AI Exposes the Fragility of Explanation-Centered Pedagogy",
+    "author": [
+      {
+        "family": "Billsberry",
+        "given": "Jon"
+      },
+      {
+        "family": "Munoz",
+        "given": "Albert"
+      },
+      {
+        "family": "Ambrosini",
+        "given": "Véronique"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          14
+        ]
+      ]
+    },
+    "abstract": "In this essay, we examine a growing tension in management education revealed when students use generative artificial intelligence tools such as ChatGPT to question and challenge their educators. We argue that these encounters expose a contest over educational authority. Management education has long relied on explanation-centered pedagogy, allowing authority to rest on theoretical articulation rather than on the demonstrable development of students’ judgment and capability to act. Generative artificial intelligence (AI) destabilizes this arrangement by making fluent explanation ubiquitous, inexpensive, and readily contestable. Our provocation is that business schools have misdiagnosed this as primarily a technological problem when it more fundamentally reveals the fragility of explanation-based authority. We contribute by explaining how explanation became a scalable and defensible proxy for forms of managerial capability that are difficult to observe and assess, and why generative AI now devalues that currency. We call for authority to be rebuilt around capability-oriented education organized at the program level, with theory repositioned as a resource for interpreting, guiding, challenging, and evaluating action. This requires coordinated work by educators, program leaders, deans, and university administrators to make students’ developing capabilities visible, cumulative, and assessable.",
+    "DOI": "10.5465/amle.2025.0284",
+    "URL": "https://doi.org/10.5465/amle.2025.0284",
+    "container-title": "Academy of Management Learning & Education"
   },
   {
     "id": "openalex:W7222130096",
@@ -28964,6 +29981,54 @@
     "abstract": "Higher education institutions have been grappling with the impact of Large Language Models (LLMs) on teaching and learning. LLMs like ChatGPT, Claude, and DeepSeek, can produce high-quality text with a single prompt. This is particularly concerning in research modules, where students are expected to showcase their work in a text-based format. In this study, ChatGPT, Claude, and DeepSeek were prompted to develop three research assessments that an LLM should not be able to complete and were subsequently prompted with the instructions generated. The purpose was to explore the influence of assessment instructions and characteristics on the ability of these models to generate complete responses. The instructions and characteristics included written text, oral discussions, physical attendance, contextual access, realistic content, lecturer approval, and the inclusion of multiple components. The most influential characteristic was the inclusion of an oral component. Other noteworthy characteristics were requiring students to attend live events and including multiple staged components. These findings contribute to the ongoing exploration of assessment design in the age of AI and LLMs.",
     "DOI": "10.1080/02602938.2026.2744231",
     "URL": "https://doi.org/10.1080/02602938.2026.2744231",
+    "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7222478844",
+    "type": "article-journal",
+    "title": "Bridging Theory and Practice Through Field-Based Learning: Student Engagement and Competency Development in Higher Education",
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Chien Chih"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          15
+        ]
+      ]
+    },
+    "abstract": "This study addresses the limited empirical evidence on how field-based learning, grounded in principles of authentic and experiential education, is associated with students’ motivation and self-perceived competency development in higher education management. Employing an action research design in a third-year undergraduate cultural and educational management course in Taiwan ( N = 39), the instructor embedded site visits, stakeholder interviews, preparatory briefings, and reflection within a case-based learning framework. Quantitative pre- and post-test data were collected using validated instruments measuring student motivation and professional competencies, while qualitative data came from observations, reflections and interviews. The results indicated significant gains in motivation and self-perceived competencies, together with high course satisfaction. Qualitative findings showed that real-world organisational engagement helped students connect theory with practice, sharpen critical thinking, develop confidence and reconsider assumptions about social enterprises. The study provides evidence for field-based learning as a strategy for bridging theory and practice in domains where fieldwork is not routine.",
+    "DOI": "10.1177/14697874261493865",
+    "URL": "https://doi.org/10.1177/14697874261493865",
+    "container-title": "Active Learning in Higher Education"
+  },
+  {
+    "id": "openalex:W7222546200",
+    "type": "article-journal",
+    "title": "Beyond the bluebook: a calibrated framework for redesigning construct-valid assessment in higher education in the age of generative AI",
+    "author": [
+      {
+        "family": "Dilinika",
+        "given": "J.M Shalani"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          15
+        ]
+      ]
+    },
+    "abstract": "The rapid proliferation of generative artificial intelligence (GenAI) has complicated the link between what a student submits as evidence of learning and what that student actually knows and can do. In response, this study advances an AI-resilient approach to assessment design through the development of a calibrated framework for redesigning construct-valid assessment, based on a systematic review and synthesis of assessment frameworks and structured approaches. Following PRISMA 2020 reporting guidance, sixteen primary assessment frameworks and structured approaches were identified. The synthesis brought their complementary components together into three interdependent design constructs: authorisation, verification, and accountability. Messick’s unified validity theory provides the conceptual anchor connecting these components to the inference an assessment is intended to support. The synthesis revealed that the central gap in the literature is not a lack of relevant approaches or components, but calibration. This gap informed the development of the Calibrated Framework for AI-Resilient Assessment (AIRA), which proposes that verification and accountability should become stronger and more diverse as authorised GenAI involvement increases or becomes more consequential to the intended construct. The framework provides educators with a guide for designing assessments and evaluating student learning in AI-integrated environments.",
+    "DOI": "10.1080/02602938.2026.2747110",
+    "URL": "https://doi.org/10.1080/02602938.2026.2747110",
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
@@ -29019,6 +30084,62 @@
     "container-title": "Higher Education"
   },
   {
+    "id": "openalex:W7223016339",
+    "type": "article-journal",
+    "title": "Student-Centred Teaching and Basic Psychological Need Satisfaction in Higher Education: Longitudinal Evidence From Flipped and Lecture-Based Engineering Mathematics Courses",
+    "author": [
+      {
+        "family": "Puhakka",
+        "given": "Ilmari"
+      },
+      {
+        "family": "Nokelainen",
+        "given": "Petri"
+      },
+      {
+        "family": "Vuorenpää",
+        "given": "Vikke"
+      },
+      {
+        "family": "Rämö",
+        "given": "Johanna"
+      },
+      {
+        "family": "Kangaslampi",
+        "given": "Riikka"
+      },
+      {
+        "family": "Kaarakka",
+        "given": "Terhi"
+      },
+      {
+        "family": "Viro",
+        "given": "Elina"
+      },
+      {
+        "family": "Hirvonen",
+        "given": "Jani"
+      },
+      {
+        "family": "Ali‐Löytty",
+        "given": "Simo"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          19
+        ]
+      ]
+    },
+    "abstract": "Student-centred teaching methods, such as flipped learning, have been found to enhance learning outcomes in higher education (HE); however, their impact on factors that influence student learning and well-being has been less researched. In addition to facing various challenges during their first study year, first-year students’ preparedness for student-centred and active learning methods can be low at the start of HE, requiring research to look beyond short time-span changes and cross-sectional associations. To address these gaps, this study examined the development of engineering HE students’ ( n = 367) satisfaction of basic psychological needs – autonomy (RQ1), competence (RQ2) and relatedness (RQ3) – over time in two parallel sets of four engineering mathematics courses implemented with two student-centred pedagogical models: a lecture-based model (control; n = 192) and a flipped learning model (intervention; n = 175). Using five measurement points across the academic year 2019 to 2020, we analysed longitudinal change in students’ need satisfaction with two-level growth models. The results showed a decline in autonomy satisfaction in the lecture-based group, while the flipped model mitigated this decline (interaction between measurement point and teaching model: β = 0.042, p = .008). Regarding competence satisfaction, the lecture-based group declined more steeply than the flipped model (β = 0.055, p = .002). Relatedness satisfaction increased over time in both groups, although this growth decelerated over time (Time: β = 0.127, p < .001). When pandemic restrictions began, declines in autonomy and competence satisfaction were more pronounced in the lecture-based group. Differences between genders (autonomy and competence) and high versus low achievers (competence) were observed. The results imply that, in first-year, high-enrolment, or otherwise demanding HE courses, student-centred course design can provide benefits by supporting students’ autonomy and competence through clear structure, guided preparation, active participation and timely feedback, even during disruptions to normal teaching formats.",
+    "DOI": "10.1177/14697874261493770",
+    "URL": "https://doi.org/10.1177/14697874261493770",
+    "container-title": "Active Learning in Higher Education"
+  },
+  {
     "id": "openalex:W7223094482",
     "type": "article-journal",
     "title": "Learner agency and human-AI collaboration: shaping hybrid intelligence for the future of higher education",
@@ -29052,6 +30173,38 @@
     "abstract": "Artificial intelligence (AI), particularly generative AI, has transformed the higher education landscape with remarkable speed, reshaping how students learn, produce academic work, and interact wit...",
     "DOI": "10.1080/03075079.2026.2747551",
     "URL": "https://doi.org/10.1080/03075079.2026.2747551",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7223139805",
+    "type": "article-journal",
+    "title": "Between us: perspectives on interinstitutional collaboration in higher education",
+    "author": [
+      {
+        "family": "Barros",
+        "given": "Fernando Rufino de"
+      },
+      {
+        "family": "Bastos",
+        "given": "Sérgio Augusto Pereira"
+      },
+      {
+        "family": "Silva",
+        "given": "Rodrigo Oliveira da"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          21
+        ]
+      ]
+    },
+    "abstract": "Higher education systems worldwide increasingly rely on inter-institutional networks to enhance coordination, governance, and social impact. Yet, little is known about how these arrangements are perceived and managed in practice. This study examines managers' perceptions within a network of Brazilian federal higher education institutions, exploring the benefits and limitations associated with this collaborative dynamic. This study utilizes a mixed-methods design that combines qualitative and quantitative techniques, drawing on Actor-Network Theory (ANT) and Social Representations Theory (SRT). Data were collected from 103 managers through word-evocation tasks, semantic proximity mapping, and analysis using the four-house structural framework. Findings reveal a mutual interdependence between collaborative dynamics, perceived benefits, and structural barriers within the network under study. Collaboration and integration emerge as key enablers of cohesion, shared learning, and collective identity, while bureaucratic rigidity, governance misalignments, and regional disparities limit overall effectiveness and sustainability. The study extends ANT's analytical scope to inter-organizational educational management, underscoring managers' strategic role as mediators between human and nonhuman actors in complex institutional systems. In practice, the findings inform the design of context-sensitive policies and leadership strategies to strengthen inter-institutional collaboration and enhance the resilience of higher education networks globally.",
+    "DOI": "10.1080/03075079.2026.2750405",
+    "URL": "https://doi.org/10.1080/03075079.2026.2750405",
     "container-title": "Studies in Higher Education"
   },
   {
@@ -29091,6 +30244,134 @@
     "container-title": "Assessment & Evaluation in Higher Education"
   },
   {
+    "id": "openalex:W7223362014",
+    "type": "article-journal",
+    "title": "How Does Social Presence Affect Non-Interactive Teaching When the Audience Is a Familiar Peer?",
+    "author": [
+      {
+        "family": "Cheng",
+        "given": "Meixia"
+      },
+      {
+        "family": "Qiao",
+        "given": "Peihua"
+      },
+      {
+        "family": "Yin",
+        "given": "Xinyi"
+      },
+      {
+        "family": "Wang",
+        "given": "Fuxing"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          23
+        ]
+      ]
+    },
+    "abstract": "This study investigated how different levels of social presence affect non-interactive teaching in the presence of a familiar audience. We compared three teaching conditions (video, online, and in-person) to examine whether higher levels of social presence can increase motivation and engagement, thereby improving learning outcomes. A restudy was used as the control condition. All students taught in front of a familiar peer. Results showed that social presence increased sequentially from the restudy condition to the video, online, and in-person teaching conditions. No significant differences in state anxiety or extraneous cognitive load were found among the three teaching conditions, although students in the video condition experienced significantly higher state anxiety than those in the restudy condition. Students in the in-person condition reported higher motivation, germane cognitive load, and intrinsic cognitive load than those in the restudy condition. Students in the in-person and online conditions also exhibited more happy expressions than those in the video condition. However, students in the video condition outperformed students in both the in-person and restudy conditions on the transfer test. Online teaching achieved comparable academic performance to video teaching. Social presence and motivation together mediated the positive effects of teaching activities on transfer performance (vs. restudy). These findings suggest that high social presence with a familiar audience can effectively reduce anxiety and modestly increase motivation, thereby explaining the learning advantage of teaching over restudy; however, it does not further improve, and may even hinder, learning outcomes compared to teaching with lower social presence.",
+    "DOI": "10.1177/14697874261493885",
+    "URL": "https://doi.org/10.1177/14697874261493885",
+    "container-title": "Active Learning in Higher Education"
+  },
+  {
+    "id": "openalex:W7223685127",
+    "type": "article-journal",
+    "title": "The partnership model of learner-GenAI collaboration: Mapping competencies and interaction dynamics in higher education",
+    "author": [
+      {
+        "family": "Porat",
+        "given": "Erez"
+      },
+      {
+        "family": "Kasperski",
+        "given": "Ronen"
+      },
+      {
+        "family": "Avdiel",
+        "given": "Orit"
+      },
+      {
+        "family": "Blau",
+        "given": "Ina"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          1
+        ]
+      ]
+    },
+    "abstract": "Generative AI (GenAI) is rapidly transforming higher education. While textual and visual AI tools are increasingly used as learning assistants and creative supports, limited research has examined the competencies students develop, the interaction patterns that emerge, and the emotional dynamics shaping these experiences. This qualitative study investigates how university students interact with GenAI in academic contexts and the emerging forms of learner–AI partnerships. Semi-structured interviews combined with guided observation demonstrations were conducted with 19 undergraduate and graduate students from multiple disciplines. Using an inductive thematic analysis, the study identified three key dimensions of learner–GenAI interaction. First, students reported developing a range of AI-related competencies, including prompting practices, contextual and decomposition strategies, mental verbalization, and critical evaluation of AI outputs. Second, three partnership types emerged from the data: AI-led, Learner-led, and Collaborative interactions, reflecting different levels of learner control and cognitive engagement when working with AI systems. Third, students frequently expressed anthropomorphic behaviors, such as courtesy, companionship, and role-play, indicating that emotional and relational dynamics shape learner–AI interaction. Building on these findings and grounded in the present qualitative dataset, the study proposes a conceptual Partnership Model of Learner–GenAI Collaboration that integrates partnership types, skill development, and relational engagement. The findings contribute to emerging discussions on AI literacy by highlighting competencies and interaction patterns involved in human–AI collaboration in educational settings.",
+    "DOI": "10.1016/j.iheduc.2026.101120",
+    "URL": "https://doi.org/10.1016/j.iheduc.2026.101120",
+    "container-title": "The Internet and Higher Education"
+  },
+  {
+    "id": "openalex:W7224155152",
+    "type": "article-journal",
+    "title": "Course descriptions and skill supply: an exploration of green content and uniqueness",
+    "author": [
+      {
+        "family": "Pagliarini",
+        "given": "Giovanni"
+      },
+      {
+        "family": "Marzucchi",
+        "given": "Alberto"
+      },
+      {
+        "family": "Rizzo",
+        "given": "Ugo"
+      },
+      {
+        "family": "Landini",
+        "given": "Fabio"
+      },
+      {
+        "family": "Sciavicco",
+        "given": "Guido"
+      },
+      {
+        "family": "Lupi",
+        "given": "Giacomo Roberto"
+      },
+      {
+        "family": "Barbieri",
+        "given": "Nicolò"
+      },
+      {
+        "family": "Rotolo",
+        "given": "Daniele"
+      },
+      {
+        "family": "Casavecchia",
+        "given": "Pietro"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          29
+        ]
+      ]
+    },
+    "abstract": "This paper develops a novel empirical framework to measure the skill content of higher education programmes. Using natural language processing techniques, we link the official descriptions of Italian degree programmes to the ESCO taxonomy of labour-market skills, constructing a high-dimensional skill provision matrix covering more than 45,000 programme-year observations over 2013–2022. We exploit this skill-based representation in two applications. First, we map the distribution and evolution of green skills across disciplines and territories. Second, we construct measures of programme-level uniqueness and examine their association with first-year enrolment. While abstract skill-based uniqueness is not significantly related to enrolment, a geographically weighted measure–capturing differentiation relative to proximate alternatives–is positively and robustly associated with student demand. The proposed methodology provides a scalable and flexible tool to open the ‘black box’ of curricular content and can be readily extended to a wide range of applications, including the analysis of skill alignment, institutional adaptation, and the evolving geography of higher education provision.",
+    "DOI": "10.1080/03075079.2026.2747742",
+    "URL": "https://doi.org/10.1080/03075079.2026.2747742",
+    "container-title": "Studies in Higher Education"
+  },
+  {
     "id": "openalex:W7224346926",
     "type": "article-journal",
     "title": "Artificial intelligence (AI) proposals to counter AI cheating by students in non-invigilated assessment",
@@ -29117,6 +30398,138 @@
     "DOI": "10.1080/02602938.2026.2751526",
     "URL": "https://doi.org/10.1080/02602938.2026.2751526",
     "container-title": "Assessment & Evaluation in Higher Education"
+  },
+  {
+    "id": "openalex:W7224532163",
+    "type": "article-journal",
+    "title": "Staging the International Classroom in Problem-Based Learning: Staff and Students’ Performance and Perceptions",
+    "author": [
+      {
+        "family": "Bijsmans",
+        "given": "Patrick"
+      },
+      {
+        "family": "Smeets",
+        "given": "Chayenne"
+      },
+      {
+        "family": "Haelermans",
+        "given": "Carla"
+      },
+      {
+        "family": "Hendrikse",
+        "given": "Arnold"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          29
+        ]
+      ]
+    },
+    "abstract": "European higher education has become increasingly international. Proponents argue that internationalisation exposes students to diverse perspectives, cultivating intercultural skills through interactions with peers from different countries. However, critics have raised concerns that internationalisation may adversely impact students’ academic success. We engage with this debate by building on findings from a large-scale quantitative study at an international Dutch university, which concluded that the international classroom at Bachelor’s level tends to have a positive effect on students’ academic success in a Problem-Based Learning (PBL) environment. We specifically explore how first-year students navigate the international PBL classroom. Taking cues from constructivists views of learning, which highlight the interactive nature of knowledge construction and the role of diversity therein, we conducted 22 international classroom observations and 21 semi-structured interviews. We find that students treat each other as individuals with complex identities, of which nationality is only one aspect. Tutors and leading students can create space for diverse perspectives as part of the collaborative construction of knowledge in the international classroom. Yet, this requires purposeful design of the curriculum, as well as proper training of staff and students.",
+    "DOI": "10.1177/14697874261498374",
+    "URL": "https://doi.org/10.1177/14697874261498374",
+    "container-title": "Active Learning in Higher Education"
+  },
+  {
+    "id": "openalex:W7224883744",
+    "type": "article-journal",
+    "title": "A Generative AI-Integrated Framework for Teaching Operations Management: Case-Based Projects",
+    "author": [
+      {
+        "family": "Ebrahimi",
+        "given": "Sajad"
+      },
+      {
+        "family": "Bridgelall",
+        "given": "Raj"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          30
+        ]
+      ]
+    },
+    "abstract": "As generative artificial intelligence (GAI) reshapes business education, instructors must simultaneously safeguard academic integrity and develop students’ AI literacy for an increasingly AI-driven workplace. This study developed the GAI Learning Framework (GLF), a replicable, step-by-step experiential learning approach for case-based projects in undergraduate business courses, illustrated through an operations management (OM) application. Rather than enabling passive cognitive offloading, the GLF promotes active learning by requiring students to craft context-rich prompts grounded in course materials, systematically compare outputs across multiple GAI platforms (e.g., ChatGPT, Claude, and Gemini), and critically evaluate discrepancies against independently verified sources. The framework was implemented across two sections of an undergraduate OM course and evaluated using a student survey that combined Likert-scale items with open-ended reflections (n = 50). All three constructs exceeded the scale midpoint, with pooled means ranging from 3.93 (Constructive Alignment) to 4.08 (Cognitive Load/Scaffolding). Qualitative student reflections further indicated that students perceived the framework as fostering active learning, AI platform literacy, and professional communication skills. This study offers educators a practical, classroom-tested framework for integrating GAI tools into case-based projects in business courses while preserving analytical rigor and promoting experiential learning. Supplemental Material: The online appendices are available at https://doi.org/10.1287/ited.2026.0224 .",
+    "DOI": "10.1287/ited.2026.0224",
+    "URL": "https://doi.org/10.1287/ited.2026.0224",
+    "container-title": "INFORMS Transactions on Education"
+  },
+  {
+    "id": "openalex:W7225254061",
+    "type": "article-journal",
+    "title": "From policy to practice: aligning gender equity strategies and leadership realities in Omani higher education",
+    "author": [
+      {
+        "family": "Balushi",
+        "given": "Sabah Al"
+      },
+      {
+        "family": "AlWahaibi",
+        "given": "Anfal N."
+      },
+      {
+        "family": "Ghamrawi",
+        "given": "Norma"
+      },
+      {
+        "family": "Hammad",
+        "given": "Waheed"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          4
+        ]
+      ]
+    },
+    "abstract": "This study examines how national gender equity policies align with the lived experiences of female academic leaders in Omani higher education institutions. Specifically, it investigates how national and institutional policy documents represent gender equity and assesses whether these representations align with the experiences of women leaders in their workplaces. The study employed a qualitative methodology, integrating critical policy analysis guided by Bacchi’s What’s the Problem Represented to Be? (WPR) framework and semi-structured interviews with nine female academic leaders from public and private higher education institutions. The findings indicate that, while national rhetoric strongly emphasizes gender equity, the analyzed documents primarily conceptualize inequality in terms of formal discrimination, procedural fairness, and quantifiable participation. These representations give limited attention to structural and cultural factors within higher education institutions, including gendered leadership norms, informal networks, and unequal role expectations. Interview data show that the participating women reported resistance, legitimacy challenges, and gendered caregiving burdens, even when they perceived their institutions as formally supportive. The study recommends that bridging the gap between policy and practice requires policymakers and institutions to use gender-responsive language, create structured leadership pathways, increase policy visibility, and implement targeted leadership development programs for women.",
+    "DOI": "10.1080/03075079.2026.2758873",
+    "URL": "https://doi.org/10.1080/03075079.2026.2758873",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7225342195",
+    "type": "article-journal",
+    "title": "Case Study—AdWords to AdWards: AI as a Coding Partner in Teaching Online Optimization Algorithms",
+    "author": [
+      {
+        "family": "Pachamanova",
+        "given": "Dessislava A."
+      },
+      {
+        "family": "Tilson",
+        "given": "Vera"
+      },
+      {
+        "family": "Dwyer‐Matzky",
+        "given": "Keely"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          5
+        ]
+      ]
+    },
+    "abstract": "This case illustrates teaching online optimization algorithms for sequential decision making using generative artificial intelligence (GenAI) as an assistant, making complex concepts in algorithm design, implementation, and evaluation accessible even to nontechnical student audiences. Students are asked to translate an unfamiliar healthcare setting into the Google AdWords problem. The well-known structure of the Google AdWords problem both facilitates students’ conceptual learning and makes it easier for GenAI tools to assist with algorithm implementation. However, the complexity of the healthcare environment makes the mapping difficult, requires discussions with “experts” with domain knowledge and various stakeholders in the process, and raises ethical questions. The case is based on an actual process improvement project aimed at maximizing the use of a hospital’s capacity. The main character, Dr. Kelly, heads an observation unit and had tried a predictive model for patient assignments to her unit versus the hospital wards, which, however, can sometimes lead to inefficient bed capacity management. She is looking to improve patient allocation decisions made in real time. The case empowers students to (1) identify situations in which sequential decision-making models and online algorithms are appropriate and preferable to predictive models, (2) discover the concept of inventory balancing, (3) map its application in an unfamiliar setting (healthcare) to a well-studied setting (advertising) through inquiry and stakeholder analysis, and (4) embrace GenAI as a partner in algorithm implementation and testing. Realistic data, code, and models are provided. The rich context of the case makes it appropriate for use in courses in operations management, business analytics, marketing, machine learning, and operations research, both at the advanced undergraduate level and at the masters/MBA level. Supplemental Material: The Teaching Note is available at https://www.informs.org/Publications/Subscribe/Access-Restricted-Materials .",
+    "DOI": "10.1287/ited.2025.0147ca",
+    "URL": "https://doi.org/10.1287/ited.2025.0147ca",
+    "container-title": "INFORMS Transactions on Education"
   },
   {
     "id": "openalex:W7225401532",
@@ -29180,6 +30593,260 @@
     "abstract": "The transition from secondary education to higher education poses significant challenges, often increasing psychological load, particularly in STEM fields and among women, which may raise dropout risk. This study examines load profiles of students during the study entry phase (1st–3rd semester) using latent profile analysis (LPA) based on five cohorts of a large national student survey in Germany (N = 12, 282). Seven different latent profiles were identified across all cohorts, reflecting different configurations of load factors. While some students experienced minimal to moderate load across all domains, others faced high academic, financial, social, or navigational load. The ‘high all-around load profile’ was consistently present across all cohorts. Women were more likely to experience high academic, economic, and navigational load, while STEM students were overrepresented in academically burdened profiles. Students with minimal to moderate load had the lowest dropout intention, whereas those with multiple load factors, particularly without strong social support, showed a higher dropout intention. However, participation in support programs and their perceived usefulness did not differ significantly between profiles. These findings indicate that students experience load in different ways rather than uniformly across all domains. Therefore, universities should implement targeted support measures that specifically address academic, financial and social load factors. This requires a prior analysis of individual load factors to develop tailored interventions for different student groups, potentially contributing to long-term academic success.",
     "DOI": "10.1080/03075079.2026.2755375",
     "URL": "https://doi.org/10.1080/03075079.2026.2755375",
+    "container-title": "Studies in Higher Education"
+  },
+  {
+    "id": "openalex:W7225624219",
+    "type": "article-journal",
+    "title": "‘Entering a Forbidden Territory’: Co-Creation of Assessment Marking Criteria",
+    "author": [
+      {
+        "family": "Lubicz-Nawrocka",
+        "given": "Tanya"
+      },
+      {
+        "family": "Smillie",
+        "given": "Zeinab"
+      },
+      {
+        "family": "Wright",
+        "given": "Jennifer"
+      },
+      {
+        "family": "Prentice",
+        "given": "Ellie"
+      },
+      {
+        "family": "Smith",
+        "given": "Dean"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          9
+        ]
+      ]
+    },
+    "abstract": "Advancements in active learning methods necessitate transparent and continuous dialogue between learners and educators to align and reconcile differing expectations. This study investigates the co-creation of assessment marking criteria in higher education, emphasising the pedagogical value of involving learners in collaboratively designing rubrics with teachers. The research explores how co-creation fosters student engagement, critical thinking, and shared ownership of valuable active learning opportunities. Conducted following a postgraduate module, the study analysed learners’ experiences of co-creating a marking rubric and employed a qualitative methodology involving module evaluations, focus groups, and interviews with participating learners. Four key themes emerged from the data on student perceptions of co-creating a marking rubric in that they: provided novel learning experiences, enhanced agency and creativity, strengthened the sense of community, and improved clarity of assessment expectations for authentic assessment. Benefits and challenges in rubric co-design and implementation are discussed within each of these themes. Findings reveal that 82% of participating learners reported a greater understanding of assessment criteria, with several describing the co-creation process as transformative and one likening the experience to ‘entering a forbidden territory’. The collaborative development of the rubric promoted inclusivity, deepened assessment literacy, and enhanced learners’ confidence and motivation. Findings also suggest that the experience of co-creating the marking rubric may have contributed to higher student achievement in the associated summative assessment task. The research demonstrates that co-creating assessment rubrics can not only enhance academic performance but also build a more inclusive, student-centred educational environment. These findings support broader implementation of co-creation practices as a means to enrich active learning and foster collaborative academic communities.",
+    "DOI": "10.1177/14697874261500709",
+    "URL": "https://doi.org/10.1177/14697874261500709",
+    "container-title": "Active Learning in Higher Education"
+  },
+  {
+    "id": "openalex:W7225725182",
+    "type": "article-journal",
+    "title": "Decision Modeling in the Classroom: What Does Optimality Mean in Scheduling the Norwegian Women’s Bandy League?",
+    "author": [
+      {
+        "family": "Guajardo",
+        "given": "Mario"
+      },
+      {
+        "family": "Nonås",
+        "given": "Sigrid Lise"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          10
+        ]
+      ]
+    },
+    "abstract": "This paper presents a sports case based on the women’s bandy league organized by the Norwegian Bandy Federation. The case has been used in different formats during four consecutive years in a master’s course on decision modeling at a business school in Norway. These formats included first a structured problem-solving task, with clear instructions on how to model constraints and define the objective function. The case was later taught using the case teaching method, where certain criteria were deliberately presented ambiguously to encourage deeper student engagement and discussion. Students’ feedback indicates that incorporating realistic sports-based examples, such as the Bandy Case, enhances motivation and engagement with mathematical modeling. As part of their learning experience with this case, students also highlight that sports-related examples help them connect mathematical programming to real-world problems, deepen their understanding of optimization techniques, and improve their coding skills. Overall, our results support the conclusion that sports-based examples are an effective tool for fostering interest and deepening understanding in decision modeling education.",
+    "DOI": "10.1287/ited.2025.0186",
+    "URL": "https://doi.org/10.1287/ited.2025.0186",
+    "container-title": "INFORMS Transactions on Education"
+  },
+  {
+    "id": "openalex:W7225728294",
+    "type": "article-journal",
+    "title": "From Potential to Practice: A Critical Realist Exploration of GenAI Use in Australian Early Childhood Education and Care",
+    "author": [
+      {
+        "family": "Tehrani",
+        "given": "Ali"
+      },
+      {
+        "family": "Madanipour",
+        "given": "Parian"
+      },
+      {
+        "family": "Cohrssen",
+        "given": "Caroline"
+      },
+      {
+        "family": "Burstein",
+        "given": "Frada V."
+      },
+      {
+        "family": "Forsyth",
+        "given": "Emma"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          1
+        ]
+      ]
+    },
+    "abstract": "The rapid uptake of Generative Artificial Intelligence (GenAI) tools has driven significant change across the education sector. Despite this, empirical understanding of how early childhood education and care (ECEC) educators use GenAI in their professional practice remains limited. This pioneering study used the Context-Mechanism-Outcomes (CMO) schema as an organising framework to explore how Australian ECEC educators use GenAI tools, including the Contexts in which they are used, the Mechanisms of use, and the associated Outcomes. Using an online qualitative survey of 75 participants across Australia, guided by critical realism and abductive reasoning, this exploratory study shows that GenAI users outnumbered non-users in this sample, and four distinct, plausible explanatory use patterns emerged. Further, the identified Mechanisms reveal that educators’ use of GenAI tools for non-contact work activity domains is associated with benefits and constraints, and with some tensions in the Outcomes. In light of these findings, our study highlights the need for sector-specific policy development, professional guidance, and further research to support educators’ informed use of GenAI.",
+    "DOI": "10.1016/j.compedu.2026.105791",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105791",
+    "container-title": "Computers & Education"
+  },
+  {
+    "id": "openalex:W7225748780",
+    "type": "article-journal",
+    "title": "Synergizing Mind and Machine: Unlocking the Potential of Generative AI With Metacognitive Scaffolding to Optimize Upper Elementary Student Learning",
+    "author": [
+      {
+        "family": "YUE",
+        "given": "Miao"
+      },
+      {
+        "family": "Jong",
+        "given": "Morris Siu–Yung"
+      },
+      {
+        "family": "Wang",
+        "given": "Wenjiao"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.compedu.2026.105792",
+    "URL": "https://doi.org/10.1016/j.compedu.2026.105792",
+    "container-title": "Computers & Education"
+  },
+  {
+    "id": "openalex:W7225753828",
+    "type": "article-journal",
+    "title": "Cognitive engagement and students' perceptions of ChatGPT during discipline-specific problem solving in mining engineering graduate education",
+    "author": [
+      {
+        "family": "Alhaj-Bedar",
+        "given": "Rana"
+      },
+      {
+        "family": "Cunningham",
+        "given": "Nicole"
+      },
+      {
+        "family": "Agioutantis",
+        "given": "Zacharias G."
+      },
+      {
+        "family": "Schafrik",
+        "given": "Steven J."
+      },
+      {
+        "family": "Afrapoli",
+        "given": "Ali Moradi"
+      },
+      {
+        "family": "Roghanchi",
+        "given": "Pedram"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1007/s10734-026-01806-y",
+    "URL": "https://doi.org/10.1007/s10734-026-01806-y",
+    "container-title": "Higher Education"
+  },
+  {
+    "id": "openalex:W7225829037",
+    "type": "article-journal",
+    "title": "Generative AI in Mental Health Training: A Human Factors Approach to Active Learning and Pedagogical Innovation",
+    "author": [
+      {
+        "family": "Chavez",
+        "given": "Denis I."
+      },
+      {
+        "family": "González-Maldonado",
+        "given": "Caridad"
+      },
+      {
+        "family": "Cruz-Silva",
+        "given": "Jorge"
+      },
+      {
+        "family": "Egas-Balseca",
+        "given": "Sonia"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          10
+        ]
+      ]
+    },
+    "abstract": "This study examines the use of generative artificial intelligence (GenAI) as a simulation environment for mental health training. Drawing on a human factors and active learning perspective, this study explores how interactions between psychology students and AI-simulated patients may support the development of professional competencies, formative assessment, and reflective learning. An exploratory mixed-methods design was conducted with 40 final-year psychology students who completed simulated initial clinical interviews using ChatGPT. The simulation environment was iteratively designed through expert interviews and human factors principles. Interaction corpora were analyzed using natural language processing techniques, categorical analysis, and exploratory interaction metrics. Results describe the design of the simulation environment, the intervention categories that emerged during consultations, a set of linguistic, cognitive, and temporal indicators for interaction analysis, and students’ perceptions of the pedagogical value and limitations of the experience. Findings suggest that GenAI-based simulations can support competency-oriented training by generating rich interaction data for reflection, feedback, and curriculum development.",
+    "DOI": "10.1177/14697874261498614",
+    "URL": "https://doi.org/10.1177/14697874261498614",
+    "container-title": "Active Learning in Higher Education"
+  },
+  {
+    "id": "openalex:W7225831021",
+    "type": "article-journal",
+    "title": "Constrained brokerage: gendered returns to network position in GCC higher education",
+    "author": [
+      {
+        "family": "Baig",
+        "given": "Parissa"
+      },
+      {
+        "family": "MahmoumGonbadi",
+        "given": "Azar"
+      },
+      {
+        "family": "Ijaz",
+        "given": "Abdullah"
+      },
+      {
+        "family": "Wood",
+        "given": "Bronwyn P."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          11,
+          11
+        ]
+      ]
+    },
+    "abstract": "Gender inequality in academic collaboration remains a persistent challenge in higher education, yet existing research offers limited explanation of how network structures reproduce unequal access to visibility, resources, and recognition. This study examines gendered collaboration patterns in an entrepreneurship and innovation co-authorship network anchored in Gulf Cooperation Council (GCC) higher education, combining bibliometric corpus construction (4,613 publications, 14,250 authors, 2014 –2024) with social network analysis and statistical testing. The findings reveal a consistent structural pattern. Women are under-represented in the broader top tier of academic collaboration across all four centrality measures, with the largest gap in brokerage positions (top 5% of betweenness: 15.7%, against a 24.4% baseline). At the very top of the network, women appear at approximately the baseline rate. A rank-based test of the brokerage-prestige relationship reveals that the correlation between brokerage and prestige is significantly weaker for women than for men (Spearman ρ = 0.32 vs 0.45; Fisher’s z = −5.01, p < .0001). We interpret this dual pattern of restricted access and weaker broker-prestige coupling through the concept of constrained brokerage, with mediated weak ties introduced as an interpretive hypothesis about tie formation under institutional and interactional constraint. The study advances research in higher education by shifting the analytical focus from participation gaps to the relational organisation of academic work, demonstrating how collaboration networks reproduce stratification even in rapidly developing research systems. The findings carry implications for policy aligned with SDG 5 (Gender Equality) and SDG 4 (Quality Education).",
+    "DOI": "10.1080/03075079.2026.2759176",
+    "URL": "https://doi.org/10.1080/03075079.2026.2759176",
     "container-title": "Studies in Higher Education"
   }
 ]
